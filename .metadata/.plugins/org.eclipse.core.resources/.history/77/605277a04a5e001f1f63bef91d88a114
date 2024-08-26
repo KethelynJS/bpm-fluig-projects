@@ -1,0 +1,30 @@
+/**
+ * Função para desabilitar campos específicos na atividade 4.
+ */
+function disableFieldsActivity4() {
+    // Obtém o número da atividade atual
+    var currentActivity = getValue("WKNumState");
+    
+    // Log para verificar a atividade atual
+    log.info("disableFieldsActivity4 - Atividade Atual: " + currentActivity);
+    
+    // Verifica se a atividade atual é 4
+    if (currentActivity == 4) {
+        // Usa jQuery para desabilitar os campos
+        $("#validacao_anexo").prop("disabled", true);
+        $("#observacao_validacao").prop("disabled", true);
+        
+        // Adiciona logs para confirmar a desabilitação
+        log.info("Campo 'validacao_anexo' desabilitado.");
+        log.info("Campo 'observacao_validacao' desabilitado.");
+    }
+}
+
+/**
+ * Função chamada antes do processamento do formulário.
+ * @param {Object} form - O objeto do formulário.
+ */
+function beforeProcessing(form) {
+    // Chama a função para desabilitar os campos na atividade 4
+    disableFieldsActivity4();
+}

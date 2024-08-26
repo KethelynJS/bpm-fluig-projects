@@ -1,0 +1,131 @@
+var recordCounter = 0; // Contador global para a Tabela 1
+var recordCounter2 = 0; // Contador global para a Tabela 2
+
+// Funções para a Tabela 1 (tabelaRegistros)
+function addNewRecord() {
+    var tabela = document.getElementById('tabelaRegistros').getElementsByTagName('tbody')[0];
+    var newRow = tabela.insertRow();
+
+    var cells = [
+        '<input type="text" name="codigo_' + (recordCounter + 1) + '" class="form-control col-md-3">',
+        '<input type="text" name="lote_' + (recordCounter + 1) + '" class="form-control col-md-3">',
+        '<input type="number" name="quantidade_' + (recordCounter + 1) + '" class="form-control col-md-2">',
+        '<input type="date" name="datafabricacao_' + (recordCounter + 1) + '" class="form-control col-md-2">',
+        '<input type="date" name="datavalidade_' + (recordCounter + 1) + '" class="form-control col-md-2">',
+        '<button type="button" onclick="removeRow(this)">Remover</button>'
+    ];
+
+    cells.forEach(function(cellHtml, index) {
+        var newCell = newRow.insertCell(index);
+        newCell.innerHTML = cellHtml;
+    });
+
+    recordCounter++;
+    saveTableData();
+}
+
+function removeRow(button) {
+    var row = button.parentNode.parentNode;
+    row.parentNode.removeChild(row);
+    saveTableData();
+}
+
+function saveTableData() {
+    var tabela = document.getElementById('tabelaRegistros').getElementsByTagName('tbody')[0];
+    var rows = tabela.rows;
+    var data = [];
+
+    for (var i = 0; i < rows.length; i++) {
+        var row = rows[i];
+        var rowData = {
+            codigo: row.cells[0].children[0].value,
+            lote: row.cells[1].children[0].value,
+            quantidade: row.cells[2].children[0].value,
+            datafabricacao: row.cells[3].children[0].value,
+            datavalidade: row.cells[4].children[0].value
+        };
+        data.push(rowData);
+    }
+
+    document.getElementById('linhaDinamicaDataset').value = JSON.stringify(data);
+}
+
+function loadTableData() {
+    var data = JSON.parse(document.getElementById('linhaDinamicaDataset').value || '[]');
+    var tabela = document.getElementById('tabelaRegistros').getElementsByTagName('tbody')[0];
+    recordCounter = data.length; // Ajustar o contador com base na quantidade de dados
+
+    data.forEach(function(item, index) {
+        var newRow = tabela.insertRow();
+
+        newRow.insertCell(0).innerHTML = '<input type="text" name="codigo_' + (index + 1) + '" class="form-control col-md-3" value="' + item.codigo + '">';
+        newRow.insertCell(1).innerHTML = '<input type="text" name="lote_' + (index + 1) + '" class="form-control col-md-3" value="' + item.lote + '">';
+        newRow.insertCell(2).innerHTML = '<input type="number" name="quantidade_' + (index + 1) + '" class="form-control col-md-2" value="' + item.quantidade + '">';
+        newRow.insertCell(3).innerHTML = '<input type="date" name="datafabricacao_' + (index + 1) + '" class="form-control col-md-2" value="' + item.datafabricacao + '">';
+        newRow.insertCell(4).innerHTML = '<input type="date" name="datavalidade_' + (index + 1) + '" class="form-control col-md-2" value="' + item.datavalidade + '">';
+        newRow.insertCell(5).innerHTML = '<button type="button" onclick="removeRow(this)">Remover</button>';
+    });
+}
+
+// Funções para a Tabela 2 (tabelaRegistross)
+function addNewRecord2() {
+    var tabela = document.getElementById('tabelaRegistross').getElementsByTagName('tbody')[0];
+    var newRow = tabela.insertRow();
+
+    var cells = [
+        '<input type="text" name="causa_' + (recordCounter2 + 1) + '" class="form-control col-md-6">',
+        '<input type="text" name="porque_' + (recordCounter2 + 1) + '" class="form-control col-md-6">',
+        '<button type="button" onclick="removeRow2(this)">Remover</button>'
+    ];
+
+    cells.forEach(function(cellHtml, index) {
+        var newCell = newRow.insertCell(index);
+        newCell.innerHTML = cellHtml;
+    });
+
+    recordCounter2++;
+    saveTableData2();
+}
+
+function removeRow2(button) {
+    var row = button.parentNode.parentNode;
+    row.parentNode.removeChild(row);
+    saveTableData2();
+}
+
+function saveTableData2() {
+    var tabela = document.getElementById('tabelaRegistross').getElementsByTagName('tbody')[0];
+    var rows = tabela.rows;
+    var data = [];
+
+    for (var i = 0; i < rows.length; i++) {
+        var row = rows[i];
+        var rowData = {
+            causa: row.cells[0].children[0].value,
+            porque: row.cells[1].children[0].value
+        };
+        data.push(rowData);
+    }
+
+    document.getElementById('tabela2Data').value = JSON.stringify(data);
+}
+
+function loadTableData2() {
+    var data = JSON.parse(document.getElementById('tabela2Data').value || '[]');
+    var tabela = document.getElementById('tabelaRegistross').getElementsByTagName('tbody')[0];
+    recordCounter2 = data.length; // Ajustar o contador com base na quantidade de dados
+
+    data.forEach(function(item, index) {
+        var newRow = tabela.insertRow();
+
+        newRow.insertCell(0).innerHTML = '<input type="text" name="causa_' + (index + 1) + '" class="form-control col-md-6" value="' + item.causa + '">';
+        newRow.insertCell(1).innerHTML = '<input type="text" name="porque_' + (index + 1) + '" class="form-control col-md-6" value="' + item.porque + '">';
+        newRow.insertCell(2).innerHTML = '<button type="button" onclick="removeRow2(this)">Remover</button>';
+    });
+}
+
+// Carregar os dados das tabelas quando a página é carregada
+window.onload = function() {
+    loadTableData();
+    loadTableData2();
+};

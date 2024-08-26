@@ -1,0 +1,154 @@
+<html>
+<head>
+	<link type="text/css" rel="stylesheet" href="/style-guide/css/fluig-style-guide.min.css"/>
+	<script type="text/javascript" src="/portal/resources/js/jquery/jquery.js"></script>
+	<script type="text/javascript" src="/portal/resources/js/jquery/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="/portal/resources/js/mustache/mustache-min.js"></script>
+	<script type="text/javascript" src="/style-guide/js/fluig-style-guide.min.js" charset="utf-8"></script>
+</head>
+<body>
+<div class="fluig-style-guide">
+<form name="form" role="form">
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">Solicitante</h3>
+    </div>
+    <div class="panel-body">
+		<div class="row">
+		    <div class="form-group col-md-6">
+		        <label for="colaborador">Nome do colaborador</label>
+		        <input type="colaborador" name="colaborador" class="form-control" id="colaborador" placeholder="Coloque o nome do colaborador">
+		    </div>
+		    <div class="form-group col-md-4">
+		        <label for="setor">Setor Solicitante</label>
+		        <input type="setor" name="setor" class="form-control" id="setor" placeholder="Coloque o nome do setor">
+		    </div>
+		    <div class="form-group col-md-4">
+		        <label for="data_solicitacao">Data da Solicitação</label>
+		        <input type="date" name="data_solicitacao" class="form-control" id="data_solicitacao" placeholder="Coloque a data da solicitação">
+		    </div>
+		</div>
+		<div class="row">
+		    <div class="form-group col-md-4">
+		        <label for="dias_solicitados">Quantidade de dias solicitados</label>
+		        <input type="dias_solicitados" name="dias_solicitados" class="form-control" id="dias_solicitados" placeholder="Coloque a quantidade de dias">
+		    </div>
+		    <div class="form-group col-md-4">
+		        <label for="data_inicio">Data início</label>
+		        <input type="date" name="data_inicio" class="form-control" id="data_inicio" placeholder="Coloque a data início">
+		    </div>
+		    <div class="form-group col-md-4">
+		        <label for="data_final">Data final</label>
+		        <input type="date" name="data_final" class="form-control" id="data_final" placeholder="Coloque a data final">
+		    </div>
+		</div>
+		<div class="row">
+		    <div class="form-group col-md-6">
+		    <label>Abono Pecuniário (Venda de 1/3 de férias)</label>
+		        <div class="radio">
+		            <label><input type="radio" name="abono_pecuario" id="abono_pecuariosim" value="sim">Sim</label></br>
+		            <label><input type="radio" name="abono_pecuario" id="abono_pecuarionao" value="nao">Não</label>
+		        </div>	
+		        	
+			</div>
+		</div>
+    </div>
+</div>
+
+
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">Aprovação RH</h3>
+    </div>
+    <div class="panel-body">
+		 <div class="row">
+		    <div class="form-group col-md-6">
+		        <div class="radio">
+		            <label><input type="radio" name="aprovacao" id="aprovacao_rh_a" value="aprovacao_rh_a">Aprovado</label></br>
+		            <label><input type="radio" name="aprovacao" id="aprovacao_rh_r" value="aprovacao_rh_r">Reprovado</label></br>
+		            <label><input type="radio" name="aprovacao" id="aprovacao_rh_c" value="aprovacao_rh_c">Corrigir</label>
+		        </div>		
+		</div>
+		</div>
+		<div class="row">
+		    <div class="form-group col-md-12">
+		        <label for="observacao">Observação</label>
+		        <textarea rows="5" name="observacao" id="observacao" class="form-control"></textarea>
+		    </div>
+		</div>
+    </div>
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">Contabilidade</h3>
+    </div>
+    <div class="panel-body">
+        <div class="form-group col-md-4">
+    <label>Retorno da Contabilidade</label>
+    		<div class="checkbox">
+        	<label><input type="checkbox" name="contabilidade">Contabilidade retornou com os dados processados; </label>
+        
+        
+    		</div>
+		</div>
+    </div>
+</div>
+
+<div class="panel panel-default">
+	    <div class="panel-heading">
+	        <h3 class="panel-title">RH - Inclusão de pagamento na conta</h3>
+	    </div>
+	    <div class="panel-body">
+	    <div class="row">
+		    <div class="form-group col-md-6">
+		        <label for="pagamento_ferias_dia">Dia do Pagamento das Férias</label>
+		        <input type="pagamento_ferias_dia" name="pagamento_ferias_dia" class="form-control" id="pagamento_ferias_dia" placeholder="Coloque o dia do pagamento">
+		    </div>
+		</div>
+			<div class="row">
+			    <div class="form-group col-md-6">
+			    <label>Necessário substituição de tarefas?</label>
+			        <div class="radio">
+			            <label><input type="radio" name="substituicao" id="sim_substituicao" value="sim_substituicao">Sim</label></br>
+			            <label><input type="radio" name="substituicao" id="nao_substituicao" value="nao_substituicao">Não</label>
+			        </div>		
+			</div>
+			</div>
+				<div class="row">
+				    <div class="form-group col-md-6">
+				        <label for="nome_sair">Se sim, nome de quem irá sair de férias</label>
+				        <input type="nome_sair" name="nome_sair" class="form-control" id="nome_sair" placeholder="nome de quem irá sair">
+				    </div>
+				    <div class="form-group col-md-6">
+				        <label for="nome_substituir">Se sim, nome de quem irá substituí-lo(a)</label>
+				        <input type="nome_substituir" name="nome_substituir" class="form-control" id="nome_substituir" placeholder="nome de quem irá substituir">
+				    </div>
+				</div>
+				
+	    </div>
+</div>
+
+
+<div class="panel panel-default">
+	    <div class="panel-heading">
+	        <h3 class="panel-title">TI</h3>
+	    </div>
+	    <div class="panel-body">
+			<div class="row">
+			    <div class="form-group col-md-6">
+			    <label>Informativo TI</label>
+			        <div class="radio">
+			            <label><input type="radio" name="informativo_ti" id="informativo_tis" value="sim_ti">Sim, recebemos informações do substituto</label></br>
+			            <label><input type="radio" name="informativo_ti" id="informativo_tin" value="nao_ti">Não recebemos informações</label>
+			        </div>		
+			</div>
+			</div>
+	    </div>
+</div>
+
+</form>
+</div>
+</body>
+</html>

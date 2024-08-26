@@ -1,0 +1,29 @@
+document.addEventListener('DOMContentLoaded', function() {
+    function formatDate(date) {
+        // Formata a data no formato DD/MM/YYYY
+        return date.toLocaleDateString('pt-BR');
+    }
+
+    function formatDateTime(date) {
+        // Formata a data e hora no formato DD/MM/YYYY HH:MM
+        return date.toLocaleString('pt-BR', { hour12: false });
+    }
+
+    // Obtém a data e hora atuais
+    const agora = new Date();
+
+    // Ajusta para o horário do Brasil (UTC-3)
+    const fusoHorarioBrasil = -3; // Horário de Brasília (BRT)
+    const horaUTC = agora.getUTCHours();
+    agora.setHours(horaUTC + fusoHorarioBrasil);
+
+    // Formata a data e hora
+    const dataAtual = formatDate(agora);
+    const dataHoraAtual = formatDateTime(agora);
+
+    // Define a data e a hora para os campos
+    document.getElementById('datacalendario').value = dataAtual;
+    document.getElementById('data_final_microbiologico').value = dataHoraAtual;
+    document.getElementById('data_final_esterilidade').value = dataHoraAtual;
+    document.getElementById('datainicio2').value = dataHoraAtual;
+});

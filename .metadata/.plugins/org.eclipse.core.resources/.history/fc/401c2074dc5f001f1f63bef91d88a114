@@ -1,0 +1,728 @@
+<html>
+<head>
+	<link type="text/css" rel="stylesheet" href="/style-guide/css/fluig-style-guide.min.css"/>
+	<script type="text/javascript" src="/portal/resources/js/jquery/jquery.js"></script>
+	<script type="text/javascript" src="/portal/resources/js/jquery/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="/portal/resources/js/mustache/mustache-min.js"></script>
+	<script type="text/javascript" src="/style-guide/js/fluig-style-guide.min.js" charset="utf-8"></script>
+	
+	<style>
+        .textarea-fixed-size {
+            width: 100%; /* Faz o textarea ocupar toda a largura da célula */
+            height: 35px; /* Define a altura do textarea */
+            min-height: 35px;
+            box-sizing: border-box; /* Inclui padding e border no tamanho total */
+            resize: vertical; /* Permite apenas redimensionar verticalmente */
+            white-space: pre-wrap; /* Permite quebra de linha e preserva espaços */
+            word-wrap: break-word;
+        }
+        /* Configurações para a tabela e células */
+        .table {
+            table-layout: fixed; /* Garante que a tabela tenha um layout fixo */
+            width: 100%; /* Faz a tabela ocupar toda a largura disponível */
+        }
+        .table td, .table th {
+            vertical-align: top; /* Alinha o conteúdo no topo das células */
+            padding: 8px; /* Adiciona espaçamento interno nas células */
+        }
+        .table textarea {
+            overflow: auto; /* Adiciona rolagem se o conteúdo exceder a altura definida */
+        }
+        
+	    .info-textarea1 {
+			    width: 100%; /* Garante que o textarea ocupe toda a largura do contêiner */
+			    background-color: #ffff99; /* Fundo amarelo claro */
+			    color: #000000; /* Cor do texto preta */
+			    border: 1px solid #cccccc; /* Borda cinza clara */
+			    border-radius: 4px; /* Bordas arredondadas */
+	}
+        
+    </style>
+</head>
+<body>
+<div class="fluig-style-guide">
+<form name="form" role="form">
+<div id="panelcompras" class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">Compras</h3>
+    </div>
+    <div class="panel-body">
+        <div class="row">
+            <div class="form-group col-md-2">
+                <label for="datacalendario">Data</label>
+                <input type="date" name="datacalendario" id="datacalendario" class="form-control" placeholder="Data da solicitação ">
+            </div>
+            <div class="form-group col-md-10">
+                <label for="motivoQualificacao">Motivo da Qualificação</label>
+                <input type="text" name="motivoQualificacao" class="form-control" id="motivoQualificacao" placeholder="Coloque o motivo">
+            </div>
+        </div>
+        <div class="form-group col-md-12">
+            <label>Componente a ser qualificado</label>
+            <div id="tabelaContainer">
+                <!-- Primeira tabela -->
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th class="col-md-2">Código SAP</th>
+                            <th class="col-md-2">Código Fornecedor</th>
+                            <th class="col-md-4">Marca/fornecedor</th>
+                            <th class="col-md-4">Descrição</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="text" name="caixa1_1" class="form-control" style="height: 35px;"></td>
+                            <td><input type="text" name="caixa1_2" class="form-control" style="height: 35px;"></td>
+                            <td><textarea name="caixa1_3" class="form-control textarea-fixed-size" style="height: 35px;"></textarea></td>
+                            <td><textarea name="caixa1_4" class="form-control textarea-fixed-size" style="height: 35px;"></textarea></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" name="caixa2_1" class="form-control" style="height: 35px;"></td>
+                            <td><input type="text" name="caixa2_2" class="form-control" style="height: 35px;"></td>
+                            <td><textarea name="caixa2_3" class="form-control textarea-fixed-size" style="height: 35px;"></textarea></td>
+                            <td><textarea name="caixa2_4" class="form-control textarea-fixed-size" style="height: 35px;"></textarea></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" name="caixa3_1" class="form-control" style="height: 35px;"></td>
+                            <td><input type="text" name="caixa3_2" class="form-control" style="height: 35px;"></td>
+                            <td><textarea name="caixa3_3" class="form-control textarea-fixed-size" style="height: 35px;"></textarea></td>
+                            <td><textarea name="caixa3_4" class="form-control textarea-fixed-size" style="height: 35px;"></textarea></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" name="caixa4_1" class="form-control" style="height: 35px;"></td>
+                            <td><input type="text" name="caixa4_2" class="form-control" style="height: 35px;"></td>
+                            <td><textarea name="caixa4_3" class="form-control textarea-fixed-size" style="height: 35px;"></textarea></td>
+                            <td><textarea name="caixa4_4" class="form-control textarea-fixed-size" style="height: 35px;"></textarea></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" name="caixa5_1" class="form-control" style="height: 35px;"></td>
+                            <td><input type="text" name="caixa5_2" class="form-control" style="height: 35px;"></td>
+                            <td><textarea name="caixa5_3" class="form-control textarea-fixed-size" style="height: 35px;"></textarea></td>
+                            <td><textarea name="caixa5_4" class="form-control textarea-fixed-size" style="height: 35px;"></textarea></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+        </div>
+        <div class="row">
+            <div class="form-group col-md-12">
+                <label for="componente">Componente compõe qual produto acabado?</label>
+                <textarea rows="3" name="componente" id="componente" class="form-control" placeholder="Código e descrição"></textarea>
+            </div>
+        </div>
+		    <div class="row">
+			    <div class="form-group col-md-8">
+			        <div class="radio">
+			            <label><input type="radio" name="anexo1" id="anexo1" value="anexo1">Anexar: Especificação técnica e Certificado de Análise.</label></br>   
+			   		</div>		
+				</div>
+			</div>
+			
+			<div class="row">
+	    <div class="form-group col-md-12">
+	        <label for="documents"></label>
+	        <textarea rows="3"  name="documents" id="infoText1" class="info-textarea1" readonly>Se esta etapa retornar para o setor de compras, isso indica que os arquivos anexados estão incorretos. É necessário anexar os documentos corretos, como a Especificação Técnica e o Certificado de Análise.</textarea>
+	    </div>
+	    </div>
+	    
+</div>
+</div>
+
+<div id="panelalmox" class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">Almox. de suprimentos</h3>
+    </div>
+	    <div class="panel-body">
+	        <div class="row">
+	    <div class="form-group col-md-2">
+	        <label for="datacalendario2">Data de recebimento</label>
+	        <input type="date" name="datacalendario2" id="datacalendario2" class="form-control" placeholder="Data ">
+	    </div>
+	</div>
+	<div class="row">
+    <div class="form-group col-md-12">
+        <div class="radio">
+            <label><input type="radio" name="notificarCQFQ" id="notificarCQFQ" value="notificarCQFQ">Notificar o CQFQ que o componente esta na quarentena disponível para coleta</label></br>
+        </div>		
+</div>
+    </div>
+</div>
+</div>
+
+<div id="validacao_anexoo" class="panel panel-warning">
+    <div id="validacao_anexoo" class="panel-heading">
+        <h3 class="panel-title">Validação para arquivos em anexo</h3>
+    </div>
+    <div class="panel-body">
+        <div class="row">
+    <div class="form-group col-md-6">
+        <div class="radio">
+            <label><input type="radio" name="validacao_anexo" id="validacao_anexo" value="validacao1corrigir">Corrigir</label></br>
+            <label><input type="radio" name="validacao_anexo" id="validacao_anexo" value="validacao1continuar">Continuar</label>
+        </div>		
+	</div>
+	</div>
+    </div>
+</div>
+
+<!-- CQFQ -->
+
+<div id="panelcqfq1" class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">CQFQ</h3>
+    </div>
+    <div class="panel-body">
+        <div class="row">
+    <div class="form-group col-md-5">
+        <label for="datacalendario3">Data de início da análise:</label>
+        <input type="date" name="datacalendario3" id="datacalendario3" class="form-control" placeholder="Data ">
+    </div>
+</div>
+
+<div class="row">
+    <div class="form-group col-md-6">
+    <label>Temperatura de armazenamento:</label>
+        <div class="radio">
+            <label><input type="radio" name="temperatura" id="temperatura1" value="temperatura1">2 a 8°C</label></br>
+            <label><input type="radio" name="temperatura" id="temperatura2" value="temperatura2">15 a 25°C</label></br>
+            <label><input type="radio" name="temperatura" id="temperatura3" value="temperatura3">10 a 30°C</label></br>
+            <label><input type="radio" name="temperatura" id="temperatura4" value="temperatura4">Outras</label>
+        </div>
+        <div id="outrasTemperaturas" >
+        <label for="temperaturaOutras">Se Outras, descrever:</label>
+        <input type="text" name="temperaturaOutras" id="temperaturaOutras" class="form-control" placeholder="Descreva a temperatura">
+    	</div>
+        </div>
+        <div class="form-group col-md-6">
+        <label>Observações complementares:</label>
+        
+		        <div class="checkbox">
+		    <label>
+		        <input type="checkbox" name="fotossensivel" id="fotossensivel" value="fotossensivel"> Fotossensível
+		    </label>
+		    <br>
+		
+		    <label>
+		        <input type="checkbox" name="concentracao" id="concentracao" value="concentracao"> Concentração g/L
+		        <input type="text" id="concentracao_text" name="concentracao_text" class="form-control" style="display: inline-block; width: 100px; margin-left: 10px;">
+		    </label>
+		    <br>
+		
+		    <label>
+		        <input type="checkbox" name="composicao" id="composicao" value="composicao"> Composição
+		        <textarea name="composicao_text" class="form-control textarea-fixed-size" style="display: inline-block; "></textarea>
+		    </label>
+		</div>	
+		</div>
+
+    </div>
+    <div class="form-group col-md-12">
+    
+    <div id="tabelaContainer">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th class="col-md-3">Análise</th>
+                    <th class="col-md-3">Especificação</th>
+                    <th class="col-md-4">Resultado</th>
+                    <th class="col-md-2">Analista</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input type="text" name="analise_1" class="form-control" style="height: 35px;"></td>
+                    <td><input type="text" name="especificacao_1" class="form-control" style="height: 35px;"></td>
+                    <td><textarea name="result_1" class="form-control textarea-fixed-size" style="height: 35px;"></textarea></td>
+                    <td><input type="text" name="analista_1" class="form-control" style="height: 35px;"></td>
+                </tr>
+                <tr>
+                    <td><input type="text" name="analise_2" class="form-control" style="height: 35px;"></td>
+                    <td><input type="text" name="especificacao_2" class="form-control" style="height: 35px;"></td>
+                    <td><textarea name="result_2" class="form-control textarea-fixed-size" style="height: 35px;"></textarea></td>
+                    <td><input type="text" name="analista_2" class="form-control" style="height: 35px;"></td>
+                </tr>
+                <tr>
+                    <td><input type="text" name="analise_3" class="form-control" style="height: 35px;"></td>
+                    <td><input type="text" name="especificacao_3" class="form-control" style="height: 35px;"></td>
+                    <td><textarea name="result_3" class="form-control textarea-fixed-size" style="height: 35px;"></textarea></td>
+                    <td><input type="text" name="analista_3" class="form-control" style="height: 35px;"></td>
+                </tr>
+                <tr>
+                    <td><input type="text" name="analise_4" class="form-control" style="height: 35px;"></td>
+                    <td><input type="text" name="especificacao_4" class="form-control" style="height: 35px;"></td>
+                    <td><textarea name="result_4" class="form-control textarea-fixed-size" style="height: 35px;"></textarea></td>
+                    <td><input type="text" name="analista_4" class="form-control" style="height: 35px;"></td>
+                </tr>
+                <tr>
+                    <td><input type="text" name="analise_5" class="form-control" style="height: 35px;"></td>
+                    <td><input type="text" name="especificacao_5" class="form-control" style="height: 35px;"></td>
+                    <td><textarea name="result_5" class="form-control textarea-fixed-size" style="height: 35px;"></textarea></td>
+                    <td><input type="text" name="analista_5" class="form-control" style="height: 35px;"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="row">
+    <div class="form-group col-md-12">
+        <label for="lotebancada"> Descrever se houver condições de preparo diferente das demais marcas qualificadas atualmente:</label>
+        <textarea rows="5" name="lotebancada" id="lotebancada" class="form-control"></textarea>
+    </div>
+    </div>
+    <div class="row">
+    <div class="form-group col-md-6">
+    <label>É necessário realizar lote de bancada?</label>
+        <div class="radio">
+            <label><input type="radio" name="lotebancadaa" id="lotebancadaa" value="lotebancadaaS">Sim. Anexar OP de bancada</label></br>
+            <label><input type="radio" name="lotebancadaa" id="lotebancadaa" value="lotebancadaaN">Não</label>
+        </div>		
+</div>
+</div>
+		<div class="row">
+	    <div class="form-group col-md-6">
+	        <label>É necessário realizar análises microbiológicas, hematológicas e/ou físico-química?</label>
+	        <div class="radio">
+	            <label><input type="radio" name="analiseMicro" id="analiseMicroS" value="sim">Sim</label><br>
+	            <label><input type="radio" name="analiseMicro" id="analiseMicroN" value="nao">Não</label>
+	        </div>      
+	    </div>
+			<div class="form-group col-md-4">
+			    <label>Tipo:</label>
+			    <div class="checkbox">
+			        <label><input type="checkbox" name="microbiologica">Microbiológica</label></br>
+			        <label><input type="checkbox" name="hematologica">Hematológica</label></br>
+			        <label><input type="checkbox" name="citologica">Citológica</label></br>
+			        <label><input type="checkbox" name="fisicoquimica">Físico-química</label>
+			        
+			    </div>
+			</div>
+	</div>
+	
+	<div id="camposAdicionais" style="display: none;">
+	    <div class="row">
+	        <div class="form-group col-md-4">
+	            <label for="dataConclusao">Data da conclusão da análise:</label>
+	            <input type="date" name="dataConclusao" id="dataConclusao" class="form-control">
+	        </div>
+	        <div class="form-group col-md-6">
+	            <label for="responsavelConclusao">Responsável pela conclusão da análise:</label>
+	            <input type="text" name="responsavelConclusao" id="responsavelConclusao" class="form-control">
+	        </div>
+	    </div>
+	    <div class="row">
+	        <div class="form-group col-md-6">
+	            <label>É necessário realizar lote piloto?</label>
+	            <div class="radio">
+	                <label><input type="radio" name="lotePiloto" id="lotePilotoS" value="sim2">Sim</label><br>
+	                <label><input type="radio" name="lotePiloto" id="lotePilotoN" value="nao2">Não</label>
+	            </div>
+	        </div>
+	        
+	    </div>
+	    <div id="motivoLotePiloto" style="display: none;">
+	        <div class="form-group col-md-6">
+	            <label for="motivo">Motivo:</label>
+	            <textarea name="motivo" id="motivo" class="form-control" placeholder="Descreva o motivo"></textarea>
+	        </div>
+	    </div>
+	    <div id="qualificacaoCampos" style="display: none;">
+        <div class="row">
+            <div class="form-group col-md-6">
+                <label>Qualificação:</label>
+                <div class="radio">
+                    <label><input type="radio" name="qualificacao" id="qualificado" value="qualificado">Qualificado</label><br>
+                    <label><input type="radio" name="qualificacao" id="naoQualificado" value="naoQualificado">Não qualificado</label>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-md-6">
+                <div class="radio">
+                    <label><input type="radio" name="observacoesSAP" id="observacoesSAP" value="sim">Atualizar campo observações do cadastro do item no SAP</label>
+                </div>
+            </div>
+        </div>
+    </div>
+	</div>
+</div>
+</div>
+</div>
+<!-- CQM ou CQH -->
+<div id="panelcqm1" class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">CQM/CQH/CQFQ</h3>
+    </div>
+    <div class="panel-body">
+        <div class="form-group col-md-12">
+    
+    <div id="tabelaContainer2">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th class="col-md-3">Análise</th>
+                    <th class="col-md-3">Especificação</th>
+                    <th class="col-md-4">Resultado</th>
+                    <th class="col-md-2">Analista</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input type="text" name="analise2_1" class="form-control" style="height: 35px;"></td>
+                    <td><input type="text" name="especificacao2_1" class="form-control" style="height: 35px;"></td>
+                    <td><textarea name="result2_1" class="form-control textarea-fixed-size" style="height: 35px;"></textarea></td>
+                    <td><input type="text" name="analista2_1" class="form-control" style="height: 35px;"></td>
+                </tr>
+                <tr>
+                    <td><input type="text" name="analise2_2" class="form-control" style="height: 35px;"></td>
+                    <td><input type="text" name="especificacao2_2" class="form-control" style="height: 35px;"></td>
+                    <td><textarea name="result2_2" class="form-control textarea-fixed-size" style="height: 35px;"></textarea></td>
+                    <td><input type="text" name="analista2_2" class="form-control" style="height: 35px;"></td>
+                </tr>
+                <tr>
+                    <td><input type="text" name="analise2_3" class="form-control" style="height: 35px;"></td>
+                    <td><input type="text" name="especificacao2_3" class="form-control" style="height: 35px;"></td>
+                    <td><textarea name="result2_3" class="form-control textarea-fixed-size" style="height: 35px;"></textarea></td>
+                    <td><input type="text" name="analista2_3" class="form-control" style="height: 35px;"></td>
+                </tr>
+                <tr>
+                    <td><input type="text" name="analise2_4" class="form-control" style="height: 35px;"></td>
+                    <td><input type="text" name="especificacao2_4" class="form-control" style="height: 35px;"></td>
+                    <td><textarea name="result2_4" class="form-control textarea-fixed-size" style="height: 35px;"></textarea></td>
+                    <td><input type="text" name="analista2_4" class="form-control" style="height: 35px;"></td>
+                </tr>
+                <tr>
+                    <td><input type="text" name="analise2_5" class="form-control" style="height: 35px;"></td>
+                    <td><input type="text" name="especificacao2_5" class="form-control" style="height: 35px;"></td>
+                    <td><textarea name="result2_5" class="form-control textarea-fixed-size" style="height: 35px;"></textarea></td>
+                    <td><input type="text" name="analista2_5" class="form-control" style="height: 35px;"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="row">
+    <div class="form-group col-md-3">
+        <label for="datacalendario4">Data da conclusão da análise:</label>
+        <input type="date" name="datacalendario4" id="datacalendario4" class="form-control" placeholder="Data ">
+    </div>
+    <div class="form-group col-md-6">
+        <label for="resp2">Responsável pela conclusão da análise:</label>
+        <input type="resp2" name="resp2" class="form-control" id="resp2" placeholder="Coloque o nome do responsável pela conclusão">
+    </div>
+</div>
+</div>
+
+    </div>
+</div>
+<!-- lote piloto, se é necessário realizar lote piloto -->
+<div id="panelcqfq2" class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">CQFQ</h3>
+    </div>
+    <div class="panel-body">
+		    <div class="row">
+		        <div class="form-group col-md-6">
+		            <label>É necessário realizar lote piloto?</label>
+		            <div class="radio">
+		                <label><input type="radio" name="lotePiloto2" id="lotePiloto2S" value="sim5">Sim</label><br>
+		                <label><input type="radio" name="lotePiloto2" id="lotePiloto2N" value="nao5">Não</label>
+		            </div>
+		        </div>
+		    </div>
+		    <div id="motivoLotePiloto2" style="display: none;">
+		        <div class="form-group col-md-6">
+		            <label for="motivo2">Motivo:</label>
+		            <textarea name="motivo2" id="motivo2" class="form-control" placeholder="Descreva o motivo"></textarea>
+		        </div>
+		    </div>
+		    <div id="qualificacaoCampos2" style="display: none;">
+		        <div class="row">
+		            <div class="form-group col-md-6">
+		                <label>Qualificação:</label>
+		                <div class="radio">
+		                    <label><input type="radio" name="qualificacao2" id="qualificado2" value="qualificado">Qualificado</label><br>
+		                    <label><input type="radio" name="qualificacao2" id="naoQualificado2" value="naoQualificado">Não qualificado</label>
+		                </div>
+		            </div>
+		        </div>
+		        <div class="row">
+		            <div class="form-group col-md-6">
+		                <div class="radio">
+		                    <label><input type="radio" name="observacoesSAP2" id="observacoesSAP2" value="sim">Atualizar campo observações do cadastro do item no SAP</label>
+		                </div>
+		            </div>
+		        </div>
+		    </div>
+		</div>
+    </div>
+
+
+<!-- se não for necessário lote piloto, irá notificar compras -->
+<div id="panelcomprasNotify" class="panel panel-warning">
+    <div class="panel-heading">
+        <h3 class="panel-title">Notificação para compras</h3>
+    </div>
+    <div class="panel-body">
+        <div>
+        	<label> Processo encerrado, verificar a conclusão e ao terminar de verificar clicar em enviar para finalizar.</label>
+        
+        </div>
+    </div>
+</div>
+
+<!-- se sim, PCP -->
+<div id="panelpcp" class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">PCP</h3>
+    </div>
+    <div class="panel-body">
+        <div class="row">
+    <div class="form-group col-md-5">
+        <label for="datacalendario6">Data planejada para fabricação do lote piloto:</label>
+        <input type="date" name="datacalendario6" id="datacalendario6" class="form-control" placeholder="Data ">
+    </div>
+    <div class="form-group col-md-5">
+        <label for="lotepcp">Lote</label>
+        <input type="lotepcp" name="lotepcp" class="form-control" id="lotepcp" placeholder="Coloque o lote">
+    </div>
+</div>
+    </div>
+</div>
+
+<!-- depois produção -->
+<div id="panelproducao" class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">Produção</h3>
+    </div>
+    <div class="panel-body">
+        <div class="row">
+		    <div class="form-group col-md-2">
+		        <label for="datacalendario7">Data de fabricação</label>
+		        <input type="date" name="datacalendario7" id="datacalendario7" class="form-control" placeholder="Data">
+		    </div>
+		</div>
+			<div class="row">
+			    <div class="form-group col-md-12">
+			        <label for="intercorrencia">Houve alterações ou intercorrências no processo produtivo em razão do componente que esta sendo qualificado? Se sim descrever detalhadamente.</label>
+			        <textarea rows="5" name="intercorrencia" id="intercorrencia" class="form-control"></textarea>
+			    </div>
+		    </div>
+    </div>
+</div>
+
+<!-- cqfq de novo -->
+<div id="panelcqfq3" class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">CQFQ</h3>
+    </div>
+    <div class="panel-body">
+        <div class="form-group col-md-12">
+    <label>Nova Tabela de Análise - Terceira Pessoa</label>
+    <div id="tabelaContainer3">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th class="col-md-3">Análise</th>
+                    <th class="col-md-3">Especificação</th>
+                    <th class="col-md-3">Resultado</th>
+                    <th class="col-md-3">Analista</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input type="text" name="analise3_1" class="form-control" style="height: 35px;"></td>
+                    <td><input type="text" name="especificacao3_1" class="form-control" style="height: 35px;"></td>
+                    <td><textarea name="result3_1" class="form-control textarea-fixed-size" style="height: 35px;"></textarea></td>
+                    <td><input type="text" name="analista3_1" class="form-control" style="height: 35px;"></td>
+                </tr>
+                <tr>
+                    <td><input type="text" name="analise3_2" class="form-control" style="height: 35px;"></td>
+                    <td><input type="text" name="especificacao3_2" class="form-control" style="height: 35px;"></td>
+                    <td><textarea name="result3_2" class="form-control textarea-fixed-size" style="height: 35px;"></textarea></td>
+                    <td><input type="text" name="analista3_2" class="form-control" style="height: 35px;"></td>
+                </tr>
+                <tr>
+                    <td><input type="text" name="analise3_3" class="form-control" style="height: 35px;"></td>
+                    <td><input type="text" name="especificacao3_3" class="form-control" style="height: 35px;"></td>
+                    <td><textarea name="result3_3" class="form-control textarea-fixed-size" style="height: 35px;"></textarea></td>
+                    <td><input type="text" name="analista3_3" class="form-control" style="height: 35px;"></td>
+                </tr>
+                <tr>
+                    <td><input type="text" name="analise3_4" class="form-control" style="height: 35px;"></td>
+                    <td><input type="text" name="especificacao3_4" class="form-control" style="height: 35px;"></td>
+                    <td><textarea name="result3_4" class="form-control textarea-fixed-size" style="height: 35px;"></textarea></td>
+                    <td><input type="text" name="analista3_4" class="form-control" style="height: 35px;"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+	<div>
+	    <div class="row">
+	        <div class="form-group col-md-4">
+	            <label for="dataConclusao1">Data da conclusão da análise:</label>
+	            <input type="date" name="dataConclusao1" id="dataConclusao1" class="form-control">
+	        </div>
+	        <div class="form-group col-md-6">
+	            <label for="responsavelConclusao1">Responsável pela conclusão da análise:</label>
+	            <input type="text" name="responsavelConclusao1" id="responsavelConclusao1" class="form-control">
+	        </div>
+	    </div>
+    </div>
+    <div class="row">
+	    <div class="form-group col-md-6">
+	        <label>É necessário realizar análises microbiológicas ou hematológicas?</label>
+	        <div class="radio">
+	            <label><input type="radio" name="analiseMicro1" id="analiseMicroS1" value="simx">Sim</label><br>
+	            <label><input type="radio" name="analiseMicro1" id="analiseMicroN1" value="naox">Não</label>
+	        </div>      
+	    </div>
+	    <div class="form-group col-md-4">
+			    <label>Tipo:</label>
+			    <div class="checkbox">
+			        <label><input type="checkbox" name="microbiologica2">Microbiológica</label></br>
+			        <label><input type="checkbox" name="hematologica2">Hematológica</label></br>
+			        <label><input type="checkbox" name="citologica2">Citológica</label></br>
+			        <label><input type="checkbox" name="fisicoquimica">Físico-química</label>
+			        
+			    </div>
+			</div>
+	</div>
+			<div id="qualificacaoSection" style="display: none;">
+		    <div class="row">
+		        <div class="form-group col-md-6">
+		            <label>Qualificação:</label>
+		            <div class="radio">
+		                <label><input type="radio" name="qualificacao1" id="qualificado1" value="qualificado1">Qualificado</label><br>
+		                <label><input type="radio" name="qualificacao1" id="naoQualificado1" value="naoQualificado1">Não qualificado</label>
+		            </div>
+		        </div>
+		    </div>
+		    <div class="row">
+		        <div class="form-group col-md-6">
+		            <div id="observacoesSAP1" style="display: none;">
+		                <label><input type="radio" name="observacoesSAP1" id="observacoesSAP1" value="simA">Atualizar campo observações do cadastro do item no SAP</label>
+		            </div>
+		        </div>
+		    </div>
+		</div>
+</div>
+</div>
+
+<div id="panelcqm2" class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">CQM/CQH/CQFQ</h3>
+    </div>
+    <div class="panel-body">
+        <div class="form-group col-md-12">
+    <label>Nova Tabela de Análise</label>
+    <div id="tabelaContainer4">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th class="col-md-3">Análise</th>
+                    <th class="col-md-3">Especificação</th>
+                    <th class="col-md-3">Resultado</th>
+                    <th class="col-md-3">Analista</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input type="text" name="analise4_1" class="form-control" style="height: 35px;"></td>
+                    <td><input type="text" name="especificacao4_1" class="form-control" style="height: 35px;"></td>
+                    <td><textarea name="result4_1" class="form-control textarea-fixed-size" style="height: 35px;"></textarea></td>
+                    <td><input type="text" name="analista4_1" class="form-control" style="height: 35px;"></td>
+                </tr>
+                <tr>
+                    <td><input type="text" name="analise4_2" class="form-control" style="height: 35px;"></td>
+                    <td><input type="text" name="especificacao4_2" class="form-control" style="height: 35px;"></td>
+                    <td><textarea name="result4_2" class="form-control textarea-fixed-size" style="height: 35px;"></textarea></td>
+                    <td><input type="text" name="analista4_2" class="form-control" style="height: 35px;"></td>
+                </tr>
+                <tr>
+                    <td><input type="text" name="analise4_3" class="form-control" style="height: 35px;"></td>
+                    <td><input type="text" name="especificacao4_3" class="form-control" style="height: 35px;"></td>
+                    <td><textarea name="result4_3" class="form-control textarea-fixed-size" style="height: 35px;"></textarea></td>
+                    <td><input type="text" name="analista4_3" class="form-control" style="height: 35px;"></td>
+                </tr>
+                <tr>
+                    <td><input type="text" name="analise4_4" class="form-control" style="height: 35px;"></td>
+                    <td><input type="text" name="especificacao4_4" class="form-control" style="height: 35px;"></td>
+                    <td><textarea name="result4_4" class="form-control textarea-fixed-size" style="height: 35px;"></textarea></td>
+                    <td><input type="text" name="analista4_4" class="form-control" style="height: 35px;"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="row">
+	        <div class="form-group col-md-4">
+	            <label for="dataConclusao2">Data da conclusão da análise:</label>
+	            <input type="date" name="dataConclusao2" id="dataConclusao2" class="form-control">
+	        </div>
+	        <div class="form-group col-md-6">
+	            <label for="responsavelConclusao2">Responsável pela conclusão da análise:</label>
+	            <input type="text" name="responsavelConclusao2" id="responsavelConclusao2" class="form-control">
+	        </div>
+	    </div>
+
+    </div>
+</div>
+
+<div id="panelcqfqqualify" class="panel panel-success">
+    <div class="panel-heading">
+        <h3 class="panel-title">Qualificação</h3>
+    </div>
+    <div class="panel-body">
+        <div class="row">
+				 <div class="form-group col-md-6">
+				    <label>Qualificação:</label>
+				    <div class="radio">
+				        <label><input type="radio" name="qualificacao3" id="qualificado3" value="qualificado3">Qualificado</label><br>
+				        <label><input type="radio" name="qualificacao3" id="naoQualificado3" value="naoQualificado3">Não qualificado</label>
+				    </div>
+				</div>
+				
+				<div class="row" id="observacoesContainer" style="display: none;">
+				    <div class="form-group col-md-6">
+				        <div class="radio">
+				            <label><input type="radio" name="observacoesSAP3" id="observacoesSAP3" value="simA">Atualizar campo observações do cadastro do item no SAP</label>
+				        </div>
+				    </div>
+				</div>
+    </div>
+</div>
+</div>
+
+<div id="panelcomprasnotify2" class="panel panel-warning">
+    <div class="panel-heading">
+        <h3 class="panel-title">Compras notificação 2</h3>
+    </div>
+    <div class="panel-body">
+        <div>
+        	<label> Processo encerrado, verificar a conclusão e ao terminar de verificar clicar em enviar para finalizar.</label>
+        
+        </div>
+    </div>
+</div>
+</div>
+
+
+
+
+
+
+</form>
+</div>
+<script src="qualificacao.js"></script>
+<script src="descrever.js"></script>
+<script src="cqfqnao.js"></script>
+<script src="cookies.js"></script>
+</body>
+</html>
+
+       
+
+
+    
+   

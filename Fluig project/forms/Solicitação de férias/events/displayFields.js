@@ -1,0 +1,38 @@
+function displayFields(form, customHTML) {
+    var atv_atual = getValue("WKNumState");
+    var returnFromActivity9 = form.getValue("returnFromActivity9");
+    
+    log.info("atv_atual: " + atv_atual);
+    log.info("Return From Activity 9: " + returnFromActivity9);
+
+
+    if (atv_atual == 0 || atv_atual == 4) {
+    	log.info("Entrou na condição para atividades 0 ou 4.");
+        form.setVisibleById("panel2", atv_atual == 4 && returnFromActivity9 == 'true');
+        form.setVisibleById("panel3", false);
+        form.setVisibleById("panel4", false);
+        form.setVisibleById("panel5", false);
+    }
+
+        // Resetar a flag após usar
+        if (atv_atual == 4) {
+        	log.info("Resetando returnFromActivity9 para false.");
+            form.setValue("returnFromActivity9", 'false');
+        }
+    else if (atv_atual == 9) {
+        log.info("Entrou na condição para atividade 9.");
+        form.setVisibleById("panel3", false);
+        form.setVisibleById("panel4", false);
+        form.setVisibleById("panel5", false);
+        form.setValue("returnFromActivity9", 'true');
+    }
+    else if (atv_atual == 14) {
+        log.info("Entrou na condição para atividade 14.");
+        form.setVisibleById("panel4", false);
+        form.setVisibleById("panel5", false);
+    }
+    else if (atv_atual == 18) {
+        log.info("Entrou na condição para atividade 18.");
+        form.setVisibleById("panel5", false);
+    }
+}

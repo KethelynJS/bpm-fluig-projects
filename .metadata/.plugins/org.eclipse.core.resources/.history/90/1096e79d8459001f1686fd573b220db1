@@ -1,0 +1,66 @@
+// Funções para a Tabela 1 (tabelaRegistros)
+function addNewRecord() {
+    var tabela = document.getElementById('tabelaRegistros').getElementsByTagName('tbody')[0];
+    var newRow = tabela.insertRow();
+    rowIdCounter++; // Incrementa o contador de IDs
+    var rowId = 'row_' + rowIdCounter; // Gera um ID único para a linha
+
+    var cells = [
+        '<input type="text" name="codigo_' + rowId + '" class="form-control col-md-3">',
+        '<input type="text" name="lote_' + rowId + '" class="form-control col-md-3">',
+        '<input type="number" name="quantidade_' + rowId + '" class="form-control col-md-2">',
+        '<input type="date" name="datafabricacao_' + rowId + '" class="form-control col-md-2">',
+        '<input type="date" name="datavalidade_' + rowId + '" class="form-control col-md-2">',
+        '<button type="button" onclick="removeRow(\'' + rowId + '\')">Remover</button>'
+    ];
+
+    cells.forEach(function(cellHtml, cellIndex) {
+        var newCell = newRow.insertCell(cellIndex);
+        newCell.innerHTML = cellHtml;
+        newCell.id = rowId; // Define o ID da célula
+    });
+
+    saveTableData(); // Salva os dados após adicionar uma nova linha
+}
+
+function removeRow(rowId) {
+    var row = document.querySelector(`#tabelaRegistros tbody #${rowId}`).parentNode.parentNode;
+    row.parentNode.removeChild(row);
+    saveTableData(); // Salva os dados após remover uma linha
+}
+
+// Funções para a Tabela 2 (tabelaRegistross)
+function addNewRecord2() {
+    var tabela = document.getElementById('tabelaRegistross').getElementsByTagName('tbody')[0];
+    var newRow = tabela.insertRow();
+    rowIdCounter++; // Incrementa o contador de IDs
+    var rowId = 'row2_' + rowIdCounter; // Gera um ID único para a linha
+
+    var cells = [
+        '<input type="text" name="causa_' + rowId + '" class="form-control col-md-6">',
+        '<input type="text" name="porque_' + rowId + '" class="form-control col-md-6">',
+        '<button type="button" onclick="removeRow2(\'' + rowId + '\')">Remover</button>'
+    ];
+
+    cells.forEach(function(cellHtml, cellIndex) {
+        var newCell = newRow.insertCell(cellIndex);
+        newCell.innerHTML = cellHtml;
+        newCell.id = rowId; // Define o ID da célula
+    });
+
+    saveTableData2(); // Salva os dados após adicionar uma nova linha
+}
+
+function removeRow2(rowId) {
+    var row = document.querySelector(`#tabelaRegistross tbody #${rowId}`).parentNode.parentNode;
+    row.parentNode.removeChild(row);
+    saveTableData2(); // Salva os dados após remover uma linha
+}
+
+// Funções para salvar e carregar dados permanecem inalteradas
+
+// Inicializa as tabelas ao carregar a página
+window.onload = function() {
+    loadTableData();
+    loadTableData2();
+};

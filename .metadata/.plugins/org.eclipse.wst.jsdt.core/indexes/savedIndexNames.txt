@@ -1,0 +1,23 @@
+INDEX VERSION 1.4+C:\Users\kethelyn.skripnik\eclipse-workspace1\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+2096080084.index
+2085206610.index
+810610908.index
+3277813549.index
+972103386.index
+252297542.index
+4141959890.index
+83789015.index
+1029250088.index
+3759468801.index
+7879940.index
+1290359201.index
+2183548965.index
+4033949062.index
+260940650.index
+335194619.index
+1925509118.index
+2513200162.index
+437951854.index
+2157243265.index
+1090921366.index
+1792314141.index

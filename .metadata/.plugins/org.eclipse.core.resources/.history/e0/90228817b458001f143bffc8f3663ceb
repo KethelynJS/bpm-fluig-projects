@@ -1,0 +1,274 @@
+<html>
+<head>
+	<link type="text/css" rel="stylesheet" href="/style-guide/css/fluig-style-guide.min.css"/>
+	<script type="text/javascript" src="/portal/resources/js/jquery/jquery.js"></script>
+	<script type="text/javascript" src="/portal/resources/js/jquery/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="/portal/resources/js/mustache/mustache-min.js"></script>
+	<script type="text/javascript" src="/style-guide/js/fluig-style-guide.min.js" charset="utf-8"></script>
+	
+	<style>
+        .form-control {
+            margin-bottom: 5px; /* Ajusta o espaçamento inferior */
+        }
+        td {
+            padding: 5px; /* Ajusta o espaçamento das células */
+        }
+        
+         #outrosTexto {
+            display: none;
+            margin-top: 10px; }
+            
+        #aumentar {
+    margin-top: 20px; /* Adiciona margem acima da div */
+    
+}
+        
+    </style>
+</head>
+<body>
+<div class="fluig-style-guide">
+<form name="form" role="form">
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title"><i class="fluigicon fluigicon-question-sign icon-lg" aria-hidden="true"></i> Motivo</h3>
+    </div>
+    <div class="panel-body">
+        <div class="row">
+    <div class="form-group">
+        <div class="radio">
+            <label><input type="radio" name="prioridade" id="desempenho" value="sim">Desempenho Insatisfatório</label></br>
+            <label><input type="radio" name="prioridade" id="tecnovigilancia" value="nao">Tecnovigilância</label></br>
+            <label><input type="radio" name="prioridade" id="outros" value="nao">Outros</label>
+            <input type="text" id="outrosTexto" class="form-control" name="outros1" placeholder="Por favor, especifique">
+        </div>		
+</div>
+    </div>
+</div>
+</div>
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title"><i class="fluigicon fluigicon-user-search icon-lg" aria-hidden="true"></i> Setor no qual ocorreu o desvio</h3>
+    </div>
+    <div class="panel-body">
+        <div class="row">
+    <div class="form-group">
+        <div class="radio">
+            <label><input type="radio" name="setores" id="almox1" value="sim">Almox. Suprimentos</label></br>
+            <label><input type="radio" name="setores" id="almox2" value="nao">Almox. PA/Expedição</label></br>
+            <label><input type="radio" name="setores" id="bioquimica" value="nao">Bioquímica</label></br>
+            <label><input type="radio" name="setores" id="compras" value="nao">Compras</label></br>
+            <label><input type="radio" name="setores" id="qualid" value="nao">Controle de Qualidade</label></br>
+            <label><input type="radio" name="setores" id="corantes" value="nao">Corantes</label></br>
+            <label><input type="radio" name="setores" id="comercial" value="nao">Comercial</label></br>
+            <label><input type="radio" name="setores" id="cultura" value="nao">Meio de Cultura</label></br>
+            <label><input type="radio" name="setores" id="equipamento" value="nao">Equipamentos</label></br>
+            <label><input type="radio" name="setores" id="embalagem" value="nao">Embalagem</label></br>
+            <label><input type="radio" name="setores" id="financeiro" value="nao">Financeiro/Faturamento</label></br>
+            <label><input type="radio" name="setores" id="gestao" value="nao">Gestão de Pessoas</label></br>
+            <label><input type="radio" name="setores" id="garantia" value="nao">Garantia da Qualidade</label></br>
+            <label><input type="radio" name="setores" id="pd" value="nao">P&D</label></br>
+            <label><input type="radio" name="setores" id="setornenhum" value="nao">Nenhum setor específico</label>
+        </div>		
+</div>
+    </div>
+    </div>
+</div>
+<div class="row">
+	 <div>
+		<table class="table"  id="tabelaRegistros" dataset="linhaDinamicaDataset" datadatasetkey="myDataset" datadatasetvalue="dynamicTableData">>
+		<thead>
+		    <tr>
+		        <th>Código</th>
+		        <th>Lote</th>
+		        <th>Quantidade</th>
+		        <th>Data de Fabricação</th>
+		        <th>Data de Validade</th>
+		    </tr>
+		</thead>
+		<tbody>
+		    <tr>
+		        <td><input type="text" name="codigo_1" class="form-control col-md-3"></td>
+		        <td><input type="text" name="lote_1" class="form-control col-md-3"></td>
+		        <td><input type="number" name="quantidade_1" class="form-control col-md-2"></td>
+		        <td><input type="date" name="datafabricacao_1" class="form-control col-md-2"></td>
+		        <td><input type="date" name="datavalidade_1" class="form-control col-md-2"></td>
+		        <td><button type="button" onclick="removeRow(this)">Remover</button></td>
+		    </tr>
+		</tbody>
+		</table>
+		</div>
+		</div>
+		<button type="button" class="btn btn-success" onclick="addNewRecord()" id="novoRegistroBtn">Novo Registro</button>
+		<input type="hidden" name="linhaDinamicaDataset" id="linhaDinamicaDataset">
+		
+
+<div id="aumentar" class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title"><i class="fluigicon fluigicon-pen icon-lg" aria-hidden="true"></i> Observações</h3>
+    </div>
+    <div class="panel-body">
+        <div class="row">
+    <div class="form-group col-md-12">
+        <label for="consideracoes">Descrição da não conformidade</label>
+        <textarea rows="5" name="consideracoes" id="consideracoes" class="form-control"></textarea>
+    </div>
+    </div>
+    <div class="row">
+    <div class="form-group col-md-6">
+        <label for="custo">Custo</label>
+        <input type="custo" name="custo" class="form-control" id="custo" placeholder="Coloque o custo">
+    </div>
+    </div>
+</div>
+</div>
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">Relatório</h3>
+    </div>
+    <div class="panel-body">
+        <div class="row">
+    <div class="form-group col-md-12">
+        <label for="documental"><b>A. DOCUMENTAL</b></label>
+        <textarea rows="5" name="documental" id="documental" class="form-control"></textarea>
+    </div>
+    </div>
+    <div class="row">
+    <div class="form-group col-md-12">
+        <label for="brainstorm"><b>B. BRAINSTORMING</b></label>
+        <textarea rows="5" name="brainstorm" id="brainstorm" class="form-control"></textarea>
+    </div>
+    </div>
+    <div class="row">
+    <div class="form-group col-md-6">
+        <label for="solicitantepn"><b>C. ISHIKAWA</b></label></br>
+    </div>
+    <div class="row">
+    <div class="form-group col-md-12">
+        <label for="meioambiente">Meio Ambiente</label>
+        <input type="meioambiente" name="meioambiente" class="form-control" id="meioambiente" placeholder="">
+    </div>
+    </div>
+    
+    <div class="form-group col-md-6">
+        <label for="maquina">Máquina</label>
+        <input type="maquina" name="maquina" class="form-control" id="maquina" placeholder="">
+    </div>
+    
+    <div class="row">
+    <div class="form-group col-md-6">
+        <label for="metodo">Métodos</label>
+        <input type="metodo" name="metodo" class="form-control" id="metodo" placeholder="">
+    </div>
+    </div>
+    
+    <div class="form-group col-md-6">
+        <label for="material">Material</label>
+        <input type="material" name="material" class="form-control" id="material" placeholder="">
+    </div>
+    
+    <div class="row">
+    <div class="form-group col-md-6">
+        <label for="maodeobra">Mão de Obra</label>
+        <input type="maodeobra" name="maodeobra" class="form-control" id="maodeobra" placeholder="">
+    </div>
+    </div>
+</div>
+</div>
+</div>
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">D. 5 POR QUÊS</h3>
+    </div>
+    <div class="panel-body">
+        <div class="row">
+	 <div>
+		<table class="table"  id="tabelaRegistross">
+		<thead>
+		    <tr>
+		        <th>Causa</th>
+		        <th>Porquê?</th>
+		        
+		    </tr>
+		</thead>
+		<tbody>
+		    <tr>
+		        <td><input type="text" name="causa" class="form-control col-md-6"></td>
+		        <td><input type="text" name="porque" class="form-control col-md-6"></td>
+		        <td><button type="button" onclick="removeRow2(this)">Remover</button></td>
+		        
+		    </tr>
+		</tbody>
+		</table>
+		</div>
+		</div>
+		<button type="button" class="btn btn-success" onclick="addNewRecord2()" id="novoRegistroBtnn">Novo Registro</button>
+    </div>
+    <input type="hidden" name="tabela2Data" id="tabela2Data">
+    
+</div>
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">Existem ações corretivas para serem cadastradas?</h3>
+    </div>
+    <div class="panel-body">
+        <div class="row">
+    <div class="form-group">
+        <div class="radio">
+            <label><input type="radio" name="processo" id="processo" value="sim">Sim. Cadastrar no Processo ações corretivas/preventivas com o motivo desse processo</label></br>
+            <label><input type="radio" name="processo" id="processanao" value="nao">Não.</label>
+        </div>		
+	</div>
+    </div>
+    <div class="row">
+    <div class="form-group col-md-12">
+        <label for="observac">Observações e número das ações corretivas</label>
+        <textarea rows="3" name="observac" id="observac" class="form-control"></textarea>
+    </div>
+    </div>
+    </div>
+</div>
+    <div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">Conclusão</h3>
+    </div>
+    <div class="panel-body">
+         <div class="row">
+    <div class="form-group">
+        <div class="radio">
+            <label><input type="radio" name="conclusao" id="confirmada" value="sim">CONFIRMADA por meio de ensaios técnicos ou por evidências visíveis;</label></br>
+            <label><input type="radio" name="conclusao" id="provavel" value="nao">PROVÁVEL não foi confirmada mas existem fortes evidências do desvio da qualidade do produto ou da irregularidade</label>
+            <label><input type="radio" name="conclusao" id="inconclusiva" value="nao">INCONCLUSIVA não foi confirmada. Pois as informações levantadas durante a investigação são insuficientes ou contraditórias e não podem ser completadas ou verificadas</label>
+            <label><input type="radio" name="conclusao" id="descartada" value="nao">DESCARTADA quando não confirmada;</label>
+        </div>		
+	</div>
+    </div>
+    </div>
+</div>
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">Validação GQ</h3>
+    </div>
+    <div class="panel-body">
+         <div class="row">
+    <div class="form-group">
+        <div class="radio">
+            <label><input type="radio" name="processo" id="processo" value="sim2">Sim. Cadastrar no Processo ações corretivas/preventivas com o motivo desse processo</label></br>
+            <label><input type="radio" name="processo" id="processanao" value="nao2">Não.</label>
+        </div>		
+	</div>
+    </div>
+    <div class="row">
+    <div class="form-group col-md-12">
+        <label for="observacgq">Observações GQ</label>
+        <textarea rows="3" name="observacgq" id="observacgq" class="form-control"></textarea>
+    </div>
+    </div>
+    </div>
+</div>
+
+</form>
+</div>
+<script src="tabelaUm.js"></script>
+<script src="tabelaDois.js"></script>
+</body>
+</html>

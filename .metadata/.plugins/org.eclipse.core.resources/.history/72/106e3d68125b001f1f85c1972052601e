@@ -1,0 +1,26 @@
+function displayFields(form,customHTML){
+	var atv_atual = getValue("WKNumState");
+	
+	log.info("atv_atual: " + atv_atual);
+    
+    
+    if (atv_atual == 0 || atv_atual == 4) {
+        form.setVisibleById("painelwarning3", false);
+        form.setVisibleById("painelwarning4", false);
+        form.setVisibleById("painelwarning5", false);
+        form.setVisibleById("painelwarning6", false);
+        form.setVisibleById("painelwarning7", false);
+    }
+
+	
+	else if(atv_atual == 5){
+        form.setVisibleById("painelwarning6", false);
+        form.setVisibleById("painelwarning7", false);
+	}
+    
+	else if(atv_atual == 9){
+        form.setVisibleById("painelwarning6", false);
+        form.setVisibleById("painelwarning7", false);
+	}
+    
+}

@@ -1,0 +1,208 @@
+function displayFields(form, customHTML) {
+    var atv_atual = getValue("WKNumState");
+    var returnFromActivity62 = form.getValue("returnFromActivity62");
+
+    log.info("atv_atual: " + atv_atual);
+    log.info("Return From Activity 62: " + returnFromActivity62);
+
+    // Atividades 0 e 4
+    if (atv_atual == 0 || atv_atual == 4) {
+        // Oculta todos os painéis, exceto os que devem ser exibidos
+        form.setVisibleById("panelalmox", false);
+        form.setVisibleById("panelcqfq1", false);
+        form.setVisibleById("panelcqm1", false);
+        form.setVisibleById("panelcqfq2", false);
+        form.setVisibleById("panelcomprasNotify", false);
+        form.setVisibleById("panelpcp", false);
+        form.setVisibleById("panelproducao", false);
+        form.setVisibleById("panelcqfq3", false);
+        form.setVisibleById("panelcqm2", false);
+        form.setVisibleById("panelcqfqqualify", false);
+        form.setVisibleById("panelcomprasnotify2", false);
+
+        // Exibe o painel `validacao_anexoo` se estiver retornando da atividade 62
+        if (atv_atual == 4) {
+            form.setVisibleById("validacao_anexoo", returnFromActivity62 == 'true');
+            form.setVisibleById("panelcompras", true); // Exibe o painel `panelcompras` na atividade 4
+            log.info("Painel validacao_anexoo: " + (returnFromActivity62 == 'true' ? 'visível' : 'oculto'));
+        } else {
+            form.setVisibleById("validacao_anexoo", false);
+        }
+
+        // Resetar a flag após o uso
+        if (atv_atual == 4) {
+            form.setValue("returnFromActivity62", 'false');
+        }
+    }
+    
+    // Atividade 62
+    else if (atv_atual == 62) {
+        // Configura a flag para indicar que voltou da atividade 62
+        form.setValue("returnFromActivity62", 'true');
+        
+        // Oculta todos os painéis, exceto o painel `validacao_anexoo`
+        form.setVisibleById("panelalmox", false);
+        form.setVisibleById("panelcqfq1", false);
+        form.setVisibleById("panelcqm1", false);
+        form.setVisibleById("panelcqfq2", false);
+        form.setVisibleById("panelcomprasNotify", false);
+        form.setVisibleById("panelpcp", false);
+        form.setVisibleById("panelproducao", false);
+        form.setVisibleById("panelcqfq3", false);
+        form.setVisibleById("panelcqm2", false);
+        form.setVisibleById("panelcqfqqualify", false);
+        form.setVisibleById("panelcomprasnotify2", false);
+        form.setVisibleById("validacao_anexoo", true);
+    }
+}
+
+
+	
+	else if(atv_atual == 5){
+		form.setVisibleById("panelcqfq1", false);
+        form.setVisibleById("panelcqm1", false);
+        form.setVisibleById("panelcqfq2", false);
+        form.setVisibleById("panelcomprasNotify", false);
+        form.setVisibleById("panelpcp", false);
+        form.setVisibleById("panelproducao", false);
+        form.setVisibleById("panelcqfq3", false);
+        form.setVisibleById("panelcqm2", false);
+        form.setVisibleById("panelcqfqqualify", false);
+        form.setVisibleById("panelcomprasnotify2", false);
+        form.setVisibleById("validacao_anexoo", false);
+		
+	}
+    
+	else if(atv_atual == 15){
+		form.setVisibleById("panelcqm1", false);
+        form.setVisibleById("panelcqfq2", false);
+        form.setVisibleById("panelcomprasNotify", false);
+        form.setVisibleById("panelpcp", false);
+        form.setVisibleById("panelproducao", false);
+        form.setVisibleById("panelcqfq3", false);
+        form.setVisibleById("panelcqm2", false);
+        form.setVisibleById("panelcqfqqualify", false);
+        form.setVisibleById("panelcomprasnotify2", false);
+	}
+	
+    
+	else if(atv_atual == 19){
+		form.setVisibleById("panelcqfq2", false);
+		form.setVisibleById("panelcomprasNotify", false);
+        form.setVisibleById("panelpcp", false);
+        form.setVisibleById("panelproducao", false);
+        form.setVisibleById("panelcqfq3", false);
+        form.setVisibleById("panelcqm2", false);
+        form.setVisibleById("panelcqfqqualify", false);
+        form.setVisibleById("panelcomprasnotify2", false);
+        form.setVisibleById("validacao_anexoo", false);
+		}
+	    
+	else if(atv_atual == 21){
+		form.setVisibleById("panelcomprasNotify", false);
+        form.setVisibleById("panelpcp", false);
+        form.setVisibleById("panelproducao", false);
+        form.setVisibleById("panelcqfq3", false);
+        form.setVisibleById("panelcqm2", false);
+        form.setVisibleById("panelcqfqqualify", false);
+        form.setVisibleById("panelcomprasnotify2", false);
+        form.setVisibleById("validacao_anexoo", false);
+	}
+	    
+	else if(atv_atual == 25){
+        form.setVisibleById("panelpcp", false);
+        form.setVisibleById("panelproducao", false);
+        form.setVisibleById("panelcqfq3", false);
+        form.setVisibleById("panelcqm2", false);
+        form.setVisibleById("panelcqfq2", false);
+        form.setVisibleById("panelcqm1", false);
+        form.setVisibleById("panelcqfqqualify", false);
+        form.setVisibleById("panelcomprasnotify2", false);
+        form.setVisibleById("validacao_anexoo", false);
+	}
+    
+	else if(atv_atual == 30){
+		form.setVisibleById("panelcomprasNotify", false);
+        form.setVisibleById("panelproducao", false);
+        form.setVisibleById("panelcqfq3", false);
+        form.setVisibleById("panelcqm2", false);
+        form.setVisibleById("panelcqm1", false);
+        form.setVisibleById("panelcqfq2", false);
+        form.setVisibleById("panelcqfqqualify", false);
+        form.setVisibleById("panelcomprasnotify2", false);
+        form.setVisibleById("validacao_anexoo", false);
+	}
+    
+	else if(atv_atual == 51){
+		form.setVisibleById("panelcomprasNotify", false);
+        form.setVisibleById("panelproducao", false);
+        form.setVisibleById("panelcqfq3", false);
+        form.setVisibleById("panelcqm2", false);
+        form.setVisibleById("panelcqfqqualify", false);
+        form.setVisibleById("panelcomprasnotify2", false);
+        form.setVisibleById("validacao_anexoo", false);
+	}
+    
+	else if(atv_atual == 33){
+		form.setVisibleById("panelcomprasNotify", false);
+		form.setVisibleById("panelcqfq3", false);
+        form.setVisibleById("panelcqm2", false);
+        form.setVisibleById("panelcqm1", false);
+        form.setVisibleById("panelcqfq2", false);
+        form.setVisibleById("panelcqfqqualify", false);
+        form.setVisibleById("panelcomprasnotify2", false);
+        form.setVisibleById("validacao_anexoo", false);
+		}
+    
+	else if(atv_atual == 53){
+		form.setVisibleById("panelcomprasNotify", false);
+		form.setVisibleById("panelcqfq3", false);
+        form.setVisibleById("panelcqm2", false);
+        form.setVisibleById("panelcqfqqualify", false);
+        form.setVisibleById("panelcomprasnotify2", false);
+        form.setVisibleById("validacao_anexoo", false);
+		}
+	    
+	else if(atv_atual == 36){
+		form.setVisibleById("panelcomprasNotify", false);
+		form.setVisibleById("panelcqm2", false);
+		form.setVisibleById("panelcqm1", false);
+        form.setVisibleById("panelcqfq2", false);
+        form.setVisibleById("panelcqfqqualify", false);
+        form.setVisibleById("panelcomprasnotify2", false);
+        form.setVisibleById("validacao_anexoo", false);
+	}
+    
+	else if(atv_atual == 55){
+		form.setVisibleById("panelcomprasNotify", false);
+		form.setVisibleById("panelcqm2", false);
+        form.setVisibleById("panelcqfqqualify", false);
+        form.setVisibleById("panelcomprasnotify2", false);
+        form.setVisibleById("validacao_anexoo", false);
+	}
+    
+else if(atv_atual == 45){
+	form.setVisibleById("panelcomprasNotify", false);
+	form.setVisibleById("validacao_anexoo", false);
+	}
+    
+else if(atv_atual == 58){
+	form.setVisibleById("panelcomprasNotify", false);
+	form.setVisibleById("panelcqfqqualify", false);
+	form.setVisibleById("panelcqm2", false);
+	form.setVisibleById("validacao_anexoo", false);
+}
+	    
+	else if(atv_atual == 40){
+		form.setVisibleById("panelcomprasNotify", false);
+		form.setVisibleById("panelcqfqqualify", false);
+        form.setVisibleById("panelcomprasnotify2", false);
+        form.setVisibleById("validacao_anexoo", false);
+	}
+    
+	else if(atv_atual == 42){
+		form.setVisibleById("panelcomprasNotify", false);
+		form.setVisibleById("panelcomprasnotify2", false);
+		
+	}
+}

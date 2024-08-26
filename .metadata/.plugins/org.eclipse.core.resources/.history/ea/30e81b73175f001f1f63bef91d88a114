@@ -1,0 +1,16 @@
+document.addEventListener('DOMContentLoaded', function() {
+    // Obtém a data e hora atuais
+    const agora = new Date();
+
+    // Formata a data no formato YYYY-MM-DD
+    const dataAtual = agora.toISOString().split('T')[0];
+    
+    // Formata a hora no formato HH:MM:SS
+    const horaAtual = agora.toTimeString().split(' ')[0];
+
+    // Define a data e a hora para os campos
+    document.getElementById('datacalendario').value = dataAtual;
+    document.getElementById('data_final_microbiologico').value = `${dataAtual} ${horaAtual}`;
+    document.getElementById('data_final_esterilidade').value = `${dataAtual} ${horaAtual}`;
+    document.getElementById('datainicio2').value = `${dataAtual} ${horaAtual}`;
+});

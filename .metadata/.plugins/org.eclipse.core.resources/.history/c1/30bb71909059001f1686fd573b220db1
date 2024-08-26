@@ -1,0 +1,160 @@
+let rowIdCounter = 0; // Contador para IDs exclusivos
+
+// Funções para a Tabela 1 (tabelaRegistros)
+function addNewRecord() {
+    var tabela = document.getElementById('tabelaRegistros').getElementsByTagName('tbody')[0];
+    var newRow = tabela.insertRow();
+    rowIdCounter++; // Incrementa o contador de IDs
+    var rowId = 'row_' + rowIdCounter; // Gera um ID único para a linha
+
+    var cells = [
+        '<input type="text" name="codigo_' + rowId + '" class="form-control col-md-3">',
+        '<input type="text" name="lote_' + rowId + '" class="form-control col-md-3">',
+        '<input type="number" name="quantidade_' + rowId + '" class="form-control col-md-2">',
+        '<input type="date" name="datafabricacao_' + rowId + '" class="form-control col-md-2">',
+        '<input type="date" name="datavalidade_' + rowId + '" class="form-control col-md-2">',
+        '<button type="button" onclick="removeRow(\'' + rowId + '\')">Remover</button>'
+    ];
+
+    cells.forEach(function(cellHtml, cellIndex) {
+        var newCell = newRow.insertCell(cellIndex);
+        newCell.innerHTML = cellHtml;
+        newCell.id = rowId; // Define o ID da célula
+    });
+
+    saveTableData();
+}
+
+function removeRow(rowId) {
+    var row = document.getElementById(rowId).parentNode.parentNode;
+    row.parentNode.removeChild(row);
+    saveTableData();
+}
+
+function saveTableData() {
+    var tabela = document.getElementById('tabelaRegistros').getElementsByTagName('tbody')[0];
+    var rows = tabela.rows;
+    var data = [];
+
+    for (var i = 0; i < rows.length; i++) {
+        var row = rows[i];
+        var rowId = row.cells[0].id; // Obtém o ID da linha
+
+        var rowData = {
+            id: rowId,
+            codigo: row.cells[0].querySelector('input').value || '',
+            lote: row.cells[1].querySelector('input').value || '',
+            quantidade: row.cells[2].querySelector('input').value || '',
+            datafabricacao: row.cells[3].querySelector('input').value || '',
+            datavalidade: row.cells[4].querySelector('input').value || ''
+        };
+        data.push(rowData);
+    }
+
+    console.log("Dados salvos (Tabela 1):", JSON.stringify(data)); // Log dos dados salvos
+    document.getElementById('linhaDinamicaDataset').value = JSON.stringify(data);
+}
+
+function loadTableData() {
+    var data = JSON.parse(document.getElementById('linhaDinamicaDataset').value || '[]');
+    var tabela = document.getElementById('tabelaRegistros').getElementsByTagName('tbody')[0];
+
+    tabela.innerHTML = ''; // Limpa a tabela antes de carregar novos dados
+
+    data.forEach(function(item) {
+        var newRow = tabela.insertRow();
+
+        newRow.insertCell(0).innerHTML = '<input type="text" name="codigo_' + item.id + '" class="form-control col-md-3" value="' + (item.codigo || '') + '">';
+        newRow.insertCell(1).innerHTML = '<input type="text" name="lote_' + item.id + '" class="form-control col-md-3" value="' + (item.lote || '') + '">';
+        newRow.insertCell(2).innerHTML = '<input type="number" name="quantidade_' + item.id + '" class="form-control col-md-2" value="' + (item.quantidade || '') + '">';
+        newRow.insertCell(3).innerHTML = '<input type="date" name="datafabricacao_' + item.id + '" class="form-control col-md-2" value="' + (item.datafabricacao || '') + '">';
+        newRow.insertCell(4).innerHTML = '<input type="date" name="datavalidade_' + item.id + '" class="form-control col-md-2" value="' + (item.datavalidade || '') + '">';
+        newRow.insertCell(5).innerHTML = '<button type="button" onclick="removeRow(\'' + item.id + '\')">Remover</button>';
+    });
+
+    // Atualiza o contador de IDs
+    rowIdCounter = data.length ? Math.max(...data.map(item => parseInt(item.id.split('_')[1]))) : 0;
+
+    // Adiciona uma nova linha em branco se a tabela estiver vazia
+    if (tabela.rows.length === 0) {
+        addNewRecord();
+    }
+}
+
+// Funções para a Tabela 2 (tabelaRegistross)
+function addNewRecord2() {
+    var tabela = document.getElementById('tabelaRegistross').getElementsByTagName('tbody')[0];
+    var newRow = tabela.insertRow();
+    rowIdCounter++; // Incrementa o contador de IDs
+    var rowId = 'row2_' + rowIdCounter; // Gera um ID único para a linha
+
+    var cells = [
+        '<input type="text" name="causa_' + rowId + '" class="form-control col-md-6">',
+        '<input type="text" name="porque_' + rowId + '" class="form-control col-md-6">',
+        '<button type="button" onclick="removeRow2(\'' + rowId + '\')">Remover</button>'
+    ];
+
+    cells.forEach(function(cellHtml, cellIndex) {
+        var newCell = newRow.insertCell(cellIndex);
+        newCell.innerHTML = cellHtml;
+        newCell.id = rowId; // Define o ID da célula
+    });
+
+    saveTableData2();
+}
+
+function removeRow2(rowId) {
+    var row = document.getElementById(rowId).parentNode.parentNode;
+    row.parentNode.removeChild(row);
+    saveTableData2();
+}
+
+function saveTableData2() {
+    var tabela = document.getElementById('tabelaRegistross').getElementsByTagName('tbody')[0];
+    var rows = tabela.rows;
+    var data = [];
+
+    for (var i = 0; i < rows.length; i++) {
+        var row = rows[i];
+        var rowId = row.cells[0].id; // Obtém o ID da linha
+
+        var rowData = {
+            id: rowId,
+            causa: row.cells[0].querySelector('input').value || '',
+            porque: row.cells[1].querySelector('input').value || ''
+        };
+        data.push(rowData);
+    }
+
+    console.log("Dados salvos (Tabela 2):", JSON.stringify(data)); // Log dos dados salvos
+    document.getElementById('tabela2Data').value = JSON.stringify(data);
+}
+
+function loadTableData2() {
+    var data = JSON.parse(document.getElementById('tabela2Data').value || '[]');
+    var tabela = document.getElementById('tabelaRegistross').getElementsByTagName('tbody')[0];
+
+    tabela.innerHTML = ''; // Limpa a tabela antes de carregar novos dados
+
+    data.forEach(function(item) {
+        var newRow = tabela.insertRow();
+
+        newRow.insertCell(0).innerHTML = '<input type="text" name="causa_' + item.id + '" class="form-control col-md-6" value="' + (item.causa || '') + '">';
+        newRow.insertCell(1).innerHTML = '<input type="text" name="porque_' + item.id + '" class="form-control col-md-6" value="' + (item.porque || '') + '">';
+        newRow.insertCell(2).innerHTML = '<button type="button" onclick="removeRow2(\'' + item.id + '\')">Remover</button>';
+    });
+
+    // Atualiza o contador de IDs
+    rowIdCounter = data.length ? Math.max(...data.map(item => parseInt(item.id.split('_')[1]))) : 0;
+
+    // Adiciona uma nova linha em branco se a tabela estiver vazia
+    if (tabela.rows.length === 0) {
+        addNewRecord2();
+    }
+}
+
+// Inicializa as tabelas ao carregar a página
+window.onload = function() {
+    loadTableData();
+    loadTableData2();
+};

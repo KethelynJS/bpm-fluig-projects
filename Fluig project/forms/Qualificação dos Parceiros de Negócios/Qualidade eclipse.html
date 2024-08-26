@@ -1,0 +1,145 @@
+<html>
+<head>
+	<link type="text/css" rel="stylesheet" href="/style-guide/css/fluig-style-guide.min.css"/>
+	<script type="text/javascript" src="/portal/resources/js/jquery/jquery.js"></script>
+	<script type="text/javascript" src="/portal/resources/js/jquery/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="/portal/resources/js/mustache/mustache-min.js"></script>
+	<script type="text/javascript" src="/style-guide/js/fluig-style-guide.min.js" charset="utf-8"></script>
+	
+	<style>
+        
+        .info-textarea {
+            width: 100%;
+            height: 100px; /* Ajuste a altura conforme necessário */
+            font-size: 16px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            box-sizing: border-box; /* Inclui padding e border na largura total */
+            background-color: #f9f9f9; /* Cor de fundo para destacar a área de texto */
+        }
+    </style>
+</head>
+<body>
+<div class="fluig-style-guide">
+<form name="form" role="form">
+<div id="documents" class="panel panel-warning">
+    <div class="panel-heading">
+        <h3 class="panel-title"><i class="flaticon flaticon-documents icon-lg" aria-hidden="true"></i> Documentos mínimos necessários para Qualificação dos PN's</h3>
+    </div>
+    <div class="panel-body">
+        <div class="row">
+	    <div class="form-group col-md-12">
+	        <label for="documents"></label>
+	        <textarea rows="5"  name="documents" id="infoText" class="info-textarea" readonly>"FORNECEDORES COMPONENTES NÃO CRÍTICOS:  FOR 2.5.6 - Qualificação Fornecedores de Componentes Não Críticos; Termo de Conhecimento e Conformidade de Fornecedores; Licença Sanitária e/ou Alvará Localização e Funcionamento; <br>  FORNECEDORES COMPONENTES CRÍTICOS:  FOR 2.5.1 - Qualificação Fornecedores de Componentes Críticos;  Termo de Conhecimento e Conformidade de Fornecedores; Licença Sanitária e/ou Alvará Localização e Funcionamento; Certidão de Regularidade/ Responsabilidade Técnica; Certificado de registro do Exército (se aplicável); Certificado de Vistoria Corpo de Bombeiros (se aplicável); Licença de Funcionamento da polícia Federal (se aplicável); Certificado do Órgão ambiental (se aplicável);  DISTRIBUIDORES: FOR 2.5.3 - Qualificação de Distribuidores; AFE de produtos para saúde/correlatos; Licença Sanitária; Certidão de Regularidade/ Responsabilidade Técnica;  TRANSPORTADORAS:  FOR 2.5.4 - Qualificação de Transportadoras;  AFE de produtos para saúde/correlatos; Licença Sanitária; Certidão de Regularidade/ Responsabilidade Técnica;   PRESTADORES DE SERVIÇOS:  FOR 2.5.5 - Qualificação Prestadores Serviços Terceirizados; Comprovante de Capacitação Técnica/Profissional: cópia dos documentos que comprovam tal capacitação (para profissionais autônomos; profissionais liberais e pequenas empresas, a comprovação profissional pode apresentar-se na forma de diploma ou certificado de curso superior ou específico, carta de referência, lista de clientes referenciais, entre outros)"</textarea>
+	    </div>
+	    </div>
+    </div>
+</div>
+    <div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title"><i class="flaticon flaticon-person icon-xl" aria-hidden="true"></i>Solicitante</h3>
+    </div>
+    <div class="panel-body">
+        <div class="row">
+			<div class="form-group col-md-6">
+				<label for="solicitantepn">Nome do PN</label>
+				<input type="solicitante" name="solicitantepn" class="form-control" id="solicitantepn" placeholder="Preencher sempre o nome da razão social">
+			</div>
+			<div class="form-group col-md-3">
+                <label for="setor">CNPJ</label>
+                <input type="text" name="setor" class="form-control cnpj-input" id="setor" placeholder="00.000.000/0001-00">
+            </div>
+			<div class="form-group col-md-3">
+				<label for="produto">Região</label>
+				<input type="produto" name="produto" class="form-control" id="produto" placeholder="Escreva a localização do estado">
+			</div>
+			<div class="form-group col-md-6">
+				<label for="solicitante">Nome do solicitante</label>
+				<input type="solicitante" name="solicitante" class="form-control" id="solicitante" placeholder="Escreva nome + setor solicitante">
+			</div>
+			<div id="opcaoo" class="form-group col-md-4">
+				<label for="opcoes">Escolha uma opção:</label>
+  				<select type="opcao" name="opcao" class="form-control" id="opcao" placeholder="Escreva o seu nome">
+    				<option value="opcao1">Transportadora</option>
+    				<option value="opcao2">Distribuidora</option>
+    				<option value="opcao3">Fornecedores Componentes Críticos</option>
+    				<option value="opcao4">Fornecedores Componentes Não críticos</option>
+    				<option value="opcao5">Prestadores de serviços</option>
+  				</select>
+			</div>
+    		<div class="form-group col-md-2">
+				<label for="datacalendario">Data</label>
+				<input type="datacalendario" name="datacalendario" id="datacalendario" class="form-control" placeholder="Data da solicitação ">
+			</div>
+    	</div>
+    </div>
+    </div>
+     <div id="panelwarning" class="panel panel-warning">
+    <div class="panel-heading">
+        <h3 class="panel-title"><i class="flaticon flaticon-timer icon-xl" aria-hidden="true"></i>Aprovação</h3>
+    </div>
+    <div class="panel-body">
+       	<div class="row">
+    		<div class="form-group col-md-6">
+    			<div class="radio">
+					<label><input type="radio" name="prioridade" id="prioridadeAprovado" value="sim">Aprovado</label></br>
+					<label><input type="radio" name="prioridade" id="prioridadeReprovado" value="nao">Reprovado</label>
+				</div>		
+		</div>
+    </div>
+    		<input type="hidden" id="returnFromActivity5" name="returnFromActivity5" value="false">
+    <div class="row">
+		<div class="form-group col-md-12">
+			<label for="consideracoes">Observação</label>
+			<textarea rows="5" name="consideracoes" id="consideracoes" class="form-control"></textarea>
+		</div>
+		</div>
+</div>
+
+</div>
+ <div id="panelwarning2" class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">Cadastro SAP</h3>
+    </div>
+    <div class="panel-body">
+       	<div class="row">
+    		<div class="form-group col-md-6">
+    			<div class="radio">
+					<label><input type="radio" name="realizado" id="realizado" value="realizado">Realizado</label></br>
+				</div>		
+		</div>
+    </div>
+    <div class="row">
+		<div class="form-group col-md-4">
+			<label for="codigo">Código PN SAP</label>
+			<textarea rows="1" name="codigo" id="codigo" class="form-control" placeholder="Coloque o código do cadastro SAP"></textarea>
+		</div>
+		</div>
+</div>
+
+</div>
+<div id="panelwarning3" class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">SAP</h3>
+    </div>
+    <div class="panel-body">
+       	<div class="row">
+		<div class="form-group col-md-12">
+			<label for="qualificado">Status de Qualificado SAP</label>
+			<textarea rows="1" name="qualificado" id="qualificado" class="form-control" placeholder="Incluir no SAP (código do PN) as informações do status de qualificação + data da qualificação."></textarea>
+		</div>
+		</div>
+    </div>
+</div>
+
+</div>
+</div>
+</form>
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+    
+    <!-- Inclusão do arquivo JavaScript do usuário -->
+    <script src="qualiade.js"></script> <!-- Caminho para seu arquivo JS -->
+</body>
+</html>

@@ -1,0 +1,344 @@
+<html>
+<head>
+	<link type="text/css" rel="stylesheet" href="/style-guide/css/fluig-style-guide.min.css"/>
+	<script type="text/javascript" src="/portal/resources/js/jquery/jquery.js"></script>
+	<script type="text/javascript" src="/portal/resources/js/jquery/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="/portal/resources/js/mustache/mustache-min.js"></script>
+	<script type="text/javascript" src="/style-guide/js/fluig-style-guide.min.js" charset="utf-8"></script>
+	
+	<style>
+        
+        input[type="text"] {
+            width: 100%;
+            padding: 6px; /* Aumenta o preenchimento interno das caixas de texto */
+            border: 1px solid #ccc; /* Adiciona uma borda leve */
+            border-radius: 4px; /* Arredonda os cantos da borda */
+            box-sizing: border-box; /* Inclui o preenchimento e borda na largura total */
+        }
+        /* Estilo para ajustar a largura das colunas */
+        .col-cep {
+            width: 40%; /* Ajusta a largura da primeira coluna */
+        }
+        .col-lote {
+            width: 30%; /* Ajusta a largura da coluna do meio */
+        }
+        .col-resultado {
+            width: 30%; /* Ajusta a largura da coluna de resultado */
+        }
+        /* Ajuste adicional para garantir a visibilidade do conteúdo */
+        .col-resultado {
+            width: 40%; /* Aumenta a largura da coluna de resultado */
+        }
+        
+    </style>
+</head>
+<body>
+<div class="fluig-style-guide">
+<form name="form" role="form">
+<div id="panelwarning" class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title"><i class="fluigicon fluigicon-search icon-md" aria-hidden="true"></i> Dados do Produto e Análises Físico-químicas</h3>
+    </div>
+    <div class="panel-body">
+	    	<div id="opcaoo7" class="form-group col-md-10">
+	    <label for="opcoes7">Produto:</label>
+	      	<select type="itens" name="itens" id="itens" class="form-control" >
+	      	<option value="escolha">Escolha</option>
+	      	<option value="PA384">PA384 - Agar Sangue/Sangue (Base TSA) pcte c/ 10 biplacas 90x15mm</option>
+			<option value="PA42">PA42 - Agar Chocolate/Thayer Martin pcte c/ 10 biplacas 90x15mm</option>
+			<option value="PA43">PA43 - Agar Cled/Cled pcte c/ 10 biplacas 90x15mm</option>
+			<option value="PA44">PA44 - Agar Mac Conkey/SS pcte c/ 10 biplacas 90x15mm</option>
+			<option value="PA45">PA45 - Agar Sangue/Chocolate pcte c/ 10 biplacas 90x15mm</option>
+			<option value="PA46">PA46 - Agar Sangue/Mac Conkey pcte c/ 10 biplacas 90x15mm</option>
+			<option value="PA47">PA47 - Agar Sangue/Teague pcte c/ 10 biplacas 90x15mm</option>
+			<option value="PA48">PA48 - Agar Sangue/Thayer Martin pcte c/ 10 biplacas 90x15mm</option>
+			<option value="PA49">PA49 - Cromonew UTI pcte c/ 10 biplacas 90x15mm</option>
+			<option value="PA50">PA50 - Uriprov pcte c/ 10 biplacas 90x15mm</option>
+			<option value="PA39">PA39 - Agar XLD pcte c/ 08 placas 60x10mm - Sob encomenda</option>
+			<option value="PA37">PA37 - Agar TSA para Contato pcte c/ 05 placas c/ 60x10mm</option>
+			<option value="PA323">PA323 - Cromonew ESBL pcte c/ 10 placas 60x15mm</option>
+			<option value="PA330">PA330 - Agar Manitol pcte c/ 10 placas 60x15mm</option>
+			<option value="PA331">PA331 - Agar SS pcte c/ 10 placas 60x15mm - Sob encomenda</option>
+			<option value="PA332">PA332 - Agar Thayer Martin pcte c/ 10 placas 60x15mm - Sob encomenda</option>
+			<option value="PA344">PA344 - Agar Cled pcte c/ 10 placas 60x15mm</option>
+			<option value="PA319">PA319 - Cromonew MRSA pcte c/ 10 placas 60x15mm</option>
+			<option value="PA321">PA321 - Cromonew VRE pcte c/ 10 placas 60x15mm</option>
+			<option value="PA325">PA325 - Cromonew KPC pcte c/ 10 placas 60x15mm</option>
+			<option value="PA328">PA328 - Cromonew Candida pcte c/ 10 placas 60x15mm</option>
+			<option value="PA329">PA329 - Cromonew UTI pcte c/ 10 placas 60x15mm</option>
+			<option value="PA07">PA07 - Agar Cetrimide pcte c/ 08 placas 60x10mm - Sob encomenda</option>
+			<option value="PA14">PA14 - Agar Mac Conkey pcte c/ 08 placas 60x10 mm</option>
+			<option value="PA13">PA13 - Agar Letheen pcte c/ 08 placas 60x10mm</option>
+			<option value="PA16">PA16 - Agar Manitol pcte c/ 08 placas 60x10mm - Sob encomenda</option>
+			<option value="PA24">PA24 - Agar Sabouraud Dextrose para Contato pcte c/ 05 placas 60x10mm - sob encomenda</option>
+			<option value="PA25">PA25 - Agar Sabouraud Dextrose pcte c/ 08 placas 60x10mm</option>
+			<option value="PA26">PA26 - Agar Sabouraud Dextrose pcte c/ 10 placas 90x15mm</option>
+			<option value="PA22">PA22 - Agar PCA pcte c/ 10 placas 90x15mm</option>
+			<option value="PA20">PA20 - Agar Mycosel pcte c/ 10 placas 90x15mm</option>
+			<option value="PA23">PA23 - Agar Sabouraud com Cloranfenicol pcte c/ 10 placas 90x15mm</option>
+			<option value="PA19">PA19 - Agar Mueller Hinton pcte c/ 10 placas 90x15mm</option>
+			<option value="PA15">PA15 - Agar Mac Conkey pcte c/ 10 placas 90x15mm</option>
+			<option value="PA17">PA17 - Agar Manitol pcte c/ 10 placas 90x15mm</option>
+			<option value="PA12">PA12 - Agar Enterico de Hektoen pcte c/ 10 placas 90x15mm</option>
+			<option value="PA08">PA08 - Agar Cetrimide pcte c/ 10 placas 90x15mm</option>
+			<option value="PA09">PA09 - Agar Chocolate Suplementado pcte c/ 10 placas 90x15mm</option>
+			<option value="PA10">PA10 - Agar Cled pcte c/ 10 placas 90x15mm</option>
+			<option value="PA02">PA02 - Agar Baird Parker pcte c/ 10 placas 90x15mm</option>
+			<option value="PA03">PA03 - Agar Batata Dextrose pcte c/ 10 placas 90x15mm</option>
+			<option value="PA04">PA04 - Agar BHI com Vancomicina pcte c/ 10 placas 90x15mm - Sob encomenda</option>
+			<option value="PA06">PA06 - Agar Bile Esculina com Vancomicina pcte c/ 10 placas 90x15mm</option>
+			<option value="PA11">PA11 - Agar Dnase pcte c/ 10 placas 90x15mm</option>
+			<option value="PA33">PA33 - Agar SS pcte c/ 10 placas 90x15mm</option>
+			<option value="PA322">PA322 - Cromonew ESBL pcte c/ 10 placas 90x15mm</option>
+			<option value="PA32">PA32 - Agar Sangue de Carneiro Com Azida pcte c/ 10 placas 90x15mm</option>
+			<option value="PA320">PA320 - Cromonew VRE pcte c/ 10 placas 90x15mm</option>
+			<option value="PA345">PA345 - Agar DRBC pcte c/ 10 placas 90x15mm</option>
+			<option value="PA346">PA346 - Agar MYP pcte c/ 10 placas 90x15mm</option>
+			<option value="PA34">PA34 - Agar Teague pcte c/ 10 placas 90x15mm</option>
+			<option value="PA318">PA318 - Cromonew MRSA pcte c/ 10 placas 90x15mm</option>
+			<option value="PA341">PA341 - Agar MH-F (Agar sangue de cavalo base Mueller Hinton + B-NAD) pcte c/ 10 placas 90x15mm</option>
+			<option value="PA324">PA324 - Cromonew KPC pcte c/ 10 placas 90x15mm</option>
+			<option value="PA30">PA30 - Agar Sangue de Carneiro (Base Triptose) pcte c/ 10 placas 90x15mm - Sob encomenda</option>
+			<option value="PA308">PA308 - Cromonew Candida pcte c/ 10 placas 90x15mm</option>
+			<option value="PA31">PA31 - Agar Sangue de Carneiro (Base TSA) pcte c/ 10 placas 90x15mm</option>
+			<option value="PA29">PA29 - Agar Sangue de Carneiro (Base Mueller Hinton) pcte c/ 10 placas 90x15mm</option>
+			<option value="PA27">PA27 - Agar Sangue de Carneiro (Base Columbia) pcte c/ 10 placas 90x15mm</option>
+			<option value="PA36">PA36 - Agar Triptico de soja (TSA) pcte c/ 10 placas 90x15mm</option>
+			<option value="PA387">PA387 - Agar Chocolate + B-NAD pcte c/ 10 placas 90x15mm - Sob encomenda</option>
+			<option value="PA38">PA38 - Agar Verde Brilhante pcte c/ 10 placas 90x15mm - Sob encomenda</option>
+			<option value="PA380">PA380 - Agar Sangue c/ telurito pcte c/ 10 placas 90x15mm - Sob encomenda</option>
+			<option value="PA348">PA348 - Agar PCA com TTC pcte c/ 10 placas 90x15mm - Sob encomenda</option>
+			<option value="PA349">PA349 - Cromonew ALOA Listeria pcte c/ 10 placas 90x15mm</option>
+			<option value="PA35">PA35 - Agar Thayer Martin pcte c/ 10 placas 90x15mm</option>
+			<option value="PA350">PA350 - Cromonew ECC pcte c/ 10 placas 90x15mm</option>
+			<option value="PA395">PA395 - Cromonew Strep B pcte c/ 10 placas 90x15mm</option>
+			<option value="PA40">PA40 - Agar XLD pcte c/ 10 placas 90x15mm</option>
+			<option value="PA406">PA406 - Agar BHI pcte c/ 10 placas 90x15mm - Sob encomenda</option>
+			<option value="PA41">PA41 - Cromonew UTI pcte c/ 10 placas 90x15mm</option>
+			<option value="PA28">PA28 - Agar Sangue de Carneiro (Base Mueller Hinton) pcte c/ 10 placas 140x15mm</option>
+			<option value="PA340">PA340 - Agar MH-F (Agar sangue de cavalo base Mueller Hinton + B-NAD) pcte c/ 10 placas 140x15mm</option>
+			<option value="PA347">PA347 - Agar MYP pcte c/ 10 placas 140x15mm - Sob encomenda</option>
+			<option value="PA312">PA312 - Agar XLD pcte c/ 10 placas 140x15mm - Sob encomenda</option>
+			<option value="PA18">PA18 - Agar Mueller Hinton pcte c/ 10 placas 140x15mm</option>
+			<option value="PA338">PA338 - Agar Sangue/Mac Conkey/Manitol pcte c/ 10 triplacas 90x15 mm - Sob encomenda</option>
+			<option value="PA339">PA339 - Agar Sangue/Mac Conkey/SS pcte c/ 10 triplacas 90x15mm - Sob encomenda</option>
+			<option value="PA333">PA333 - Cromonew UTI pcte c/ 10 triplacas 90x15mm</option>
+			<option value="PA334">PA334 - Agar Sangue/Chocolate/Mac Conkey pcte c/ 10 triplacas 90x15mm</option>
+			<option value="PA335">PA335 - Agar XLD/Mac Conkey/Cromonew Salmonella pcte c/ 10 triplacas 90x15mm</option>
+
+	      </select>
+			</div>
+	<div class="form-group col-md-2">
+        <label for="lote">Lote</label>
+        <input type="lote" name="lote" class="form-control" id="lote" placeholder="Coloque o lote">
+    </div>
+        
+    	
+    	<div class="row">
+    <div class="form-group col-md-10">
+        <label for="aspecto">Aspecto final</label>
+        <input type="aspecto" name="aspecto" class="form-control" id="aspecto" placeholder="">
+    </div>
+    <div id="opcaoo" class="form-group col-md-2">
+  <label for="Resp">Responsável:</label>
+    <select type="Resp" name="Resp" class="form-control" id="Resp" placeholder="">
+    <option value="escolha">Escolha</option>
+      			<option value="fernando">Fernando B. Stocco</option>
+		      <option value="andrea">Andrea Mara Issa</option>
+		      <option value="cleide">Cleide M. de carvalho</option>
+    </select>
+</div>
+    </div>
+		 <div class="row">
+		<div class="form-group col-md-6">
+		<label>Início incubação - Ensaio de esterilidade</label>
+		        <div class="radio">
+		            <label><input type="radio" name="bacteriana" id="bacteriana" value="bacteriana">Bacteriana. Estufa Bacteriológica</label>
+		            <label><input type="radio" name="estufa" id="estufa1" value="n_24_25">n° 24/25</label>
+		            <label><input type="radio" name="estufa" id="estufa2" value="n_35">ou n° 226 a 35°C ± por pelo menos 24h</label>
+		        </div>		
+		</div>
+		</div>
+
+</div>
+</div>
+<div id="panelwarning2" class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title"><i class="fluigicon fluigicon-search icon-md" aria-hidden="true"></i> Análise microbiológica</h3>
+    </div>
+    <div class="panel-body">
+	    	<div class="row">
+		 <div>
+			<table class="table"  id="tabelaRegistros" dataset="linhaDinamicaDataset" datadatasetkey="myDataset" datadatasetvalue="dynamicTableData">
+			<thead>
+			    <tr>
+			        <th> Código interno - Micro-organismo padrão (Cepa)/Reagente</th>
+			        <th>Lote do micro-organismo padrão/Reagente</th>
+			    </tr>
+			</thead>
+			<tbody>
+			    <tr>
+			        <td><input type="text" name="codigo_1" class="form-control col-md-6"></td>
+			        <td><input type="text" name="lote_1" class="form-control col-md-6"></td>
+			        <td><button type="button" onclick="removeRow(this)">Remover</button></td>
+			    </tr>
+			</tbody>
+			</table>
+			</div>
+			</div>
+			<button type="button" class="btn btn-info" onclick="addNewRecord()" id="novoRegistroBtn">Novo Registro</button>
+			<button type="button" class="btn btn-success" onclick="saveAllTables()">Salvar Dados</button>
+			<input type="hidden" name="linhaDinamicaDataset" id="linhaDinamicaDataset">
+		
+    	
+    
+    	<div class="row">
+    <div class="form-group col-md-3">
+        </br><label for="datacainicio2">Início da incubação </label>
+        <input type="datetime-local" name="datainicio2" id="datacainicio2" class="form-control" placeholder="Data e hora da solicitação">
+    </div>
+    <div id="opcaoo3" class="form-group col-md-2">
+  </br><label for="Resp2">Responsável:</label>
+    <select type="Resp2" name="Resp4" class="form-control" id="Resp4" placeholder="">
+    <option value="escolha">Escolha</option>
+      			<option value="fernando">Fernando B. Stocco</option>
+		      <option value="andrea">Andrea Mara Issa</option>
+		      <option value="cleide">Cleide M. de carvalho</option>
+    </select>
+</div>
+	</div>
+	</div>
+	</div>
+	<div id="panelwarning3" class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title"><i class="fluigicon fluigicon-search icon-md" aria-hidden="true"></i> Conclusão da análise</h3>
+    </div>
+    <div class="panel-body">
+        <div class="row">
+		    <div class="form-group col-md-6">
+		        <label for="datacafinall">Fim da incubação - Ensaio de Esterilidade</label>
+		        </div>
+		        </div>
+		        <div class="row">
+		        <div class="form-group col-md-3">
+		        <input type="datetime-local" name="datacafinall" id="datacafinall" class="form-control" placeholder="Data e hora da solicitação">
+		    </div>
+		    </div>
+		    <div class="row">
+		    
+		    <div class="form-group col-md-4">
+		    <label>Resultado do Ensaio de esterilidade</label>
+		    <select type="opcao" name="opcao" class="form-control" id="opcao" placeholder="Escreva o seu nome">
+				<option value="escolha">Escolha</option>
+		      <option value="presenca">Presença de crescimento bacteriano</option>
+		      <option value="ausencia">Ausência de crescimento bacteriano</option>
+		    </select>
+		    </div>
+			    <div id="respc" class="form-group col-md-2">
+			  <label for="respc">Responsável:</label>
+			    <select type="respc" name="respc" class="form-control" id="respc" placeholder="">
+			    <option value="escolha">Escolha</option>
+			      <option value="fernando">Fernando B. Stocco</option>
+			      <option value="andrea">Andrea Mara Issa</option>
+			      <option value="cleide">Cleide M. de carvalho</option>
+			    </select>
+			</div>
+		    </div>
+				<div class="row">
+			    <div class="form-group col-md-12">
+			        <label for="obs_esterilidade">Observação</label>
+			        <textarea rows="4" name="obs_esterilidade" id="obs_esterilidade" class="form-control"></textarea>
+			    </div>
+			    </div>
+		    	</div>
+				<div class="panel panel-primary">
+			    <div class="panel-heading">
+			        <h3 class="panel-title">Conclusão da análise</h3>
+			    </div>
+			    <div class="panel-body">
+		    <div class="row">
+		    <div class="form-group col-md-6">
+		        <label for="datacafinalll">Fim da incubação - Desempenho microbiológico</label>
+		        </div>
+		        </div>
+		        <div class="row">
+		        <div class="form-group col-md-3">
+		        <input type="datetime-local" name="datacafinalll" id="datacafinalll" class="form-control" placeholder="Data e hora da solicitação">
+		    </div>
+		    </div>
+			  <div class="row">
+	        <div class="container1">
+	        <div id="opcaoo4" class="form-group col-md-6">
+		  <label for="analise_microbiologica">Resultado do desempenho microbiológico</label>
+			</div>
+			</div>
+			</div>
+			<div class="row">
+		    	<label>Desempenho Microbiológico: Estufa bacteriológica n°23 a 35°C ± 2°C por overnight ou até crescimento visível.</label>
+			    <div class="form-group col-md-12">
+			        <label for="infoText1"></label>
+			        <textarea rows="5"  name="infoText1" id="infoText1" class="info-textarea1" style="width: 100%;" ></textarea>
+			    </div>
+			    </div>
+			    <div class="row">
+		    <div id="opcaoo2" class="form-group col-md-2">
+		  <label for="Respk">Responsável:</label>
+		    <select type="Respk" name="Respk" class="form-control" id="Respk" placeholder="">
+		    <option value="escolha">Escolha</option>
+		      <option value="fernando">Fernando B. Stocco</option>
+		      <option value="andrea">Andrea Mara Issa</option>
+		      <option value="cleide">Cleide M. de carvalho</option>
+		    </select>
+		</div>
+		</div>
+			<div class="row">
+		    <div class="form-group col-md-7">
+		    <label for="analiseop">Análise da OP(RHP) do produto:</label>
+		        <div class="radio">
+		            <label><input type="radio" name="prioridade" id="prioridade" value="conforme">Conforme</label>
+		            <label><input type="radio" name="prioridade" id="prioridade" value="naoconforme">Não conforme</label>
+		            
+			</div>	
+			</div>
+			</div>
+		<div class="row">
+		    <div class="form-group col-md-7">
+		    <label>Status:</label>
+		        <div class="radio">
+		            <label><input type="radio" name="aprovado" id="aprovado" value="aprovado">Produto aprovado</label>
+		            <label><input type="radio" name="aprovado" id="aprovado" value="reprovado">Produto reprovado</label>
+		            
+		            </div>
+		    </div>
+		</div>
+		    
+		<div class="row">
+		    <div class="form-group col-md-2">
+		        <label for="datacalendario">Data da conclusão</label>
+		        <input type="datacalendario" name="datacalendario" id="datacalendario" class="form-control" placeholder="Data da solicitação ">
+		    </div>
+			 <div id="opcaoo1" class="form-group col-md-4">
+			 <label for="datacalendario">Responsável pela liberação final do produto:</label>
+		    <select type="Respp1" name="Respp1" class="form-control" id="Respp1" placeholder="">
+		    	<option value="escolha">Escolha</option>
+		      <option value="fernando">Fernando B. Stocco</option>
+		      <option value="andrea">Andrea Mara Issa</option>
+		      <option value="cleide">Cleide M. de carvalho</option>
+		    </select>
+		    </div>
+		</div>
+    </div>
+    
+	</div>
+	</div>
+	</div>
+	
+
+</form>
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+<script src="tabelaSave.js"></script>
+<script src="informacao.js"></script>
+</body>
+</html>

@@ -1,0 +1,438 @@
+$(document).ready(function() {
+    var produtoData = {
+        'PA384': {
+            aspecto: 'Meio vermelho sangue opalescente.',
+            dosagem: ' g/300 mL',
+            bacteriana: true, // Marcar a caixa de seleção "bacteriana"
+            infoText1: 'Desempenho microbiológico E. coli ATCC 25922. Especificação: Crescimento excelente de colônias grandes, acinzentadas e brilhantes. Resultado: Adequado Desempenho microbiológico S. aureus ATCC 25923. Especificação: Crescimento excelente de colônias grandes, amareladas e opacas. Resultado: Adequado Desempenho microbiológico S. pneumoniae ATCC 49619. Especificação: Crescimento moderado a bom de colônias pequenas alfa-hemolíticas. Resultado: Adequado Desempenho microbiológico S. pyogenes ATCC 19615. Especificação: Crescimento moderado a bom de colônias pequenas beta-hemolíticas. Resultado: Adequado Esterilidade. Especificação: Ausência de crescimento. Resultado: Adequado'
+        },
+        'PA42': {
+            aspecto: 'Meio castanho opalescente.',
+            dosagem: ' g/200 mL',
+            bacteriana: true,
+            obs_esterilidade: 'Resultado: Adequado'
+        },
+        'PA43': {
+            aspecto: 'Meio verde claro translúcido, ligeiramente opalescente.',
+            dosagem: ' g/200 mL',
+            bacteriana: true,
+            obs_esterilidade: 'Resultado: Adequado'
+        },
+        // Continue adicionando os outros produtos conforme necessário
+        'PA44': {
+            aspecto: 'Meio rosado translúcido, ligeiramente opalescente.',
+            dosagem: ' g/300 mL',
+            bacteriana: true,
+            obs_esterilidade: 'Resultado: Adequado'
+        },
+        'PA45': {
+            aspecto: 'Ágar Sangue: Especificação: Meio vermelho sangue opalescente. Aspecto final Ágar Chocolate: Especificação: Meio sólido, marrom brilhante, homogêneo. Resultado: Adequado',
+            bacteriana: 'conforme',
+            obs_esterilidade: 'Observação específica para PA45'
+        },
+        'PA46': {
+            aspecto: 'Ágar Sangue: Especificação: Meio vermelho sangue opalescente. Resultado: Adequado. Ágar Mac Conkey: Especificação: Meio rosado translúcido. Resultado: Adequado',
+            bacteriana: 'conforme',
+            obs_esterilidade: 'Observação específica para PA46'
+        },
+        'PA47': {
+            aspecto: 'Ágar Sangue: Especificação: Meio vermelho sangue opalescente. Resultado: Adequado. Ágar Teague: Especificação: Meio castanho translúcido ligeiramente opalescente. Resultado: Adequado',
+            bacteriana: 'conforme',
+            obs_esterilidade: 'Observação específica para PA47'
+        },
+        'PA48': {
+            aspecto: 'Ágar Sangue: Especificação: Meio vermelho sangue opalescente. Resultado: Adequado. Ágar Thayer Martin: Especificação: Meio castanho opalescente. Resultado: Adequado',
+            bacteriana: 'conforme',
+            obs_esterilidade: 'Observação específica para PA48'
+        },
+        'PA49': {
+            aspecto: 'Especificação: Meio âmbar claro a médio, ligeiramente opalescente e sem precipitados. Resultado: Adequado',
+            bacteriana: 'conforme',
+            obs_esterilidade: 'Observação específica para PA49'
+        },
+        'PA50': {
+            aspecto: 'Ágar CLED: Especificação: 7,3 ± 0,1. Resultado: Adequado. pH final. Ágar Mac Conkey: Especificação: 7,1 ± 0,2. Resultado: Adequado. Aspecto final. Ágar CLED: Especificação: Meio verde claro translúcido. Resultado: Adequado. Aspecto final. Ágar Mac Conkey: Especificação: Meio rosado translúcido. Resultado: Adequado',
+            bacteriana: 'conforme',
+            obs_esterilidade: 'Observação específica para PA50'
+        },
+        'PA39': {
+            aspecto: 'Especificação: 7,4 ± 0,2. Resultado: Adequado. Aspecto final. Especificação: Meio vermelho translúcido, ligeiramente opalescente. Resultado: Adequado',
+            bacteriana: 'conforme',
+            obs_esterilidade: 'Observação específica para PA39'
+        },
+        'PA37': {
+            aspecto: 'Especificação: Meio bege claro translúcido. Resultado: Adequado',
+            bacteriana: 'conforme',
+            obs_esterilidade: 'Observação específica para PA37'
+        },
+        'PA323': {
+            aspecto: 'Especificação: Meio sólido, amarelo-claro translúcido a ligeiramente opalescente, sem precipitados. Resultado: Adequado',
+            bacteriana: 'conforme',
+            obs_esterilidade: 'Observação específica para PA323'
+        },
+        'PA330': {
+            aspecto: 'Especificação: Meio de cor pêssego a vermelho rosado, ligeiramente opalescente. Resultado: Adequado',
+            bacteriana: 'conforme',
+            obs_esterilidade: 'Observação específica para PA330'
+        },
+        'PA331': {
+            aspecto: 'Especificação: Meio vermelho alaranjado, ligeiramente opalescente. Resultado: Adequado. Observação: este ágar pode apresentar alguns precipitados/cristais, que em nada interferem no seu desempenho microbiológico.',
+            bacteriana: 'conforme',
+            obs_esterilidade: 'Observação específica para PA331'
+        },
+        'PA332': {
+            aspecto: 'Especificação: Meio castanho opalescente. Resultado: Adequado',
+            bacteriana: 'conforme',
+            obs_esterilidade: 'Observação específica para PA332'
+        },
+        'PA344': {
+            aspecto: 'Especificação: Meio verde claro translúcido, ligeiramente opalescente. Resultado: Adequado',
+            bacteriana: 'conforme',
+            obs_esterilidade: 'Observação específica para PA344'
+        },
+        'PA319': {
+            aspecto: 'Especificação: Meio sólido, amarelo claro opalescente, sem precipitados. Resultado: Adequado',
+            bacteriana: 'conforme',
+            obs_esterilidade: 'Observação específica para PA319'
+        },
+        'PA321': {
+            aspecto: 'Especificação: Meio sólido, vermelho opaco podendo apresentar pequenos precipitados. Resultado: Adequado',
+            bacteriana: 'conforme',
+            obs_esterilidade: 'Observação específica para PA321'
+        },
+        'PA325': {
+            aspecto: 'Especificação: Meio sólido, âmbar claro, ligeiramente opalescente e sem precipitados. Resultado: Adequado',
+            bacteriana: 'conforme',
+            obs_esterilidade: 'Observação específica para PA325'
+        },
+        'PA328': {
+            aspecto: 'Especificação: Meio âmbar claro, levemente opalescente. Resultado: Adequado',
+            bacteriana: 'conforme',
+            obs_esterilidade: 'Observação específica para PA328'
+        },
+        'PA329': {
+            aspecto: 'Especificação: Meio âmbar claro a médio, ligeiramente opalescente e sem precipitados. Resultado: Adequado',
+            bacteriana: 'conforme',
+            obs_esterilidade: 'Observação específica para PA329'
+        },
+        'PA07': {
+            aspecto: 'Especificação: Meio incolor opalescente. Resultado: Adequado',
+            bacteriana: 'conforme',
+            obs_esterilidade: 'Observação específica para PA07'
+        },
+        'PA14': {
+            aspecto: 'Especificação: Meio rosado translúcido, ligeiramente opalescente. Resultado: Adequado',
+            bacteriana: 'conforme',
+            obs_esterilidade: 'Observação específica para PA14'
+        },
+        'PA13': {
+            aspecto: 'Especificação: Meio âmbar claro, ligeiramente opalescente. Resultado: Adequado',
+            bacteriana: 'conforme',
+            obs_esterilidade: 'Observação específica para PA13'
+        },
+        'PA16': {
+            aspecto: 'Especificação: Meio de cor pêssego a vermelho rosado, ligeiramente opalescente. Resultado: Adequado',
+            bacteriana: 'conforme',
+            obs_esterilidade: 'Observação específica para PA16'
+        },
+        'PA24': {
+            aspecto: 'Especificação: Meio âmbar claro, ligeiramente opalescente. Resultado: Adequado',
+            bacteriana: 'conforme',
+            obs_esterilidade: 'Observação específica para PA24'
+        },
+        'PA25': {
+            aspecto: 'Especificação: Meio âmbar claro, ligeiramente opalescente. Resultado: Adequado',
+            bacteriana: 'conforme',
+            obs_esterilidade: 'Observação específica para PA25'
+        },
+        'PA26': {
+            aspecto: 'Especificação: Meio âmbar claro, ligeiramente opalescente. Resultado: Adequado',
+            bacteriana: 'conforme',
+            obs_esterilidade: 'Observação específica para PA26'
+        },
+        'PA22': {
+            aspecto: 'Especificação: Meio âmbar claro translúcido e ligeiramente opalescente. Resultado: Adequado',
+            bacteriana: 'conforme',
+            obs_esterilidade: 'Observação específica para PA22'
+        },
+        'PA20': {
+            aspecto: 'Especificação: Meio âmbar claro, ligeiramente opalescente. Resultado: Adequado',
+            bacteriana: 'conforme',
+            obs_esterilidade: 'Observação específica para PA20'
+        },
+        'PA23': {
+            aspecto: 'Especificação: Meio sólido âmbar claro, ligeiramente opalescente. Resultado: Adequado',
+            bacteriana: 'conforme',
+            obs_esterilidade: 'Observação específica para PA23'
+        },
+        'PA19': {
+            aspecto: 'Especificação: Meio bege claro translúcido, ligeiramente opalescente. Resultado: Adequado. Espessura do ágar - Especificação: 4 mm ± 0,5. Resultado: Adequado',
+            bacteriana: 'conforme',
+            obs_esterilidade: 'Observação específica para PA19'
+        },
+        'PA15': {
+            aspecto: 'Especificação: Meio rosado translúcido, ligeiramente opalescente. Resultado: Adequado',
+            bacteriana: 'conforme',
+            obs_esterilidade: 'Observação específica para PA15'
+        },
+        'PA17': {
+            aspecto: 'Especificação: Meio de cor pêssego a vermelho rosado, ligeiramente opalescente. Resultado: Adequado',
+            bacteriana: 'conforme',
+            obs_esterilidade: 'Observação específica para PA17'
+        },
+        'PA12': {
+            aspecto: 'Especificação: Meio verde translúcido, ligeiramente opalescente. Resultado: Adequado',
+            bacteriana: 'conforme',
+            obs_esterilidade: 'Observação específica para PA12'
+        },
+        'PA08': {
+            aspecto: 'Especificação: Meio incolor opalescente. Resultado: Adequado',
+            bacteriana: 'conforme',
+            obs_esterilidade: 'Observação específica para PA08'
+        },
+        'PA09': {
+            aspecto: 'Especificação: Meio castanho opalescente. Resultado: Adequado',
+            bacteriana: 'conforme',
+            obs_esterilidade: 'Observação específica para PA09'
+        },
+        'PA10': {
+            aspecto: 'Especificação: Meio verde-claro translúcido, ligeiramente opalescente. Resultado: Adequado',
+            bacteriana: 'conforme',
+            obs_esterilidade: 'Observação específica para PA10'
+        },
+        'PA02': {
+            aspecto: 'Especificação: Meio amarelo ovo opalescente. Resultado: Adequado',
+            bacteriana: 'conforme',
+            obs_esterilidade: 'Observação específica para PA02'
+        },
+        'PA03': {
+            aspecto: 'Especificação: Meio âmbar claro, ligeiramente opalescente. Resultado: Adequado',
+            bacteriana: 'conforme',
+            obs_esterilidade: 'Observação específica para PA03'
+        },
+        'PA04': {
+            aspecto: 'Especificação: Meio âmbar claro translúcido, ligeiramente opalescente. Resultado: Adequado',
+            bacteriana: 'conforme',
+            obs_esterilidade: 'Observação específica para PA04'
+        },
+        'PA06': {
+            aspecto: 'Especificação: Meio âmbar claro translúcido, ligeiramente opalescente. Resultado: Adequado',
+            bacteriana: 'conforme',
+            obs_esterilidade: 'Observação específica para PA06'
+        },
+        'PA11': {
+            aspecto: 'Especificação: Meio âmbar claro, ligeiramente opalescente. Resultado: Adequado',
+            bacteriana: 'conforme',
+            obs_esterilidade: 'Observação específica para PA11'
+        },
+        'PA33': {
+            aspecto: 'Especificação: Meio vermelho alaranjado, ligeiramente opalescente. Resultado: Adequado. Observação: este ágar pode apresentar alguns precipitados/cristais, que em nada interferem no seu desempenho microbiológico.',
+            bacteriana: 'conforme',
+            obs_esterilidade: 'Observação específica para PA33'
+        },
+        'PA322': {
+            aspecto: 'Especificação: Meio sólido, amarelo-claro translúcido a ligeiramente opalescente, sem precipitados. Resultado: Adequado',
+            bacteriana: 'conforme',
+            obs_esterilidade: 'Observação específica para PA322'
+        },
+        'PA32': {
+            aspecto: 'Especificação: Meio vermelho sangue opalescente. Resultado: Adequado',
+            bacteriana: 'conforme',
+            obs_esterilidade: 'Observação específica para PA32'
+        },
+        'PA320': {
+            aspecto: 'Especificação: Meio sólido, vermelho opaco podendo apresentar pequenos precipitados. Resultado: Adequado',
+            bacteriana: 'conforme',
+            obs_esterilidade: 'Observação específica para PA320'
+        },
+        'PA345': {
+            aspecto: 'Especificação: Meio rosa brilhante, ligeiramente opalescente. Resultado: Adequado',
+            bacteriana: 'conforme',
+            obs_esterilidade: 'Observação específica para PA345'
+        },
+        'PA346': {
+            aspecto: 'Especificação: Meio laranja amarelado a rosa alaranjado, ligeiramente opalescente. Resultado: Adequado',
+            bacteriana: 'conforme',
+            obs_esterilidade: 'Observação específica para PA346'
+        },
+        'PA34': {
+            aspecto: 'Especificação: Meio púrpura escuro, ligeiramente opalescente. Resultado: Adequado',
+            bacteriana: 'conforme',
+            obs_esterilidade: 'Observação específica para PA34'
+        },
+        'PA318': {
+            aspecto: 'Especificação: Meio sólido, amarelo claro opalescente, sem precipitados. Resultado: Adequado',
+            bacteriana: 'conforme',
+            obs_esterilidade: 'Observação específica para PA318'
+        },
+        'PA341': {
+            aspecto: 'Especificação: Meio vermelho sangue opalescente. Resultado: Adequado',
+            bacteriana: 'conforme',
+            obs_esterilidade: 'Observação específica para PA341'
+        },
+        'PA324': {
+            aspecto: 'Especificação: Meio sólido, âmbar claro, ligeiramente opalescente e sem precipitados. Resultado: Adequado',
+            bacteriana: 'conforme',
+            obs_esterilidade: 'Observação específica para PA324'
+        },
+        'PA30': {
+            aspecto: 'Especificação: Meio vermelho sangue opalescente. Resultado: Adequado',
+            bacteriana: 'conforme',
+            obs_esterilidade: 'Observação específica para PA30'
+        },
+        'PA308': {
+            aspecto: 'Especificação: Meio âmbar claro, levemente opalescente. Resultado: Adequado',
+            bacteriana: 'conforme',
+            obs_esterilidade: 'Observação específica para PA308'
+        },
+        'PA31': {
+            aspecto: 'Especificação: Meio vermelho vivo/sangue opalescente. Resultado: Adequado',
+            bacteriana: 'conforme',
+            obs_esterilidade: 'Observação específica para PA31'
+        },
+        'PA29': {
+            aspecto: 'Especificação: Meio vermelho sangue opalescente. Resultado: Adequado',
+            bacteriana: 'conforme',
+            obs_esterilidade: 'Observação específica para PA29'
+        },
+        'PA27': {
+            aspecto: 'Especificação: Meio vermelho sangue opalescente. Resultado: Adequado',
+            bacteriana: 'conforme',
+            obs_esterilidade: 'Observação específica para PA27'
+        },
+        'PA36': {
+            aspecto: 'Especificação: Meio bege claro translúcido. Resultado: Adequado',
+            bacteriana: 'conforme',
+            obs_esterilidade: 'Observação específica para PA36'
+        },
+        'PA387': {
+            aspecto: 'Especificação: Meio vermelho sangue translúcido. Resultado: Adequado',
+            bacteriana: 'conforme',
+            obs_esterilidade: 'Observação específica para PA387'
+        },
+        'PA38': {
+            aspecto: 'Especificação: Meio marrom alaranjado, ligeiramente opalescente. Resultado: Adequado',
+            bacteriana: 'conforme',
+            obs_esterilidade: 'Observação específica para PA38'
+        },
+        'PA380': {
+            aspecto: 'Especificação: Meio vermelho escuro opalescente. Resultado: Adequado',
+            bacteriana: 'conforme',
+            obs_esterilidade: 'Observação específica para PA380'
+        },
+        'PA348': {
+            aspecto: 'Especificação: Meio bege a levemente rosado translúcido e ligeiramente opalescente. Resultado: Adequado',
+            bacteriana: 'conforme',
+            obs_esterilidade: 'Observação específica para PA348'
+        },
+        'PA349': {
+            aspecto: 'Especificação: Meio âmbar claro a amarelado, ligeiramente opalescente. Resultado: Adequado',
+            bacteriana: 'conforme',
+            obs_esterilidade: 'Observação específica para PA349'
+        },
+        'PA35': {
+            aspecto: 'Especificação: Meio castanho opalescente. Resultado: Adequado',
+            bacteriana: 'conforme',
+            obs_esterilidade: 'Observação específica para PA35'
+        },
+        'PA350': {
+            aspecto: 'Especificação: Meio em gel amarelo-claro ligeiramente opalescente. Resultado: Adequado',
+            bacteriana: 'conforme',
+            obs_esterilidade: 'Observação específica para PA350'
+        },
+        'PA395': {
+            aspecto: 'Especificação: Meio sólido, amarelo a âmbar claro opalescente com matiz cinza, com precipitados. Resultado: Adequado',
+            bacteriana: 'conforme',
+            obs_esterilidade: 'Observação específica para PA395'
+        },
+        'PA40': {
+            aspecto: 'Especificação: Meio vermelho translúcido, ligeiramente opalescente. Resultado: Adequado',
+            bacteriana: 'conforme',
+            obs_esterilidade: 'Observação específica para PA40'
+        },
+        'PA406': {
+            aspecto: 'Especificação: Meio âmbar claro translúcido, ligeiramente opalescente. Resultado: Adequado',
+            bacteriana: 'conforme',
+            obs_esterilidade: 'Observação específica para PA406'
+        },
+        'PA41': {
+            aspecto: 'Especificação: Meio âmbar claro a médio, ligeiramente opalescente e sem precipitados. Resultado: Adequado',
+            bacteriana: 'conforme',
+            obs_esterilidade: 'Observação específica para PA41'
+        },
+        'PA28': {
+            aspecto: 'Especificação: Meio vermelho sangue opalescente. Resultado: Adequado. Espessura do ágar. Especificação: 4 mm. Resultado: Adequado',
+            bacteriana: 'conforme',
+            obs_esterilidade: 'Observação específica para PA28'
+        },
+        'PA340': {
+            aspecto: 'Especificação: Meio vermelho sangue opalescente. Resultado: Adequado',
+            bacteriana: 'conforme',
+            obs_esterilidade: 'Observação específica para PA340'
+        },
+        'PA347': {
+            aspecto: 'Especificação: Meio laranja amarelado a rosa alaranjado, ligeiramente opalescente. Resultado: Adequado',
+            bacteriana: 'conforme',
+            obs_esterilidade: 'Observação específica para PA347'
+        },
+        'PA312': {
+            aspecto: 'Especificação: Meio vermelho translúcido, ligeiramente opalescente. Resultado: Adequado',
+            bacteriana: 'conforme',
+            obs_esterilidade: 'Observação específica para PA312'
+        },
+        'PA18': {
+            aspecto: 'Especificação: Meio bege claro translúcido, ligeiramente opalescente. Resultado: Adequado. Espessura do ágar - Especificação: 4 mm ± 0,5. Resultado: Adequado',
+            bacteriana: 'conforme',
+            obs_esterilidade: 'Observação específica para PA18'
+        },
+        'PA338': {
+            aspecto: 'Ágar Sangue: Especificação: Meio vermelho sangue opalescente. Resultado: Adequado. Ágar Mac Conkey: Especificação: Meio rosado translúcido. Resultado: Adequado. Ágar Manitol: Especificação: Meio vermelho translúcido, ligeiramente opalescente. Resultado: Adequado',
+            bacteriana: 'conforme',
+            obs_esterilidade: 'Observação específica para PA338'
+        },
+        'PA339': {
+            aspecto: 'Ágar Sangue: Especificação: Meio vermelho sangue opalescente. Resultado: Adequado. Ágar Mac Conkey: Especificação: Meio rosado translúcido. Resultado: Adequado. Ágar SS: Especificação: Meio vermelho alaranjado, ligeiramente opalescente. Resultado: Adequado',
+            bacteriana: 'conforme',
+            obs_esterilidade: 'Observação específica para PA339'
+        },
+        'PA333': {
+            aspecto: 'Especificação: Meio âmbar claro a médio, ligeiramente opalescente e sem precipitados. Resultado: Adequado',
+            bacteriana: 'conforme',
+            obs_esterilidade: 'Observação específica para PA333'
+        },
+        'PA334': {
+            aspecto: 'Ágar Sangue: Especificação: Meio vermelho sangue opalescente. Resultado: Adequado. Ágar Chocolate: Especificação: Meio castanho opalescente. Resultado: Adequado. Ágar Mac Conkey: Especificação: Meio rosado translúcido. Resultado: Adequado',
+            bacteriana: 'conforme',
+            obs_esterilidade: 'Observação específica para PA334'
+        },
+        'PA335': {
+            aspecto: 'Ágar XLD: Especificação: Meio vermelho translúcido, ligeiramente opalescente. Resultado: Adequado. Ágar Mac Conkey: Especificação: Meio rosado translúcido. Resultado: Adequado. Ágar Cromonew Salmonella: Especificação: Meio âmbar claro, ligeiramente opalescente. Resultado: Adequado',
+            bacteriana: 'conforme',
+            obs_esterilidade: 'Observação específica para PA335'
+        }
+        
+    };
+
+    $('#itens').change(function() {
+        var selectedValue = $(this).val();
+        var data = produtoData[selectedValue];
+
+        if (data) {
+            $('#aspecto').val(data.aspecto);
+            $('#dosagem').val(data.dosagem);
+
+            // Marcar a checkbox "bacteriana" se true
+            $('input[name="bacteriana"]').prop('checked', data.bacteriana || false);
+
+            // Atualizar o campo de texto "obs_esterilidade"
+            $('#infoText1').val(data.obs_esterilidade);
+
+            // Adicione outras atualizações de campos conforme necessário...
+        } else {
+            $('#aspecto').val('');
+            $('#dosagem').val('');
+            $('input[name="bacteriana"]').prop('checked', false);
+            $('#infoText1').val('');
+        }
+    });
+});

@@ -1,0 +1,166 @@
+<html>
+<head>
+	<link type="text/css" rel="stylesheet" href="/style-guide/css/fluig-style-guide.min.css"/>
+	<script type="text/javascript" src="/portal/resources/js/jquery/jquery.js"></script>
+	<script type="text/javascript" src="/portal/resources/js/jquery/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="/portal/resources/js/mustache/mustache-min.js"></script>
+	<script type="text/javascript" src="/style-guide/js/fluig-style-guide.min.js" charset="utf-8"></script>
+	
+	<style>
+        .textarea-fixed-size {
+            width: 100%; /* Faz o textarea ocupar toda a largura da célula */
+            height: 150px; /* Define a altura do textarea */
+            min-height: 150px;
+            box-sizing: border-box; /* Inclui padding e border no tamanho total */
+            resize: vertical; /* Permite apenas redimensionar verticalmente */
+            white-space: pre-wrap; /* Permite quebra de linha e preserva espaços */
+            word-wrap: break-word;
+        }
+        /* Configurações para a tabela e células */
+        .table {
+            table-layout: fixed; /* Garante que a tabela tenha um layout fixo */
+            width: 100%; /* Faz a tabela ocupar toda a largura disponível */
+        }
+        .table td, .table th {
+            vertical-align: top; /* Alinha o conteúdo no topo das células */
+            padding: 8px; /* Adiciona espaçamento interno nas células */
+        }
+        .table textarea {
+            overflow: auto; /* Adiciona rolagem se o conteúdo exceder a altura definida */
+        }
+        
+    </style>
+</head>
+<body>
+<div class="fluig-style-guide">
+<form name="form" role="form">
+<div id="panelwarning" class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title"><i class="flaticon flaticon-documents icon-lg" aria-hidden="true"></i> Revisão periódica - Validações</h3>
+    </div>
+    <div class="panel-body">
+	    <div class="row">
+	    <div class="form-group col-md-6">
+	        <label for="processovalidado">Nome do processo validado:</label>
+	        <input type="processovalidado" name="processovalidado" class="form-control" id="processovalidado" placeholder="Coloque o nome do processo">
+	    </div>
+		</div>
+        <div class="container-table">
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th class="col-md-4">Item</th>
+                <th class="col-md-4">Houveram alterações com impacto significativo?</th>
+                <th class="col-md-4">Houveram desvios com impacto significativo?</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Alteração de normativa e legislação relacionada</br> e impactos</td>
+                <td><textarea name="caixa1_1" class="form-control textarea-fixed-size" ></textarea></td>
+                <td><textarea name="caixa1_2" class="form-control textarea-fixed-size" ></textarea></td>
+                
+            </tr>
+            <tr>
+                <td>Controles de mudança e se eles impactaram no</br> status de validação</td>
+                <td><textarea name="caixa2_1" class="form-control textarea-fixed-size" ></textarea></td>
+                <td><textarea name="caixa2_2" class="form-control textarea-fixed-size" ></textarea></td>
+                
+            </tr>
+            <tr>
+                <td>Não conformidades e se as ações tomadas</br> foram eficazes e/ou impactaram no status de validação</td>
+                <td><textarea name="caixa3_1" class="form-control textarea-fixed-size" ></textarea></td>
+                <td><textarea name="caixa3_2" class="form-control textarea-fixed-size" ></textarea></td>
+                
+            </tr>
+            <tr>
+                <td>Reclamações de clientes ou tecnovigilancia</td>
+                <td><textarea name="caixa4_1" class="form-control textarea-fixed-size" ></textarea></td>
+                <td><textarea name="caixa4_2" class="form-control textarea-fixed-size" ></textarea></td>
+                
+            </tr>
+            <tr>
+                <td>Resultados de manutenções preventivas</td>
+                <td><textarea name="caixa5_1" class="form-control textarea-fixed-size" ></textarea></td>
+                <td><textarea name="caixa5_2" class="form-control textarea-fixed-size" ></textarea></td>
+                
+            </tr>
+            <tr>
+                <td>Manutenções corretivas e possíveis impactos</td>
+                <td><textarea name="caixa6_1" class="form-control textarea-fixed-size" ></textarea></td>
+                <td><textarea name="caixa6_2" class="form-control textarea-fixed-size" ></textarea></td>
+                
+            </tr>
+            <tr>
+                <td>Toda a documentação da validação inicial ou da </br>revisão periódica anterior (quando houver)</td>
+                <td><textarea name="caixa7_1" class="form-control textarea-fixed-size" ></textarea></td>
+                <td><textarea name="caixa7_2" class="form-control textarea-fixed-size" ></textarea></td>
+            </tr>
+            
+        </tbody>
+    </table>
+</div>
+
+<div class="row">
+    <div class="form-group col-md-12">
+        <label for="revalidacao">Há necessidade de revalidação? Se sim, qual prazo final e responsável?</label>
+        <input type="revalidacao" name="revalidacao" class="form-control" id="revalidacao" placeholder="">
+    </div>
+</div>
+
+<div class="row">
+    <div class="form-group col-md-12">
+        <label for="consideracoes">Observação</label>
+        <textarea rows="5" name="consideracoes" id="consideracoes" class="form-control"></textarea>
+    </div>
+    </div>
+<div class="row">
+    <div class="form-group col-md-10">
+        <label for="responsavel">Responsável</label>
+        <input type="responsavel" name="responsavel" class="form-control" id="responsavel" placeholder="Coloque o nome do responsável">
+    </div>
+
+    <div class="form-group col-md-2">
+        <label for="datacalendario">Data</label>
+        <input type="datacalendario" name="datacalendario" id="datacalendario" class="form-control" placeholder="Data da solicitação ">
+    </div>
+</div>
+    </div>
+</div>
+<div id="panelwarning2" class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title"><i class="fluigicon fluigicon-period-transfer icon-lg" aria-hidden="true"></i> Análise Crítica pela responsável técnica</h3>
+    </div>
+    <div class="panel-body">
+    <input type="hidden" id="returnFromActivity5" name="returnFromActivity5" value="false">
+        <div class="row">
+    <div class="form-group col-md-6">
+        <div class="radio">
+            <label><input type="radio" name="prioridade" id="prioridade" value="sim">Aprovado</label></br>
+            <label><input type="radio" name="prioridade" id="nao" value="nao">Reprovado</label>
+        </div>		
+	</div>
+    </div>
+    <div class="row">
+    <div class="form-group col-md-12">
+        <label for="observacao">Observação</label>
+        <textarea rows="5" name="observacao" id="observacao" class="form-control"></textarea>
+    </div>
+    </div>
+    <div class="row">
+    <div class="form-group col-md-2">
+        <label for="datacalendario2">Data</label>
+        <input type="datacalendario2" name="datacalendario2" id="datacalendario2" class="form-control" placeholder="Data ">
+    </div>
+</div>
+</div>
+</form>
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="revisao.js"></script> <!-- Caminho para seu arquivo JS -->
+</body>
+</html>

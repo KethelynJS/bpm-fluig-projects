@@ -1,0 +1,227 @@
+<html>
+<head>
+	<link type="text/css" rel="stylesheet" href="/style-guide/css/fluig-style-guide.min.css"/>
+	<script type="text/javascript" src="/portal/resources/js/jquery/jquery.js"></script>
+	<script type="text/javascript" src="/portal/resources/js/jquery/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="/portal/resources/js/mustache/mustache-min.js"></script>
+	<script type="text/javascript" src="/style-guide/js/fluig-style-guide.min.js" charset="utf-8"></script>
+	
+	<style>
+        .textarea-fixed-size {
+            width: 100%; /* Faz o textarea ocupar toda a largura da célula */
+            height: 150px; /* Define a altura do textarea */
+            min-height: 150px;
+            box-sizing: border-box; /* Inclui padding e border no tamanho total */
+            resize: vertical; /* Permite apenas redimensionar verticalmente */
+            white-space: pre-wrap; /* Permite quebra de linha e preserva espaços */
+            word-wrap: break-word;
+        }
+        /* Configurações para a tabela e células */
+        .table {
+            table-layout: fixed; /* Garante que a tabela tenha um layout fixo */
+            width: 100%; /* Faz a tabela ocupar toda a largura disponível */
+        }
+        .table td, .table th {
+            vertical-align: top; /* Alinha o conteúdo no topo das células */
+            padding: 8px; /* Adiciona espaçamento interno nas células */
+        }
+        .table textarea {
+            overflow: auto; /* Adiciona rolagem se o conteúdo exceder a altura definida */
+        }
+        
+    </style>
+</head>
+<body>
+<div class="fluig-style-guide">
+<form name="form" role="form">
+<div id="panelwarning" class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">Check list dos itens do protocolo e relatório de validação externa</h3>
+    </div>
+    <div class="panel-body">
+    	<div class="row">
+		    <div class="form-group col-md-6">
+		        <label for="validacao">Empresa responsável pela validação</label>
+		        <input type="validacao" name="validacao" class="form-control" id="validacao" placeholder="Coloque o nome da empresa responsável pela validação">
+		    </div>
+		    <div class="form-group col-md-6">
+		        <label for="responsavel">Responsável pelo check list</label>
+		        <input type="responsavel" name="responsavel" class="form-control" id="responsavel" placeholder="Coloque o nome do responsavel">
+		    </div>
+		</div>
+			<div class="row">
+			    <div class="form-group col-md-6">
+			        <label for="processovalidado">Nome do processo validado:</label>
+			        <input type="processovalidado" name="processovalidado" class="form-control" id="processovalidado" placeholder="Coloque o nome do processo">
+			    </div>
+			</div>
+			<div class="row">
+		    	<div class="form-group col-md-6">
+		    	<label>o prestador de serviço foi qualificada?</label>
+		        <div class="radio">
+		            <label><input type="radio" name="prioridade" id="prioridade" value="sim">Sim</label></br>
+		            <label><input type="radio" name="prioridade" id="prioridade" value="nao">Não</label>
+		        </div>		
+			</div>
+			</div>
+			<div class="row">
+			    <div class="form-group col-md-3">
+			        <label for="datacalendario">Data da conclusão da validação</label>
+			        <input type="date" name="datacalendario" id="datacalendario" class="form-control" placeholder="Data da solicitação ">
+			    </div>
+			    <div class="form-group col-md-3">
+			        <label for="datacalendario3">Data da análise check list</label>
+			        <input type="date" name="datacalendario3" id="datacalendario3" class="form-control" placeholder="Data da solicitação ">
+			    </div>
+			</div>
+			<label>Análise de correspondência:</label>
+        <table class="table table-bordered">
+    <thead>
+        <tr>
+            <th class="col-md-3">Item</th>
+            <th class="col-md-2">Sim</th>
+            <th class="col-md-2">Não</th>
+            <th class="col-md-3">Item correspondente</th>
+            <th class="col-md-2">N.A</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Objetivo</td>
+            <td><input type="radio" name="radio_row1" class="form-control" style="transform: scale(0.5);"></td>
+            <td><input type="radio" name="radio_row1" class="form-control" style="transform: scale(0.5);"></td>
+            <td><textarea name="text_row1" class="form-control textarea-fixed-size" ></textarea></td>
+            <td><input type="radio" name="radio_row1" class="form-control" style="transform: scale(0.5);"></td>
+        </tr>
+        <tr>
+            <td>Responsabilidades</td>
+            <td><input type="radio" name="radio_row2" class="form-control" style="transform: scale(0.5);"></td>
+            <td><input type="radio" name="radio_row2" class="form-control" style="transform: scale(0.5);"></td>
+            <td><textarea name="text_row2" class="form-control textarea-fixed-size" ></textarea></td>
+            <td><input type="radio" name="radio_row2" class="form-control" style="transform: scale(0.5);"></td>
+        </tr>
+        <tr>
+            <td>Materiais, Reagentes e equipamentos que serão utilizados</td>
+            <td><input type="radio" name="radio_row3" class="form-control" style="transform: scale(0.5);"></td>
+            <td><input type="radio" name="radio_row3" class="form-control" style="transform: scale(0.5);"></td>
+            <td><textarea name="text_row3" class="form-control textarea-fixed-size" ></textarea></td>
+            <td><input type="radio" name="radio_row3" class="form-control" style="transform: scale(0.5);"></td>
+        </tr>
+        <tr>
+            <td>Método</td>
+            <td><input type="radio" name="radio_row4" class="form-control" style="transform: scale(0.5);"></td>
+            <td><input type="radio" name="radio_row4" class="form-control" style="transform: scale(0.5);"></td>
+            <td><textarea name="text_row4" class="form-control textarea-fixed-size" ></textarea></td>
+            <td><input type="radio" name="radio_row4" class="form-control" style="transform: scale(0.5);"></td>
+        </tr>
+        <tr>
+            <td>Qualificação de instalação e operação e desempenho</td>
+            <td><input type="radio" name="radio_row5" class="form-control" style="transform: scale(0.5);"></td>
+            <td><input type="radio" name="radio_row5" class="form-control" style="transform: scale(0.5);"></td>
+            <td><textarea name="text_row5" class="form-control textarea-fixed-size" ></textarea></td>
+            <td><input type="radio" name="radio_row5" class="form-control" style="transform: scale(0.5);"></td>
+        </tr>
+        <tr>
+            <td>Critérios de aceitação</td>
+            <td><input type="radio" name="radio_row6" class="form-control" style="transform: scale(0.5);"></td>
+            <td><input type="radio" name="radio_row6" class="form-control" style="transform: scale(0.5);"></td>
+            <td><textarea name="text_row6" class="form-control textarea-fixed-size" ></textarea></td>
+            <td><input type="radio" name="radio_row6" class="form-control" style="transform: scale(0.5);"></td>
+        </tr>
+        <tr>
+            <td>Aprovação do protocolo de validação com data e responsável</td>
+            <td><input type="radio" name="radio_row7" class="form-control" style="transform: scale(0.5);"></td>
+            <td><input type="radio" name="radio_row7" class="form-control" style="transform: scale(0.5);"></td>
+            <td><textarea name="text_row7" class="form-control textarea-fixed-size" ></textarea></td>
+            <td><input type="radio" name="radio_row7" class="form-control" style="transform: scale(0.5);"></td>
+        </tr>
+        <tr>
+            <td>Instrução de trabalho do processo de envio de itens para esterilização por óxido de etileno</td>
+            <td><input type="radio" name="radio_row8" class="form-control" style="transform: scale(0.5);"></td>
+            <td><input type="radio" name="radio_row8" class="form-control" style="transform: scale(0.5);"></td>
+            <td><textarea name="text_row8" class="form-control textarea-fixed-size" ></textarea></td>
+            <td><input type="radio" name="radio_row8" class="form-control" style="transform: scale(0.5);"></td>
+        </tr>
+        <tr>
+            <td>Cetificado de calibração dos equipamentos</td>
+            <td><input type="radio" name="radio_row9" class="form-control" style="transform: scale(0.5);"></td>
+            <td><input type="radio" name="radio_row9" class="form-control" style="transform: scale(0.5);"></td>
+            <td><textarea name="text_row9" class="form-control textarea-fixed-size" ></textarea></td>
+            <td><input type="radio" name="radio_row9" class="form-control" style="transform: scale(0.5);"></td>
+        </tr>
+        <tr>
+            <td>Treinamento dos colaboradores envolvidos no processo de esterilização por óxido de etileno</td>
+            <td><input type="radio" name="radio_row10" class="form-control" style="transform: scale(0.5);"></td>
+            <td><input type="radio" name="radio_row10" class="form-control" style="transform: scale(0.5);"></td>
+            <td><textarea name="text_row10" class="form-control textarea-fixed-size" ></textarea></td>
+            <td><input type="radio" name="radio_row10" class="form-control" style="transform: scale(0.5);"></td>
+        </tr>
+        <tr>
+            <td>Resultado da qualificação de instalação e operação</td>
+            <td><input type="radio" name="radio_row11" class="form-control" style="transform: scale(0.5);"></td>
+            <td><input type="radio" name="radio_row11" class="form-control" style="transform: scale(0.5);"></td>
+            <td><textarea name="text_row11" class="form-control textarea-fixed-size" ></textarea></td>
+            <td><input type="radio" name="radio_row11" class="form-control" style="transform: scale(0.5);"></td>
+        </tr>
+        <tr>
+            <td>Resultado da qualificação de desempenho</td>
+            <td><input type="radio" name="radio_row12" class="form-control" style="transform: scale(0.5);"></td>
+            <td><input type="radio" name="radio_row12" class="form-control" style="transform: scale(0.5);"></td>
+            <td><textarea name="text_row12" class="form-control textarea-fixed-size" ></textarea></td>
+            <td><input type="radio" name="radio_row12" class="form-control" style="transform: scale(0.5);"></td>
+        </tr>
+        <tr>
+            <td>Conclusão da validação</td>
+            <td><input type="radio" name="radio_row13" class="form-control" style="transform: scale(0.5);"></td>
+            <td><input type="radio" name="radio_row13" class="form-control" style="transform: scale(0.5);"></td>
+            <td><textarea name="text_row13" class="form-control textarea-fixed-size" ></textarea></td>
+            <td><input type="radio" name="radio_row13" class="form-control" style="transform: scale(0.5);"></td>
+        </tr>
+        <tr>
+            <td>Aprovação do relatório com data e responsável</td>
+            <td><input type="radio" name="radio_row14" class="form-control" style="transform: scale(0.5);"></td>
+            <td><input type="radio" name="radio_row14" class="form-control" style="transform: scale(0.5);"></td>
+            <td><textarea name="text_row14" class="form-control textarea-fixed-size" ></textarea></td>
+            <td><input type="radio" name="radio_row14" class="form-control" style="transform: scale(0.5);"></td>
+        </tr>
+    </tbody>
+</table>
+
+    </div>
+</div>
+<div id="panelwarning2" class="panel panel-warning">
+    <div class="panel-heading">
+        <h3 class="panel-title"><i class="fluigicon fluigicon-period-transfer icon-lg" aria-hidden="true"></i> Análise Crítica pela responsável técnica</h3>
+    </div>
+    
+    <div class="panel-body">
+    <input type="hidden" id="returnFromActivity5" name="returnFromActivity5" value="false">
+        <div class="row">
+    <div class="form-group col-md-6">
+    <label>Validação</label>
+        <div class="radio">
+            <label><input type="radio" name="validacao1" id="validacao1" value="aprovado">Aprovado</label></br>
+            <label><input type="radio" name="validacao1" id="validacao2" value="reprovado">Reprovado</label>
+        </div>		
+	</div>
+    </div>
+    <div class="row">
+    <div class="form-group col-md-12">
+        <label for="observacao">Observação</label>
+        <textarea rows="5" name="observacao" id="observacao" class="form-control"></textarea>
+    </div>
+    </div>
+    <div class="row">
+    <div class="form-group col-md-2">
+        <label for="datacalendario2">Data</label>
+        <input type="date" name="datacalendario2" id="datacalendario2" class="form-control" placeholder="Data ">
+    </div>
+</div>
+    </div>
+</div>
+
+</form>
+</div>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

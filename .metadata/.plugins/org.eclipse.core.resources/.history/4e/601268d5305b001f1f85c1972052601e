@@ -1,0 +1,36 @@
+function displayFields(form, customHTML) {
+    var atv_atual = getValue("WKNumState");
+    var returnFromActivity11 = form.getValue("returnFromActivity11");
+
+    log.info("atv_atual: " + atv_atual);
+
+    // Atividades 0 e 4
+    if (atv_atual == 0 || atv_atual == 4) {
+        form.setVisibleById("panelwarning3", false);
+        form.setVisibleById("panelwarning4", false);
+        form.setVisibleById("panelwarning5", false);
+        form.setVisibleById("panelwarning6", false);
+        form.setVisibleById("panelwarning7", false);
+    }
+
+    // Atividade 5
+    else if (atv_atual == 5) {
+        form.setVisibleById("panelwarning5", false);
+        form.setVisibleById("panelwarning6", false);
+
+        // Exibe o panelwarning7 se o formulário retornou da atividade 11
+        if (returnFromActivity11 == 'true') {
+            form.setVisibleById("panelwarning7", true);
+    }
+
+    // Atividade 9
+    else if (atv_atual == 9) {
+        form.setVisibleById("panelwarning6", false);
+        form.setVisibleById("panelwarning7", false);
+    }
+
+    // Atividade 11
+    if (atv_atual == 11) {
+        form.setValue("returnFromActivity11", 'true');
+    }
+}

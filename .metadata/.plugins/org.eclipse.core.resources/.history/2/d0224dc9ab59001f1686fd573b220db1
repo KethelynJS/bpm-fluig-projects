@@ -1,0 +1,141 @@
+// Função para definir um cookie
+function setCookie(name, value, days) {
+    let expires = "";
+    if (days) {
+        const date = new Date();
+        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+        expires = "; expires=" + date.toUTCString();
+    }
+    document.cookie = name + "=" + (value || "") + expires + "; path=/";
+}
+
+// Função para obter um cookie
+function getCookie(name) {
+    const nameEQ = name + "=";
+    const ca = document.cookie.split(';');
+    for(let i = 0; i < ca.length; i++) {
+        let c = ca[i];
+        while (c.charAt(0) === ' ') c = c.substring(1, c.length);
+        if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
+    }
+    return null;
+}
+
+// Função para apagar um cookie
+function eraseCookie(name) {
+    document.cookie = name + '=; Max-Age=-99999999;';
+}
+
+// Função para salvar os dados da Tabela 1 no cookie
+function saveTableData() {
+    console.log("Salvando dados da Tabela 1 no cookie");
+    const tabela = document.getElementById('tabelaRegistros').getElementsByTagName('tbody')[0];
+    const rows = tabela.rows;
+    const data = [];
+
+    for (let i = 0; i < rows.length; i++) {
+        const row = rows[i];
+        const rowData = {
+            codigo: row.cells[0].children[0].value || '',
+            lote: row.cells[1].children[0].value || '',
+            quantidade: row.cells[2].children[0].value || '',
+            datafabricacao: row.cells[3].children[0].value || '',
+            datavalidade: row.cells[4].children[0].value || ''
+        };
+
+        // Adiciona dados apenas se pelo menos um campo estiver preenchido
+        if (Object.values(rowData).some(value => value.trim() !== '')) {
+            console.log("Dados da linha", i, ":", rowData);
+            data.push(rowData);
+        }
+    }
+
+    console.log("Dados salvos para Tabela 1:", JSON.stringify(data));
+
+    // Salvar os dados no cookie com um identificador único para o formulário
+    setCookie('tabela1Data', JSON.stringify(data), 7); // O cookie expira em 7 dias
+}
+
+// Função para carregar os dados da Tabela 1 do cookie
+function loadTableData() {
+    console.log("Carregando dados da Tabela 1 do cookie");
+    const data = JSON.parse(getCookie('tabela1Data') || '[]');
+    console.log("Dados carregados para Tabela 1:", data);
+    const tabela = document.getElementById('tabelaRegistros').getElementsByTagName('tbody')[0];
+
+    // Limpar a tabela
+    tabela.innerHTML = '';
+    recordIdCounter = 0; // Resetar IDs
+
+    // Adicionar linhas com dados
+    data.forEach((item, index) => {
+        const newRow = tabela.insertRow();
+
+        newRow.insertCell(0).innerHTML = `<input type="text" id="codigo_${index}" name="codigo_${index}" class="form-control col-md-3" value="${item.codigo || ''}">`;
+        newRow.insertCell(1).innerHTML = `<input type="text" id="lote_${index}" name="lote_${index}" class="form-control col-md-3" value="${item.lote || ''}">`;
+        newRow.insertCell(2).innerHTML = `<input type="number" id="quantidade_${index}" name="quantidade_${index}" class="form-control col-md-2" value="${item.quantidade || ''}">`;
+        newRow.insertCell(3).innerHTML = `<input type="date" id="datafabricacao_${index}" name="datafabricacao_${index}" class="form-control col-md-2" value="${item.datafabricacao || ''}">`;
+        newRow.insertCell(4).innerHTML = `<input type="date" id="datavalidade_${index}" name="datavalidade_${index}" class="form-control col-md-2" value="${item.datavalidade || ''}">`;
+        newRow.insertCell(5).innerHTML = '<button type="button" onclick="removeRow(this)">Remover</button>';
+    });
+
+    // Adicionar uma linha extra em branco se necessário
+    if (data.length === 0 || data[data.length - 1].codigo !== '') {
+        addNewRecord();
+    }
+}
+
+// Função para salvar os dados da Tabela 2 no cookie
+function saveTableData2() {
+    console.log("Salvando dados da Tabela 2 no cookie");
+    const tabela = document.getElementById('tabelaRegistross').getElementsByTagName('tbody')[0];
+    const rows = tabela.rows;
+    const data = [];
+
+    for (let i = 0; i < rows.length; i++) {
+        const row = rows[i];
+        const rowData = {
+            causa: row.cells[0].children[0].value || '',
+            porque: row.cells[1].children[0].value || ''
+        };
+        console.log("Dados da linha", i, ":", rowData);
+        data.push(rowData);
+    }
+
+    console.log("Dados salvos para Tabela 2:", JSON.stringify(data));
+
+    // Salvar os dados no cookie com um identificador único para o formulário
+    setCookie('tabela2Data', JSON.stringify(data), 7); // O cookie expira em 7 dias
+}
+
+// Função para carregar os dados da Tabela 2 do cookie
+function loadTableData2() {
+    console.log("Carregando dados da Tabela 2 do cookie");
+    const data = JSON.parse(getCookie('tabela2Data') || '[]');
+    console.log("Dados carregados para Tabela 2:", data);
+    const tabela = document.getElementById('tabelaRegistross').getElementsByTagName('tbody')[0];
+
+    // Limpar a tabela
+    tabela.innerHTML = '';
+    record2IdCounter = 0; // Resetar IDs
+
+    // Adicionar linhas com dados
+    data.forEach((item, index) => {
+        const newRow = tabela.insertRow();
+
+        newRow.insertCell(0).innerHTML = `<input type="text" id="causa_${index}" name="causa_${index}" class="form-control col-md-6" value="${item.causa || ''}">`;
+        newRow.insertCell(1).innerHTML = `<input type="text" id="porque_${index}" name="porque_${index}" class="form-control col-md-6" value="${item.porque || ''}">`;
+        newRow.insertCell(2).innerHTML = '<button type="button" onclick="removeRow2(this)">Remover</button>';
+    });
+
+    // Adicionar uma linha extra em branco se necessário
+    if (data.length === 0 || data[data.length - 1].causa !== '') {
+        addNewRecord2();
+    }
+}
+
+// Carregar dados ao iniciar a página
+window.onload = function() {
+    loadTableData();
+    loadTableData2();
+};

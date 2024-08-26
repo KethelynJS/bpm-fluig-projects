@@ -1,0 +1,298 @@
+<html>
+<head>
+	<link type="text/css" rel="stylesheet" href="/style-guide/css/fluig-style-guide.min.css"/>
+	<script type="text/javascript" src="/portal/resources/js/jquery/jquery.js"></script>
+	<script type="text/javascript" src="/portal/resources/js/jquery/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="/portal/resources/js/mustache/mustache-min.js"></script>
+	<script type="text/javascript" src="/style-guide/js/fluig-style-guide.min.js" charset="utf-8"></script>
+	
+	<style>
+        table {
+            width: 100%;
+            border-collapse: collapse; /* Remove bordas duplicadas */
+        }
+        th, td {
+            padding: 12px; /* Aumenta o espaço dentro das células */
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2; /* Cor de fundo mais clara para os cabeçalhos */
+            font-weight: bold; /* Destaca o texto dos cabeçalhos */
+        }
+        .table-striped tbody tr:nth-of-type(odd) {
+            background-color: #f9f9f9; /* Alterna a cor de fundo das linhas */
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 6px; /* Aumenta o preenchimento interno das caixas de texto */
+            border: 1px solid #ccc; /* Adiciona uma borda leve */
+            border-radius: 4px; /* Arredonda os cantos da borda */
+            box-sizing: border-box; /* Inclui o preenchimento e borda na largura total */
+        }
+        /* Estilo para ajustar a largura das colunas */
+        .col-cep {
+            width: 40%; /* Ajusta a largura da primeira coluna */
+        }
+        .col-lote {
+            width: 30%; /* Ajusta a largura da coluna do meio */
+        }
+        .col-resultado {
+            width: 30%; /* Ajusta a largura da coluna de resultado */
+        }
+        /* Ajuste adicional para garantir a visibilidade do conteúdo */
+        .col-resultado {
+            width: 40%; /* Aumenta a largura da coluna de resultado */
+        }
+        
+    </style>
+</head>
+<body>
+<div class="fluig-style-guide">
+<form name="form" role="form">
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title"><i class="fluigicon fluigicon-search icon-md" aria-hidden="true"></i> Análise do Produto</h3>
+    </div>
+    <div class="panel-body">
+	    	<div id="opcaoo" class="form-group col-md-10">
+	    <label for="opcoes">Escolha uma opção:</label>
+	      <select type="opcao" name="opcao" class="form-control" id="opcao" placeholder="Escreva o seu nome">
+	        <option value="opcao1">Transportadora</option>
+	        <option value="opcao2">Distribuidora</option>
+	        <option value="opcao3">Fornecedores Componentes Críticos</option>
+	        <option value="opcao4">Fornecedores Componentes Não críticos</option>
+	        <option value="opcao5">Prestadores de serviços</option>
+	      </select>
+			</div>
+	<div class="form-group col-md-2">
+        <label for="lote">Lote</label>
+        <input type="lote" name="lote" class="form-control" id="lote" placeholder="Coloque o lote">
+    </div>
+        <div class="row">
+    <div class="form-group col-md-12">
+    <label for="motivo">Motivo da análise:</label>
+        <div class="radio">
+            <label><input type="radio" name="motivoAnalise" id="motivoAnalise" value="sim">Liberação para comercialização</label>
+            <label><input type="radio" name="motivoAnalise" id="motivoAnalise" value="nao">RC/Tecnovigilância</label>
+        </div>		
+	</div>
+    	</div>
+    	<div class="row">
+    <div class="form-group col-md-10">
+        <label for="aspecto">Aspecto final</label>
+        <input type="aspecto" name="aspecto" class="form-control" id="aspecto" placeholder="">
+    </div>
+    <div id="opcaoo" class="form-group col-md-2">
+  <label for="Resp">Resp:</label>
+    <select type="Resp" name="Resp" class="form-control" id="Resp" placeholder="">
+    <option value="escolha">Escolha</option>
+      <option value="cleide">Cleide</option>
+      <option value="daniele">Daniele</option>
+    </select>
+</div>
+    </div>
+    	<div class="row">
+    <div class="form-group col-md-12">
+    <label for="esteril">Esterilidade:</label>
+        <div class="radio">
+            <label><input type="radio" name="esterilidadeA" id="esterilidade" value="bacteriana">Bacteriana. Estufa bacteriológica n° 24/25</label>
+            <label><input type="radio" name="esterilidadeB" id="esterilidade" value="n226">ou n° 226</label>
+            <label><input type="radio" name="esterilidadeC" id="esterilidade" value="n35">a 35°C ± 2°C por pelo menos 24h</label>
+        </div>		
+	</div>
+    	</div>
+    	<div class="row">
+    <div class="form-group col-md-2">
+        <label for="datacainicio">Início da incubação </label>
+        <input type="datetime-local" name="datacainicio" id="datacainicio" class="form-control" placeholder="Data e hora da solicitação">
+    </div>
+    <div id="opcaoo" class="form-group col-md-2">
+  <label for="Resp2">Resp:</label>
+    <select type="Resp2" name="Resp2" class="form-control" id="Resp2" placeholder="">
+    <option value="escolha">Escolha</option>
+      <option value="cleide">Cleide</option>
+      <option value="daniele">Daniele</option>
+    </select>
+</div>
+	</div>
+	<div class="row">
+	    <div class="form-group col-md-2">
+	        <label for="datafinal5">Fim da incubação</label>
+	        <input type="datetime-local" name="datafinal5" id="datafinal5" class="form-control" placeholder="Data e hora do fim ">
+	    </div>
+	    <div class="form-group col-md-5">
+        <label for="resultado5">Resultado</label>
+        <input type="solicitante" name="resultado5" class="form-control" id="resultado5" placeholder="Coloque o resultado">
+    	</div>
+		 <div id="opcaoo" class="form-group col-md-2">
+		  <label for="Respx">Resp:</label>
+		    <select type="Respx" name="Respx" class="form-control" id="Respx" placeholder="">
+		    <option value="escolha">Escolha</option>
+		      <option value="cleide">Cleide</option>
+		      <option value="daniele">Daniele</option>
+		    </select>
+		</div>
+	</div>
+	<div class="row">
+    <div class="form-group col-md-12">
+   
+        <div class="radio">
+            <label><input type="radio" name="fungica" id="fungica" value="fungica">Fúngica. Estufa bacteriológica n° 22 a 25°C ± 2°C por 120h (5 dias)</label>
+ 
+        </div>		
+	</div>
+    	</div>
+	    	<div class="row">
+	    <div class="form-group col-md-2">
+	        <label for="datacainicio3">Início da incubação </label>
+	        <input type="datetime-local" name="datacainicio3" id="datacainicio3" class="form-control" placeholder="Data e hora da solicitação">
+	    </div>
+	    <div id="opcaoo" class="form-group col-md-2">
+	  <label for="Respo">Resp:</label>
+	    <select type="Respo" name="Respo" class="form-control" id="Respo" placeholder="">
+	    <option value="escolha">Escolha</option>
+	      <option value="cleide">Cleide</option>
+	      <option value="daniele">Daniele</option>
+	    </select>
+		</div>
+		</div>
+	<div class="row">
+	    <div class="form-group col-md-2">
+	        <label for="datafinal">Fim da incubação</label>
+	        <input type="datetime-local" name="datafinal" id="datafinal" class="form-control" placeholder="Data e hora do fim ">
+	    </div>
+	    <div class="form-group col-md-5">
+        <label for="resultado">Resultado</label>
+        <input type="solicitante" name="resultado" class="form-control" id="resultado" placeholder="Coloque o resultado">
+    	</div>
+		 <div id="opcaoo" class="form-group col-md-2">
+		  <label for="Resp3">Resp:</label>
+		    <select type="Resp3" name="Resp3" class="form-control" id="Resp3" placeholder="">
+		    <option value="escolha">Escolha</option>
+		      <option value="cleide">Cleide</option>
+		      <option value="daniele">Daniele</option>
+		    </select>
+		</div>
+	</div>
+</div>
+</div>
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title"><i class="fluigicon fluigicon-search icon-md" aria-hidden="true"></i> Análise desempenho</h3>
+    </div>
+    <div class="panel-body">
+        <div class="container">
+        <h3>Desempenho microbiológico: Estufa bacteriológica n° 23 a 35°C ± 2°C por overnight ou até crescimento visível</h3>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th class="col-cep">Micro-organismo padrão (Cepa) - código interno</th>
+                    <th class="col-lote">Lote do micro-organismo padrão</th>
+                    <th class="col-resultado">Resultado</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input type="text" name="campo_1_1" placeholder="Digite aqui"></td>
+                    <td><input type="text" name="campo_1_2" placeholder="Digite aqui"></td>
+                    <td><input type="text" name="campo_1_3" placeholder="Digite aqui"></td>
+                </tr>
+                <tr>
+                    <td><input type="text" name="campo_2_1" placeholder="Digite aqui"></td>
+                    <td><input type="text" name="campo_2_2" placeholder="Digite aqui"></td>
+                    <td><input type="text" name="campo_2_3" placeholder="Digite aqui"></td>
+                </tr>
+                <tr>
+                    <td><input type="text" name="campo_3_1" placeholder="Digite aqui"></td>
+                    <td><input type="text" name="campo_3_2" placeholder="Digite aqui"></td>
+                    <td><input type="text" name="campo_3_3" placeholder="Digite aqui"></td>
+                </tr>
+                <tr>
+                    <td><input type="text" name="campo_4_1" placeholder="Digite aqui"></td>
+                    <td><input type="text" name="campo_4_2" placeholder="Digite aqui"></td>
+                    <td><input type="text" name="campo_4_3" placeholder="Digite aqui"></td>
+                </tr>
+                <tr>
+                    <td><input type="text" name="campo_5_1" placeholder="Digite aqui"></td>
+                    <td><input type="text" name="campo_5_2" placeholder="Digite aqui"></td>
+                    <td><input type="text" name="campo_5_3" placeholder="Digite aqui"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+    	<div class="row">
+    <div class="form-group col-md-2">
+        <label for="datacainicio2">Início da incubação </label>
+        <input type="datetime-local" name="datainicio2" id="datacainicio2" class="form-control" placeholder="Data e hora da solicitação">
+    </div>
+    <div id="opcaoo" class="form-group col-md-2">
+  <label for="Resp2">Resp:</label>
+    <select type="Resp2" name="Resp4" class="form-control" id="Resp4" placeholder="">
+    <option value="escolha">Escolha</option>
+      <option value="cleide">Cleide</option>
+      <option value="daniele">Daniele</option>
+    </select>
+</div>
+	</div>
+	<div class="row">
+    <div class="form-group col-md-2">
+        <label for="datacafinall">Fim da incubação </label>
+        <input type="datetime-local" name="datacafinall" id="datacafinall" class="form-control" placeholder="Data e hora da solicitação">
+    </div>
+    <div id="opcaoo" class="form-group col-md-2">
+  <label for="Respk">Resp:</label>
+    <select type="Respk" name="Respk" class="form-control" id="Respk" placeholder="">
+    <option value="escolha">Escolha</option>
+      <option value="cleide">Cleide</option>
+      <option value="daniele">Daniele</option>
+    </select>
+</div>
+	</div>
+	<div class="row">
+    <div class="form-group col-md-7">
+        <div class="radio">
+            <label><input type="radio" name="prioridade" id="prioridade" value="conforme">Conforme</label>
+            <label><input type="radio" name="prioridade" id="prioridade" value="naoconforme">Não conforme</label>
+            <label><input type="radio" name="prioridade" id="prioridade" value="naoaplicavel">Não aplicável</label>
+        	
+	    <div id="opcaoo" class="form-group col-md-2">
+	  		
+	    <select type="Respp" name="Respp" class="form-control" id="Respp" placeholder="">
+	    <option value="escolha">Resp</option>
+	      <option value="cleide">Cleide</option>
+	      <option value="daniele">Daniele</option>
+	    </select>
+	    </div>
+</div>	
+</div>
+</div>
+<div class="row">
+    <div class="form-group col-md-7">
+        <div class="radio">
+            <label><input type="radio" name="aprovado" id="aprovado" value="aprovado">Produto aprovado</label>
+            <label><input type="radio" name="aprovado" id="aprovado" value="reprovado">Produto reprovado</label>
+            
+            </div>
+    </div>
+</div>
+<div class="row">
+    <div class="form-group col-md-12">
+        <label for="rpnc">Caso a finalidade da análise seja para liberação de produto para comercialização e o produto seja reprovado abrir RPNC. RPNC n°:</label>
+        <input type="rpnc" name="rpnc" class="form-control" id="rpnc" placeholder="Coloque o n° da RPNC">
+    </div>
+    </div>
+<div class="row">
+    <div class="form-group col-md-2">
+        <label for="datacalendario">Data</label>
+        <input type="datacalendario" name="datacalendario" id="datacalendario" class="form-control" placeholder="Data da solicitação ">
+    </div>
+</div>
+
+</form>
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+<script src="registro.js"></script>
+</body>
+</html>

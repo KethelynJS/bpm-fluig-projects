@@ -1,0 +1,36 @@
+function displayFields(form, customHTML) {
+    var atv_atual = getValue("WKNumState");
+    var returnFromActivity11 = form.getValue("returnFromActivity11");
+
+    log.info("atv_atual: " + atv_atual);
+
+    // Configura a visibilidade dos painéis baseados na atividade atual
+    if (atv_atual == 0 || atv_atual == 4) {
+        form.setVisibleById("panelwarning3", false);
+        form.setVisibleById("panelwarning4", false);
+        form.setVisibleById("panelwarning5", false); // Painel da atividade 11
+        form.setVisibleById("panelwarning6", false);
+        form.setVisibleById("panelwarning7", false);
+    } else if (atv_atual == 5) {
+        form.setVisibleById("panelwarning5", true);  // Exibe o painel da atividade 11 na atividade 5
+        form.setVisibleById("panelwarning6", false);
+        form.setVisibleById("panelwarning7", false);
+
+        if (returnFromActivity11 == "true") {  // Verifica se a atividade retornou da 11
+            disableAllFields("panelwarning7");  // Desabilita todos os campos no painel da atividade 11
+        }
+    } else if (atv_atual == 9) {
+        form.setVisibleById("panelwarning6", false);
+        form.setVisibleById("panelwarning7", false);
+    }
+}
+
+function disableAllFields(panelId) {
+    var panel = document.getElementById(panelId);
+    if (panel) {
+        var fields = panel.querySelectorAll("input, select, textarea");
+        fields.forEach(function(field) {
+            field.disabled = true;  // Desabilita o campo para edição
+        });
+    }
+}

@@ -1,0 +1,155 @@
+let recordIdCounter = 0; // Contador de ID para Tabela 1
+let record2IdCounter = 0; // Contador de ID para Tabela 2
+
+// Função para adicionar uma nova linha na Tabela 1
+function addNewRecord() {
+    const tabela = document.getElementById('tabelaRegistros').getElementsByTagName('tbody')[0];
+    const newRow = tabela.insertRow();
+
+    newRow.insertCell(0).innerHTML = `<input type="text" id="codigo_${recordIdCounter}" name="codigo_${recordIdCounter}" class="form-control col-md-3">`;
+    newRow.insertCell(1).innerHTML = `<input type="text" id="lote_${recordIdCounter}" name="lote_${recordIdCounter}" class="form-control col-md-3">`;
+    newRow.insertCell(2).innerHTML = `<input type="number" id="quantidade_${recordIdCounter}" name="quantidade_${recordIdCounter}" class="form-control col-md-2">`;
+    newRow.insertCell(3).innerHTML = `<input type="date" id="datafabricacao_${recordIdCounter}" name="datafabricacao_${recordIdCounter}" class="form-control col-md-2">`;
+    newRow.insertCell(4).innerHTML = `<input type="date" id="datavalidade_${recordIdCounter}" name="datavalidade_${recordIdCounter}" class="form-control col-md-2">`;
+    newRow.insertCell(5).innerHTML = '<button type="button" onclick="removeRow(this)">Remover</button>';
+
+    recordIdCounter++;
+}
+
+// Função para remover uma linha da Tabela 1
+function removeRow(button) {
+    const row = button.parentNode.parentNode;
+    row.parentNode.removeChild(row);
+}
+
+// Função para adicionar uma nova linha na Tabela 2
+function addNewRecord2() {
+    const tabela = document.getElementById('tabelaRegistross').getElementsByTagName('tbody')[0];
+    const newRow = tabela.insertRow();
+
+    newRow.insertCell(0).innerHTML = `<input type="text" id="causa_${record2IdCounter}" name="causa_${record2IdCounter}" class="form-control col-md-6">`;
+    newRow.insertCell(1).innerHTML = `<input type="text" id="porque_${record2IdCounter}" name="porque_${record2IdCounter}" class="form-control col-md-6">`;
+    newRow.insertCell(2).innerHTML = '<button type="button" onclick="removeRow2(this)">Remover</button>';
+
+    record2IdCounter++;
+}
+
+// Função para remover uma linha da Tabela 2
+function removeRow2(button) {
+    const row = button.parentNode.parentNode;
+    row.parentNode.removeChild(row);
+}
+
+// Função para salvar os dados da Tabela 1 no cookie
+function saveTableData() {
+    console.log("Salvando dados da Tabela 1 no cookie");
+    const tabela = document.getElementById('tabelaRegistros').getElementsByTagName('tbody')[0];
+    const rows = tabela.rows;
+    const data = [];
+
+    for (let i = 0; i < rows.length; i++) {
+        const row = rows[i];
+        const rowData = {
+            codigo: row.cells[0].children[0].value || '',
+            lote: row.cells[1].children[0].value || '',
+            quantidade: row.cells[2].children[0].value || '',
+            datafabricacao: row.cells[3].children[0].value || '',
+            datavalidade: row.cells[4].children[0].value || ''
+        };
+
+        // Adiciona dados apenas se pelo menos um campo estiver preenchido
+        if (Object.values(rowData).some(value => value.trim() !== '')) {
+            console.log("Dados da linha", i, ":", rowData);
+            data.push(rowData);
+        }
+    }
+
+    console.log("Dados salvos para Tabela 1:", JSON.stringify(data));
+
+    // Salvar os dados no cookie com um identificador único para o formulário
+    setCookie('tabela1Data', JSON.stringify(data), 7); // O cookie expira em 7 dias
+}
+
+// Função para carregar os dados da Tabela 1 do cookie
+function loadTableData() {
+    console.log("Carregando dados da Tabela 1 do cookie");
+    const data = JSON.parse(getCookie('tabela1Data') || '[]');
+    console.log("Dados carregados para Tabela 1:", data);
+    const tabela = document.getElementById('tabelaRegistros').getElementsByTagName('tbody')[0];
+
+    // Limpar a tabela
+    tabela.innerHTML = '';
+    recordIdCounter = 0; // Resetar IDs
+
+    // Adicionar linhas com dados
+    data.forEach((item, index) => {
+        const newRow = tabela.insertRow();
+
+        newRow.insertCell(0).innerHTML = `<input type="text" id="codigo_${index}" name="codigo_${index}" class="form-control col-md-3" value="${item.codigo || ''}">`;
+        newRow.insertCell(1).innerHTML = `<input type="text" id="lote_${index}" name="lote_${index}" class="form-control col-md-3" value="${item.lote || ''}">`;
+        newRow.insertCell(2).innerHTML = `<input type="number" id="quantidade_${index}" name="quantidade_${index}" class="form-control col-md-2" value="${item.quantidade || ''}">`;
+        newRow.insertCell(3).innerHTML = `<input type="date" id="datafabricacao_${index}" name="datafabricacao_${index}" class="form-control col-md-2" value="${item.datafabricacao || ''}">`;
+        newRow.insertCell(4).innerHTML = `<input type="date" id="datavalidade_${index}" name="datavalidade_${index}" class="form-control col-md-2" value="${item.datavalidade || ''}">`;
+        newRow.insertCell(5).innerHTML = '<button type="button" onclick="removeRow(this)">Remover</button>';
+    });
+
+    // Adicionar uma linha extra em branco se necessário
+    if (data.length === 0 || data[data.length - 1].codigo !== '') {
+        addNewRecord();
+    }
+}
+
+// Função para salvar os dados da Tabela 2 no cookie
+function saveTableData2() {
+    console.log("Salvando dados da Tabela 2 no cookie");
+    const tabela = document.getElementById('tabelaRegistross').getElementsByTagName('tbody')[0];
+    const rows = tabela.rows;
+    const data = [];
+
+    for (let i = 0; i < rows.length; i++) {
+        const row = rows[i];
+        const rowData = {
+            causa: row.cells[0].children[0].value || '',
+            porque: row.cells[1].children[0].value || ''
+        };
+        console.log("Dados da linha", i, ":", rowData);
+        data.push(rowData);
+    }
+
+    console.log("Dados salvos para Tabela 2:", JSON.stringify(data));
+
+    // Salvar os dados no cookie com um identificador único para o formulário
+    setCookie('tabela2Data', JSON.stringify(data), 7); // O cookie expira em 7 dias
+}
+
+// Função para carregar os dados da Tabela 2 do cookie
+function loadTableData2() {
+    console.log("Carregando dados da Tabela 2 do cookie");
+    const data = JSON.parse(getCookie('tabela2Data') || '[]');
+    console.log("Dados carregados para Tabela 2:", data);
+    const tabela = document.getElementById('tabelaRegistross').getElementsByTagName('tbody')[0];
+
+    // Limpar a tabela
+    tabela.innerHTML = '';
+    record2IdCounter = 0; // Resetar IDs
+
+    // Adicionar linhas com dados
+    data.forEach((item, index) => {
+        const newRow = tabela.insertRow();
+
+        newRow.insertCell(0).innerHTML = `<input type="text" id="causa_${index}" name="causa_${index}" class="form-control col-md-6" value="${item.causa || ''}">`;
+        newRow.insertCell(1).innerHTML = `<input type="text" id="porque_${index}" name="porque_${index}" class="form-control col-md-6" value="${item.porque || ''}">`;
+        newRow.insertCell(2).innerHTML = '<button type="button" onclick="removeRow2(this)">Remover</button>';
+    });
+
+    // Adicionar uma linha extra em branco se necessário
+    if (data.length === 0 || data[data.length - 1].causa !== '') {
+        addNewRecord2();
+    }
+}
+
+// Carregar dados ao iniciar a página
+window.onload = function() {
+    loadTableData();
+    loadTableData2();
+};

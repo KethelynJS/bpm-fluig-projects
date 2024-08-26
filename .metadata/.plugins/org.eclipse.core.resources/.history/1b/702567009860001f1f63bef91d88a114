@@ -1,0 +1,208 @@
+<html>
+<head>
+	<link type="text/css" rel="stylesheet" href="/style-guide/css/fluig-style-guide.min.css"/>
+	<script type="text/javascript" src="/portal/resources/js/jquery/jquery.js"></script>
+	<script type="text/javascript" src="/portal/resources/js/jquery/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="/portal/resources/js/mustache/mustache-min.js"></script>
+	<script type="text/javascript" src="/style-guide/js/fluig-style-guide.min.js" charset="utf-8"></script>
+</head>
+<body>
+<div class="fluig-style-guide">
+<form name="form" role="form">
+<div id="panel1" class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">Gestão de pessoas</h3>
+    </div>
+    <div class="panel-body">
+		 <div class="row">
+		    <div class="form-group col-md-6">
+		        <label for="novo_colaborador">Nome do novo colaborador</label>
+		        <input type="novo_colaborador" name="novo_colaborador" class="form-control" id="novo_colaborador" placeholder="Coloque o nome do novo colaborador">
+		    </div>
+		    <div class="form-group col-md-6">
+		        <label for="setor_atuante">Setor atuante</label>
+		        <input type="setor_atuante" name="setor_atuante" class="form-control" id="setor_atuante" placeholder="Coloque o nome do setor">
+		    </div>
+		</div>
+		<div class="row">
+		    <div class="form-group col-md-6">
+		        <label for="funcao">Função</label>
+		        <input type="funcao" name="funcao" class="form-control" id="funcao" placeholder="Coloque o nome da função">
+		    </div>
+		    <div class="form-group col-md-4">
+		        <label for="data_prevista">Data previsto para início</label>
+		        <input type="date" name="data_prevista" class="form-control" id="data_prevista" placeholder="Coloque a data de início">
+		    </div>
+		</div>
+		<div class="row">
+		    <div class="form-group col-md-6">
+		    <label>Colaborador vai atuar com cargo que necessita acionar a TI?</label>
+		        <div class="radio">
+		            <label><input type="radio" name="acionar_ti" id="acionar_ti_s" value="acionar_sim">Sim</label></br>
+		            <label><input type="radio" name="acionar_ti" id="acionar_ti_n" value="acionar_nao">Não</label>
+		        </div>		
+		</div>
+		</div>
+		<div class="row">
+		    <div class="form-group col-md-12">
+		        <label for="consideracoes">Se sim, quais as necessidades:</label>
+		        <textarea rows="3" name="consideracoes" id="consideracoes" class="form-control" placeholder="Descrever as necessidades de acesso para o colaborador como e-mail, assinatura digital, acesso SAP e/ou Fluig, ramal p/telefone, spark, aquisição de computador e/ou telefone."></textarea>
+		    </div>
+		</div>
+		
+    </div>
+</div>
+
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">TI</h3>
+    </div>
+    <div class="panel-body">
+		 <div class="row">
+		    <div class="form-group col-md-4">
+		        <label for="acessos_solicitados">Criado todos os acessos solicitados?</label>
+		        <input type="acessos_solicitados" name="acessos_solicitados" class="form-control" id="acessos_solicitados" placeholder="">
+		    </div>
+		</div>
+		<div class="row">
+		    <div class="form-group col-md-12">
+		        <label for="observacao_ti">Observação</label>
+		        <textarea rows="3" name="observacao_ti" id="observacao_ti" class="form-control"></textarea>
+		    </div>
+		</div>
+    </div>
+</div>
+
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">1 Dia do colaborador</h3>
+    </div>
+    <div class="panel-body">
+		 <table class="table table-striped">
+		  <thead>
+		    <tr>
+		      <th>Pergunta</th>
+		      <th>Sim</th>
+		      <th>Não</th>
+		    </tr>
+		  </thead>
+		  <tbody>
+		    <tr>
+		      <td>Colaborador entregou todo os documentos admissionais</td>
+		      <td><input type="radio" name="pergunta1" value="sim"></td>
+		      <td><input type="radio" name="pergunta1" value="nao"></td>
+		    </tr>
+		    <tr>
+		      <td>Realizou exame admissional</td>
+		      <td><input type="radio" name="pergunta2" value="sim"></td>
+		      <td><input type="radio" name="pergunta2" value="nao"></td>
+		    </tr>
+		    <tr>
+		      <td>Assinou o contrato de trabalho?</td>
+		      <td><input type="radio" name="pergunta3" value="sim"></td>
+		      <td><input type="radio" name="pergunta3" value="nao"></td>
+		    </tr>
+		    <tr>
+		      <td>Pergunta 4</td>
+		      <td><input type="radio" name="pergunta4" value="sim"></td>
+		      <td><input type="radio" name="pergunta4" value="nao"></td>
+		    </tr>
+		    <tr>
+		      <td>Assinou a ordem de serviço?</td>
+		      <td><input type="radio" name="pergunta5" value="sim"></td>
+		      <td><input type="radio" name="pergunta5" value="nao"></td>
+		    </tr>
+		    <tr>
+		      <td>Assinou o termo de responsabilidade TI?</td>
+		      <td><input type="radio" name="pergunta6" value="sim"></td>
+		      <td><input type="radio" name="pergunta6" value="nao"></td>
+		    </tr>
+		  </tbody>
+		</table>
+		
+	<div class="row">
+	    <div class="form-group col-md-12">
+	        <label for="observacao_gestao">Observação</label>
+	        <textarea rows="5" name="observacao_gestao" id="observacao_gestao" class="form-control" placeholder="Descrever qualquer pendência que tenha sido gerada e data prevista para entrega - essa pendência deverá ser cadastrada como ação corretiva para o setor gestão de pessoas não esquecer de solicitar ao colaborador tal pendência."></textarea>
+	    </div>
+	</div>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">Deveres Gestão de pessoas</h3>
+    </div>
+    <div class="panel-body">
+		<table class="table table-striped">
+		  <thead>
+		    <tr>
+		      <th>Pergunta</th>
+		      <th>Sim</th>
+		      <th>Não</th>
+		    </tr>
+		  </thead>
+		  <tbody>
+		    <tr>
+		      <td>Foi criado uma pasta com o nome do colaborador no Fluig(pasta GP) e anexados todos os documentos nessa?</td>
+		      <td><input type="radio" name="questao1" value="sim"></td>
+		      <td><input type="radio" name="questao1" value="nao"></td>
+		    </tr>
+		    <tr>
+		      <td>Foi entregue ao colaborador o crachá em treinamento e explicado a respeito do uso (durante todo o período de experência)?</td>
+		      <td><input type="radio" name="questao2" value="sim"></td>
+		      <td><input type="radio" name="questao2" value="nao"></td>
+		    </tr>
+		    <tr>
+		      <td>Os EPI's foram entregues ao colaborador, e o FOR 5.1.3.1.2 Controle de Entrega de EPI's assinado? (Criar como campo obrigatório anexo o For assinado)</td>
+		      <td><input type="radio" name="questao3" value="sim"></td>
+		      <td><input type="radio" name="questao3" value="nao"></td>
+		    </tr>
+		    <tr>
+		      <td>Os uniformes e chaves dos armários foram entregues ao colaborador?</td>
+		      <td><input type="radio" name="questao4" value="sim"></td>
+		      <td><input type="radio" name="questao4" value="nao"></td>
+		    </tr>
+		    <tr>
+		      <td></td>
+		      <td><input type="radio" name="questao5" value="sim"></td>
+		      <td><input type="radio" name="questao5" value="nao"></td>
+		    </tr>
+		    <tr>
+		      <td>Pergunta 6</td>
+		      <td><input type="radio" name="questao6" value="sim"></td>
+		      <td><input type="radio" name="questao6" value="nao"></td>
+		    </tr>
+		    <tr>
+		      <td>Pergunta 7</td>
+		      <td><input type="radio" name="questao7" value="sim"></td>
+		      <td><input type="radio" name="questao7" value="nao"></td>
+		    </tr>
+		  </tbody>
+		</table>
+
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">Título</h3>
+    </div>
+    <div class="panel-body">
+        aqui onde vai o conteúdo
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">Título</h3>
+    </div>
+    <div class="panel-body">
+        aqui onde vai o conteúdo
+    </div>
+</div>
+
+</form>
+</div>
+</body>
+</html>
