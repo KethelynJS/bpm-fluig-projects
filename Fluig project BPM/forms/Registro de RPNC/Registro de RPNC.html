@@ -1,0 +1,366 @@
+<html>
+<head>
+	<link type="text/css" rel="stylesheet" href="/style-guide/css/fluig-style-guide.min.css"/>
+	<script type="text/javascript" src="/portal/resources/js/jquery/jquery.js"></script>
+	<script type="text/javascript" src="/portal/resources/js/jquery/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="/portal/resources/js/mustache/mustache-min.js"></script>
+	<script type="text/javascript" src="/style-guide/js/fluig-style-guide.min.js" charset="utf-8"></script>
+	
+	<style>
+	.info-textarea1 {
+			    width: 100%; /* Garante que o textarea ocupe toda a largura do contêiner */
+			    background-color: #ffff99; /* Fundo amarelo claro */
+			    color: #000000; /* Cor do texto preta */
+			    border: 1px solid #cccccc; /* Borda cinza clara */
+			    border-radius: 4px; /* Bordas arredondadas */
+			    justify-content: center;
+	}
+	
+	.info-textarea2 {
+		width: 100%;
+		color: #000000; /* Cor do texto preta */
+		border: 1px solid #cccccc; /* Borda cinza clara */
+		border-radius: 4px;
+		background-color: #DCDCDC;
+	}
+	
+	.textarea-fixed-size {
+            width: 100%; /* Faz o textarea ocupar toda a largura da célula */
+            height: 70px; /* Define a altura do textarea */
+            min-height: 70px;
+            box-sizing: border-box; /* Inclui padding e border no tamanho total */
+            resize: vertical; /* Permite apenas redimensionar verticalmente */
+            white-space: pre-wrap; /* Permite quebra de linha e preserva espaços */
+            word-wrap: break-word;
+        }
+	
+	</style>
+</head>
+<body>
+<div class="fluig-style-guide">
+<form name="form" role="form">
+<div id="panelwarning1" class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">RPNC</h3>
+    </div>
+    <div class="panel-body">
+        <div class="row">
+		    <div class="form-group col-md-2">
+		        <label for="data_inicio">Data da abertura RPNC</label>
+		        <input type="date" name="data_inicio" id="data_inicio" class="form-control" placeholder="Data">
+		    </div>
+			<div class="form-group col-md-10">
+		        <label for="resp_pelo_envio">Responsável pelo envio da RPNC</label>
+		        <input type="resp_pelo_envio" name="resp_pelo_envio" class="form-control" id="resp_pelo_envio" placeholder="Coloque o nome do responsável">
+		    </div>
+		</div>
+		
+	<div class="row">
+	    <div class="form-group col-md-4">
+	    <label>Setor responsável pela abertura da RPNC</label>
+	        <div class="radio">
+	            <label><input type="radio" name="setor_responsavel" id="setor_responsavel" value="almox_suprimentos">Almox. Suprimentos</label></br>
+	            <label><input type="radio" name="setor_responsavel" id="setor_responsavel" value="almox_pa">Almox. PA/Expedição</label></br>
+	            <label><input type="radio" name="setor_responsavel" id="setor_responsavel" value="bioquimica">Bioquímica</label></br>
+	            <label><input type="radio" name="setor_responsavel" id="setor_responsavel" value="compras">Compras</label></br>
+	            <label><input type="radio" name="setor_responsavel" id="setor_responsavel" value="controle_qualidade">Controle de Qualidade</label></br>
+	            <label><input type="radio" name="setor_responsavel" id="setor_responsavel" value="corantes">Corantes</label></br>
+	            <label><input type="radio" name="setor_responsavel" id="setor_responsavel" value="comercial">Comercial</label></br>
+	            <label><input type="radio" name="setor_responsavel" id="setor_responsavel" value="meio_cultura">Meio de Cultura</label></br>
+	            <label><input type="radio" name="setor_responsavel" id="setor_responsavel" value="equipamentos">Equipamentos</label></br>
+	            <label><input type="radio" name="setor_responsavel" id="setor_responsavel" value="embalagem">Embalagem</label></br>
+	            <label><input type="radio" name="setor_responsavel" id="setor_responsavel" value="financeiro_faturamento">Financeiro/Faturamento</label></br>
+	            <label><input type="radio" name="setor_responsavel" id="setor_responsavel" value="gestao_pessoas">Gestão de Pessoas</label></br>
+	            <label><input type="radio" name="setor_responsavel" id="setor_responsavel" value="garantia_qualidade">Garantia da Qualidade</label></br>
+	            <label><input type="radio" name="setor_responsavel" id="setor_responsavel" value="pd">P&D</label></br>
+	            <label><input type="radio" name="setor_responsavel" id="setor_responsavel" value="pcp">PCP</label></br>
+	            <label><input type="radio" name="setor_responsavel" id="setor_responsavel" value="t_i">T.I.</label>
+	        </div>		
+	    </div>
+	    
+	    <div class="form-group col-md-4">
+	    <label>Natureza do Desvio</label>
+	        <div class="radio">
+	            <label><input type="radio" name="natureza_desvio" id="natureza_desvio" value="aspecto_alterado">Aspecto Alterado</label></br>
+	            <label><input type="radio" name="natureza_desvio" id="natureza_desvio" value="contaminacao">Contaminação</label></br>
+	            <label><input type="radio" name="natureza_desvio" id="natureza_desvio" value="erro_operacional">Erro Operacional</label></br>
+	            <label><input type="radio" name="natureza_desvio" id="natureza_desvio" value="desempenho">Desempenho Insatisfatório</label></br>
+	            <label><input type="radio" name="natureza_desvio" id="natureza_desvio" value="rendimento">Rendimento real acima ou abaixo 10% do RT</label></br>
+	            <label><input type="radio" name="natureza_desvio" id="natureza_desvio" value="fora_especificacao">Fora da Especificação</label></br>
+	            <label><input type="radio" name="natureza_desvio" id="natureza_desvio" value="falta_suprimentos">Falta de Suprimentos</label></br>
+	            <label><input type="radio" name="natureza_desvio" id="natureza_desvio" value="avarias">Avarias</label></br>
+	            <label><input type="radio" name="natureza_desvio" id="natureza_desvio" value="itens_vencidos">Itens Vencidos</label></br>
+	            <label><input type="radio" name="natureza_desvio" id="natureza_desvio" value="erro_separacao">Erro de Separação</label></br>
+	            <label><input type="radio" name="natureza_desvio" id="natureza_desvio" value="problemas_equipamentos">Problemas em Equipamentos</label></br>
+	            <label><input type="radio" name="natureza_desvio" id="natureza_desvio" value="outros_desvio">Outros: </label> <input type="text" name="descricao_outros" id="descricao_outros" style="display: inline-block; width: 200px; border: none; border-bottom: 1px solid #000; background: none; outline: none; height: 20px;" placeholder="Descreva o desvio">
+	        </div>		
+	    </div>
+	    
+		<div class="form-group col-md-2">
+	        <label for="data_ocorrencia">Data da ocorrência</label>
+	        <input type="date" name="data_ocorrencia" id="data_ocorrencia" class="form-control" placeholder="Data">
+	    </div>
+	</div>
+		<div class="row">
+		    <div class="form-group col-md-6">
+		    <label>Tipo de Não conformidade:</label>
+		        <div class="radio">
+		            <label><input type="radio" name="tipo_nao_conformidade" id="tipo_nao_conformidade" value="produto">Produto</label>
+		            <label><input type="radio" name="tipo_nao_conformidade" id="tipo_nao_conformidade" value="componente">Componente</label>
+		            <label><input type="radio" name="tipo_nao_conformidade" id="tipo_nao_conformidade" value="processo">Processo</label>
+		        </div>		
+		    </div>
+		</div>
+		<label>Para produto ou componente:</label>
+		<div class="row">
+		
+	 <div>
+		<table class="table"  id="tabelaRegistros" dataset="linhaDinamicaDataset" datadatasetkey="myDataset" datadatasetvalue="dynamicTableData">
+		<thead>
+		    <tr>
+		        <th class="col-md-2">Código</th>
+		        <th class="col-md-6">item</th>
+		        <th class="col-md-2">lote</th>
+		        <th class="col-md-2">Quantidade</th>
+		        
+		    </tr>
+		</thead>
+		<tbody>
+		    <tr>
+		        <td><input type="text" name="codigo_1" class="form-control"></td>
+		        <td><input type="text" name="lote_1" class="form-control"></td>
+		        <td><input type="text" name="quantidade_1" class="form-control"></td>
+		        <td><input type="text" name="datafabricacao_1" class="form-control"></td>
+		        <td><button type="button" onclick="removeRow(this)"><i class="flaticon flaticon-trash icon-md" aria-hidden="true"></i></button></td>
+		    </tr>
+		</tbody>
+		</table>
+		</div>
+		</div>
+		<button type="button" class="btn btn-info" onclick="addNewRecord()" id="novoRegistroBtn">Novo Registro</button>
+		<button type="button" class="btn btn-success" onclick="saveAllTables()" id="btnSalvar">Salvar Dados</button>
+		<input type="hidden" name="linhaDinamicaDataset" id="linhaDinamicaDataset">
+		</br><label></label>
+		<div class="row">
+		    <div class="form-group col-md-12">
+		        </br><label for="descricao_nao_conformidade">Descrição da não conformidade</label>
+		        <textarea rows="5" name="descricao_nao_conformidade" id="descricao_nao_conformidade" class="form-control"></textarea>
+		    </div>
+		</div>
+		<div class="row">
+		<div class="form-group col-md-8">
+	    <label>Ação imediata tomada pela área:</label>
+	        <div class="radio"> 
+	            <label><input type="radio" name="acao_imediata_tomada" id="acao_imediata_tomada" value="produto_descartado">Produto Descartado e transferido para o depósito 04</label></br>
+	            <label><input type="radio" name="acao_imediata_tomada" id="acao_imediata_tomada" value="produto_retrabalhado">Produto Retrabalhado após análise do coordenador/gerente técnico</label></br>
+	            <label><input type="radio" name="acao_imediata_tomada" id="acao_imediata_tomada" value="componente_segregado">Componente segregado e devolvido ao setor almox. suprimentos</label></br>
+	            <label><input type="radio" name="acao_imediata_tomada" id="acao_imediata_tomada" value="outros_acao">Outros: </label> <input type="text" name="descricao_outros_acao" id="descricao_outros_acao" style="display: inline-block; width: 200px; border: none; border-bottom: 1px solid #000; background: none; outline: none; height: 20px;" placeholder="Descreva a ação">
+	        </div>		
+	    </div>
+		</div>
+		<div class="row">
+	    <div class="form-group col-md-12">
+	        <label for="documents"></label>
+	        <textarea rows="2"  name="documents" id="infoText1" class="info-textarea1" style="text-align: center;" readonly>Se possível anexar fotos ou documentos</textarea>
+	    </div>
+	    </div>
+    </div>
+</div>
+
+<div id="panelwarning" class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">Validação dos dados GQ</h3>
+    </div>
+    <div class="panel-body">
+		<div class="row">
+		    <div class="form-group col-md-6">
+		        <div class="radio">
+		            <label><input type="radio" name="validando_primeira" id="validando_primeira" value="validando_conforme">Conforme</label></br>
+		            <label><input type="radio" name="validando_primeira" id="validando_primeira" value="validando_nao_conforme">Não conforme</label>
+		        </div>		
+		    </div>
+		</div>
+		<div class="row">
+		    <div class="form-group col-md-12">
+		        <label for="observacao_gq">Observações GQ</label>
+		        <textarea rows="5" name="observacao_gq" id="observacao_gq" class="form-control"></textarea>
+		    </div>
+		</div>
+		<input type="hidden" id="returnFromActivity5" name="returnFromActivity5" value="false">
+		<input type="hidden" id="returnFromActivity15" name="returnFromActivity14" value="false">
+    </div>
+</div>
+
+<div id="panelwarning3" class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">Garantia da qualidade</h3>
+    </div>
+    <div class="panel-body">
+        <div class="row">
+	    <div class="form-group col-md-4">
+	    <label>Setor responsável pela investigação</label>
+	        <div class="radio">
+	            <label><input type="radio" name="setor_responsavel_investigacao" id="setor_responsavel2" value="almox_suprimentos2">Almox. Suprimentos</label></br>
+	            <label><input type="radio" name="setor_responsavel_investigacao" id="setor_responsavel2" value="almox_pa2">Almox. PA/Expedição</label></br>
+	            <label><input type="radio" name="setor_responsavel_investigacao" id="setor_responsavel2" value="bioquimica2">Bioquímica</label></br>
+	            <label><input type="radio" name="setor_responsavel_investigacao" id="setor_responsavel2" value="compras2">Compras</label></br>
+	            <label><input type="radio" name="setor_responsavel_investigacao" id="setor_responsavel2" value="controle_qualidade2">Controle de Qualidade</label></br>
+	            <label><input type="radio" name="setor_responsavel_investigacao" id="setor_responsavel2" value="corantes2">Corantes</label></br>
+	            <label><input type="radio" name="setor_responsavel_investigacao" id="setor_responsavel2" value="comercial2">Comercial</label></br>
+	            <label><input type="radio" name="setor_responsavel_investigacao" id="setor_responsavel2" value="meio_cultura2">Meio de Cultura</label></br>
+	            <label><input type="radio" name="setor_responsavel_investigacao" id="setor_responsavel2" value="equipamentos2">Equipamentos</label></br>
+	            <label><input type="radio" name="setor_responsavel_investigacao" id="setor_responsavel2" value="embalagem2">Embalagem</label></br>
+	            <label><input type="radio" name="setor_responsavel_investigacao" id="setor_responsavel2" value="financeiro_faturamento2">Financeiro/Faturamento</label></br>
+	            <label><input type="radio" name="setor_responsavel_investigacao" id="setor_responsavel2" value="gestao_pessoas2">Gestão de Pessoas</label></br>
+	            <label><input type="radio" name="setor_responsavel_investigacao" id="setor_responsavel2" value="garantia_qualidade2">Garantia da Qualidade</label></br>
+	            <label><input type="radio" name="setor_responsavel_investigacao" id="setor_responsavel2" value="pd2">P&D</label></br>
+	            <label><input type="radio" name="setor_responsavel_investigacao" id="setor_responsavel2" value="pcp2">PCP</label></br>
+	            <label><input type="radio" name="setor_responsavel_investigacao" id="setor_responsavel2" value="t_i2">T.I.</label>
+	        </div>		
+	    </div>
+	    </div>
+		<div class="row">
+		    <div class="form-group col-md-12">
+		        <label for="observacao_garantia">Observações</label>
+		        <textarea rows="5" name="observacao_garantia" id="observacao_garantia" class="form-control"></textarea>
+		    </div>
+		</div>
+    </div>
+</div>
+
+<div id="panelwarning4" class="panel panel-warning">
+    <div class="panel-heading">
+        <h3 class="panel-title">Investigação pelo gestor responsável</h3>
+    </div>
+    <div class="panel-body">
+		 <div class="row">
+		    <div class="form-group col-md-12">
+		        <label for="investigacao_previa">Investigação prévia</label>
+		        <textarea rows="5" name="investigacao_previa" id="investigacao_previa" class="form-control" placeholder="Para Processo/Produtos:  quando aplicável, analisar Ordem de produção física; colaboradores/treinamentos; equipamentos/manutenções; componente/qualificações; Ciclo Esterilização;    Para Componentes: quando aplicável analisar quantidade disponível em estoque; qualificação do componente/fornecedor; análise do lote pelo controle de qualidade; especificações; se o componente já estava em uso ou é novo lote; "></textarea>
+		    </div>
+		</div>
+    <div class="row" style="text-align: center;">
+    </br><label style="text-decoration: underline; ">Ações corretivas imediatas</label></br></br>
+    </div>
+	        <div class="row">
+		 <div>
+			<table class="table"  id="tabelaRegistross">
+			<thead>
+			    <tr>
+			        <th class="col-md-6">O que?</th>
+			        <th class="col-md-6">Quem?</th>
+			        
+			    </tr>
+			</thead>
+			<tbody>
+			    <tr>
+			        <td><textarea name="causa" class="form-control textarea-fixed-size"></textarea></td>
+			        <td><textarea name="porque" class="form-control textarea-fixed-size"></textarea></td>
+			        <td><button type="button" onclick="removeRow2(this)"><i class="flaticon flaticon-trash icon-xl" aria-hidden="true"></i>
+</button></td>
+			    </tr>
+			</tbody>
+			</table>
+			</div>
+			</div>
+			<button type="button" class="btn btn-info" onclick="addNewRecord2()" id="novoRegistroBtnn">Novo Registro</button>
+			<button id="saveTable2" class="btn btn-success" onclick="saveTableData2()">Salvar Tabela 2</button>
+	    <input type="hidden" name="tabela2Data" id="tabela2Data">
+	    
+	    
+	    <div class="row" style="text-align: center;">
+		    </br></br><label style="text-decoration: underline;">Ações corretivas complementares</label></br></br>
+		</div>
+		<div class="row">
+		  <div>
+		    <table class="table" id="tabelaRegistros3" dataset="linhaDinamicaDataset3" datadatasetkey="myDataset3" datadatasetvalue="dynamicTableData3">
+		      <thead>
+		        <tr>
+		          <th class="col-md-3">What/O Que?</th>
+		          <th class="col-md-4">When/Quando?</th>
+		          <th class="col-md-3">Who/Quem?</th>
+		          <th class="col-md-2">Solicitação Fluig</th>
+		        </tr>
+		      </thead>
+		      <tbody>
+		        <tr>
+		          <td><textarea name="what_c1" class="form-control textarea-fixed-size"  rows="2" ></textarea></td>
+		          <td><textarea name="when_c1" class="form-control textarea-fixed-size"  rows="2"></textarea></td>
+		          <td><textarea name="who_c1" class="form-control textarea-fixed-size"  rows="2"></textarea></td>
+		          <td><input type="text" name="solicitacaoFluig_c1" class="form-control textarea-fixed-size"  style="height: 50px; rows="2"></td>
+		          
+		        </tr>
+		      </tbody>
+		    </table>
+		  </div>
+		</div>
+		<button type="button" class="btn btn-info" onclick="addNewRecord3()" id="novoRegistroBtn3">Novo Registro</button>
+		<button type="button" class="btn btn-success" onclick="saveAllTables3()">Salvar Dados</button>
+		<input type="hidden" name="linhaDinamicaDataset3" id="linhaDinamicaDataset3">
+	    
+	    <div class="row">
+		<div class="form-group col-md-8">
+	    </br><label>Disposição Final do lote:</label>
+	        <div class="radio"> 
+	            <label><input type="radio" name="disposicao_final_lote" id="disposicao_final_lote" value="aprovado">Aprovado</label></br>
+	            <label><input type="radio" name="disposicao_final_lote" id="disposicao_final_lote" value="reprovado">Reprovado</label></br>
+	            <label><input type="radio" name="disposicao_final_lote" id="disposicao_final_lote" value="nao_aplicavel">Não aplicável</label></br>
+	            <label><input type="radio" name="disposicao_final_lote" id="disposicao_final_lote" value="outros_final">Outros: </label> <input type="text" name="descricao_outros_final" id="descricao_outros_final" style="display: inline-block; width: 200px; border: none; border-bottom: 1px solid #000; background: none; outline: none; height: 20px;" placeholder="Descreva a ação">
+	        </div>		
+	    </div>
+		</div>
+	    
+		<div class="row">
+			<div class="form-group col-md-6">
+			    <label for="conclusao">Conclusão</label>
+			    <textarea name="conclusao" class="form-control" id="conclusao" placeholder="Descrever a causa da ocorrência"></textarea>
+			</div>
+		    <div class="form-group col-md-4">
+		        <label for="resp_investigacao">Responsável pela investigação</label>
+		        <input type="resp_investigacao" name="resp_investigacao" class="form-control" id="resp_investigacao" placeholder="Responsável">
+		    </div>
+		</div>
+	    
+	 </div>
+  </div>
+
+
+
+
+
+<div id="panelwarning5" class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">Validação GQ</h3>
+    </div>
+    <div class="panel-body">
+		  <div class="row">
+		    <div class="form-group col-md-6">
+		        <div class="radio">
+		            <label><input type="radio" name="validando_final" id="validando_final" value="validando_final_apr">Aprovado</label></br>
+		            <label><input type="radio" name="validando_final" id="validando_final" value="validando_final_repr">Reprovado</label>
+		        </div>		
+		    </div>
+		</div>
+		<div class="row">
+		    <div class="form-group col-md-12">
+		        <label for="consideracoes">Se reprovado, descrever considerações</label>
+		        <textarea rows="5" name="consideracoes" id="consideracoes" class="form-control"></textarea>
+		    </div>
+		</div>
+		<div class="row">
+	    <div class="form-group col-md-12">
+	        <label for="informativo"></label>
+	        <textarea rows="2"  name="informativo" id="infoText2" class="info-textarea2" style="text-align: center;" readonly>As investigações que necessitam conduzir investigações, estão descritas no PR 7.1 - Investigação da causa raiz, ação corretiva e preventiva.; </textarea>
+	    </div>
+	    </div>
+    </div>
+</div>
+
+
+</form>
+</div>
+<script src="tabelas.js"></script>
+<script src="data.js"></script>
+<script src="returnFlag.js"></script>
+</body>
+</html>

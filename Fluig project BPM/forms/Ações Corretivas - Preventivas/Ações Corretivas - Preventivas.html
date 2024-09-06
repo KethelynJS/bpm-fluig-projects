@@ -1,0 +1,212 @@
+<html>
+<head>
+	<link type="text/css" rel="stylesheet" href="/style-guide/css/fluig-style-guide.min.css"/>
+	<script type="text/javascript" src="/portal/resources/js/jquery/jquery.js"></script>
+	<script type="text/javascript" src="/portal/resources/js/jquery/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="/portal/resources/js/mustache/mustache-min.js"></script>
+	<script type="text/javascript" src="/style-guide/js/fluig-style-guide.min.js" charset="utf-8"></script>
+	
+	<style>
+	.textarea-fixed-size {
+            width: 100%; /* Faz o textarea ocupar toda a largura da célula */
+            height: 50px; /* Define a altura do textarea */
+            min-height: 50px;
+            box-sizing: border-box; /* Inclui padding e border no tamanho total */
+            resize: vertical; /* Permite apenas redimensionar verticalmente */
+            white-space: pre-wrap; /* Permite quebra de linha e preserva espaços */
+            word-wrap: break-word;
+        }
+        
+        .info-textarea2 {
+		width: 100%;
+		color: #000000; /* Cor do texto preta */
+		border: 1px solid #B8860B; /* Borda cinza clara */
+		border-radius: 4px;
+		background-color: #DAA520;
+	}
+	
+	
+	</style>
+</head>
+<body>
+<div class="fluig-style-guide">
+<form name="form" role="form">
+<div id="panelwarning1" class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">Solicitante</h3>
+    </div>
+    <div class="panel-body">
+		<div class="row">
+		    <div class="form-group col-md-2">
+		        <label for="data_inicio">Data</label>
+		        <input type="date" name="data_inicio" id="data_inicio" class="form-control" placeholder="Data">
+		    </div>
+			<div class="form-group col-md-10">
+		        <label for="identificacao_processo">Identificação do processo de origem</label>
+		        <input type="identificacao_processo" name="identificacao_processo" class="form-control" id="identificacao_processo" placeholder="Ex: N° CM/RC/RPNC/Tecnovigilância, nome do projeto, motivo da reunião, etc..">
+		    </div>
+		    </div>
+		    <div class="row">
+			<div class="form-group col-md-5">
+				<label>Processo de origem:</label>
+		        <div class="radio">
+		            <label><input type="radio" name="processo_origem" id="processo_origem" value="brigada_incendio">Brigada de incêndio</label></br>
+		            <label><input type="radio" name="processo_origem" id="processo_origem" value="cipa">CIPA</label></br>
+		            <label><input type="radio" name="processo_origem" id="processo_origem" value="controle_mudança">Controle de mudança</label></br>
+		            <label><input type="radio" name="processo_origem" id="processo_origem" value="gerenciamento_risco">Gerenciamento de risco</label></br>
+		            <label><input type="radio" name="processo_origem" id="processo_origem" value="indicadores">Indicadores estratégicos</label></br>
+		            <label><input type="radio" name="processo_origem" id="processo_origem" value="projeto">Projeto</label></br>
+		            <label><input type="radio" name="processo_origem" id="processo_origem" value="reunião">Reunião</label></br>
+		            <label><input type="radio" name="processo_origem" id="processo_origem" value="revisao_gerencial">Revisão gerencial</label></br>
+		            <label><input type="radio" name="processo_origem" id="processo_origem" value="rc">RC</label></br>
+		            <label><input type="radio" name="processo_origem" id="processo_origem" value="rpnc">RPNC</label></br>
+		            <label><input type="radio" name="processo_origem" id="processo_origem" value="tecnovigilancia">Tecnovigilância</label></br>
+		            <label><input type="radio" name="processo_origem" id="processo_origem" value="outros">Outros</label> <input type="text" name="descricao_outros_acao" id="descricao_outros_acao" style="display: inline-block; width: 200px; border: none; border-bottom: 1px solid #000; background: none; outline: none; height: 20px;" placeholder="Descreva a ação">
+		        </div>		
+		    </div>
+		<div class="form-group col-md-2">
+		<label>Tipo:</label>
+	        <div class="radio">
+	            <label><input type="radio" name="tipo" id="tipo" value="tipo_corretiva">Corretiva</label></br>
+	            <label><input type="radio" name="tipo" id="tipo" value="tipo_preventiva">Preventiva</label>
+	        </div>		
+	    </div>
+		
+		</div>
+		
+				<table class="table">
+		  <thead>
+		    <tr>
+		      <th class="col-md-5">Pergunta</th>
+		      <th class="col-md-7">Resposta</th>
+		    </tr>
+		  </thead>
+		  <tbody>
+		    <tr>
+		      <td>Ação - O que?</td>
+		      <td><textarea name="resposta1" class="form-control textarea-fixed-size"></textarea></td>
+		    </tr>
+		    <tr>
+		      <td>Responsável pela realização da ação - Quem?</td>
+		      <td><textarea name="resposta2" class="form-control textarea-fixed-size"></textarea></td>
+		    </tr>
+		    <tr>
+		      <td>Prazo para realização da atividade - Quando?</td>
+		      <td><textarea name="resposta3" class="form-control textarea-fixed-size"></textarea></td>
+		    </tr>
+		    <tr>
+		      <td>Por que?</td>
+		      <td><textarea name="resposta4" class="form-control textarea-fixed-size"></textarea></td>
+		    </tr>
+		    <tr>
+		      <td>Onde?</td>
+		      <td><textarea name="resposta5" class="form-control textarea-fixed-size"></textarea></td>
+		    </tr>
+		    <tr>
+		      <td>Como?</td>
+		      <td><textarea name="resposta6" class="form-control textarea-fixed-size"></textarea></td>
+		    </tr>
+		    <tr>
+		      <td>Quanto?</td>
+		      <td><textarea name="resposta7" class="form-control textarea-fixed-size"></textarea></td>
+		    </tr>
+		  </tbody>
+		</table>
+		
+		<input type="hidden" id="returnFromActivity5" name="returnFromActivity5" value="false">
+    </div>
+</div>
+
+<div id="panelwarning" class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">Validação das ações pelo responsável</h3>
+    </div>
+    <div class="panel-body">
+		<div class="row">
+		    <div class="form-group col-md-6">
+		        <div class="radio">
+		            <label><input type="radio" name="validacao_acoes_responsavel" id="validacao_acoes_responsavel" value="continuar">Continuar</label></br>
+		            <label><input type="radio" name="validacao_acoes_responsavel" id="validacao_acoes_responsavel" value="corrigir">Corrigir</label></br>
+		            <label><input type="radio" name="validacao_acoes_responsavel" id="validacao_acoes_responsavel" value="transferencia_atividade">Transferência de atividade</label>
+		        </div>		
+		    </div>
+		</div>
+		<div class="row">
+		    <div class="form-group col-md-12">
+		        <label for="correcao_primeira">Caso necessário correção descrever motivo</label>
+		        <textarea rows="5" name="correcao_primeira" id="correcao_primeira" class="form-control"></textarea>
+		    </div>
+		</div>
+    </div>
+</div>
+
+<div id="panelwarning3" class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">Status da atividade</h3>
+    </div>
+    <div class="panel-body">
+		 <div class="row">
+		    <div class="form-group col-md-2">
+		        <label for="data_realizacao_acao">Data da realização da ação</label>
+		        <input type="date" name="data_realizacao_acao" id="data_realizacao_acao" class="form-control" placeholder="Data">
+		    </div>
+		</div>
+		 <div class="row">
+		    <div class="form-group col-md-6">
+		        <div class="radio">
+		            <label><input type="radio" name="status" id="status" value="realizada">Realizada</label></br>
+		            <label><input type="radio" name="status" id="status" value="nao_realizada">Não realizada</label>
+		        </div>		
+		    </div>
+		</div>
+		
+		<div class="row">
+		    <div class="form-group col-md-12">
+		        <label for="motivos">Se não realizada, descrever motivo</label>
+		        <textarea rows="3" name="motivos" id="motivos" class="form-control"></textarea>
+		    </div>
+		</div>
+			<div class="row">
+		    <div class="form-group col-md-12">
+		        <label for="informativo"></label>
+		        <textarea rows="2"  name="informativo" id="infoText2" class="info-textarea2" style="text-align: center;" readonly>Se realizada - OBRIGATÓRIO ANEXAR EVIDÊNCIA </textarea>
+		    </div>
+		    </div>
+		    
+    </div>
+</div>
+
+<div id="panelwarning4" class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">Validação da ação pelo solicitante</h3>
+    </div>
+    <div class="panel-body">
+        <div class="row">
+    <div class="form-group col-md-6">
+        <div class="radio">
+            <label><input type="radio" name="validacao_solicitante" id="validacao_solicitante" value="validacao_solicitanteC">Conforme</label></br>
+            <label><input type="radio" name="validacao_solicitante" id="validacao_solicitante" value="validacao_solicitanteN">Não conforme</label>
+        </div>		
+    </div>
+	</div>
+	<div class="row">
+	    <div class="form-group col-md-12">
+	        <label for="motivo_nao_conforme">Se não conforme, descrever motivo:</label>
+	        <textarea rows="5" name="motivo_nao_conforme" id="motivo_nao_conforme" class="form-control"></textarea>
+	    </div>
+	</div>
+	<div class="row">
+	    <div class="form-group col-md-2">
+	        <label for="data_conclusao">Data da conclusão pelo solicitante</label>
+	        <input type="date" name="data_conclusao" id="data_conclusao" class="form-control" placeholder="Data">
+	    </div>
+	</div>
+    </div>
+</div>
+
+</form>
+</div>
+
+<script src="data.js"></script>
+</body>
+</html>

@@ -1,0 +1,162 @@
+<html>
+<head>
+	<link type="text/css" rel="stylesheet" href="/style-guide/css/fluig-style-guide.min.css"/>
+	<script type="text/javascript" src="/portal/resources/js/jquery/jquery.js"></script>
+	<script type="text/javascript" src="/portal/resources/js/jquery/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="/portal/resources/js/mustache/mustache-min.js"></script>
+	<script type="text/javascript" src="/style-guide/js/fluig-style-guide.min.js" charset="utf-8"></script>
+	
+	<style>
+        .textarea-fixed-size {
+            width: 100%; /* Faz o textarea ocupar toda a largura da célula */
+            height: 10px; /* Define a altura do textarea */
+            min-height: 10px;
+            box-sizing: border-box; /* Inclui padding e border no tamanho total */
+            resize: vertical; /* Permite apenas redimensionar verticalmente */
+            white-space: pre-wrap; /* Permite quebra de linha e preserva espaços */
+            word-wrap: break-word;
+        }
+        /* Configurações para a tabela e células */
+        .table {
+            table-layout: fixed; /* Garante que a tabela tenha um layout fixo */
+            width: 100%; /* Faz a tabela ocupar toda a largura disponível */
+        }
+        .table td, .table th {
+            vertical-align: top; /* Alinha o conteúdo no topo das células */
+            padding: 8px; /* Adiciona espaçamento interno nas células */
+        }
+        .table textarea {
+            overflow: auto; /* Adiciona rolagem se o conteúdo exceder a altura definida */
+        }
+        
+	    .info-textarea1 {
+			    width: 100%; /* Garante que o textarea ocupe toda a largura do contêiner */
+			    background-color: #ffff99; /* Fundo amarelo claro */
+			    color: #000000; /* Cor do texto preta */
+			    border: 1px solid #cccccc; /* Borda cinza clara */
+			    border-radius: 4px; /* Bordas arredondadas */
+	}
+        
+    </style>
+</head>
+<body>
+<div  class="fluig-style-guide">
+<form name="form" role="form">
+<div id="panel1" class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">Solicitante</h3>
+    </div>
+    <div class="panel-body">
+		 <div class="row">
+		    <div class="form-group col-md-6">
+		        <label for="solicitante">Solicitante</label>
+		        <input type="solicitante" name="solicitante" class="form-control" id="solicitante" placeholder="Coloque o nome do solicitante">
+		    </div>
+		    <div class="form-group col-md-6">
+		        <label for="setor">Setor</label>
+		        <input type="setor" name="setor" class="form-control" id="setor" placeholder="Coloque o nome do setor">
+		    </div>
+		</div>
+			<div class="row">
+			    <div class="form-group col-md-2">
+			        <label for="datacalendario">Data</label>
+			        <input type="date" name="datacalendario" id="datacalendario" class="form-control" placeholder="Data">
+			    </div>
+				 <div class="form-group col-md-7">
+			        <label for="equipamento_modelo">Equipamento - Modelo</label>
+			        <input type="equipamento_modelo" name="equipamento_modelo" class="form-control" id="equipamento_modelo" placeholder="Preencha o modelo do equipamento">
+			    </div>
+				<div class="form-group col-md-3">
+			        <label for="n_equipamento">Nº de Identificação do equipamento</label>
+			        <input type="n_equipamento" name="n_equipamento" class="form-control" id="n_equipamento" placeholder="N° de identificação do aparelho">
+			    </div>
+			</div>
+			<div class="row">
+			    <div class="form-group col-md-12">
+			        <label for="ocorrencia">Ocorrência</label>
+			        <textarea rows="5" name="ocorrencia" id="ocorrencia" class="form-control" placeholder="Preencha a descrição do problema a ser corrigido"></textarea>
+			    </div>
+			</div>
+    </div>
+</div>
+
+<div id="panel2" class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">Analisando tipo de manutenção</h3>
+    </div>
+    <div class="panel-body">
+		 <div class="row">
+		    <div class="form-group col-md-6">
+		    <label>Manutenção por:</label>
+		        <div class="radio">
+		            <label><input type="radio" name="interno_externo" id="interno_externo" value="analista_interno">Analista Interno</label></br>
+		            <label><input type="radio" name="interno_externo" id="interno_externo" value="prestador_servico">Prestador de serviço</label>
+		        </div>		
+		</div>
+		</div>
+		<input type="hidden" id="passouPelaAtv10" name="passouPelaAtv10" value="nao">
+		<input type="hidden" id="escolhaAtv5" name="escolhaAtv5" value="naoDefinido">
+		
+		<div class="row">
+		    <div class="form-group col-md-12">
+		        <label for="descrever_acao">Descrever a ação corretiva</label>
+		        <textarea rows="5" name="descrever_acao" id="descrever_acao" class="form-control"></textarea>
+		    </div>
+		</div>
+		<div class="row">
+	    <div class="form-group col-md-12">
+	        <label for="documents"></label>
+	        <textarea rows="2"  name="documents" id="infoText1" class="info-textarea1" style="text-align: center;" readonly>O trabalho será enviado ao solicitante para validação. O solicitante deverá confirmar se o trabalho foi realizado conforme o solicitado.</textarea>
+	    </div>
+	    </div>
+    </div>
+</div>
+
+<div id="panel3" class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">Anexar O.S.</h3>
+    </div>
+    <div class="panel-body">
+		    <div class="row">
+			    <div class="form-group col-md-12">
+			        <label for="documentss"></label>
+			        <textarea rows="2"  name="documentss" id="infoText1" class="info-textarea1" style="text-align: center;" readonly> A Ordem de Serviço (O.S.) do prestador de serviços precisa ser anexada para a devida validação.</textarea>
+				</div>
+			</div>
+		 <div class="row">
+		    <div class="form-group col-md-12">
+		        <label for="observacao_manutencao">Observação da manutenção caso seja necessário</label>
+		        <textarea rows="3" name="observacao_manutencao" id="observacao_manutencao" class="form-control"></textarea>
+		    </div>
+		</div>
+    </div>
+</div>
+
+<div id="panel4" class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">Validação pelo solicitante</h3>
+    </div>
+    <div class="panel-body">
+		 <div class="row">
+		    <div class="form-group col-md-6">
+		    <label>Validar manutenção corretiva? </label>
+		        <div class="radio">
+		            <label><input type="radio" name="validar" id="validar" value="validarS">Sim</label></br>
+		            <label><input type="radio" name="validar" id="validar" value="validarN">Não</label>
+		        </div>		
+		</div>
+		</div>
+		<div class="row">
+		    <div class="form-group col-md-12">
+		        <label for="observacao_solicitante">Observações do Solicitante:</label>
+		        <textarea rows="5" name="observacao_solicitante" id="observacao_solicitante" class="form-control"></textarea>
+		    </div>
+		</div>
+    </div>
+</div>
+
+<script src="data.js"></script>
+</form>
+</div>
+</body>
+</html>

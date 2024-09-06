@@ -1,0 +1,354 @@
+<html>
+<head>
+	<link type="text/css" rel="stylesheet" href="/style-guide/css/fluig-style-guide.min.css"/>
+	<script type="text/javascript" src="/portal/resources/js/jquery/jquery.js"></script>
+	<script type="text/javascript" src="/portal/resources/js/jquery/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="/portal/resources/js/mustache/mustache-min.js"></script>
+	<script type="text/javascript" src="/style-guide/js/fluig-style-guide.min.js" charset="utf-8"></script>
+	<style>
+	
+	.textarea-fixed-size {
+            width: 100%; /* Faz o textarea ocupar toda a largura da célula */
+            height: 50px; /* Define a altura do textarea */
+            min-height: 50px;
+            box-sizing: border-box; /* Inclui padding e border no tamanho total */
+            resize: vertical; /* Permite apenas redimensionar verticalmente */
+            white-space: pre-wrap; /* Permite quebra de linha e preserva espaços */
+            word-wrap: break-word;
+        }
+        
+        .info-textarea2 {
+		width: 100%;
+		color: #000000; /* Cor do texto preta */
+		border: 1px solid #cccccc; /* Borda cinza clara */
+		border-radius: 4px;
+		background-color: #DCDCDC;
+	}
+        
+  </style>
+</head>
+<body>
+<div class="fluig-style-guide">
+<form name="form" role="form">
+
+<div id="panel1" class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">Cliente</h3>
+    </div>
+    <div class="panel-body">
+<div class="row">
+    <div class="form-group col-md-2">
+        <label for="datacalendario">Data</label>
+        <input type="date" name="datacalendario" id="datacalendario" class="form-control" placeholder="Data">
+    </div>
+    <div class="form-group col-md-4">
+        <label for="reclamante_setor">Nome do reclamante/setor</label>
+        <input type="solicitante" name="reclamante_setor" class="form-control" id="reclamante_setor" placeholder="Coloque reclamante e o setor">
+    </div>
+    <div class="form-group col-md-6">
+        <label for="nome_empresa">Nome da empresa</label>
+        <input type="nome_empresa" name="nome_empresa" class="form-control" id="nome_empresa" placeholder="Coloque o nome da empresa">
+    </div>
+</div>
+<div class="row">
+    <div class="form-group col-md-6">
+    <label>Identificação do reclamante</label>
+        <div class="radio">
+            <label><input type="radio" name="cliente" id="cliente" value="cliente_direto">Cliente direto</label></br>
+            <label><input type="radio" name="cliente" id="cliente" value="distribuidor">Distribuidor</label></br>
+            <label><input type="radio" name="cliente" id="cliente" value="cliente_do_distribuidor">Cliente do distribuidor</label>
+        </div>		
+    </div>
+</div>
+<label>se cliente Distribuidor, descreva:</label>
+<div class="row">
+    <div class="form-group col-md-4">
+        <label for="endereco">Endereço</label>
+        <input type="endereco" name="endereco" class="form-control" id="endereco" placeholder="Coloque o endereço">
+    </div>
+    <div class="form-group col-md-4">
+        <label for="Telefone">Telefone</label>
+        <input type="Telefone" name="Telefone" class="form-control" id="Telefone" placeholder="Coloque o nome do Telefone">
+    </div>
+    <div class="form-group col-md-4">
+        <label for="email">Email</label>
+        <input type="email" name="email" class="form-control" id="email" placeholder="Coloque o e-mail">
+    </div>
+</div>
+<div class="row">
+    <div class="form-group col-md-6">
+    <label>Avaliar categorização do cliente distribuidor</label>
+        <div class="radio">
+            <label><input type="radio" name="categoria" id="categoria" value="diamante">Diamante</label></br>
+            <label><input type="radio" name="categoria" id="categoria" value="ouro">Ouro</label></br>
+            <label><input type="radio" name="categoria" id="categoria" value="prata">Prata</label></br>
+            <label><input type="radio" name="categoria" id="categoria" value="bronze">Bronze</label>
+        </div>	
+        <input type="hidden" id="returnFromActivity5" name="returnFromActivity5" value="false">	
+    </div>
+</div>
+
+<div class="row">
+    <div class="form-group col-md-12">
+        <label for="descricao_reclamacao">Descrição da reclamação</label>
+        <textarea rows="5" name="descricao_reclamacao" id="descricao_reclamacao" class="form-control"></textarea>
+    </div>
+</div>
+<div class="row">
+<div class="form-group col-md-4">
+    <label>Natureza da reclamação</label>
+    <div class="checkbox">
+        <label><input type="checkbox" name="aspecto_alterado">Aspecto Alterado</label></br>
+        <label><input type="checkbox" name="contaminacao">Contaminação</label></br>
+        <label><input type="checkbox" name="avaria">Avaria</label></br>
+        <label><input type="checkbox" name="desempenho_insatisfatorio">Desempenho Insatisfatório</label></br>
+        <label><input type="checkbox" name="erro_digitacao">Erro de Digitação de Pedido</label></br>
+        <label><input type="checkbox" name="erro_separacao">Erro de Separação e Conferência</label></br>
+        <label><input type="checkbox" name="nf_incorreta">NF incorreta</label></br>
+        <label><input type="checkbox" name="reacao_adversa">Reações Adversas</label></br>
+        <label><input type="checkbox" name="vazamento">Vazamento</label></br>
+        <label><input type="checkbox" name="validade_curta">Validade Curta</label></br>
+        <label><input type="checkbox" name="atraso_entrega">Atraso na entrega</label></br>
+        <label><input type="checkbox" name="produto_sem_rotulo_incorreto">Produto sem rótulo ou Rotulagem Incorreta</label></br>
+        <label><input type="checkbox" name="outros">Outros:</label> </label> <input type="text" name="descricao_outros" id="descricao_outros" style="display: inline-block; width: 200px; border: none; border-bottom: 1px solid #000; background: none; outline: none; height: 20px;" placeholder="Descrever">
+        
+    </div>
+</div>
+</div>
+
+<div class="row">
+    <div class="form-group col-md-6">
+        <label for="n_nota">Qual o número da nota fiscal? (apenas p/ cliente direto ou distribuidor)</label>
+        <input type="n_nota" name="n_nota" class="form-control" id="n_nota" placeholder="Coloque o nome n° nota">
+    </div>
+    <div class="form-group col-md-6">
+        <label for="vendedor_representante">Vendedor e/ou Representante responsável na Newprov: Cliente direto ou distribuidor</label>
+        <input type="vendedor_representante" name="vendedor_representante" class="form-control" id="vendedor_representante" placeholder="Coloque o nome vendedor representante">
+    </div>
+</div>
+
+
+	    <div class="row" style="text-align: center;">
+		    </br></br><label style="text-decoration: underline;">Produtos</label></br></br>
+		</div>
+		<div class="row">
+		  <div>
+		    <table class="table" id="tabelaRegistros3" dataset="linhaDinamicaDataset3" datadatasetkey="myDataset3" datadatasetvalue="dynamicTableData3">
+		      <thead>
+		        <tr>
+		          <th class="col-md-2">Código</th>
+		          <th class="col-md-4">Nome do produto</th>
+		          <th class="col-md-3">Lote</th>
+		          <th class="col-md-3">Quantidade reclamada</th>
+		        </tr>
+		      </thead>
+		      <tbody>
+		        <tr>
+		          <td><textarea name="what_c1" class="form-control textarea-fixed-size"  rows="2" ></textarea></td>
+		          <td><textarea name="when_c1" class="form-control textarea-fixed-size"  rows="2"></textarea></td>
+		          <td><textarea name="who_c1" class="form-control textarea-fixed-size"  rows="2"></textarea></td>
+		          <td><input type="text" name="solicitacaoFluig_c1" class="form-control textarea-fixed-size"  style="height: 50px; rows="2"></td>
+		          
+		        </tr>
+		      </tbody>
+		    </table>
+		  </div>
+		</div>
+		<button type="button" class="btn btn-info" onclick="addNewRecord3()" id="novoRegistroBtn3">Novo Registro</button>
+		<button type="button" class="btn btn-success" onclick="saveAllTables3()">Salvar Dados</button>
+		<input type="hidden" name="linhaDinamicaDataset3" id="linhaDinamicaDataset3">
+		</div>
+</div>
+		
+		
+		<div id="panel2" class="panel panel-primary">
+		    <div class="panel-heading">
+		        <h3 class="panel-title">Investigação prévia pela assessoria</h3>
+		    </div>
+		    <div class="panel-body">
+		<table class="table table-striped">
+		    <thead>
+		        <tr>
+		            <th>Parâmetros</th>
+		            <th>Sim</th>
+		            <th>Não</th>
+		            <th>N.A</th>
+		            <th>Comentário</th>
+		        </tr>
+		    </thead>
+		    <tbody>
+		        <!-- Linha 1 -->
+		        <tr>
+		            <td>Analisada NF?</td>
+		            <td><input type="radio" name="question1" value="sim"></td>
+		            <td><input type="radio" name="question1" value="nao"></td>
+		            <td><input type="radio" name="question1" value="na"></td>
+		            <td><textarea name="comment1" class="form-control" rows="2"></textarea></td>
+		        </tr>
+		        <!-- Linha 2 -->
+		        <tr>
+		            <td>Produto disponível estoque?</td>
+		            <td><input type="radio" name="question2" value="sim"></td>
+		            <td><input type="radio" name="question2" value="nao"></td>
+		            <td><input type="radio" name="question2" value="na"></td>
+		            <td><textarea name="comment2" class="form-control" rows="2"></textarea></td>
+		        </tr>
+		     
+		        <tr>
+		            <td>Analisado RHP (OP)?</td>
+		            <td><input type="radio" name="question3" value="sim"></td>
+		            <td><input type="radio" name="question3" value="nao"></td>
+		            <td><input type="radio" name="question3" value="na"></td>
+		            <td><textarea name="comment3" class="form-control" rows="2"></textarea></td>
+		        </tr>
+		        <tr>
+		            <td>Há necessidade de solicitar devolução?</td>
+		            <td><input type="radio" name="question4" value="sim"></td>
+		            <td><input type="radio" name="question4" value="nao"></td>
+		            <td><input type="radio" name="question4" value="na"></td>
+		            <td><textarea name="comment4" class="form-control" rows="2"></textarea></td>
+		        </tr>
+		        <tr>
+		            <td>Enviado foto que tenha evidência da natureza do RC?</td>
+		            <td><input type="radio" name="question5" value="sim"></td>
+		            <td><input type="radio" name="question5" value="nao"></td>
+		            <td><input type="radio" name="question5" value="na"></td>
+		            <td><textarea name="comment5" class="form-control" rows="2"></textarea></td>
+		        </tr>
+		        <tr>
+		            <td>Necessário analisar amostra retenção?</td>
+		            <td><input type="radio" name="question6" value="sim"></td>
+		            <td><input type="radio" name="question6" value="nao"></td>
+		            <td><input type="radio" name="question6" value="na"></td>
+		            <td><textarea name="comment6" class="form-control" rows="2"></textarea></td>
+		        </tr>
+		        <tr>
+		            <td>Produto perecível?</td>
+		            <td><input type="radio" name="question7" value="sim"></td>
+		            <td><input type="radio" name="question7" value="nao"></td>
+		            <td><input type="radio" name="question7" value="na"></td>
+		            <td><textarea name="comment7" class="form-control" rows="2"></textarea></td>
+		        </tr>
+		        
+		    </tbody>
+		</table>
+
+
+		<h3 class="panel-title">Contatos com o cliente por e-mail</h3>
+    </div>
+    <div class="panel-body">
+        <div class="row">
+    <div>
+        <table class="table" id="tabelaRegistross">
+            <thead>
+                <tr>
+                    <th class="col-md-3">Data</th>
+                    <th class="col-md-9">Contato</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><textarea name="data_registro" class="form-control textarea-fixed-size col-md-6"></textarea></td>
+                    <td><textarea name="contato" class="form-control textarea-fixed-size col-md-6"></textarea></td>
+                    <td><button type="button" onclick="removeRow2(this)">Remover</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<button type="button" class="btn btn-info" onclick="addNewRecord2()" id="novoRegistroBtnn">Novo Registro</button>
+<button id="saveTable2" class="btn btn-success" onclick="saveTableData2()">Salvar Dados</button>
+<input type="hidden" name="linhaDinamicaDataset2" id="linhaDinamicaDataset2">
+		    </div>
+		</div>
+
+
+<div id="panel3" class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">Conclusão</h3>
+    </div>
+    <div class="panel-body">
+		 <div class="row">
+		    <div class="form-group col-md-12">
+		        <div class="radio">
+		            <label><input type="radio" name="conclusao" id="conclusao" value="confirmada">CONFIRMADA por meio de ensaios técnicos ou por evidências visíveis</label></br>
+		            <label><input type="radio" name="conclusao" id="conclusao" value="provavel">PROVÁVEL não foi confirmada mas existem fortes evidências do desvio da qualidade do produto ou da irregularidade</label>
+		            <label><input type="radio" name="conclusao" id="conclusao" value="inconclusiva">INCONCLUSIVA não foi confirmada. Pois as informações levantadas durante a investigação são insuficientes ou contraditórias e não podem ser completadas ou verificadas</label>
+		            <label><input type="radio" name="conclusao" id="conclusao" value="descartada">DESCARTADA quando não confirmada</label>
+		            
+		        </div>		
+		    </div>
+		</div>
+		<div class="row">
+		    <div class="form-group col-md-12">
+		        <label for="observacao_conclusao">Observação</label>
+		        <textarea rows="5" name="observacao_conclusao" id="observacao_conclusao" class="form-control"></textarea>
+		    </div>
+		</div>
+		<div class="row" style="text-align: center;">
+    <br><br><label style="text-decoration: underline;">Ações Corretivas</label>
+</div>
+<div class="row">
+  <div>
+    <table class="table" id="tabelaRegistros4" dataset="linhaDinamicaDataset4" datadatasetkey="myDataset4" datadatasetvalue="dynamicTableData4">
+      <thead>
+        <tr>
+          <th class="col-md-3">What/O Que?</th>
+          <th class="col-md-3">When/Quando?</th>
+          <th class="col-md-3">Who/Quem?</th>
+          <th class="col-md-1">Solicitação Fluig</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><textarea name="what_d1" class="form-control textarea-fixed-size" rows="2"></textarea></td>
+          <td><textarea name="when_d1" class="form-control textarea-fixed-size" rows="2"></textarea></td>
+          <td><textarea name="who_d1" class="form-control textarea-fixed-size" rows="2"></textarea></td>
+          <td><input type="text" name="solicitacaoFluig_d1" class="form-control textarea-fixed-size" style="height: 50px;"></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<button type="button" class="btn btn-info" onclick="addNewRecord4()" id="novoRegistroBtn4">Novo Registro</button>
+<button type="button" class="btn btn-success" onclick="saveAllTables4()">Salvar Dados</button>
+<input type="hidden" name="linhaDinamicaDataset4" id="linhaDinamicaDataset4">
+		
+    </div>
+</div>
+
+<div id="panel4" class="panel panel-warning">
+    <div class="panel-heading">
+        <h3 class="panel-title">Validação pela GQ</h3>
+    </div>
+    <div class="panel-body">
+        <div class="row">
+    <div class="form-group col-md-6">
+        <div class="radio">
+            <label><input type="radio" name="validacao_gq" id="validacao_gq" value="validacao_gq_conforme">Conforme</label></br>
+            <label><input type="radio" name="validacao_gq" id="validacao_gq" value="validacao_gq_nao_conforme">Não conforme</label>
+        </div>		
+    </div>
+</div>
+<div class="row">
+    <div class="form-group col-md-12">
+        <label for="consideracoes_nao_conforme">Se não conforme, descrever:</label>
+        <textarea rows="5" name="consideracoes_nao_conforme" id="consideracoes_nao_conforme" class="form-control"></textarea>
+    </div>
+</div>
+		<div class="row">
+	    <div class="form-group col-md-12">
+	        <label for="informativo"></label>
+	        <textarea rows="2"  name="informativo" id="infoText2" class="info-textarea2" style="text-align: center;" readonly>As não conformidades que necessitam conduzir investigações, estão descritas no PR 7.1 - Investigação da causa raiz, ação corretiva e preventiva. </textarea>
+	    </div>
+	    </div>
+    </div>
+</div>
+ 
+
+</form>
+</div>
+<script src="tabela.js"></script>
+<script src="data.js"></script>
+</body>
+</html>
