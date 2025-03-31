@@ -1,0 +1,264 @@
+<html>
+<head>
+	<link type="text/css" rel="stylesheet" href="/style-guide/css/fluig-style-guide.min.css"/>
+	<script type="text/javascript" src="/portal/resources/js/jquery/jquery.js"></script>
+	<script type="text/javascript" src="/portal/resources/js/jquery/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="/portal/resources/js/mustache/mustache-min.js"></script>
+	<script type="text/javascript" src="/style-guide/js/fluig-style-guide.min.js" charset="utf-8"></script>
+	<link rel="stylesheet" href="participante.css">
+	
+	<style>
+        .form-control {
+            margin-bottom: 5px; /* Ajusta o espaçamento inferior */
+        }
+        td {
+            padding: 5px; /* Ajusta o espaçamento das células */
+        }
+        
+         #outrosTexto {
+            display: none;
+            margin-top: 10px; }
+            
+        #aumentar {
+    margin-top: 20px; /* Adiciona margem acima da div */
+    
+}
+
+#tabelaRegistros3 {
+    width: 100%;
+  }
+
+  /* Garante que os textareas ocupem toda a largura da célula e não se redimensionem horizontalmente */
+  #tabelaRegistros3 .form-control.textarea-fixed-size {
+    width: 100%;
+    resize: vertical; /* Permite redimensionamento apenas vertical */
+  }
+
+  /* Ajusta as colunas específicas para a tabela com o ID 'tabelaRegistros3' */
+  #tabelaRegistros3 th.col-md-3,
+  #tabelaRegistros3 td.col-md-3 {
+    width: 25%; /* Aproximadamente 3 colunas do grid de 12 */
+  }
+
+  #tabelaRegistros3 th.col-md-4,
+  #tabelaRegistros3 td.col-md-4 {
+    width: 33.3333%; /* Aproximadamente 4 colunas do grid de 12 */
+  }
+
+  #tabelaRegistros3 th.col-md-1,
+  #tabelaRegistros3 td.col-md-1 {
+    width: 8.3333%; /* Aproximadamente 1 coluna do grid de 12 */
+  }
+  
+  .textarea-fixed-size {
+            width: 100%; /* Faz o textarea ocupar toda a largura da célula */
+            height: 50px; /* Define a altura do textarea */
+            min-height: 50px;
+            box-sizing: border-box; /* Inclui padding e border no tamanho total */
+            resize: vertical; /* Permite apenas redimensionar verticalmente */
+            white-space: pre-wrap; /* Permite quebra de linha e preserva espaços */
+            word-wrap: break-word;
+        }
+        /* Configurações para a tabela e células */
+        .table {
+            table-layout: fixed; /* Garante que a tabela tenha um layout fixo */
+            width: 100%; /* Faz a tabela ocupar toda a largura disponível */
+        }
+        .table td, .table th {
+            vertical-align: top; /* Alinha o conteúdo no topo das células */
+            padding: 8px; /* Adiciona espaçamento interno nas células */
+        }
+        .table textarea {
+            overflow: auto; /* Adiciona rolagem se o conteúdo exceder a altura definida */
+        }
+        }
+        
+        
+    </style>
+</head>
+<body>
+<div class="fluig-style-guide">
+<form name="form" role="form">
+
+<div id="panel1" class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">Ata de reunião</h3>
+    </div>
+    <div class="panel-body">
+		<div class="row">
+		    <div class="form-group col-md-3">
+		        <label for="datacalendario">Data da reunião</label>
+		        <input type="date" name="datacalendario" id="datacalendario" class="form-control" placeholder="Data">
+		    </div>
+		    <div class="form-group col-md-3">
+		        <label for="horario_inicio">Horário de Início</label>
+		        <input type="time" name="horario_inicio" id="horario_inicio" class="form-control" placeholder="horário">
+		    </div>
+			<div class="form-group col-md-2">
+			    <label for="procedencia">N° Solicitação Fluig</label>
+			    <input type="text" id="numeroSolicitacao" name="numeroSolicitacao" class="form-control" readonly>
+			</div>
+		    
+		</div></br></br>
+		
+	<h2>Participantes</h2>
+
+    <!-- Campo de input com autocomplete -->
+    <input  name="nome_input" type="text" id="nome-input" class="form-control" placeholder="Digite um nome">
+
+    <!-- Lista de sugestões -->
+    <ul id="suggestions-list" class="suggestions-list"></ul>
+
+    <!-- Contêiner para exibir os nomes selecionados -->
+    <div id="selected-names" class="selected-names"></div>
+
+    <!-- Campo oculto para salvar os dados -->
+    <input type="hidden" id="nomesData" name="nomesData">
+		
+		</br></br></br><div class="form-group col-md-4">
+		    <label>Motivo:</label>
+		    <div class="checkbox">
+		        <label><input type="checkbox" name="agm">AGM</label></br>
+		        <label><input type="checkbox" name="pvo">PVO/S&OP</label></br>
+		        <label><input type="checkbox" name="comercial">Comercial/Marketing</label></br>
+		        <label><input type="checkbox" name="orcamento">Orçamento</label></br>
+		        <label><input type="checkbox" name="cipa">CIPA</label></br>
+		        <label><input type="checkbox" name="brigada">Brigada de Incêndio</label></br>
+		        <label><input type="checkbox" name="revisao">Revisão do planejamento estratégico</label></br>
+		        <label><input type="checkbox" name="outros">Outros:</label> <input type="text" name="descricao_outros_acao" id="descricao_outros_acao" style="display: inline-block; width: 200px; border: none; border-bottom: 1px solid #000; background: none; outline: none; height: 20px;" placeholder="Descreva outro">
+		        
+		    </div>
+		</div>
+		
+    </div>
+</div>
+
+<div id="panel2" class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">Pendências de Reuniões Anteriores</h3>
+    </div>
+    <div class="panel-body">
+    <div class="row">
+    
+    </div>
+		        <div class="row">
+		
+	 <div>
+		<table class="table"  id="tabelaRegistros" dataset="linhaDinamicaDataset" datadatasetkey="myDataset" datadatasetvalue="dynamicTableData">
+		<thead>
+		    <tr>
+		        <th class="col-md-3">Ação</th>
+		        <th class="col-md-4">Responsável</th>
+		        <th class="col-md-2">Prazo</th>
+		        <th class="col-md-2">N°Solicitação fluig</th>
+		        
+		    </tr>
+		</thead>
+		<tbody>
+		    <tr>
+		        <td><textarea name="codigo_1" class="form-control"></textarea></td>
+		        <td><input type="text" name="lote_1" class="form-control"></td>
+		        <td><input type="text" name="quantidade_1" class="form-control"></td>
+		        <td><input type="text" name="datafabricacao_1" class="form-control"></td>
+		        <td><button type="button" onclick="removeRow(this)"><i class="flaticon flaticon-trash icon-md" aria-hidden="true"></i></button></td>
+		    </tr>
+		</tbody>
+		</table>
+		</div>
+		</div>
+		<button type="button" class="btn btn-info" onclick="addNewRecord()" id="novoRegistroBtn">Novo Registro</button>
+		<button type="button" class="btn btn-success" onclick="saveAllTables()" id="btnSalvar">Salvar Dados</button>
+		<input type="hidden" name="linhaDinamicaDataset" id="linhaDinamicaDataset">
+		
+		</br></br></br><div class="row">
+		    <div class="form-group col-md-12">
+		        <label for="assuntos_tratados">Assuntos tratados:</label>
+		        <textarea rows="7" name="assuntos_tratados" id="assuntos_tratados" class="form-control"></textarea>
+		    </div>
+		</div>  
+		  
+	</br></br></br><div class="row">
+    <label><b>Ações geradas nessa reunião</b></label>
+    </div>
+			  
+		<div class="row">
+		  <div>
+		    <table class="table" id="tabelaRegistros3" dataset="linhaDinamicaDataset3" datadatasetkey="myDataset3" datadatasetvalue="dynamicTableData3">
+		      <thead>
+		        <tr>
+		          <th class="col-md-3">Ação</th>
+		          <th class="col-md-3">Responsável</th>
+		          <th class="col-md-3">Prazo</th>
+		          <th class="col-md-2">N° Solicitação fluig</th>
+		        </tr>
+		      </thead>
+		      <tbody>
+		        <tr>
+		          <td><textarea name="what_c1" class="form-control textarea-fixed-size"  rows="2" ></textarea></td>
+		          <td><textarea name="when_c1" class="form-control textarea-fixed-size"  rows="2"></textarea></td>
+		          <td><textarea name="who_c1" class="form-control textarea-fixed-size"  rows="2"></textarea></td>
+		          <td><input type="text" name="solicitacaoFluig_c1" class="form-control textarea-fixed-size"  style="height: 50px; rows="2"></td>
+		          <td><button type="button" onclick="removeRow5(this)"><i class="flaticon flaticon-trash icon-md" aria-hidden="true"></i></button></td>
+		        </tr>
+		      </tbody>
+		    </table>
+		  </div>
+		</div>
+		<button type="button" class="btn btn-info" onclick="addNewRecord3()" id="novoRegistroBtn3">Novo Registro</button>
+		<button type="button" class="btn btn-success" onclick="saveAllTables3()">Salvar Dados</button>
+		<input type="hidden" name="linhaDinamicaDataset3" id="linhaDinamicaDataset3">
+
+    
+
+		       
+    </div>
+</div>
+
+<div id="panel3" class="panel panel-warning">
+    <div class="panel-heading">
+        <h3 class="panel-title">Horário de término</h3>
+    </div>
+    <div class="panel-body">
+    <div class="row">
+		 
+		 </div>
+		
+		</br><div class="row">
+		    <div class="form-group col-md-2">
+		        
+		        <input type="time" name="termino" id="termino" class="form-control" placeholder="horario">
+		    </div>
+		</div>
+    </div>
+</div>
+
+
+<div id="panel5" class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">Validação</h3>
+    </div>
+    <div class="panel-body">
+        <div class="row">
+		<div class="form-group col-md-6">
+		        <div class="radio">
+		            <label><input type="radio" name="validar" id="validar" value="aprovado">Finalizar</label></br>
+		            <label><input type="radio" name="validar" id="validar" value="reprovado">Arrumar</label>
+		        </div>		
+		    </div>
+		</div>
+		<div class="row">
+    <div class="form-group col-md-12">
+        <label for="observacao">Observação</label>
+        <textarea rows="5" name="observacao" id="observacao" class="form-control"></textarea>
+    </div>
+</div>
+    </div>
+</div>
+
+</form>
+</div>
+<script src="tabelas.js"></script>
+<script src="emails.js"></script>
+<script src="participantes.js"></script>
+</body>
+</html>

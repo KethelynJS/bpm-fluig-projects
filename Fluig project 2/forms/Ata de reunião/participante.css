@@ -1,0 +1,43 @@
+.form-control {
+    padding: 8px;
+    width: 300px;
+    margin-bottom: 10px;
+}
+
+.suggestions-list {
+    list-style-type: none;
+    padding: 0;
+    border: 1px solid #ccc;
+    max-height: 150px;
+    overflow-y: auto;
+    width: 300px;
+}
+
+.suggestions-list li {
+    padding: 8px;
+    cursor: pointer;
+    background-color: #f9f9f9;
+}
+
+.suggestions-list li:hover {
+    background-color: #ececec;
+}
+
+.selected-names {
+    margin-top: 20px;
+}
+
+.selected-name {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 5px;
+    background-color: #f1f1f1;
+}
+
+.remove-btn {
+    cursor: pointer;
+    color: red;
+    margin-left: 10px;
+}
