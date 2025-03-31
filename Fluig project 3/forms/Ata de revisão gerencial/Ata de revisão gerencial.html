@@ -1,0 +1,154 @@
+<html>
+<head>
+	<link type="text/css" rel="stylesheet" href="/style-guide/css/fluig-style-guide.min.css"/>
+	<script type="text/javascript" src="/portal/resources/js/jquery/jquery.js"></script>
+	<script type="text/javascript" src="/portal/resources/js/jquery/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="/portal/resources/js/mustache/mustache-min.js"></script>
+	<script type="text/javascript" src="/style-guide/js/fluig-style-guide.min.js" charset="utf-8"></script>
+</head>
+<body>
+<div class="fluig-style-guide">
+<form name="form" role="form">
+<div id="panelwarning1" class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">Ata revisão gerencial</h3>
+    </div>
+    <div class="panel-body">
+		 <div class="row">
+		    <div class="form-group col-md-6">
+		        <label for="solicitante">Responsável pela elaboração da Ata</label>
+		        <input type="text" name="solicitante" class="form-control" id="solicitante" placeholder="Coloque o nome do solicitante">
+		    </div>
+		    <div class="form-group col-md-2">
+		        <label for="data_solicitacao">Data</label>
+		        <input type="text" name="data_solicitacao" class="form-control" id="data_solicitacao" placeholder="Coloque a data">
+		    </div>
+		    <div class="form-group col-md-2">
+		        <label for="ano_referencia">Ano de Referência</label>
+		        <input type="text" name="ano_referencia" class="form-control" id="ano_referencia" placeholder="Coloque o ano">
+		    </div>
+			 <div class="form-group col-md-2">
+			    <label for="procedencia">N° Solicitação Fluig</label>
+			    <input type="text" id="numeroSolicitacao" name="numeroSolicitacao" class="form-control" readonly>
+			</div>
+		</div>
+		
+		</br></br><div class="row">
+		<label>a) Cumprimento das ações propostas na ata de revisão gerencial anterior:</label>
+	 <div>
+	 
+		<table class="table" id="tabelaRegistros" dataset="linhaDinamicaDataset" datadatasetkey="myDataset" datadatasetvalue="dynamicTableData">
+    <thead>
+        <tr>
+            <th>Item</th>
+            <th>Ações propostas</th>
+            <th>Prazo</th>
+            <th>Status</th>
+            <th>Observações</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><textarea name="codigo_1" class="form-control col-md-3"></textarea></td>
+            <td><textarea name="lote_1" class="form-control col-md-3"></textarea></td>
+            <td><input type="text" name="quantidade_1" class="form-control col-md-2"></td>
+            <td><input type="text" name="datafabricacao_1" class="form-control col-md-2"></td>
+            <td><textarea name="datavalidade_1" class="form-control col-md-2"></textarea></td>
+            <td><button type="button" onclick="removeRow(this)">Remover</button></td>
+        </tr>
+    </tbody>
+</table>
+<button type="button" class="btn btn-info" onclick="addNewRecord()" id="novoRegistroBtn">Novo Registro</button>
+<button type="button" class="btn btn-success" onclick="saveAllTables()">Salvar Dados</button>
+<input type="hidden" name="linhaDinamicaDataset" id="linhaDinamicaDataset">
+		
+		</br></br></br><div class="row">
+		    <div class="form-group col-md-12">
+		        <label for="inspecao">b) Inspeção sanitária / auditoria da qualidade:</label>
+		        <textarea rows="5" name="inspecao" id="inspecao" class="form-control"></textarea>
+		    </div>
+		</div>
+		<div class="row">
+		    <div class="form-group col-md-12">
+		        <label for="comercializacao">c) Informações pós comercialização (RC + tecnovogilancia), dados de desempenho de processos e conformidade de produtos (RPNC):</label>
+		        <textarea rows="5" name="comercializacao" id="comercializacao" class="form-control"></textarea>
+		    </div>
+		</div>
+		<div class="row">
+		    <div class="form-group col-md-12">
+		        <label for="situacao">d) Situação das demais ações corretivas e/ou preventivas:</label>
+		        <textarea rows="5" name="situacao" id="situacao" class="form-control"></textarea>
+		    </div>
+		</div>
+		<div class="row">
+		    <div class="form-group col-md-12">
+		        <label for="mudanca">e) Mudanças que possam afetar o sistema da qualidade ou conformidade de produtos:</label>
+		        <textarea rows="5" name="mudanca" id="mudanca" class="form-control"></textarea>
+		    </div>
+		</div>
+		<div class="row">
+		    <div class="form-group col-md-12">
+		        <label for="regulamentares">f) Requisitos regulamentares:</label>
+		        <textarea rows="5" name="regulamentares" id="regulamentares" class="form-control"></textarea>
+		    </div>
+		</div>
+		<div class="row">
+		    <div class="form-group col-md-12">
+		        <label for="projetos">g) Controle de projetos:</label>
+		        <textarea rows="5" name="projetos" id="projetos" class="form-control"></textarea>
+		    </div>
+		</div>
+		<div class="row">
+		    <div class="form-group col-md-12">
+		        <label for="estabilidade">h) Estudo de estabilidade:</label>
+		        <textarea rows="5" name="estabilidade" id="estabilidade" class="form-control"></textarea>
+		    </div>
+		</div>
+		<input type="hidden" id="returnFromActivity5" name="returnFromActivity5" value="false">	
+    </div>
+</div>
+
+
+
+<div id="panelwarning" class="panel panel-warning">
+    <div class="panel-heading">
+        <h3 class="panel-title">Status da direção</h3>
+    </div>
+    <div class="panel-body">
+        <div class="row">
+    <div class="form-group col-md-6">
+        <div class="radio">
+            <label><input type="radio" name="status" id="status" value="aprovado">Aprovado</label></br>
+            <label><input type="radio" name="status" id="status" value="devolver">Devolver para análise das considerações</label>
+        </div>		
+    </div>
+</div>
+<div class="row">
+    <div class="form-group col-md-12">
+        <label for="consideracoes">Considerações</label>
+        <textarea rows="5" name="consideracoes" id="consideracoes" class="form-control"></textarea>
+    </div>
+</div>
+    </div>
+</div>
+
+<div id="panelwarning3" class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">Análise Garantia da qualidade</h3>
+    </div>
+    <div class="panel-body">
+		<div class="row">
+		    <div class="form-group col-md-12">
+		        <label for="observac_">Observação</label>
+		        <textarea rows="5" name="observac_" id="observac_" class="form-control"></textarea>
+		    </div>
+		</div>
+    </div>
+</div>
+
+</form>
+</div>
+<script src="tabelaUm.js"></script>
+<script src="returnFlag.js"></script>
+</body>
+</html>

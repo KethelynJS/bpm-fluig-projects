@@ -1,0 +1,557 @@
+<html>
+<head>
+	<link type="text/css" rel="stylesheet" href="/style-guide/css/fluig-style-guide.min.css"/>
+	<script type="text/javascript" src="/portal/resources/js/jquery/jquery.js"></script>
+	<script type="text/javascript" src="/portal/resources/js/jquery/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="/portal/resources/js/mustache/mustache-min.js"></script>
+	<script type="text/javascript" src="/style-guide/js/fluig-style-guide.min.js" charset="utf-8"></script>
+	
+	
+	<style>
+	.info-textarea2 {
+		width: 100%;
+		color: #000000; /* Cor do texto preta */
+		border: 1px solid #cccccc; /* Borda cinza clara */
+		border-radius: 4px;
+		background-color: #DCDCDC;
+	}
+	
+	</style>
+	
+</head>
+<body>
+<div class="fluig-style-guide">
+<form name="form" role="form">
+
+<div id="panel1" class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">Avaliação de desempenho</h3>
+    </div>
+    <div class="panel-body">
+		<div class="row">
+		    <div class="form-group col-md-6">
+		        <label for="nome">Nome</label>
+		        <input type="text" name="nome" class="form-control" id="solicitantepn" placeholder="Coloque o nome">
+		    </div>
+		    <div class="form-group col-md-3">
+		        <label for="cargo">Cargo</label>
+		        <input type="text" name="cargo" class="form-control" id="cargo" placeholder="Coloque o cargo">
+		    </div>
+		    <div class="form-group col-md-3">
+		        <label for="setor">Setor</label>
+		        <input type="text" name="setor" class="form-control" id="setor" placeholder="Coloque o setor">
+		    </div>
+		</div>
+		<div class="row">
+		    <div class="form-group col-md-3">
+		        <label for="datacalendario">Data da realização da avaliação</label>
+		        <input type="date" name="datacalendario" id="datacalendario" class="form-control" placeholder="Data">
+		    </div>
+		    <div class="form-group col-md-4">
+		        <label for="periodo_avaliado">Período avaliado</label>
+		        <input type="text" name="periodo_avaliado" class="form-control" id="periodo_avaliado" placeholder="Coloque o período">
+		    </div>
+		</div>
+		<div class="row">
+		    <div class="form-group col-md-6">
+		        <div class="radio">
+		            <label><input type="radio" name="itempreenchimento" id="itempreenchimento" >Periódica/Semestral</label></br>
+		            <label><input type="radio" name="itempreenchimento" id="itempreenchimento" >Alteração de função</label></br>
+		            <label><input type="radio" name="itempreenchimento" id="itempreenchimento" >Avaliação de experiência <label><input type="radio" name="trinta_setenta" id="trinta_setenta" > 30 dias <label><input type="radio" name="trinta_setenta" id="trinta_setenta" > 70 dias </label> <input type="text" name="descricao_outros_acao" id="descricao_outros_acao" style="display: inline-block; width: 200px; border: none; border-bottom: 1px solid #000; background: none; outline: none; height: 20px;" placeholder="Descreva se outros">
+		        </div>		
+		    </div>
+		</div>
+		<label>Avaliador</label>
+		<div class="row">
+		    <div class="form-group col-md-4">
+		        <label for="nome_avaliador">Nome do avaliador</label>
+		        <input type="text" name="nome_avaliador" class="form-control" id="nome_avaliador" placeholder="Coloque o nome de quem está avaliando">
+		    </div>
+		    <div class="form-group col-md-4">
+		        <label for="cargo_avaliador">Cargo do avaliador</label>
+		        <input type="text" name="cargo_avaliador" class="form-control" id="cargo_avaliador" placeholder="Coloque o cargo do avaliador">
+		    </div>
+		    <div class="form-group col-md-4">
+		        <label for="setor_avaliador">setor do avaliador</label>
+		        <input type="text" name="setor_avaliador" class="form-control" id="setor_avaliador" placeholder="Coloque o nome do setor do avaliador">
+		    </div>
+		</div>
+		
+		<div class="row">
+		    <div class="form-group col-md-12">
+		        <label for="informativo2"></label>
+		        <textarea rows="2"  name="informativo2" id="infoText2" class="info-textarea2" style="text-align: center;" readonly>Notas: 10 e 9: Ótimo - 8 e 7: Bom - 6 e 5: Regular - 4 e 0: Ruim</textarea>
+		    </div>
+	    </div>
+	    
+		<div class="row">
+		    <div class="form-group col-md-6">
+		    <label>1. Assiduidade</label>
+		        <div class="radio">
+		            <label><input type="radio" class="pontuacao_radios" name="assiduidade" id="assiduidade" value="1">1</label></br>
+		            <label><input type="radio" class="pontuacao_radios" name="assiduidade" id="assiduidade" value="2">2</label></br>
+		            <label><input type="radio" class="pontuacao_radios" name="assiduidade" id="assiduidade" value="3">3</label></br>
+		            <label><input type="radio" class="pontuacao_radios" name="assiduidade" id="assiduidade" value="4">4</label></br>
+		            <label><input type="radio" class="pontuacao_radios" name="assiduidade" id="assiduidade" value="5">5</label></br>
+		            <label><input type="radio" class="pontuacao_radios" name="assiduidade" id="assiduidade" value="6">6</label></br>
+		            <label><input type="radio" class="pontuacao_radios" name="assiduidade" id="assiduidade" value="7">7</label></br>
+		            <label><input type="radio" class="pontuacao_radios" name="assiduidade" id="assiduidade" value="8">8</label></br>
+		            <label><input type="radio" class="pontuacao_radios" name="assiduidade" id="assiduidade" value="9">9</label></br>
+		            <label><input type="radio" class="pontuacao_radios" name="assiduidade" id="assiduidade" value="10">10</label></br>
+		            <label><input type="radio" class="nao_sei_avaliar" name="assiduidade" id="assiduidade" value="na">Não sei avaliar</label>
+		        </div>	
+			 
+			    <div class="form-group col-md-6">
+			        <label for="consideracoes">Observação</label>
+			        <textarea rows="3" name="consideracoes" id="consideracoes" class="form-control" placeholder="Se a nota for abaixo de 7 detalhar o motivo"></textarea>
+			    </div>
+			
+		    </div>
+		</div>
+		<div class="row">
+		    <div class="form-group col-md-6">
+		    <label>2. Pontualidade</label>
+		        <div class="radio">
+		            <label><input type="radio" class="pontuacao_radios" name="pontualidade" id="pontualidade" value="1">1</label></br>
+		            <label><input type="radio" class="pontuacao_radios" name="pontualidade" id="pontualidade" value="2">2</label></br>
+		            <label><input type="radio" class="pontuacao_radios" name="pontualidade" id="pontualidade" value="3">3</label></br>
+		            <label><input type="radio" class="pontuacao_radios" name="pontualidade" id="pontualidade" value="4">4</label></br>
+		            <label><input type="radio" class="pontuacao_radios" name="pontualidade" id="pontualidade" value="5">5</label></br>
+		            <label><input type="radio" class="pontuacao_radios" name="pontualidade" id="pontualidade" value="6">6</label></br>
+		            <label><input type="radio" class="pontuacao_radios" name="pontualidade" id="pontualidade" value="7">7</label></br>
+		            <label><input type="radio" class="pontuacao_radios" name="pontualidade" id="pontualidade" value="8">8</label></br>
+		            <label><input type="radio" class="pontuacao_radios" name="pontualidade" id="pontualidade" value="9">9</label></br>
+		            <label><input type="radio" class="pontuacao_radios" name="pontualidade" id="pontualidade" value="10">10</label></br>
+		            <label><input type="radio" class="nao_sei_avaliar" name="pontualidade" id="pontualidade" value="0">Não sei avaliar</label>
+		        </div>	
+			 
+			    <div class="form-group col-md-6">
+			        <label for="consideracoes_pontualidade">Observação</label>
+			        <textarea rows="3" name="consideracoes_pontualidade" id="consideracoes_pontualidade" class="form-control" placeholder="Se a nota for abaixo de 7 detalhar o motivo"></textarea>
+			    </div>
+			
+		    </div>
+		</div>
+		
+		<div class="row">
+		    <div class="form-group col-md-6">
+		    <label>3. Queixas de conduta</label>
+		        <div class="radio">
+		            <label><input type="radio" class="pontuacao_radios" name="queixa_conduta" id="queixa_conduta" value="1">1</label></br>
+		            <label><input type="radio" class="pontuacao_radios" name="queixa_conduta" id="queixa_conduta" value="2">2</label></br>
+		            <label><input type="radio" class="pontuacao_radios" name="queixa_conduta" id="queixa_conduta" value="3">3</label></br>
+		            <label><input type="radio" class="pontuacao_radios" name="queixa_conduta" id="queixa_conduta" value="4">4</label></br>
+		            <label><input type="radio" class="pontuacao_radios" name="queixa_conduta" id="queixa_conduta" value="5">5</label></br>
+		            <label><input type="radio" class="pontuacao_radios" name="queixa_conduta" id="queixa_conduta" value="6">6</label></br>
+		            <label><input type="radio" class="pontuacao_radios" name="queixa_conduta" id="queixa_conduta" value="7">7</label></br>
+		            <label><input type="radio" class="pontuacao_radios" name="queixa_conduta" id="queixa_conduta" value="8">8</label></br>
+		            <label><input type="radio" class="pontuacao_radios" name="queixa_conduta" id="queixa_conduta" value="9">9</label></br>
+		            <label><input type="radio" class="pontuacao_radios" name="queixa_conduta" id="queixa_conduta" value="10">10</label></br>
+		            <label><input type="radio" class="nao_sei_avaliar" name="queixa_conduta" id="queixa_conduta" value="0">Não sei avaliar</label>
+		        </div>	
+			 
+			    <div class="form-group col-md-6">
+			        <label for="consideracoes_queixa">Observação</label>
+			        <textarea rows="3" name="consideracoes_queixa" id="consideracoes_queixa" class="form-control" placeholder="Se a nota for abaixo de 7 detalhar o motivo"></textarea>
+			    </div>
+			
+		    </div>
+		</div>
+		
+		<div class="row">
+		    <div class="form-group col-md-6">
+		    <label>4. Registro de desvio comportamental</label>
+		        <div class="radio">
+		            <label><input type="radio" class="pontuacao_radios" name="desvio_comport" id="desvio_comport" value="1">1</label></br>
+		            <label><input type="radio" class="pontuacao_radios" name="desvio_comport" id="desvio_comport" value="2">2</label></br>
+		            <label><input type="radio" class="pontuacao_radios" name="desvio_comport" id="desvio_comport" value="3">3</label></br>
+		            <label><input type="radio" class="pontuacao_radios" name="desvio_comport" id="desvio_comport" value="4">4</label></br>
+		            <label><input type="radio" class="pontuacao_radios" name="desvio_comport" id="desvio_comport" value="5">5</label></br>
+		            <label><input type="radio" class="pontuacao_radios" name="desvio_comport" id="desvio_comport" value="6">6</label></br>
+		            <label><input type="radio" class="pontuacao_radios" name="desvio_comport" id="desvio_comport" value="7">7</label></br>
+		            <label><input type="radio" class="pontuacao_radios" name="desvio_comport" id="desvio_comport" value="8">8</label></br>
+		            <label><input type="radio" class="pontuacao_radios" name="desvio_comport" id="desvio_comport" value="9">9</label></br>
+		            <label><input type="radio" class="pontuacao_radios" name="desvio_comport" id="desvio_comport" value="10">10</label></br>
+		            <label><input type="radio" class="pontuacao_radios" name="desvio_comport" id="desvio_comport" value="0">Não sei avaliar</label>
+		        </div>	
+			 
+			    <div class="form-group col-md-6">
+			        <label for="consideracoes_desvio">Observação</label>
+			        <textarea rows="3" name="consideracoes_desvio" id="consideracoes_desvio" class="form-control" placeholder="Se a nota for abaixo de 7 detalhar o motivo"></textarea>
+			    </div>
+		    </div>
+		</div>
+    </div>
+</div>
+
+
+<div id="panel2" class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">Avaliação do Superior</h3>
+    </div>
+    <div class="panel-body">
+    <div class="row">
+		    <div class="form-group col-md-12">
+		        <label for="informativo2"></label>
+		        <textarea rows="2"  name="informativo88" id="infoText2" class="info-textarea2" style="text-align: center;" readonly>Notas: 10 e 9: Ótimo - 8 e 7: Bom - 6 e 5: Regular - 4 e 0: Ruim</textarea>
+		    </div>
+	    </div>
+        <div class="row">
+		    <div class="form-group col-md-6">
+		    <label>5. Entregas no prazo</label>
+		        <div class="radio">
+		            <label><input type="radio" class="pontuacao_radios" name="entregas" id="entregas" value="1">1</label></br>
+		            <label><input type="radio" class="pontuacao_radios" name="entregas" id="entregas" value="2">2</label></br>
+		            <label><input type="radio" class="pontuacao_radios" name="entregas" id="entregas" value="3">3</label></br>
+		            <label><input type="radio" class="pontuacao_radios" name="entregas" id="entregas" value="4">4</label></br>
+		            <label><input type="radio" class="pontuacao_radios" name="entregas" id="entregas" value="5">5</label></br>
+		            <label><input type="radio" class="pontuacao_radios" name="entregas" id="entregas" value="6">6</label></br>
+		            <label><input type="radio" class="pontuacao_radios" name="entregas" id="entregas" value="7">7</label></br>
+		            <label><input type="radio" class="pontuacao_radios" name="entregas" id="entregas" value="8">8</label></br>
+		            <label><input type="radio" class="pontuacao_radios" name="entregas" id="entregas" value="9">9</label></br>
+		            <label><input type="radio" class="pontuacao_radios" name="entregas" id="entregas" value="10">10</label></br>
+		            <label><input type="radio" class="nao_sei_avaliar" name="entregas" id="entregas" value="0">Não sei avaliar</label>
+		        </div>	
+			 
+			    <div class="form-group col-md-6">
+			        <label for="consideracoes_entregas">Observação</label>
+			        <textarea rows="3" name="consideracoes_entregas" id="consideracoes_entregas" class="form-control" placeholder="Se a nota for abaixo de 7 detalhar o motivo"></textarea>
+			    </div>
+		    </div>
+		</div>
+		
+		
+		<div class="row">
+		    <div class="form-group col-md-6">
+		    <label>6. Interesse pelos objetivos da empresa</label>
+		        <div class="radio">
+		            <label><input type="radio" class="pontuacao_radios" name="interesse_objetivos" id="interesse_objetivos" value="1">1</label></br>
+		            <label><input type="radio" class="pontuacao_radios" name="interesse_objetivos" id="interesse_objetivos" value="2">2</label></br>
+		            <label><input type="radio" class="pontuacao_radios" name="interesse_objetivos" id="interesse_objetivos" value="3">3</label></br>
+		            <label><input type="radio" class="pontuacao_radios" name="interesse_objetivos" id="interesse_objetivos" value="4">4</label></br>
+		            <label><input type="radio" class="pontuacao_radios" name="interesse_objetivos" id="interesse_objetivos" value="5">5</label></br>
+		            <label><input type="radio" class="pontuacao_radios" name="interesse_objetivos" id="interesse_objetivos" value="6">6</label></br>
+		            <label><input type="radio" class="pontuacao_radios" name="interesse_objetivos" id="interesse_objetivos" value="7">7</label></br>
+		            <label><input type="radio" class="pontuacao_radios" name="interesse_objetivos" id="interesse_objetivos" value="8">8</label></br>
+		            <label><input type="radio" class="pontuacao_radios" name="interesse_objetivos" id="interesse_objetivos" value="9">9</label></br>
+		            <label><input type="radio" class="pontuacao_radios" name="interesse_objetivos" id="interesse_objetivos" value="10">10</label></br>
+		            <label><input type="radio" class="nao_sei_avaliar" name="interesse_objetivos" id="interesse_objetivos" value="0">Não sei avaliar</label>
+		        </div>	
+			 
+			    <div class="form-group col-md-6">
+			        <label for="consideracoes_interesse">Observação</label>
+			        <textarea rows="3" name="consideracoes_interesse" id="consideracoes_interesse" class="form-control" placeholder="Se a nota for abaixo de 7 detalhar o motivo"></textarea>
+			    </div>
+		    </div>
+		</div>
+		
+		
+		<div class="row">
+		    <div class="form-group col-md-6">
+		    <label>7. Pontualidade  assiduidade nas reuniões estratégicas</label>
+		        <div class="radio">
+		            <label><input type="radio" class="pontuacao_radios" name="pount_assid_reuniao" id="pount_assid_reuniao" value="1">1</label></br>
+		            <label><input type="radio" class="pontuacao_radios" name="pount_assid_reuniao" id="pount_assid_reuniao" value="2">2</label></br>
+		            <label><input type="radio" class="pontuacao_radios" name="pount_assid_reuniao" id="pount_assid_reuniao" value="3">3</label></br>
+		            <label><input type="radio" class="pontuacao_radios" name="pount_assid_reuniao" id="pount_assid_reuniao" value="4">4</label></br>
+		            <label><input type="radio" class="pontuacao_radios" name="pount_assid_reuniao" id="pount_assid_reuniao" value="5">5</label></br>
+		            <label><input type="radio" class="pontuacao_radios" name="pount_assid_reuniao" id="pount_assid_reuniao" value="6">6</label></br>
+		            <label><input type="radio" class="pontuacao_radios" name="pount_assid_reuniao" id="pount_assid_reuniao" value="7">7</label></br>
+		            <label><input type="radio" class="pontuacao_radios" name="pount_assid_reuniao" id="pount_assid_reuniao" value="8">8</label></br>
+		            <label><input type="radio" class="pontuacao_radios" name="pount_assid_reuniao" id="pount_assid_reuniao" value="9">9</label></br>
+		            <label><input type="radio" class="pontuacao_radios" name="pount_assid_reuniao" id="pount_assid_reuniao" value="10">10</label></br>
+		            <label><input type="radio" class="nao_sei_avaliar" name="pount_assid_reuniao" id="pount_assid_reuniao" value="0">Não sei avaliar</label>
+		        </div>	
+			 
+			    <div class="form-group col-md-6">
+			        <label for="consideracoes_pount_assid">Observação</label>
+			        <textarea rows="3" name="consideracoes_pount_assid" id="consideracoes_pount_assid" class="form-control" placeholder="Se a nota for abaixo de 7 detalhar o motivo"></textarea>
+			    </div>
+		    </div>
+		</div>
+		
+		
+		<div class="row">
+		    <div class="form-group col-md-6">
+		    <label>8. Habilidade de liderança com a equipe</label>
+		        <div class="radio">
+		            <label><input type="radio" class="pontuacao_radios" name="habilidade_lideranca" id="habilidade_lideranca" value="1">1</label></br>
+		            <label><input type="radio" class="pontuacao_radios" name="habilidade_lideranca" id="habilidade_lideranca" value="2">2</label></br>
+		            <label><input type="radio" class="pontuacao_radios" name="habilidade_lideranca" id="habilidade_lideranca" value="3">3</label></br>
+		            <label><input type="radio" class="pontuacao_radios" name="habilidade_lideranca" id="habilidade_lideranca" value="4">4</label></br>
+		            <label><input type="radio" class="pontuacao_radios" name="habilidade_lideranca" id="habilidade_lideranca" value="5">5</label></br>
+		            <label><input type="radio" class="pontuacao_radios" name="habilidade_lideranca" id="habilidade_lideranca" value="6">6</label></br>
+		            <label><input type="radio" class="pontuacao_radios" name="habilidade_lideranca" id="habilidade_lideranca" value="7">7</label></br>
+		            <label><input type="radio" class="pontuacao_radios" name="habilidade_lideranca" id="habilidade_lideranca" value="8">8</label></br>
+		            <label><input type="radio" class="pontuacao_radios" name="habilidade_lideranca" id="habilidade_lideranca" value="9">9</label></br>
+		            <label><input type="radio" class="pontuacao_radios" name="habilidade_lideranca" id="habilidade_lideranca" value="10">10</label></br>
+		            <label><input type="radio" class="nao_sei_avaliar" name="habilidade_lideranca" id="habilidade_lideranca" value="0">Não sei avaliar</label>
+		        </div>	
+			 
+			    <div class="form-group col-md-6">
+			        <label for="consideracoes_habilidade">Observação</label>
+			        <textarea rows="3" name="consideracoes_habilidade" id="consideracoes_habilidade" class="form-control" placeholder="Se a nota for abaixo de 7 detalhar o motivo"></textarea>
+			    </div>
+		    </div>
+		</div>
+		
+		
+		<div class="row">
+		    <div class="form-group col-md-6">
+		    <label>9. Habilidade para administrar treinamentos do setor</label>
+		        <div class="radio">
+		            <label><input type="radio" class="pontuacao_radios" name="habilidade_treinamentos" id="habilidade_treinamentos" value="1">1</label></br>
+		            <label><input type="radio" class="pontuacao_radios" name="habilidade_treinamentos" id="habilidade_treinamentos" value="2">2</label></br>
+		            <label><input type="radio" class="pontuacao_radios" name="habilidade_treinamentos" id="habilidade_treinamentos" value="3">3</label></br>
+		            <label><input type="radio" class="pontuacao_radios" name="habilidade_treinamentos" id="habilidade_treinamentos" value="4">4</label></br>
+		            <label><input type="radio" class="pontuacao_radios" name="habilidade_treinamentos" id="habilidade_treinamentos" value="5">5</label></br>
+		            <label><input type="radio" class="pontuacao_radios" name="habilidade_treinamentos" id="habilidade_treinamentos" value="6">6</label></br>
+		            <label><input type="radio" class="pontuacao_radios" name="habilidade_treinamentos" id="habilidade_treinamentos" value="7">7</label></br>
+		            <label><input type="radio" class="pontuacao_radios" name="habilidade_treinamentos" id="habilidade_treinamentos" value="8">8</label></br>
+		            <label><input type="radio" class="pontuacao_radios" name="habilidade_treinamentos" id="habilidade_treinamentos" value="9">9</label></br>
+		            <label><input type="radio" class="pontuacao_radios" name="habilidade_treinamentos" id="habilidade_treinamentos" value="10">10</label></br>
+		            <label><input type="radio" class="nao_sei_avaliar" name="habilidade_treinamentos" id="habilidade_treinamentos" value="0">Não sei avaliar</label>
+		        </div>	
+			 
+			    <div class="form-group col-md-6">
+			        <label for="consideracoes_habilidade2">Observação</label>
+			        <textarea rows="3" name="consideracoes_habilidade2" id="consideracoes_habilidade2" class="form-control" placeholder="Se a nota for abaixo de 7 detalhar o motivo"></textarea>
+			    </div>
+		    </div>
+		</div>
+		
+		<div class="row">
+		    <div class="form-group col-md-6">
+		    <label>10. Trabalha conforme normas e procedimentos da empresa</label>
+		        <div class="radio">
+		            <label><input type="radio" class="pontuacao_radios" name="normas_procedimentos1" id="normas_procedimentos1" value="1">1</label></br>
+		            <label><input type="radio" class="pontuacao_radios" name="normas_procedimentos1" id="normas_procedimentos1" value="2">2</label></br>
+		            <label><input type="radio" class="pontuacao_radios" name="normas_procedimentos1" id="normas_procedimentos1" value="3">3</label></br>
+		            <label><input type="radio" class="pontuacao_radios" name="normas_procedimentos1" id="normas_procedimentos1" value="4">4</label></br>
+		            <label><input type="radio" class="pontuacao_radios" name="normas_procedimentos1" id="normas_procedimentos1" value="5">5</label></br>
+		            <label><input type="radio" class="pontuacao_radios" name="normas_procedimentos1" id="normas_procedimentos1" value="6">6</label></br>
+		            <label><input type="radio" class="pontuacao_radios" name="normas_procedimentos1" id="normas_procedimentos1" value="7">7</label></br>
+		            <label><input type="radio" class="pontuacao_radios" name="normas_procedimentos1" id="normas_procedimentos1" value="8">8</label></br>
+		            <label><input type="radio" class="pontuacao_radios" name="normas_procedimentos1" id="normas_procedimentos1" value="9">9</label></br>
+		            <label><input type="radio" class="pontuacao_radios" name="normas_procedimentos1" id="normas_procedimentos1" value="10">10</label></br>
+		            <label><input type="radio" class="nao_sei_avaliar" name="normas_procedimentos1" id="normas_procedimentos1" value="0">Não sei avaliar</label>
+		        </div>	
+			 
+			    <div class="form-group col-md-6">
+			        <label for="consideracoes_normas_proced">Observação</label>
+			        <textarea rows="3" name="consideracoes_normas_proced1" id="consideracoes_normas_proced1" class="form-control" placeholder="Se a nota for abaixo de 7 detalhar o motivo"></textarea>
+			    </div>
+		    </div>
+		</div>
+		
+		
+		
+		<div class="row">
+		    <div class="form-group col-md-6">
+		    <label>11. Escuta e aceita opiniões diferentes das suas</label>
+		        <div class="radio">
+		            <label><input type="radio" class="pontuacao_radios" name="opiniao_diferente" id="opiniao_diferente" value="1">1</label></br>
+		            <label><input type="radio" class="pontuacao_radios" name="opiniao_diferente" id="opiniao_diferente" value="2">2</label></br>
+		            <label><input type="radio" class="pontuacao_radios" name="opiniao_diferente" id="opiniao_diferente" value="3">3</label></br>
+		            <label><input type="radio" class="pontuacao_radios" name="opiniao_diferente" id="opiniao_diferente" value="4">4</label></br>
+		            <label><input type="radio" class="pontuacao_radios" name="opiniao_diferente" id="opiniao_diferente" value="5">5</label></br>
+		            <label><input type="radio" class="pontuacao_radios" name="opiniao_diferente" id="opiniao_diferente" value="6">6</label></br>
+		            <label><input type="radio" class="pontuacao_radios" name="opiniao_diferente" id="opiniao_diferente" value="7">7</label></br>
+		            <label><input type="radio" class="pontuacao_radios" name="opiniao_diferente" id="opiniao_diferente" value="8">8</label></br>
+		            <label><input type="radio" class="pontuacao_radios" name="opiniao_diferente" id="opiniao_diferente" value="9">9</label></br>
+		            <label><input type="radio" class="pontuacao_radios" name="opiniao_diferente" id="opiniao_diferente" value="10">10</label></br>
+		            <label><input type="radio" class="nao_sei_avaliar" name="opiniao_diferente" id="opiniao_diferente" value="0">Não sei avaliar</label>
+		        </div>	
+			 
+			    <div class="form-group col-md-6">
+			        <label for="consideracoes_opiniao_difer">Observação</label>
+			        <textarea rows="3" name="consideracoes_opiniao_difer" id="consideracoes_opiniao_difer" class="form-control" placeholder="Se a nota for abaixo de 7 detalhar o motivo"></textarea>
+			    </div>
+		    </div>
+		</div>
+		
+		<div class="row">
+		    <div class="form-group col-md-6">
+		    <label>12. Pró-atividade ética nas relações de trabalho</label>
+		        <div class="radio">
+		            <label><input type="radio" class="pontuacao_radios" name="etica" id="etica" value="1">1</label></br>
+		            <label><input type="radio" class="pontuacao_radios" name="etica" id="etica" value="2">2</label></br>
+		            <label><input type="radio" class="pontuacao_radios" name="etica" id="etica" value="3">3</label></br>
+		            <label><input type="radio" class="pontuacao_radios" name="etica" id="etica" value="4">4</label></br>
+		            <label><input type="radio" class="pontuacao_radios" name="etica" id="etica" value="5">5</label></br>
+		            <label><input type="radio" class="pontuacao_radios" name="etica" id="etica" value="6">6</label></br>
+		            <label><input type="radio" class="pontuacao_radios" name="etica" id="etica" value="7">7</label></br>
+		            <label><input type="radio" class="pontuacao_radios" name="etica" id="etica" value="8">8</label></br>
+		            <label><input type="radio" class="pontuacao_radios" name="etica" id="etica" value="9">9</label></br>
+		            <label><input type="radio" class="pontuacao_radios" name="etica" id="etica" value="10">10</label></br>
+		            <label><input type="radio" class="nao_sei_avaliar" name="etica" id="etica" value="0">Não sei avaliar</label>
+		        </div>	
+			 
+			    <div class="form-group col-md-6">
+			        <label for="consideracoes_etica">Observação</label>
+			        <textarea rows="3" name="consideracoes_etica" id="consideracoes_etica" class="form-control" placeholder="Se a nota for abaixo de 7 detalhar o motivo"></textarea>
+			    </div>
+		    </div>
+		</div>
+		
+		<div class="row">
+		    <div class="form-group col-md-6">
+		    <label>13. Inovação e criatividade</label>
+		        <div class="radio">
+		            <label><input type="radio" class="pontuacao_radios" name="inovacao" id="inovacao" value="1">1</label></br>
+		            <label><input type="radio" class="pontuacao_radios" name="inovacao" id="inovacao" value="2">2</label></br>
+		            <label><input type="radio" class="pontuacao_radios" name="inovacao" id="inovacao" value="3">3</label></br>
+		            <label><input type="radio" class="pontuacao_radios" name="inovacao" id="inovacao" value="4">4</label></br>
+		            <label><input type="radio" class="pontuacao_radios" name="inovacao" id="inovacao" value="5">5</label></br>
+		            <label><input type="radio" class="pontuacao_radios" name="inovacao" id="inovacao" value="6">6</label></br>
+		            <label><input type="radio" class="pontuacao_radios" name="inovacao" id="inovacao" value="7">7</label></br>
+		            <label><input type="radio" class="pontuacao_radios" name="inovacao" id="inovacao" value="8">8</label></br>
+		            <label><input type="radio" class="pontuacao_radios" name="inovacao" id="inovacao" value="9">9</label></br>
+		            <label><input type="radio" class="pontuacao_radios" name="inovacao" id="inovacao" value="10">10</label></br>
+		            <label><input type="radio" class="nao_sei_avaliar" name="inovacao" id="inovacao" value="0">Não sei avaliar</label>
+		        </div>	
+			 
+			    <div class="form-group col-md-6">
+			        <label for="consideracoes_inovacao">Observação</label>
+			        <textarea rows="3" name="consideracoes_inovacao" id="consideracoes_inovacao" class="form-control" placeholder="Se a nota for abaixo de 7 detalhar o motivo"></textarea>
+			    </div>
+		    </div>
+		</div>
+		
+		<div class="row">
+		    <div class="form-group col-md-6">
+		    <label>14. Demonstra conhecimento técnico de sua função</label>
+		        <div class="radio">
+		            <label><input type="radio" class="pontuacao_radios" name="normas_procedimentos" id="normas_procedimentos" value="1">1</label></br>
+		            <label><input type="radio" class="pontuacao_radios" name="normas_procedimentos" id="normas_procedimentos" value="2">2</label></br>
+		            <label><input type="radio" class="pontuacao_radios" name="normas_procedimentos" id="normas_procedimentos" value="3">3</label></br>
+		            <label><input type="radio" class="pontuacao_radios" name="normas_procedimentos" id="normas_procedimentos" value="4">4</label></br>
+		            <label><input type="radio" class="pontuacao_radios" name="normas_procedimentos" id="normas_procedimentos" value="5">5</label></br>
+		            <label><input type="radio" class="pontuacao_radios" name="normas_procedimentos" id="normas_procedimentos" value="6">6</label></br>
+		            <label><input type="radio" class="pontuacao_radios" name="normas_procedimentos" id="normas_procedimentos" value="7">7</label></br>
+		            <label><input type="radio" class="pontuacao_radios" name="normas_procedimentos" id="normas_procedimentos" value="8">8</label></br>
+		            <label><input type="radio" class="pontuacao_radios" name="normas_procedimentos" id="normas_procedimentos" value="9">9</label></br>
+		            <label><input type="radio" class="pontuacao_radios" name="normas_procedimentos" id="normas_procedimentos" value="10">10</label></br>
+		            <label><input type="radio" class="nao_sei_avaliar" name="normas_procedimentos" id="normas_procedimentos" value="0">Não sei avaliar</label>
+		        </div>	
+			 
+			    <div class="form-group col-md-6">
+			        <label for="consideracoes_conhecimento">Observação</label>
+			        <textarea rows="3" name="consideracoes_conhecimento" id="consideracoes_conhecimento" class="form-control" placeholder="Se a nota for abaixo de 7 detalhar o motivo"></textarea>
+			    </div>
+		    </div>
+		</div>
+		
+		<div class="row">
+		    <div class="form-group col-md-6">
+		    <label>15. Conhece e se preocupa com metas do setor</label>
+		        <div class="radio">
+		            <label><input type="radio" class="pontuacao_radios" name="metas_setor" id="metas_setor" value="1">1</label></br>
+		            <label><input type="radio" class="pontuacao_radios" name="metas_setor" id="metas_setor" value="2">2</label></br>
+		            <label><input type="radio" class="pontuacao_radios" name="metas_setor" id="metas_setor" value="3">3</label></br>
+		            <label><input type="radio" class="pontuacao_radios" name="metas_setor" id="metas_setor" value="4">4</label></br>
+		            <label><input type="radio" class="pontuacao_radios" name="metas_setor" id="metas_setor" value="5">5</label></br>
+		            <label><input type="radio" class="pontuacao_radios" name="metas_setor" id="metas_setor" value="6">6</label></br>
+		            <label><input type="radio" class="pontuacao_radios" name="metas_setor" id="metas_setor" value="7">7</label></br>
+		            <label><input type="radio" class="pontuacao_radios" name="metas_setor" id="metas_setor" value="8">8</label></br>
+		            <label><input type="radio" class="pontuacao_radios" name="metas_setor" id="metas_setor" value="9">9</label></br>
+		            <label><input type="radio" class="pontuacao_radios" name="metas_setor" id="metas_setor" value="10">10</label></br>
+		            <label><input type="radio" class="nao_sei_avaliar" name="metas_setor" id="metas_setor" value="0">Não sei avaliar</label>
+		        </div>	
+			 
+			    <div class="form-group col-md-6">
+			        <label for="consideracoes_metas">Observação</label>
+			        <textarea rows="3" name="consideracoes_metas" id="consideracoes_metas" class="form-control" placeholder="Se a nota for abaixo de 7 detalhar o motivo"></textarea>
+			    </div>
+		    </div>
+		</div>
+		<input type="hidden" id="pontuacao_total1" name="pontuacao_total1" value="0">
+
+		<div class="row">
+		    <div class="form-group col-md-6">
+		    <label>16. Conhece e pratica valores da empresa</label>
+		        <div class="radio">
+		            <label><input type="radio" class="pontuacao_radios" name="valores_empresa" id="valores_empresa" value="1">1</label></br>
+		            <label><input type="radio" class="pontuacao_radios" name="valores_empresa" id="valores_empresa" value="2">2</label></br>
+		            <label><input type="radio" class="pontuacao_radios" name="valores_empresa" id="valores_empresa" value="3">3</label></br>
+		            <label><input type="radio" class="pontuacao_radios" name="valores_empresa" id="valores_empresa" value="4">4</label></br>
+		            <label><input type="radio" class="pontuacao_radios" name="valores_empresa" id="valores_empresa" value="5">5</label></br>
+		            <label><input type="radio" class="pontuacao_radios" name="valores_empresa" id="valores_empresa" value="6">6</label></br>
+		            <label><input type="radio" class="pontuacao_radios" name="valores_empresa" id="valores_empresa" value="7">7</label></br>
+		            <label><input type="radio" class="pontuacao_radios" name="valores_empresa" id="valores_empresa" value="8">8</label></br>
+		            <label><input type="radio" class="pontuacao_radios" name="valores_empresa" id="valores_empresa" value="9">9</label></br>
+		            <label><input type="radio" class="pontuacao_radios" name="valores_empresa" id="valores_empresa" value="10">10</label></br>
+		            <label><input type="radio" class="nao_sei_avaliar" name="valores_empresa" id="valores_empresa" value="0">Não sei avaliar</label>
+		        </div>	
+			 
+			    <div class="form-group col-md-6">
+			        <label for="consideracoes_valores">Observação</label>
+			        <textarea rows="3" name="consideracoes_valores" id="consideracoes_valores" class="form-control" placeholder="Se a nota for abaixo de 7 detalhar o motivo"></textarea>
+			    </div>
+		    </div>
+		</div>
+		
+		<div class="row">
+		    <div class="form-group col-md-12">
+		        <label for="informativo2"></label>
+		        <textarea rows="2"  name="informativo3" id="infoText2" class="info-textarea2" style="text-align: center;" readonly>Para pontuação final, dividir pontuação total pelo número de itens avaliados (16); Obs.: Se algum item for (Não sei avaliar) não considerar na somatória nem na divisão.; </textarea>
+		    </div>
+	    </div>
+		 <div class="row">
+		 	<div class="form-group col-md-4">
+	        <label for="pontuacao_total">Pontuação Total:</label>
+	        <input type="text" id="pontuacao_total" class="form-control" name="pontuacao_total" readonly>
+	    </div>
+		    <div class="form-group col-md-3">
+		        <label for="pontuacao_final">Pontuação final</label>
+		        <input type="text" name="pontuacao_final" class="form-control" id="pontuacao_final" placeholder="Coloque a divisão da pontuação">
+		    </div>
+		</div>
+		<div class="row">
+		    <div class="form-group col-md-12">
+		        <label for="pontos_fortes">Pontos fortes</label>
+		        <textarea rows="5" name="pontos_fortes" id="pontos_fortes" class="form-control"></textarea>
+		    </div>
+		</div>
+		<div class="row">
+		    <div class="form-group col-md-12">
+		        <label for="pontos_melhorar">Pontos a melhorar</label>
+		        <textarea rows="5" name="pontos_melhorar" id="pontos_melhorar" class="form-control"></textarea>
+		    </div>
+		</div>
+		
+    </div>
+</div>
+
+<div id="panel10" class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">Retorno Avaliação de Desempenho</h3>
+    </div>
+    <div class="panel-body">
+        <div class="row"></div>
+	    <div class="form-group col-md-12">
+	        <label for="informativo2"></label>
+	        <textarea rows="2"  name="informativo10" id="infoText2" class="info-textarea2" style="text-align: center;" readonly> Você está ciente de que recebeu esta solicitação. Após concluir a leitura da sua avaliação de desempenho, por favor, clique em 'Enviar'</textarea>
+	    </div>
+	    </div>
+    </div>
+
+<div id="panel9" class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">RH</h3>
+    </div>
+    <div class="panel-body">
+        <div class="row"></div>
+	    <div class="form-group col-md-12">
+	        <label for="informativo2"></label>
+	        <textarea rows="2"  name="informativo7" id="infoText2" class="info-textarea2" style="text-align: center;" readonly> Informo que esse processo foi finalizado com sucesso, ao terminar a leitura clique em enviar.</textarea>
+	    </div>
+	    </div>
+    </div>
+</div>
+</form>
+</div>
+
+    <script src="soma.js"></script>
+</body>
+</html>

@@ -53,6 +53,9 @@ function validateActivity4(form) {
     if (form.getValue("resposta7") == "") {
         msg += "Campo ação imediata não foi preenchido\n";
     }
+    if (form.getValue("classificacao_comentario") == "") {
+        msg += "Campo classificação não foi preenchido\n";
+    }
 
     if (msg !== "") {
         console.log("Erros na Atividade 4: " + msg);
@@ -80,6 +83,9 @@ function validateActivity13(form) {
     if (form.getValue("status") == "") {
         msg += "Campo status não foi preenchido\n";
     }
+    if (form.getValue("data_realizacao_acao") == "") {
+        msg += "Campo Data da realização da ação não foi preenchido\n";
+    }
     
 
     if (msg !== "") {
@@ -93,6 +99,9 @@ function validateActivity15(form) {
 
     if (form.getValue("validacao_solicitante") == "") {
         msg += "Campo validação solicitante não foi preenchido\n";
+    }
+    if (form.getValue("data_conclusao") == "") {
+        msg += "Campo Data da conclusão não foi preenchido\n";
     }
     
     

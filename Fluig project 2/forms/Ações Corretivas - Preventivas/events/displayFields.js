@@ -1,4 +1,13 @@
 function displayFields(form,customHTML){
+	// Captura o número da solicitação
+    var numSolicitacao = getValue("WKNumProces");
+
+    // Preenche o campo de número de solicitação se o valor estiver disponível
+    if (numSolicitacao) {
+        form.setValue("numeroSolicitacao", numSolicitacao);
+    } else {
+        log.info("Número da solicitação não disponível.");
+    }
 	var atv_atual = getValue("WKNumState");
 	var returnFromActivity5 = form.getValue("returnFromActivity5");
 	var returnFromActivity15 = form.getValue("returnFromActivity15");

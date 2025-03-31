@@ -51,51 +51,68 @@
 <form name="form" role="form">
 <div id="panelwarning" class="panel panel-primary">
     <div class="panel-heading">
-        <h3 class="panel-title"><i class="fluigicon fluigicon-search icon-md" aria-hidden="true"></i> Dados do Produto e Análises Físico-químicas</h3>
+        <h3 class="panel-title"><i class="fluigicon fluigicon-search icon-md" aria-hidden="true"></i>Etapa 1</h3>
     </div>
     <div class="panel-body">
-	    	<div id="opcaoo7" class="form-group col-md-10">
+	    	<div id="opcaoo7" class="form-group col-md-8">
 	    <label for="opcoes7">Produto:</label>
 	      <select type="opcao7" name="opcao7" class="form-control" id="opcao7" placeholder="">
 	      	<option value="opcaox">Escolha</option>
 	        
-	        <option value="opcao5">PA177 - Gluc Up em Pó Limão Sachê c/ 50g</option>
-	        <option value="opcao6">PA178 - Gluc Up em Pó Limão Sachê c/ 75g</option>
-	        <option value="opcao8">PA390 - Gluc Up em Pó Limão frasco c/ 900g</option>
-	        <option value="opcao9">PI127 - Gluc Up em Pó Limão frasco c/ 900g - avulso</option>
-	        <option value="opcao10">PA393 - Gluc Up em Pó Limão sachê c/ 900g</option>
-	        <option value="opcao11">PI126 - Gluc Up em Pó Limão sachê c/ 900g - avulso</option>
-	        <option value="opcao14">PA290 - Lact Up em Pó Sachê Limao c/ 50g</option>
-	        <option value="opcao15">PA401 - Lact Up em Pó Limão sachê c/ 900g</option>
-	        <option value="opcao16">PI136 - Lact Up em Pó Limão sachê c/ 900g - avulso</option>
+	        <option value="PA177 - Gluc Up em Pó Limão Sachê c/ 50g">PA177 - Gluc Up em Pó Limão Sachê c/ 50g</option>
+	        <option value="PA178 - Gluc Up em Pó Limão Sachê c/ 75g">PA178 - Gluc Up em Pó Limão Sachê c/ 75g</option>
+	        <option value="PA390 - Gluc Up em Pó Limão frasco c/ 900g">PA390 - Gluc Up em Pó Limão frasco c/ 900g</option>
+	        <option value="PI127 - Gluc Up em Pó Limão frasco c/ 900g - avulso">PI127 - Gluc Up em Pó Limão frasco c/ 900g - avulso</option>
+	        <option value="PA393 - Gluc Up em Pó Limão sachê c/ 900g">PA393 - Gluc Up em Pó Limão sachê c/ 900g</option>
+	        <option value="PI126 - Gluc Up em Pó Limão sachê c/ 900g - avulso">PI126 - Gluc Up em Pó Limão sachê c/ 900g - avulso</option>
+	        <option value="PA290 - Lact Up em Pó Sachê Limao c/ 50g">PA290 - Lact Up em Pó Sachê Limao c/ 50g</option>
+	        <option value="PA401 - Lact Up em Pó Limão sachê c/ 900g">PA401 - Lact Up em Pó Limão sachê c/ 900g</option>
+	        <option value="PI136 - Lact Up em Pó Limão sachê c/ 900g - avulso">PI136 - Lact Up em Pó Limão sachê c/ 900g - avulso</option>
 	      </select>
 			</div>
 	<div class="form-group col-md-2">
         <label for="lote">Lote</label>
-        <input type="lote" name="lote" class="form-control" id="lote" placeholder="Coloque o lote">
+        <input type="text" name="lote" class="form-control" id="lote" placeholder="Coloque o lote">
     </div>
+    <div class="form-group col-md-2">
+		        <label for="procedencia">N° Solicitação Fluig</label>
+		        <input type="text" id="numeroSolicitacao" name="numeroSolicitacao" class="form-control" readonly>
+		    </div>
         <div class="row">
     	</div>
     	
     	<div class="row">
     <div class="form-group col-md-10">
         <label for="aspecto">Aspecto final</label>
-        <input type="aspecto" name="aspecto" class="form-control" id="aspecto" placeholder="">
+        <input type="text" name="aspecto" class="form-control" id="aspecto" placeholder="">
     </div>
     <div id="opcaoo" class="form-group col-md-2">
   <label for="Resp">Responsável:</label>
-    <select type="Resp" name="Resp" class="form-control" id="Resp" placeholder="">
+    <select type="text" name="Resp" class="form-control" id="Resp" placeholder="">
     <option value="escolha">Escolha</option>
-      			<option value="fernando">Fernando B. Stocco</option>
-		      <option value="andrea">Andrea Mara Issa</option>
-		      <option value="cleide">Cleide M. de carvalho</option>
+      			<option value="Fernando B. Stocco">Fernando B. Stocco</option>
+		      <option value="Andrea Mara Issa">Andrea Mara Issa</option>
+		      <option value="Angelita H. S. Charello">Angelita H. S. Charello</option>
+		      <option value="Estéfane Fontes">Estéfane Fontes</option>
     </select>
 </div>
     </div>
     <div class="row">
+    <div class="form-group col-md-2">
+        <label for="leitura_refratormetro">Leitura no refratômetro (%) </label>
+        <input type="text" name="leitura_refratormetro" class="form-control" id="leitura_refratormetro" placeholder="">
+    </div>
+    <div class="form-group col-md-2">
+        <label for="massa_volume">Massa do volume</label>
+        <input type="text" name="massa_volume" class="form-control" id="massa_volume" placeholder="">
+    </div>
     <div class="form-group col-md-3">
         <label for="dosagem">Dosagem em g/ml</label>
-        <input type="dosagem" name="dosagem" class="form-control" id="dosagem" placeholder="dosagem">
+        <input type="text" name="dosagem" class="form-control" id="dosagem" placeholder="dosagem">
+    </div>
+    <div class="form-group col-md-5">
+        <label for="observ_rep">Observação</label>
+        <input type="text" name="observ_rep" class="form-control" id="observ_rep" placeholder="N.A.">
     </div>
     </div>
 
@@ -103,7 +120,7 @@
 </div>
 	<div id="panelwarning3" class="panel panel-primary">
     <div class="panel-heading">
-        <h3 class="panel-title"><i class="fluigicon fluigicon-search icon-md" aria-hidden="true"></i> Conclusão da análise</h3>
+        <h3 class="panel-title"><i class="fluigicon fluigicon-search icon-md" aria-hidden="true"></i>Etapa 2</h3>
     </div>
     <div class="panel-body">
 		    <div class="row">
@@ -139,11 +156,12 @@
 		    </div>
 			 <div id="opcaoo1" class="form-group col-md-6">
 			 <label for="datacalendario">Responsável pela liberação final do produto:</label>
-		    <select type="Respp1" name="Respp1" class="form-control" id="Respp1" placeholder="">
+		    <select type="text" name="Respp1" class="form-control" id="Respp1" placeholder="">
 		    	<option value="escolha">Escolha</option>
-		      <option value="fernando">Fernando B. Stocco</option>
-		      <option value="andrea">Andrea Mara Issa</option>
-		      <option value="cleide">Cleide M. de carvalho</option>
+		      <option value="Fernando B. Stocco">Fernando B. Stocco</option>
+		      <option value="Andrea Mara Issa">Andrea Mara Issa</option>
+		      <option value="Angelita H. S. Charello">Angelita H. S. Charello</option>
+		      <option value="Estéfane Fontes">Estéfane Fontes</option>
 		    </select>
 		    </div>
 		</div>

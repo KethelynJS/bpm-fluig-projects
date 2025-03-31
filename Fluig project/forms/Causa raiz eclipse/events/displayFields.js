@@ -1,4 +1,12 @@
 function displayFields(form,customHTML){
+	var numSolicitacao = getValue("WKNumProces");
+
+    // Preenche o campo de número de solicitação se o valor estiver disponível
+    if (numSolicitacao) {
+        form.setValue("numeroSolicitacao", numSolicitacao);
+    } else {
+        log.info("Número da solicitação não disponível.");
+    }
 	var atv_atual = getValue("WKNumState");
 	var returnFromActivity11 = form.getValue("returnFromActivity11");
 	
@@ -22,7 +30,7 @@ function displayFields(form,customHTML){
 	}
     
 	else if(atv_atual == 9){
-        form.setVisibleById("panelwarning6", false);
+        
         form.setVisibleById("panelwarning7", false);
 	}
     

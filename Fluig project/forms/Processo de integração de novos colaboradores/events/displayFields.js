@@ -1,4 +1,12 @@
 function displayFields(form,customHTML){
+	var numSolicitacao = getValue("WKNumProces");
+
+    // Preenche o campo de número de solicitação se o valor estiver disponível
+    if (numSolicitacao) {
+        form.setValue("numeroSolicitacao", numSolicitacao);
+    } else {
+        log.info("Número da solicitação não disponível.");
+    }
 	var atv_atual = getValue("WKNumState");
 	var returnFromActivity5 = form.getValue("returnFromActivity5");
 	
@@ -13,6 +21,7 @@ function displayFields(form,customHTML){
         form.setVisibleById("panel3", false);
         form.setVisibleById("panel4", false);
         form.setVisibleById("panel5", false);
+        form.setVisibleById("panelgestor", false);
         
     }
 
@@ -38,8 +47,12 @@ function displayFields(form,customHTML){
 		form.setVisibleById("panel5", false);
 		
 	}
-	else if(atv_atual == 18){
-		
+
+	else if(atv_atual == 26){
+		form.setVisibleById("panel2", false);
+		form.setVisibleById("panel3", false);
+        form.setVisibleById("panel4", false);
+        form.setVisibleById("panel5", false);
 		
 	}
 }

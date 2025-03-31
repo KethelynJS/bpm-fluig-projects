@@ -35,6 +35,12 @@ function validateActivity4(form) {
     if (form.getValue("lote") == "") {
         msg += "Campo lote não foi preenchido\n";
     }
+    if (form.getValue("leitura_refratormetro") == "") {
+        msg += "Campo leitura refratômetro não foi preenchido\n";
+    }
+    if (form.getValue("massa_volume") == "") {
+        msg += "Campo massa_volume não foi preenchido\n";
+    }
 
     if (msg !== "") {
         console.log("Erros na Atividade 4: " + msg);

@@ -9,7 +9,7 @@
     <active>true</active>
     <publicProcess>false</publicProcess>
     <volumeId>Default</volumeId>
-    <categoryId>Teste Eclipse</categoryId>
+    <categoryId>RH</categoryId>
     <managerEngineAllocationId></managerEngineAllocationId>
     <snapshotFrequency>0</snapshotFrequency>
     <baseDay>0</baseDay>
@@ -28,7 +28,7 @@
     <processDefinitionVersionPK>
       <companyId>1</companyId>
       <processId>Solicitação de férias</processId>
-      <version>1</version>
+      <version>10</version>
     </processDefinitionVersionPK>
     <versionDescription></versionDescription>
     <formId>0</formId>
@@ -110,6 +110,8 @@
       <deadlineFieldName></deadlineFieldName>
       <joint>false</joint>
       <agreementPercentage>0</agreementPercentage>
+      <engineAllocationId>Usuário</engineAllocationId>
+      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;User&gt;gestao.pessoas&lt;/User&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
       <selectColleague>1</selectColleague>
       <initialState>false</initialState>
       <notifyAuthorityDelay>true</notifyAuthorityDelay>
@@ -210,6 +212,8 @@
       <deadlineFieldName></deadlineFieldName>
       <joint>false</joint>
       <agreementPercentage>0</agreementPercentage>
+      <engineAllocationId>Usuário</engineAllocationId>
+      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;User&gt;gestao.pessoas&lt;/User&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
       <selectColleague>1</selectColleague>
       <initialState>false</initialState>
       <notifyAuthorityDelay>true</notifyAuthorityDelay>
@@ -519,11 +523,13 @@
         <companyId>1</companyId>
         <processId>BPM-Solicitaçãodeférias</processId>
         <expressionOrder>1</expressionOrder>
-        <version>1</version>
+        <version>10</version>
         <sequence>11</sequence>
       </conditionProcessStatePK>
       <condition></condition>
       <destinationSequenceId>14</destinationSequenceId>
+      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;User&gt;gestao.pessoas&lt;/User&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
+      <engineAllocationId>Usuário</engineAllocationId>
       <conditionType>1</conditionType>
     </ConditionProcessState>
     <ConditionProcessState>
@@ -531,7 +537,7 @@
         <companyId>1</companyId>
         <processId>BPM-Solicitaçãodeférias</processId>
         <expressionOrder>2</expressionOrder>
-        <version>1</version>
+        <version>10</version>
         <sequence>11</sequence>
       </conditionProcessStatePK>
       <condition></condition>
@@ -543,7 +549,7 @@
         <companyId>1</companyId>
         <processId>BPM-Solicitaçãodeférias</processId>
         <expressionOrder>3</expressionOrder>
-        <version>1</version>
+        <version>10</version>
         <sequence>11</sequence>
       </conditionProcessStatePK>
       <condition></condition>
@@ -557,11 +563,13 @@
         <companyId>1</companyId>
         <processId>BPM-Solicitaçãodeférias</processId>
         <expressionOrder>1</expressionOrder>
-        <version>1</version>
+        <version>10</version>
         <sequence>20</sequence>
       </conditionProcessStatePK>
       <condition></condition>
       <destinationSequenceId>26</destinationSequenceId>
+      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;User&gt;admin&lt;/User&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
+      <engineAllocationId>Usuário</engineAllocationId>
       <conditionType>1</conditionType>
     </ConditionProcessState>
     <ConditionProcessState>
@@ -569,7 +577,7 @@
         <companyId>1</companyId>
         <processId>BPM-Solicitaçãodeférias</processId>
         <expressionOrder>2</expressionOrder>
-        <version>1</version>
+        <version>10</version>
         <sequence>20</sequence>
       </conditionProcessStatePK>
       <condition></condition>
@@ -581,7 +589,7 @@
         <companyId>1</companyId>
         <processId>BPM-Solicitaçãodeférias</processId>
         <expressionOrder>1</expressionOrder>
-        <version>1</version>
+        <version>10</version>
         <sequence>28</sequence>
       </conditionProcessStatePK>
       <condition></condition>
@@ -593,11 +601,13 @@
         <companyId>1</companyId>
         <processId>BPM-Solicitaçãodeférias</processId>
         <expressionOrder>2</expressionOrder>
-        <version>1</version>
+        <version>10</version>
         <sequence>28</sequence>
       </conditionProcessStatePK>
       <condition></condition>
       <destinationSequenceId>18</destinationSequenceId>
+      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;BaseActivity&gt;4&lt;/BaseActivity&gt;&lt;Returns&gt;Last&lt;/Returns&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
+      <engineAllocationId>Executor Atividade</engineAllocationId>
       <conditionType>1</conditionType>
     </ConditionProcessState>
   </list>
@@ -760,23 +770,6 @@
         <companyId>1</companyId>
         <processId>BPM-Solicitaçãodeférias</processId>
         <version>1</version>
-        <linkSequence>29</linkSequence>
-      </processLinkPK>
-      <actionLabel></actionLabel>
-      <returnPermited>false</returnPermited>
-      <initialStateSequence>26</initialStateSequence>
-      <finalStateSequence>28</finalStateSequence>
-      <returnLabel></returnLabel>
-      <name></name>
-      <automaticLink>false</automaticLink>
-      <defaultLink>false</defaultLink>
-      <type>0</type>
-    </ProcessLink>
-    <ProcessLink>
-      <processLinkPK>
-        <companyId>1</companyId>
-        <processId>BPM-Solicitaçãodeférias</processId>
-        <version>1</version>
         <linkSequence>30</linkSequence>
       </processLinkPK>
       <actionLabel></actionLabel>
@@ -800,6 +793,23 @@
       <returnPermited>false</returnPermited>
       <initialStateSequence>28</initialStateSequence>
       <finalStateSequence>31</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>BPM-Solicitaçãodeférias</processId>
+        <version>1</version>
+        <linkSequence>33</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>26</initialStateSequence>
+      <finalStateSequence>28</finalStateSequence>
       <returnLabel></returnLabel>
       <name></name>
       <automaticLink>false</automaticLink>
@@ -923,7 +933,7 @@
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>BPM-Solicitaçãodeférias</processId>
-        <version>1</version>
+        <version>10</version>
         <linkSequence>8</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>

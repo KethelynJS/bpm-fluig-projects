@@ -10,38 +10,6 @@
    </array>
   </void>
   <void method="put">
-   <string>camposFormulario, documentoId = 1771</string>
-   <array class="java.lang.String" length="9">
-    <void index="0">
-     <string>consideracoes</string>
-    </void>
-    <void index="1">
-     <string>datacalendario</string>
-    </void>
-    <void index="2">
-     <string>informacao</string>
-    </void>
-    <void index="3">
-     <string>prioridade</string>
-    </void>
-    <void index="4">
-     <string>produto</string>
-    </void>
-    <void index="5">
-     <string>setor</string>
-    </void>
-    <void index="6">
-     <string>solicitante</string>
-    </void>
-    <void index="7">
-     <string>status</string>
-    </void>
-    <void index="8">
-     <string>tipomotivo</string>
-    </void>
-   </array>
-  </void>
-  <void method="put">
    <string>mecanismoGrupo</string>
    <object class="java.util.ArrayList">
     <void method="add">
@@ -144,11 +112,21 @@
       </void>
      </object>
     </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.GroupDto">
+      <void property="groupDescription">
+       <string>Fernando/Andrea/Danielle</string>
+      </void>
+      <void property="groupId">
+       <string>controle_de_qualidade</string>
+      </void>
+     </object>
+    </void>
    </object>
   </void>
   <void method="put">
    <string>camposFormulario, documentoId = 1824</string>
-   <array class="java.lang.String" length="26">
+   <array class="java.lang.String" length="31">
     <void index="0">
      <string>brainstorm</string>
     </void>
@@ -174,40 +152,40 @@
      <string>datavalidade_1</string>
     </void>
     <void index="8">
-     <string>documental</string>
+     <string>descricao_outros_acao</string>
     </void>
     <void index="9">
-     <string>formMode</string>
+     <string>documental</string>
     </void>
     <void index="10">
      <string>linhaDinamicaDataset</string>
     </void>
     <void index="11">
-     <string>lote_1</string>
+     <string>linhaDinamicaDataset3</string>
     </void>
     <void index="12">
-     <string>maodeobra</string>
+     <string>lote_1</string>
     </void>
     <void index="13">
-     <string>maquina</string>
+     <string>maodeobra</string>
     </void>
     <void index="14">
-     <string>material</string>
+     <string>maquina</string>
     </void>
     <void index="15">
-     <string>meioambiente</string>
+     <string>material</string>
     </void>
     <void index="16">
-     <string>metodo</string>
+     <string>meioambiente</string>
     </void>
     <void index="17">
-     <string>observac</string>
+     <string>metodo</string>
     </void>
     <void index="18">
-     <string>observacgq</string>
+     <string>observac</string>
     </void>
     <void index="19">
-     <string>outros1</string>
+     <string>observacgq</string>
     </void>
     <void index="20">
      <string>porque</string>
@@ -219,69 +197,28 @@
      <string>processo</string>
     </void>
     <void index="23">
-     <string>quantidade_1</string>
+     <string>processo1</string>
     </void>
     <void index="24">
-     <string>setores</string>
+     <string>quantidade_1</string>
     </void>
     <void index="25">
+     <string>setores</string>
+    </void>
+    <void index="26">
+     <string>solicitacaoFluig_c1</string>
+    </void>
+    <void index="27">
      <string>tabela2Data</string>
     </void>
-   </array>
-  </void>
-  <void method="put">
-   <string>camposFormulario, documentoId = 1923</string>
-   <array class="java.lang.String" length="17">
-    <void index="0">
-     <string>aprovado</string>
+    <void index="28">
+     <string>what_c1</string>
     </void>
-    <void index="1">
-     <string>aspecto</string>
+    <void index="29">
+     <string>when_c1</string>
     </void>
-    <void index="2">
-     <string>datacafinall</string>
-    </void>
-    <void index="3">
-     <string>datacalendario</string>
-    </void>
-    <void index="4">
-     <string>datainicio2</string>
-    </void>
-    <void index="5">
-     <string>dosagem</string>
-    </void>
-    <void index="6">
-     <string>lote</string>
-    </void>
-    <void index="7">
-     <string>motivoAnalise</string>
-    </void>
-    <void index="8">
-     <string>opcao</string>
-    </void>
-    <void index="9">
-     <string>opcao7</string>
-    </void>
-    <void index="10">
-     <string>prioridade</string>
-    </void>
-    <void index="11">
-     <string>Resp</string>
-    </void>
-    <void index="12">
-     <string>Resp4</string>
-    </void>
-    <void index="13">
-     <string>Respk</string>
-    </void>
-    <void index="14">
-     <string>Respp1</string>
-    </void>
-    <void index="15">
-     <string>rpnc</string>
-    </void>
-    <void index="16">
-     <string>valor1</string>
+    <void index="30">
+     <string>who_c1</string>
     </void>
    </array>
   </void>
@@ -290,44 +227,6 @@
    <array class="java.lang.String" length="1">
     <void index="0">
      <string>Default</string>
-    </void>
-   </array>
-  </void>
-  <void method="put">
-   <string>camposFormulario, documentoId = 1787</string>
-   <array class="java.lang.String" length="11">
-    <void index="0">
-     <string>codigo</string>
-    </void>
-    <void index="1">
-     <string>consideracoes</string>
-    </void>
-    <void index="2">
-     <string>datacalendario</string>
-    </void>
-    <void index="3">
-     <string>opcao</string>
-    </void>
-    <void index="4">
-     <string>prioridade</string>
-    </void>
-    <void index="5">
-     <string>produto</string>
-    </void>
-    <void index="6">
-     <string>qualificado</string>
-    </void>
-    <void index="7">
-     <string>realizado</string>
-    </void>
-    <void index="8">
-     <string>setor</string>
-    </void>
-    <void index="9">
-     <string>solicitante</string>
-    </void>
-    <void index="10">
-     <string>solicitantepn</string>
     </void>
    </array>
   </void>
@@ -344,6 +243,19 @@
       </void>
       <void property="processId">
        <string>001</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.ProcessDefinitionDto">
+      <void property="companyId">
+       <int>1</int>
+      </void>
+      <void property="processDescription">
+       <string>Teste TI</string>
+      </void>
+      <void property="processId">
+       <string>abertura de chamado</string>
       </void>
      </object>
     </void>
@@ -422,6 +334,19 @@
       </void>
       <void property="processId">
        <string>BPM - Carta de transferência de função-setor</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.ProcessDefinitionDto">
+      <void property="companyId">
+       <int>1</int>
+      </void>
+      <void property="processDescription">
+       <string>Carta de transferência de função-setor</string>
+      </void>
+      <void property="processId">
+       <string>BPM - Cartadetransferênciadefunção-setor</string>
       </void>
      </object>
     </void>
@@ -665,10 +590,36 @@
        <int>1</int>
       </void>
       <void property="processDescription">
+       <string>Ações corretivas/preventivas</string>
+      </void>
+      <void property="processId">
+       <string>BPM-Controledeações</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.ProcessDefinitionDto">
+      <void property="companyId">
+       <int>1</int>
+      </void>
+      <void property="processDescription">
        <string>Desenvolvimento de novos produtos</string>
       </void>
       <void property="processId">
        <string>BPM-Desenvolvimento de novos produtos</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.ProcessDefinitionDto">
+      <void property="companyId">
+       <int>1</int>
+      </void>
+      <void property="processDescription">
+       <string>Manutenção corretiva de equipamentos</string>
+      </void>
+      <void property="processId">
+       <string>BPM-Manutençãocorretivadeequipamentos</string>
       </void>
      </object>
     </void>
@@ -691,7 +642,7 @@
        <int>1</int>
       </void>
       <void property="processDescription">
-       <string>BPM - Processo de integração de novos coaboradores</string>
+       <string>Processo de integração de novos coaboradores</string>
       </void>
       <void property="processId">
        <string>BPM-Processodeintegraçãodenovoscoaboradores</string>
@@ -730,10 +681,49 @@
        <int>1</int>
       </void>
       <void property="processDescription">
+       <string>Reclamação de clientes</string>
+      </void>
+      <void property="processId">
+       <string>BPM-Reclamaçãdeclientes</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.ProcessDefinitionDto">
+      <void property="companyId">
+       <int>1</int>
+      </void>
+      <void property="processDescription">
        <string>Registro de Análises - Meio de Cultura Placas</string>
       </void>
       <void property="processId">
        <string>BPM-Registrodeanálises-MeiodeCulturaPlacas</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.ProcessDefinitionDto">
+      <void property="companyId">
+       <int>1</int>
+      </void>
+      <void property="processDescription">
+       <string>Registro de RPNC</string>
+      </void>
+      <void property="processId">
+       <string>BPM-RegistrodeRPNC</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.ProcessDefinitionDto">
+      <void property="companyId">
+       <int>1</int>
+      </void>
+      <void property="processDescription">
+       <string>Solicitação de adiantamento de 13</string>
+      </void>
+      <void property="processId">
+       <string>BPM-Solicitaçãodeadiantamentode13</string>
       </void>
      </object>
     </void>
@@ -1310,389 +1300,6 @@
      </object>
     </void>
    </object>
-  </void>
-  <void method="put">
-   <string>camposFormulario, documentoId = 1966</string>
-   <array class="java.lang.String" length="126">
-    <void index="0">
-     <string>analise2_1</string>
-    </void>
-    <void index="1">
-     <string>analise2_2</string>
-    </void>
-    <void index="2">
-     <string>analise2_3</string>
-    </void>
-    <void index="3">
-     <string>analise2_4</string>
-    </void>
-    <void index="4">
-     <string>analise2_5</string>
-    </void>
-    <void index="5">
-     <string>analise3_1</string>
-    </void>
-    <void index="6">
-     <string>analise3_2</string>
-    </void>
-    <void index="7">
-     <string>analise3_3</string>
-    </void>
-    <void index="8">
-     <string>analise3_4</string>
-    </void>
-    <void index="9">
-     <string>analise4_1</string>
-    </void>
-    <void index="10">
-     <string>analise4_2</string>
-    </void>
-    <void index="11">
-     <string>analise4_3</string>
-    </void>
-    <void index="12">
-     <string>analise4_4</string>
-    </void>
-    <void index="13">
-     <string>analise_1</string>
-    </void>
-    <void index="14">
-     <string>analise_2</string>
-    </void>
-    <void index="15">
-     <string>analise_3</string>
-    </void>
-    <void index="16">
-     <string>analise_4</string>
-    </void>
-    <void index="17">
-     <string>analise_5</string>
-    </void>
-    <void index="18">
-     <string>analiseMicro</string>
-    </void>
-    <void index="19">
-     <string>analiseMicro1</string>
-    </void>
-    <void index="20">
-     <string>analista2_1</string>
-    </void>
-    <void index="21">
-     <string>analista2_2</string>
-    </void>
-    <void index="22">
-     <string>analista2_3</string>
-    </void>
-    <void index="23">
-     <string>analista2_4</string>
-    </void>
-    <void index="24">
-     <string>analista2_5</string>
-    </void>
-    <void index="25">
-     <string>analista3_1</string>
-    </void>
-    <void index="26">
-     <string>analista3_2</string>
-    </void>
-    <void index="27">
-     <string>analista3_3</string>
-    </void>
-    <void index="28">
-     <string>analista3_4</string>
-    </void>
-    <void index="29">
-     <string>analista4_1</string>
-    </void>
-    <void index="30">
-     <string>analista4_2</string>
-    </void>
-    <void index="31">
-     <string>analista4_3</string>
-    </void>
-    <void index="32">
-     <string>analista4_4</string>
-    </void>
-    <void index="33">
-     <string>analista_1</string>
-    </void>
-    <void index="34">
-     <string>analista_2</string>
-    </void>
-    <void index="35">
-     <string>analista_3</string>
-    </void>
-    <void index="36">
-     <string>analista_4</string>
-    </void>
-    <void index="37">
-     <string>analista_5</string>
-    </void>
-    <void index="38">
-     <string>anexo</string>
-    </void>
-    <void index="39">
-     <string>caixa1_1</string>
-    </void>
-    <void index="40">
-     <string>caixa1_2</string>
-    </void>
-    <void index="41">
-     <string>caixa1_3</string>
-    </void>
-    <void index="42">
-     <string>caixa1_4</string>
-    </void>
-    <void index="43">
-     <string>caixa2_1</string>
-    </void>
-    <void index="44">
-     <string>caixa2_2</string>
-    </void>
-    <void index="45">
-     <string>caixa2_3</string>
-    </void>
-    <void index="46">
-     <string>caixa2_4</string>
-    </void>
-    <void index="47">
-     <string>caixa3_1</string>
-    </void>
-    <void index="48">
-     <string>caixa3_2</string>
-    </void>
-    <void index="49">
-     <string>caixa3_3</string>
-    </void>
-    <void index="50">
-     <string>caixa3_4</string>
-    </void>
-    <void index="51">
-     <string>caixa4_1</string>
-    </void>
-    <void index="52">
-     <string>caixa4_2</string>
-    </void>
-    <void index="53">
-     <string>caixa4_3</string>
-    </void>
-    <void index="54">
-     <string>caixa4_4</string>
-    </void>
-    <void index="55">
-     <string>componente</string>
-    </void>
-    <void index="56">
-     <string>composicao</string>
-    </void>
-    <void index="57">
-     <string>concentracao</string>
-    </void>
-    <void index="58">
-     <string>datacalendario</string>
-    </void>
-    <void index="59">
-     <string>datacalendario2</string>
-    </void>
-    <void index="60">
-     <string>datacalendario3</string>
-    </void>
-    <void index="61">
-     <string>datacalendario4</string>
-    </void>
-    <void index="62">
-     <string>datacalendario6</string>
-    </void>
-    <void index="63">
-     <string>datacalendario7</string>
-    </void>
-    <void index="64">
-     <string>dataConclusao</string>
-    </void>
-    <void index="65">
-     <string>dataConclusao1</string>
-    </void>
-    <void index="66">
-     <string>dataConclusao2</string>
-    </void>
-    <void index="67">
-     <string>especificacao2_1</string>
-    </void>
-    <void index="68">
-     <string>especificacao2_2</string>
-    </void>
-    <void index="69">
-     <string>especificacao2_3</string>
-    </void>
-    <void index="70">
-     <string>especificacao2_4</string>
-    </void>
-    <void index="71">
-     <string>especificacao2_5</string>
-    </void>
-    <void index="72">
-     <string>especificacao3_1</string>
-    </void>
-    <void index="73">
-     <string>especificacao3_2</string>
-    </void>
-    <void index="74">
-     <string>especificacao3_3</string>
-    </void>
-    <void index="75">
-     <string>especificacao3_4</string>
-    </void>
-    <void index="76">
-     <string>especificacao4_1</string>
-    </void>
-    <void index="77">
-     <string>especificacao4_2</string>
-    </void>
-    <void index="78">
-     <string>especificacao4_3</string>
-    </void>
-    <void index="79">
-     <string>especificacao4_4</string>
-    </void>
-    <void index="80">
-     <string>especificacao_1</string>
-    </void>
-    <void index="81">
-     <string>especificacao_2</string>
-    </void>
-    <void index="82">
-     <string>especificacao_3</string>
-    </void>
-    <void index="83">
-     <string>especificacao_4</string>
-    </void>
-    <void index="84">
-     <string>especificacao_5</string>
-    </void>
-    <void index="85">
-     <string>fotossensivel</string>
-    </void>
-    <void index="86">
-     <string>intercorrencia</string>
-    </void>
-    <void index="87">
-     <string>lotebancada</string>
-    </void>
-    <void index="88">
-     <string>lotepcp</string>
-    </void>
-    <void index="89">
-     <string>lotePiloto</string>
-    </void>
-    <void index="90">
-     <string>lotePiloto2</string>
-    </void>
-    <void index="91">
-     <string>motivo</string>
-    </void>
-    <void index="92">
-     <string>motivo2</string>
-    </void>
-    <void index="93">
-     <string>motivoQualificacao</string>
-    </void>
-    <void index="94">
-     <string>notificarCQFQ</string>
-    </void>
-    <void index="95">
-     <string>observacoesSAP</string>
-    </void>
-    <void index="96">
-     <string>observacoesSAP1</string>
-    </void>
-    <void index="97">
-     <string>observacoesSAP2</string>
-    </void>
-    <void index="98">
-     <string>observacoesSAP3</string>
-    </void>
-    <void index="99">
-     <string>qualificacao</string>
-    </void>
-    <void index="100">
-     <string>qualificacao1</string>
-    </void>
-    <void index="101">
-     <string>qualificacao2</string>
-    </void>
-    <void index="102">
-     <string>qualificacao3</string>
-    </void>
-    <void index="103">
-     <string>responsavelConclusao</string>
-    </void>
-    <void index="104">
-     <string>responsavelConclusao1</string>
-    </void>
-    <void index="105">
-     <string>responsavelConclusao2</string>
-    </void>
-    <void index="106">
-     <string>result2_1</string>
-    </void>
-    <void index="107">
-     <string>result2_2</string>
-    </void>
-    <void index="108">
-     <string>result2_3</string>
-    </void>
-    <void index="109">
-     <string>result2_4</string>
-    </void>
-    <void index="110">
-     <string>result2_5</string>
-    </void>
-    <void index="111">
-     <string>result3_1</string>
-    </void>
-    <void index="112">
-     <string>result3_2</string>
-    </void>
-    <void index="113">
-     <string>result3_3</string>
-    </void>
-    <void index="114">
-     <string>result3_4</string>
-    </void>
-    <void index="115">
-     <string>result4_1</string>
-    </void>
-    <void index="116">
-     <string>result4_2</string>
-    </void>
-    <void index="117">
-     <string>result4_3</string>
-    </void>
-    <void index="118">
-     <string>result4_4</string>
-    </void>
-    <void index="119">
-     <string>result_1</string>
-    </void>
-    <void index="120">
-     <string>result_2</string>
-    </void>
-    <void index="121">
-     <string>result_3</string>
-    </void>
-    <void index="122">
-     <string>result_4</string>
-    </void>
-    <void index="123">
-     <string>result_5</string>
-    </void>
-    <void index="124">
-     <string>temperatura</string>
-    </void>
-    <void index="125">
-     <string>temperaturaOutras</string>
-    </void>
-   </array>
   </void>
   <void method="put">
    <string>mecanismo</string>
@@ -2559,7 +2166,103 @@
       </void>
      </object>
     </void>
+    <void method="add">
+     <object class="com.totvs.technology.ecmrestclient.cardindexpublisher.FormVO">
+      <void property="datasetName">
+       <string>DSRegistrodeAnalises-MeiodeCulturaPlacas</string>
+      </void>
+      <void property="documentDescription">
+       <string>Registro de Análises - Meio de Cultura Placas</string>
+      </void>
+      <void property="documentId">
+       <int>2202</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.technology.ecmrestclient.cardindexpublisher.FormVO">
+      <void property="datasetName">
+       <string>DSSolictacaodeferias</string>
+      </void>
+      <void property="documentDescription">
+       <string>Solictação de férias</string>
+      </void>
+      <void property="documentId">
+       <int>2229</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.technology.ecmrestclient.cardindexpublisher.FormVO">
+      <void property="datasetName">
+       <string>DSProcessodeintegracaodenovoscolaboradores</string>
+      </void>
+      <void property="documentDescription">
+       <string>Processo de integração de novos colaboradores</string>
+      </void>
+      <void property="documentId">
+       <int>2239</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.technology.ecmrestclient.cardindexpublisher.FormVO">
+      <void property="datasetName">
+       <string>DSManutencaocorretivadeequipamentos</string>
+      </void>
+      <void property="documentDescription">
+       <string>Manutenção corretiva de equipamentos</string>
+      </void>
+      <void property="documentId">
+       <int>2269</int>
+      </void>
+     </object>
+    </void>
    </object>
+  </void>
+  <void method="put">
+   <string>camposFormulario, documentoId = 2269</string>
+   <array class="java.lang.String" length="13">
+    <void index="0">
+     <string>datacalendario</string>
+    </void>
+    <void index="1">
+     <string>descrever_acao</string>
+    </void>
+    <void index="2">
+     <string>documents</string>
+    </void>
+    <void index="3">
+     <string>documentss</string>
+    </void>
+    <void index="4">
+     <string>equipamento_modelo</string>
+    </void>
+    <void index="5">
+     <string>interno_externo</string>
+    </void>
+    <void index="6">
+     <string>n_equipamento</string>
+    </void>
+    <void index="7">
+     <string>observacao_manutencao</string>
+    </void>
+    <void index="8">
+     <string>observacao_solicitante</string>
+    </void>
+    <void index="9">
+     <string>ocorrencia</string>
+    </void>
+    <void index="10">
+     <string>setor</string>
+    </void>
+    <void index="11">
+     <string>solicitante</string>
+    </void>
+    <void index="12">
+     <string>validar</string>
+    </void>
+   </array>
   </void>
  </object>
 </java>

@@ -1,9 +1,8 @@
-window.onload = function() {
-    // Obtém a data atual no formato YYYY-MM-DD
-    const today = new Date().toISOString().split('T')[0];
-
-    // Define a data nos campos correspondentes
-    document.getElementById('data_conclusao').value = today;
-    document.getElementById('data_realizacao_acao').value = today;
-    document.getElementById('data_inicio').value = today;
-};
+document.getElementById("prazo_atividade").addEventListener("change", function() {
+    let dataISO = this.value; // Puxa no formato YYYY-MM-DD
+    if (dataISO) {
+        let partes = dataISO.split("-");
+        let dataBrasileira = `${partes[2]}/${partes[1]}/${partes[0]}`;
+        console.log("Data formatada para exibição: ", dataBrasileira);
+    }
+});

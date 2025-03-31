@@ -25,37 +25,37 @@ $(document).ready(function() {
             analise_microbiologica: 'ausencia',
             motivoAnalise: 'motivoan'
         },
-        'opcao5': {
+        'PA177 - Gluc Up em Pó Limão Sachê c/ 50g': {
             aspecto: 'Após reconstituição com água: Líquido incolor translúcido.',
             dosagem: ' g/200 mL',
             prioridade: 'naoaplicavel',
             motivoAnalise: 'motivoan'
         },
-        'opcao6': {
+        'PA178 - Gluc Up em Pó Limão Sachê c/ 75g': {
             aspecto: 'Após reconstituição com água: Líquido incolor translúcido.',
             dosagem: ' g/300 mL',
             prioridade: 'naoaplicavel',
             motivoAnalise: 'motivoan'
         },
-        'opcao8': {
+        'PA390 - Gluc Up em Pó Limão frasco c/ 900g': {
             aspecto: 'Após reconstituição com água: Líquido incolor translúcido.',
             dosagem: ' g/200 mL',
             prioridade: 'naoaplicavel',
             motivoAnalise: 'motivoan'
         },
-        'opcao9': {
+        'PI127 - Gluc Up em Pó Limão frasco c/ 900g - avulso': {
             aspecto: 'Após reconstituição com água: Líquido incolor translúcido.',
             dosagem: ' g/200 mL',
             prioridade: 'naoaplicavel',
             motivoAnalise: 'motivoan'
         },
-        'opcao10': {
+        'PA393 - Gluc Up em Pó Limão sachê c/ 900g': {
             aspecto: 'Após reconstituição com água: Líquido incolor translúcido.',
             dosagem: ' g/200 mL',
             prioridade: 'naoaplicavel',
             motivoAnalise: 'motivoan'
         },
-        'opcao11': {
+        'PI126 - Gluc Up em Pó Limão sachê c/ 900g - avulso': {
             aspecto: 'Após reconstituição com água: Líquido incolor translúcido.',
             dosagem: ' g/200 mL',
             prioridade: 'naoaplicavel',
@@ -73,18 +73,18 @@ $(document).ready(function() {
             analise_microbiologica: 'ausencia',
             motivoAnalise: 'motivoan'
         },
-        'opcao14': {
+        'PA290 - Lact Up em Pó Sachê Limao c/ 50g': {
             aspecto: 'Após reconstituição com água: Líquido branco a amarelo-claro leitoso.',
             dosagem: ' g/300 mL',
             motivoAnalise: 'motivoan'
         },
-        'opcao15': {
+        'PA401 - Lact Up em Pó Limão sachê c/ 900g': {
             aspecto: 'Após reconstituição com água: Líquido branco a amarelo-claro leitoso.',
             dosagem: ' g/300 mL',
             prioridade: 'naoaplicavel',
             motivoAnalise: 'motivoan'
         },
-        'opcao16': {
+        'PI136 - Lact Up em Pó Limão sachê c/ 900g - avulso': {
             aspecto: 'Após reconstituição com água: Líquido branco a amarelo-claro leitoso.',
             dosagem: ' g/300 mL',
             prioridade: 'naoaplicavel',

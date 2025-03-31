@@ -1,0 +1,221 @@
+<html>
+<head>
+	<link type="text/css" rel="stylesheet" href="/style-guide/css/fluig-style-guide.min.css"/>
+	<script type="text/javascript" src="/portal/resources/js/jquery/jquery.js"></script>
+	<script type="text/javascript" src="/portal/resources/js/jquery/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="/portal/resources/js/mustache/mustache-min.js"></script>
+	<script type="text/javascript" src="/style-guide/js/fluig-style-guide.min.js" charset="utf-8"></script>
+</head>
+<body>
+<div class="fluig-style-guide">
+<form name="form" role="form">
+
+<div id="panel1" class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">Etapa 1</h3>
+    </div>
+    <div class="panel-body">
+    <div class="row">
+		<div id="opcaoo" class="form-group col-md-10">
+		  <label for="opcoes">Produto</label>
+		    <select type="opcao" name="opcao" class="form-control" id="opcao" placeholder="">
+		    <option value="escolha"> Escolha </option>
+		      <option value="PA267	Agulha para Repique de Niquel Cromo Com Cabo	PA - Alças/Agulhas">PA267	Agulha para Repique de Niquel Cromo Com Cabo	PA - Alças/Agulhas
+ </option>
+		      <option value="PA268	Agulha para Repique de Niquel Cromo Sem Cabo - Sob encomenda	PA - Alças/Agulhas"> PA268	Agulha para Repique de Niquel Cromo Sem Cabo - Sob encomenda	PA - Alças/Agulhas
+</option>
+		      <option value="PA269	Agulha para Repique de Platina Com Cabo	PA - Alças/Agulhas"> PA269	Agulha para Repique de Platina Com Cabo	PA - Alças/Agulhas
+</option>
+		      <option value="PA270	Agulha para Repique de Platina Sem Cabo - Sob encomenda	PA - Alças/Agulhas"> PA270	Agulha para Repique de Platina Sem Cabo - Sob encomenda	PA - Alças/Agulhas
+</option>
+		      <option value="PA271	Alça de Niquel Cromo Com Cabo 0,001 mL	PA - Alças/Agulhas"> PA271	Alça de Niquel Cromo Com Cabo 0,001 mL	PA - Alças/Agulhas
+</option>
+		      <option value="PA272	Alça de Niquel Cromo Com Cabo 0,01 mL	PA - Alças/Agulhas"> PA272	Alça de Niquel Cromo Com Cabo 0,01 mL	PA - Alças/Agulhas
+</option>
+		      <option value="PA273	Alça de Niquel Cromo Sem Cabo	PA - Alças/Agulhas"> PA273	Alça de Niquel Cromo Sem Cabo	PA - Alças/Agulhas
+</option>
+		      <option value="PA274	Alça de Niquel Cromo Sem Cabo 0,001 mL	PA - Alças/Agulhas"> PA274	Alça de Niquel Cromo Sem Cabo 0,001 mL	PA - Alças/Agulhas
+</option>
+		      <option value="PA275	Alça de Niquel Cromo Sem Cabo 0,01 mL	PA - Alças/Agulhas"> PA275	Alça de Niquel Cromo Sem Cabo 0,01 mL	PA - Alças/Agulhas
+</option>
+		      <option value="PA276	Alça de Platina Com Cabo - Sob encomenda	PA - Alças/Agulhas"> PA276	Alça de Platina Com Cabo - Sob encomenda	PA - Alças/Agulhas
+</option>
+		      <option value="PA277	Alça de Platina Com Cabo 0,001 mL	PA - Alças/Agulhas"> PA277	Alça de Platina Com Cabo 0,001 mL	PA - Alças/Agulhas
+</option>
+		      <option value="PA278	Alça de Platina Com Cabo 0,01 mL	PA - Alças/Agulhas"> PA278	Alça de Platina Com Cabo 0,01 mL	PA - Alças/Agulhas
+</option>
+		      <option value="PA279	Alça de Platina Sem Cabo - Sob encomenda	PA - Alças/Agulhas"> PA279	Alça de Platina Sem Cabo - Sob encomenda	PA - Alças/Agulhas
+</option>
+		      <option value="PA280	Alça de Platina Sem Cabo 0,001mL PA - Alças/Agulhas"> PA280	Alça de Platina Sem Cabo 0,001mL PA - Alças/Agulhas
+</option>
+		      <option value="PA281	Alça de Platina Sem Cabo 0,01mL	PA - Alças/Agulhas"> PA281	Alça de Platina Sem Cabo 0,01mL	PA - Alças/Agulhas
+</option>
+		      <option value="PA282	Alça de Niquel Cromo Com Cabo	PA - Alças/Agulhas"> PA282	Alça de Niquel Cromo Com Cabo	PA - Alças/Agulhas
+</option>
+		      <option value="PA283	Alça Tipo L de Niquel Cromo Com Cabo - Sob encomenda	PA - Alças/Agulhas"> PA283	Alça Tipo L de Niquel Cromo Com Cabo - Sob encomenda	PA - Alças/Agulhas
+</option>
+	
+		      
+			    
+		    </select>
+		</div>
+		<div class="form-group col-md-2">
+        <label for="lote">Lote</label>
+        <input type="text" name="lote" class="form-control" id="lote" placeholder="Coloque o lote">
+    	</div>
+	</div>
+		
+
+    <div class="row">
+
+	    <div class="form-group col-md-2">
+		        <label for="data_inicio">Data</label>
+		        <input type="text" name="data_inicio" id="data_inicio" class="form-control" placeholder="Data">
+		    </div>    
+		        
+		        <div class="form-group col-md-2">
+		        <label for="procedencia">N° Solicitação Fluig</label>
+		        <input type="text" id="numeroSolicitacao" name="numeroSolicitacao" class="form-control" readonly>
+		    </div>
+		</div>
+	
+    
+<table class="table table-bordered">
+		    <tr>
+		        <th style="width: 50%;">Dimensões</th>
+		        <th style="width: 50%;">Valor</th>
+		    </tr>
+		    
+
+		    <tr>
+		        <td>Diâmetro externo</td>
+		        <td><textarea name="question6" id="question6" rows="2" style="width: 100%;" ></textarea></td>
+		   </tr>
+		    <tr>
+		        <td>Diâmetro interno</td>
+		        <td><textarea name="question7" id="question7" rows="2" style="width: 100%;"></textarea></td>
+		    </tr>
+		    <tr>
+		        <td>comprimento total</td>
+		        <td><textarea name="question8" id="question8" rows="2" style="width: 100%;"></textarea></td>
+		    </tr>
+		    <tr>
+		        <td>Espessura</td>
+		        <td><textarea name="question9" id="question9" rows="2" style="width: 100%;" ></textarea></td>
+		    </tr>
+		    <tr>
+		        <td>Comprimento Alça/Agulha</td>
+		        <td><textarea name="question10" id="question10" rows="2" style="width: 100%;"></textarea></td>
+		    </tr>
+		    	    <tr>
+		        <td>Comprimento do L</td>
+		        <td><textarea name="question11" id="question11" rows="2" style="width: 100%;"></textarea></td>
+		    </tr>
+		    
+		    
+		</table>
+
+
+
+		<div class="row">
+	    <label>Fator de exatidão - Analisador bioquímica n°20</label></br>
+	        
+	    </div>
+
+		<div class="row">
+	    <div class="form-group col-md-5">
+	        <label for="Resultado">Resultado</label>
+	        <input type="text" name="Resultado" class="form-control" id="Resultado" placeholder="">
+	        
+	    </div>
+	    <div class="form-group col-md-2">
+	        <label for="lote_reagente">Lote do reagente</label>
+	        <input type="text" name="lote_reagente" class="form-control" id="lote_reagente" placeholder="">
+	        
+	    </div>
+    
+	    <div class="form-group col-md-5">
+		        <label for="responsavel">Responsável</label>
+		        <input type="text" name="responsavel" id="responsavel" class="form-control" placeholder="responsável">
+		</div>
+		
+	</div>
+		
+    </div>
+</div>
+
+<div id="panelwarning" class="panel panel-warning">
+    <div class="panel-heading">
+        <h3 class="panel-title">Etapa 2</h3>
+    </div>
+    <div class="panel-body">
+
+		<div class="row">
+		    <div class="form-group col-md-7">
+		    <label for="analiseop">Análise da OP(RHP) do produto:</label>
+		        <div class="radio">
+		            <label><input type="radio" name="prioridade" id="prioridade" value="conforme">Conforme</label>
+		            <label><input type="radio" name="prioridade" id="prioridade" value="naoconforme">Não conforme</label>
+		            
+			</div>	
+			</div>
+		
+		<div class="row">
+		    <div class="form-group col-md-7">
+		    <label>Status:</label>
+		        <div class="radio">
+		            <label><input type="radio" name="aprovado" id="aprovado" value="aprovado">Produto aprovado</label>
+		            <label><input type="radio" name="aprovado" id="aprovado" value="reprovado">Produto reprovado</label>
+		            
+		            </div>
+		    </div>
+		</div>
+		<div class="row">
+		    <div class="form-group col-md-2">
+		        <label for="datacalendario">Data da conclusão</label>
+		        <input type="text" name="datacalendario" id="datacalendario" class="form-control" placeholder="Data da solicitação ">
+		    </div>
+		<div id="opcaoo" class="form-group col-md-4">
+		  <label for="Resp">Responsável pela liberação final do produto</label>
+		    <select type="text" name="Resp" class="form-control" id="Resp" placeholder="">
+		    <option value="escolha">Escolha</option>
+		      			<option value="Fernando B. Stocco">Fernando B. Stocco</option>
+				      <option value="Andrea Mara Issa">Andrea Mara Issa</option>
+		    </select>
+		</div>
+		</div>
+		
+    </div>
+</div>
+
+
+</form>
+</div>
+
+<script>
+    window.onload = function() {
+        var today = new Date();
+
+        // Obtém a data
+        var day = String(today.getDate()).padStart(2, '0');
+        var month = String(today.getMonth() + 1).padStart(2, '0'); // Janeiro é 0!
+        var year = today.getFullYear();
+
+        // Formata a data no padrão DD/MM/YYYY
+        var currentDate = day + '/' + month + '/' + year;
+
+        // Define o valor do campo com id "data_inicio"
+        document.getElementById("data_inicio").value = currentDate;
+
+        // Define o valor do campo com id "datacalendario"
+        document.getElementById("datacalendario").value = currentDate;
+    };
+    
+    
+</script>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+
+<script src="info.js"></script>
+</body>
+</html>

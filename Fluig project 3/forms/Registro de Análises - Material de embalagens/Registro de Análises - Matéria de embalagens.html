@@ -1,0 +1,350 @@
+<html>
+<head>
+	<link type="text/css" rel="stylesheet" href="/style-guide/css/fluig-style-guide.min.css"/>
+	<script type="text/javascript" src="/portal/resources/js/jquery/jquery.js"></script>
+	<script type="text/javascript" src="/portal/resources/js/jquery/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="/portal/resources/js/mustache/mustache-min.js"></script>
+	<script type="text/javascript" src="/style-guide/js/fluig-style-guide.min.js" charset="utf-8"></script>
+</head>
+<body>
+<div class="fluig-style-guide">
+<form name="form" role="form">
+
+<div id="panel1" class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">Etapa 1</h3>
+    </div>
+    <div class="panel-body">
+    <div class="row">
+		<div id="opcaoo" class="form-group col-md-10">
+		  <label for="opcoes">Código - Material de embalagem</label>
+		    <select type="opcao" name="opcao" class="form-control" id="opcao" placeholder="">
+		    <option value="opcaox">Escolha</option>
+		      <option value="MB01 Etiqueta 100x36mm BOPP fosco"> MB01 Etiqueta 100x36mm BOPP fosco</option>
+			    <option value="MB02 Etiqueta 152x100mm couchê acrílico">MB02 Etiqueta 152x100mm couchê acrílico</option>
+			    <option value="MB03 Etiqueta 30x15mm acrílico">MB03 Etiqueta 30x15mm acrílico</option>
+			    <option value="MB04 Etiqueta 28x28mm BOPP fosco">MB04 Etiqueta 28x28mm BOPP fosco</option>
+			    <option value="MB05 Etiqueta 45x35mm BOPP fosco">MB05 Etiqueta 45x35mm BOPP fosco</option>
+			    <option value="MB06 Etiqueta 60x40mm BOPP fosco">MB06 Etiqueta 60x40mm BOPP fosco</option>
+			    <option value="MB07 Etiqueta 70x23mm BOPP fosco">MB07 Etiqueta 70x23mm BOPP fosco</option>
+			    <option value="MB11 Rótulo Lact up limão 130x80mm couchê acrílico">MB11 Rótulo Lact up limão 130x80mm couchê acrílico</option>
+			    <option value="MB12 Rótulo Newprov 100x45 mm BOPP fosco">MB12 Rótulo Newprov 100x45 mm BOPP fosco</option>
+			    <option value="MB13 Rótulo Newprov 120x75mm BOPP transparente">MB13 Rótulo Newprov 120x75mm BOPP transparente</option>
+			    <option value="MB16 Etiqueta 23x13 mm BOPP fosco">MB16 Etiqueta 23x13 mm BOPP fosco</option>
+			    <option value="MB17 Etiqueta 90x40mm BOPP fosco">MB17 Etiqueta 90x40mm BOPP fosco</option>
+			    <option value="MB19 Rótulo Newprov 149x67mm BOPP fosco">MB19 Rótulo Newprov 149x67mm BOPP fosco</option>
+			    <option value="MB20 Batoque de papel filtro">MB20 Batoque de papel filtro</option>
+			    <option value="MB21 Frasco PP 50mL translúcido">MB21 Frasco PP 50mL translúcido</option>
+			    <option value="MB23 Lacre termoretrátil 33x30mm">MB23 Lacre termoretrátil 33x30mm</option>
+			    <option value="MB24 Tetina">MB24 Tetina</option>
+			    <option value="MB25 Tubo de Duran">MB25 Tubo de Duran</option>
+			    <option value="MB26 Tubo fino">MB26 Tubo fino</option>
+			    <option value="MB27 Tubo largo">MB27 Tubo largo</option>
+			    <option value="MB28 Tubo para Acquaplus - 16,5 x 150 mm">MB28 Tubo para Acquaplus - 16,5 x 150 mm</option>
+			    <option value="MB29 Frasco PET 100 mL ambar">MB29 Frasco PET 100 mL ambar</option>
+			    <option value="MB30 Aparelho pulverizador">MB30 Aparelho pulverizador</option>
+			    <option value="MB32 Cânula 30 mL">MB32 Cânula 30 mL</option>
+			    <option value="MB34 Frasco PEAD 1000mL">MB34 Frasco PEAD 1000mL</option>
+			    <option value="MB35 Frasco PEAD 100mL leitoso">MB35 Frasco PEAD 100mL leitoso</option>
+			    <option value="MB36 Frasco PEAD 10mL leitoso">MB36 Frasco PEAD 10mL leitoso</option>
+			    <option value="MB37 Frasco PEAD 30mL leitoso">MB37 Frasco PEAD 30mL leitoso</option>
+			    <option value="MB38 Frasco PEAD 500mL">MB38 Frasco PEAD 500mL</option>
+			    <option value="MB39 Frasco PEAD 5mL leitoso">MB39 Frasco PEAD 5mL leitoso</option>
+			    <option value="MB40 Frasco PET 1000 mL incolor">MB40 Frasco PET 1000 mL incolor</option>
+			    <option value="MB41 Frasco PET 1000mL ambar">MB41 Frasco PET 1000mL ambar</option>
+			    <option value="MB43 Frasco PET 200 mL incolor">MB43 Frasco PET 200 mL incolor</option>
+			    <option value="MB44 Frasco PET 300 mL incolor">MB44 Frasco PET 300 mL incolor</option>
+			    <option value="MB45 Frasco PET 500mL ambar">MB45 Frasco PET 500mL ambar</option>
+			    <option value="MB46 Frasco PET 500mL incolor">MB46 Frasco PET 500mL incolor</option>
+			    <option value="MB47 Frasco PVC 120 mL cristal liso">MB47 Frasco PVC 120 mL cristal liso</option>
+			    <option value="MB49 Frasco vidro 100mL incolor">MB49 Frasco vidro 100mL incolor</option>
+			    <option value="MB50 Frasco vidro 10mL ambar">MB50 Frasco vidro 10mL ambar</option>
+			    <option value="MB51 Frasco vidro 13mL incolor">MB51 Frasco vidro 13mL incolor</option>
+			    <option value="MB52 Frasco vidro 30mL ambar">MB52 Frasco vidro 30mL ambar</option>
+			    <option value="MB53 Frasco vidro 30mL incolor">MB53 Frasco vidro 30mL incolor</option>
+			    <option value="MB54 Frasco vidro 4mL incolor">MB54 Frasco vidro 4mL incolor</option>
+			    <option value="MB55 Frasco vidro 50mL incolor">MB55 Frasco vidro 50mL incolor</option>
+			    <option value="MB56 Frasco vidro 8,5mL incolor">MB56 Frasco vidro 8,5mL incolor</option>
+			    <option value="MB57 Gotejador PEAD p/ frasco 100/30 mL Incolor">MB57 Gotejador PEAD p/ frasco 100/30 mL Incolor</option>
+			    <option value="MB58 Placa de Petri Estéril 140x15mm">MB58 Placa de Petri Estéril 140x15mm</option>
+			    <option value="MB59 Placa de Petri Estéril 60x10mm rodac">MB59 Placa de Petri Estéril 60x10mm rodac</option>
+			    <option value="MB60 Placa de Petri Estéril 90x15mm c/ 1 divisão">MB60 Placa de Petri Estéril 90x15mm c/ 1 divisão</option>
+			    <option value="MB61 Placa de Petri Estéril 90x15mm lisa">MB61 Placa de Petri Estéril 90x15mm lisa</option>
+			    <option value="MB64 Pote PP p/ Micro-organismo padrão branco">MB64 Pote PP p/ Micro-organismo padrão branco</option>
+			    <option value="MB65 Rolha de borracha butílica 13mm">MB65 Rolha de borracha butílica 13mm</option>
+			    <option value="MB66 Sachê metalizado 100M sem zíper">MB66 Sachê metalizado 100M sem zíper</option>
+			    <option value="MB68 Tampa de borracha butílica 20mm">MB68 Tampa de borracha butílica 20mm</option>
+			    <option value="MB69 Tampa de borracha butílica 24mm">MB69 Tampa de borracha butílica 24mm</option>
+			    <option value="MB70 Tampa PP amarela p/ Frasco Pet">MB70 Tampa PP amarela p/ Frasco Pet</option>
+			    <option value="MB72 Tampa PP branca p/ frasco de PVC 100mL âmbar">MB72 Tampa PP branca p/ frasco de PVC 100mL âmbar</option>
+			    <option value="MB73 Tampa PP branca p/ frasco PEAD 50/10/5mL">MB73 Tampa PP branca p/ frasco PEAD 50/10/5mL</option>
+			    <option value="MB74 Tampa PP branca p/ frasco PEAD de 100/30mL">MB74 Tampa PP branca p/ frasco PEAD de 100/30mL</option>
+			    <option value="MB75 Tampa PP p/ tubo fino">MB75 Tampa PP p/ tubo fino</option>
+			    <option value="MB76 Tampa PP p/ tubo largo">MB76 Tampa PP p/ tubo largo</option>
+			    <option value="MB77 Tampa PP para pote para micro-organismo padrão branco">MB77 Tampa PP para pote para micro-organismo padrão branco</option>
+			    <option value="MB78 Tampa PEAD preta p/ frasco de vidro 30/10mL âmbar">MB78 Tampa PEAD preta p/ frasco de vidro 30/10mL âmbar</option>
+			    <option value="MB79 Tampa PP preta s/ impressão">MB79 Tampa PP preta s/ impressão</option>
+			    <option value="MB80 Tubo cilíndrico PS cristal">MB80 Tubo cilíndrico PS cristal</option>
+			    <option value="MB81 Tubo criogênico">MB81 Tubo criogênico</option>
+			    <option value="MB82 Tubo flaconete">MB82 Tubo flaconete</option>
+			    <option value="MB83 Cânula 10mL">MB83 Cânula 10mL</option>
+			    <option value="MB84 Rolha borracha butílica 20mm">MB84 Rolha borracha butílica 20mm</option>
+			    <option value="MB85 Batoque PEBD p/ frasco de vidro 30/10mL âmbar">MB85 Batoque PEBD p/ frasco de vidro 30/10mL âmbar</option>
+			    <option value="MB86 Gotejador PEAD p/ frasco PEAD 10 mL leitoso">MB86 Gotejador PEAD p/ frasco PEAD 10 mL leitoso</option>
+			    <option value="MB88 Tampa PEAD c/ furo preta">MB88 Tampa PEAD c/ furo preta</option>
+			    <option value="MB90 Frasco PVC 100 mL âmbar">MB90 Frasco PVC 100 mL âmbar</option>
+			    <option value="MB91 Berço Emblima 53 cavidades">MB91 Berço Emblima 53 cavidades</option>
+			    <option value="MB92 Berço para caixa Acquaplus I">MB92 Berço para caixa Acquaplus I</option>
+			    <option value="MB95 Berço para caixa Hemoprov adulto - Orifício quadrado">MB95 Berço para caixa Hemoprov adulto - Orifício quadrado</option>
+			    <option value="MB96 Berço para caixa Hemoprov pediátrico">MB96 Berço para caixa Hemoprov pediátrico</option>
+			    <option value="MB97 Berço para caixa Kit Newplus III">MB97 Berço para caixa Kit Newplus III</option>
+			    <option value="MB98 Berço para caixa Kit para Micobactéria">MB98 Berço para caixa Kit para Micobactéria</option>
+			    <option value="MB99 Berço para caixa tubo II">MB99 Berço para caixa tubo II</option>
+			    <option value="MB100 Berço para caixa tubo IV">MB100 Berço para caixa tubo IV</option>
+			    <option value="MB103 Caixa para Gel de urease">MB103 Caixa para Gel de urease</option>
+			    <option value="MB104 Caixa para Newplus I e II">MB104 Caixa para Newplus I e II</option>
+			    <option value="MB107 Selo alumínio rasgável 13mm">MB107 Selo alumínio rasgável 13mm</option>
+			    <option value="MB108 Selo alumínio rasgável 20mm">MB108 Selo alumínio rasgável 20mm</option>
+			    <option value="MB110 Caixa p/ alça grande">MB110 Caixa p/ alça grande</option>
+			    <option value="MB111 Caixa p/ alça pequena">MB111 Caixa p/ alça pequena</option>
+			    <option value="MB112 Caixa POC">MB112 Caixa POC</option>
+			    <option value="MB113 Caixa tubo I">MB113 Caixa tubo I</option>
+			    <option value="MB117 Caixa Hemoprov I pediátrico">MB117 Caixa Hemoprov I pediátrico</option>
+			    <option value="MB121 Caixa Mini kit universal">MB121 Caixa Mini kit universal</option>
+			    <option value="MB124 Caixa para Ágar sabouraud c/ cloranfenicol">MB124 Caixa para Ágar sabouraud c/ cloranfenicol</option>
+			    <option value="MB128 Caixa Hemoprov adulto - Acoplada">MB128 Caixa Hemoprov adulto - Acoplada</option>
+			    <option value="MB129 Caixa Hemoprov pediátrico">MB129 Caixa Hemoprov pediátrico</option>
+			    <option value="MB130 Berço p/ Kit Newplus I">MB130 Berço p/ Kit Newplus I</option>
+			    <option value="MB131 Berço p/ Kit Newplus II">MB131 Berço p/ Kit Newplus II</option>
+			    <option value="MB132 Caixa tubo IV">MB132 Caixa tubo IV</option>
+			    <option value="MB134 Selo de segurança 26x20mm BOPP transparente">MB134 Selo de segurança 26x20mm BOPP transparente</option>
+			    <option value="MB135 Selo de segurança 70x23mm BOPP transparente">MB135 Selo de segurança 70x23mm BOPP transparente</option>
+			    <option value="MB136 Pazinha plástica transparente">MB136 Pazinha plástica transparente</option>
+			    <option value="MB138 Caixa tubo V">MB138 Caixa tubo V</option>
+			    <option value="MB140 Tampa PP azul">MB140 Tampa PP azul</option>
+			    <option value="MB141 Berço para Ogawa Kudoh">MB141 Berço para Ogawa Kudoh</option>
+			    <option value="MB142 Tubo 15x100mm PS tampado vol. 10 mL">MB142 Tubo 15x100mm PS tampado vol. 10 mL</option>
+			    <option value="MB143 Frasco PEAD - 100 mL - 13g - R20mm - Branco leitoso virgem - AGE">MB143 Frasco PEAD - 100 mL - 13g - R20mm - Branco leitoso virgem - AGE</option>
+			    <option value="MB144 Tampa almotolia para frascos AGE">MB144 Tampa almotolia para frascos AGE</option>
+			    <option value="MB145 Blister 5 cavidades">MB145 Blister 5 cavidades</option>
+			    <option value="MB146 Saco Plástico Estéril 120mL c/ Tiossulfato">MB146 Saco Plástico Estéril 120mL c/ Tiossulfato</option>
+			    <option value="MB147 Cartela Blister (Acquaplus)">MB147 Cartela Blister (Acquaplus)</option>
+			    <option value="MB148 Sachê Metalizado 140M">MB148 Sachê Metalizado 140M</option>
+			    <option value="MB152 Tampa PP Branca p/ Frasco Pet">MB152 Tampa PP Branca p/ Frasco Pet</option>
+			    <option value="MB153 Tubo de Centrifugação 15mL Estéril (Livre Dnase, Rnase e Pirog)">MB153 Tubo de Centrifugação 15mL Estéril (Livre Dnase, Rnase e Pirog)</option>
+			    <option value="MB156 Tampa branca p/ frasco 10/30mL âmbar">MB156 Tampa branca p/ frasco 10/30mL âmbar</option>
+			    <option value="MB160 Caixa para Kit Micobactérias">MB160 Caixa para Kit Micobactérias</option>
+			    <option value="MB161 Caixa para Hemoprov Adulto - Não acoplada c/ fundo automático">MB161 Caixa para Hemoprov Adulto - Não acoplada c/ fundo automático</option>
+			    <option value="MB162 Berço para caixa Hemoprov adulto - Orifício circular">MB162 Berço para caixa Hemoprov adulto - Orifício circular</option>
+			    <option value="MB163 Tubo 16X58mm Rosca Externa graduado 5mL estéril">MB163 Tubo 16X58mm Rosca Externa graduado 5mL estéril</option>
+			    <option value="MB164 Cartela de Blister (Tampão)">MB164 Cartela de Blister (Tampão)</option>
+			    <option value="MB166 Saco plástico p/ Placas 90x15 (19x30x0,14)">MB166 Saco plástico p/ Placas 90x15 (19x30x0,14)</option>
+			    <option value="MB167 Saco plástico p/ Placas 140x15 (24x45x0,14)">MB167 Saco plástico p/ Placas 140x15 (24x45x0,14)</option>
+			    <option value="MB168 Saco plástico branco Liso – 17x18x0,20">MB168 Saco plástico branco Liso – 17x18x0,20</option>
+			    <option value="MB170 INATIVO - Rótulo Newprov 100x36mm">MB170 INATIVO - Rótulo Newprov 100x36mm</option>
+			    <option value="MB179 Etiqueta 60x40 Neutra Couchê">MB179 Etiqueta 60x40 Neutra Couchê</option>
+			    <option value="MB180 Frasco Pet 100ml Cristal">MB180 Frasco Pet 100ml Cristal</option>
+			    <option value="MB182 Etiqueta 18x37mm Acrilica">MB182 Etiqueta 18x37mm Acrilica</option>
+			    <option value="MB183 Filme Poliolefinico p/ Placas de Petri">MB183 Filme Poliolefinico p/ Placas de Petri</option>
+			    <option value="MB185 Bolsa Estéril para coleta de sangue de carneiro - 1000mL">MB185 Bolsa Estéril para coleta de sangue de carneiro - 1000mL</option>
+			    <option value="MB186 Placa de Petri Estéril 60x15mm lisa">MB186 Placa de Petri Estéril 60x15mm lisa</option>
+			    <option value="MB187 Placa de Petri Estéril 90x15mm c/ 2 divisão">MB187 Placa de Petri Estéril 90x15mm c/ 2 divisão</option>
+			    <option value="MB188 Rótulo Newprov 75x20 mm Bopp fosco">MB188 Rótulo Newprov 75x20 mm Bopp fosco</option>
+			    <option value="MB189 Etiqueta Nova Formulação - Inativo">MB189 Etiqueta Nova Formulação - Inativo</option>
+				<option value="MB197 Etiqueta 50x26 (VTM)">MB197 Etiqueta 50x26 (VTM)</option>
+				<option value="MB198 Tubo não estéril centrifugação 15 mL">MB198 Tubo não estéril centrifugação 15 mL</option>
+				<option value="MB199 Tubo 10/12mL PP tampa vermelha">MB199 Tubo 10/12mL PP tampa vermelha</option>
+				<option value="MB200 Sachê Metalizado 170M">MB200 Sachê Metalizado 170M</option>
+				<option value="MB201 Sachê Metalizado 170MZ C/ Ziper">MB201 Sachê Metalizado 170MZ C/ Ziper</option>
+				<option value="MB204 Tubo 16X58mm Rosca Externa graduado 5mL">MB204 Tubo 16X58mm Rosca Externa graduado 5mL</option>
+				<option value="MB205 Saco plástico branco 17x28x0,22">MB205 Saco plástico branco 17x28x0,22</option>
+				<option value="MB207 Etiqueta 40x35mm BOPP fosco">MB207 Etiqueta 40x35mm BOPP fosco</option>
+				<option value="MB212 Tampa Preta 38 mm p/ frasco PET incolor">MB212 Tampa Preta 38 mm p/ frasco PET incolor</option>
+				<option value="MB213 Gotejador 15G-30 branco">MB213 Gotejador 15G-30 branco</option>
+				<option value="MB215 Rótulo Lact-up Laranja 50g - 100x45mm BOPP fosco">MB215 Rótulo Lact-up Laranja 50g - 100x45mm BOPP fosco</option>
+				<option value="MB216 Rótulo Lact-up Limão 50g - 100x45mm BOPP fosco">MB216 Rótulo Lact-up Limão 50g - 100x45mm BOPP fosco</option>
+				<option value="MB217 Rótulo Gluc-up Limão 50g - 100x45mm BOPP fosco">MB217 Rótulo Gluc-up Limão 50g - 100x45mm BOPP fosco</option>
+				<option value="MB219 Rótulo Gluc-up Limão 75g - 100x45mm BOPP fosco">MB219 Rótulo Gluc-up Limão 75g - 100x45mm BOPP fosco</option>
+				<option value="MB220 Rótulo Gluc-up Laranja 75g - 100x45mm BOPP fosco">MB220 Rótulo Gluc-up Laranja 75g - 100x45mm BOPP fosco</option>
+				<option value="MB221 Rótulo Gluc-up Limão 100g - 100x45mm BOPP fosco">MB221 Rótulo Gluc-up Limão 100g - 100x45mm BOPP fosco</option>
+				<option value="MB224 Frasco PEAD 1000 mL branco - Bioquímica">MB224 Frasco PEAD 1000 mL branco - Bioquímica</option>
+				<option value="MB225 Tampa PE branca com lacre">MB225 Tampa PE branca com lacre</option>
+				<option value="MB227 Saco Plástico Cinza 20,5x17x0,21 - Cromonew 60x15mm">MB227 Saco Plástico Cinza 20,5x17x0,21 - Cromonew 60x15mm</option>
+				<option value="MB228 Saco Plástico Cinza 20x30x0,210 mm - Cromonew 90x15mm">MB228 Saco Plástico Cinza 20x30x0,210 mm - Cromonew 90x15mm</option>
+				<option value="MB229 Tubo PP Cônico 12mL Com tampa pressão Vermelha Estéril">MB229 Tubo PP Cônico 12mL Com tampa pressão Vermelha Estéril</option>
+				<option value="MB235 Sachê Metalizado 18x26,5X0,20 - Gluc up 900 g">MB235 Sachê Metalizado 18x26,5X0,20 - Gluc up 900 g</option>
+				<option value="MB236 Rótulo Gluc up Limão 130x80 mm couchê - 900 g">MB236 Rótulo Gluc up Limão 130x80 mm couchê - 900 g</option>
+				<option value="MB237 Saco plástico transparente 37x27x0,14">MB237 Saco plástico transparente 37x27x0,14</option>
+				<option value="MB238 Saco plástico transparente 29x27x0,14">MB238 Saco plástico transparente 29x27x0,14</option>
+				<option value="MB239 Saco plástico transparente 21x27x0,14">MB239 Saco plástico transparente 21x27x0,14</option>
+				<option value="MB240 Rótulo Newprov 152x100mm couchê acrílico (Termolábil - 120 horas)">MB240 Rótulo Newprov 152x100mm couchê acrílico (Termolábil - 120 horas)</option>
+				<option value="MB242 Rótulo Newprov 152x100mm couchê acrílico (Termolábil - 72 horas sem gelo)">MB242 Rótulo Newprov 152x100mm couchê acrílico (Termolábil - 72 horas sem gelo)</option>
+				<option value="MB243 Copo PP Biodegradável Transparente 7,7g - Gluc Up Limão 75g">MB243 Copo PP Biodegradável Transparente 7,7g - Gluc Up Limão 75g</option>
+				<option value="MB244 Selo de alumínio 75 mm - Gluc Up Limão 75g">MB244 Selo de alumínio 75 mm - Gluc Up Limão 75g</option>
+				<option value="MB245 Selo de Alumínio 75mm – Lact Up Limão 50g">MB245 Selo de Alumínio 75mm – Lact Up Limão 50g</option>
+				<option value="MB246 Copo PP Biodegradável Transparente 7,7g - Lact Up Limão 50g">MB246 Copo PP Biodegradável Transparente 7,7g - Lact Up Limão 50g</option>
+				<option value="MB247 Sachê Metalizado 18x26,5x0,20 – Lact up 900 g">MB247 Sachê Metalizado 18x26,5x0,20 – Lact up 900 g</option>
+				<option value="MB248 Rótulo Lact up Limão 130x80 mm couchê - 900 g">MB248 Rótulo Lact up Limão 130x80 mm couchê - 900 g</option>
+				<option value="MB249 Frasco vidro 100mL 20mm injetável âmbar">MB249 Frasco vidro 100mL 20mm injetável âmbar</option>
+				<option value="MB250 Preforma Pet 24g 1810 Syphon Cristal">MB250 Preforma Pet 24g 1810 Syphon Cristal</option>
+				<option value="MB251 Etiqueta 23x13 mm BOPP Transparente">MB251 Etiqueta 23x13 mm BOPP Transparente</option>
+				<option value="MB252 Frasco PET 150 mL cristal - 38 mm">MB252 Frasco PET 150 mL cristal - 38 mm</option>
+				<option value="MB253 Filme Poliolefinico p/ Placas de Petri 15x460">MB253 Filme Poliolefinico p/ Placas de Petri 15x460</option>
+				<option value="MB254 Bombona PEAD 5L Natural">MB254 Bombona PEAD 5L Natural</option>
+				<option value="MB255 Tampa 35mm lisa branca">MB255 Tampa 35mm lisa branca</option>
+				<option value="MB256 Etiqueta 23x13mm 1 cor BOPP transparente">MB256 Etiqueta 23x13mm 1 cor BOPP transparente</option>
+				<option value="MB258 - Rótulo Gluc-up Limão 75g (SEM CORANTE) - 100x45mm BOPP fosco">MB258 - Rótulo Gluc-up Limão 75g (SEM CORANTE) - 100x45mm BOPP fosco</option>
+				<option value="MB259 - Rótulo Lact-up Limão 50g (SEM CORANTE) - 100x45mm BOPP fosco">MB259 - Rótulo Lact-up Limão 50g (SEM CORANTE) - 100x45mm BOPP fosco</option>
+			  
+			  
+		    </select>
+		</div>
+		<div class="form-group col-md-2">
+	        <label for="data_inicio">Data</label>
+	        <input type="date" name="data_inicio" id="data_inicio" class="form-control" placeholder="Data">
+	    </div>
+		</div>
+		
+		<div class="row">
+		    <div class="form-group col-md-2">
+		        <label for="procedencia">Procedência</label>
+		        <input type="text" name="dosagem" class="form-control" id="dosagem" placeholder="g/ml">
+		    </div>
+		    <div class="form-group col-md-3">
+		        <label for="lote">Lote</label>
+		        <input type="text" name="lote" class="form-control" id="lote" placeholder="lote">
+		    </div>
+		    <div class="form-group col-md-2">
+		        <label for="procedencia">N° Solicitação Fluig</label>
+		        <input type="text" id="numeroSolicitacao" name="numeroSolicitacao" class="form-control" readonly>
+		    </div>
+		</div>
+		
+		<table class="table table-bordered">
+		    <tr>
+		        <th style="width: 50%;">Itens</th>
+		        <th style="width: 50%;">Valor</th>
+		    </tr>
+		    <tr>
+		        <td>Quantidade Recebida / Quantidade para Amostragem</td>
+		        <td><textarea name="question1" id="question1" rows="2" style="width: 100%;"></textarea></td>
+		    </tr>
+		    <tr>
+		        <td>Amostragem Destrutiva</td>
+		        <td><textarea name="question2" id="question2" rows="2" style="width: 100%;"></textarea></td>
+		    </tr>
+		    
+		   
+		    <tr>
+		        <td>Diâmetro externo</td>
+		        <td><textarea name="question5" id="question5" rows="2" style="width: 100%;"></textarea></td>
+		    </tr>
+		    <tr>
+		        <td>Diâmetro interno</td>
+		        <td><textarea name="question6" id="question6" rows="2" style="width: 100%;"></textarea></td>
+		    </tr>
+		    <tr>
+		        <td>Comprimento</td>
+		        <td><textarea name="question7" id="question7" rows="2" style="width: 100%;"></textarea></td>
+		    </tr>
+		    <tr>
+		        <td>Largura</td>
+		        <td><textarea name="question8" id="question8" rows="2" style="width: 100%;"></textarea></td>
+		    </tr>
+		    <tr>
+		        <td>Gargalo</td>
+		        <td><textarea name="question9" id="question9" rows="2" style="width: 100%;"></textarea></td>
+		    </tr>
+		    <tr>
+		        <td>Altura</td>
+		        <td><textarea name="question10" id="question10" rows="2" style="width: 100%;"></textarea></td>
+		    </tr>
+		    <tr>
+		        <td>Peso médio</td>
+		        <td><textarea name="question11" id="question11" rows="2" style="width: 100%;"></textarea></td>
+		    </tr>
+		    <tr>
+		        <td>Espessura</td>
+		        <td><textarea name="question12" id="question12" rows="2" style="width: 100%;"></textarea></td>
+		    </tr>
+		    <tr>
+		        <td>Cor</td>
+		        <td><textarea name="question13" id="question13" rows="2" style="width: 100%;"></textarea></td>
+		    </tr>
+		    
+		 
+		    <tr>
+		        <td>Analista</td>
+		        <td><textarea name="question17" id="question17" rows="2" style="width: 100%;"></textarea></td>
+		    </tr>
+		    
+		</table>
+		<input type="hidden" id="returnFromActivity5" name="returnFromActivity5" value="false">	
+    </div>
+</div>
+
+<div id="panelwarning" class="panel panel-warning">
+    <div class="panel-heading">
+        <h3 class="panel-title">Etapa 2</h3>
+    </div>
+    <div class="panel-body">
+		<div class="row">
+		    <div class="form-group col-md-6">
+		    <label>Validação</label>
+		        <div class="radio">
+		            <label><input type="radio" name="aprovado_reprovado" id="aprovado_reprovado" value="aprovado">Aprovado</label></br>
+		            <label><input type="radio" name="aprovado_reprovado" id="aprovado_reprovado" value="reprovado">Reprovado</label>
+		        </div>		
+		    </div>
+		</div>
+		
+		<div class="row">
+		    
+		
+		<div class="row">
+		    <div class="form-group col-md-7">
+		    <label>Status:</label>
+		        <div class="radio">
+		            <label><input type="radio" name="aprovado" id="aprovado" value="aprovado">Produto aprovado</label>
+		            <label><input type="radio" name="aprovado" id="aprovado" value="reprovado">Produto reprovado</label>
+		            
+		            </div>
+		    </div>
+		</div>
+		<div id="opcaoo" class="form-group col-md-4">
+		  <label for="Resp">Responsável pela Liberação</label>
+		    <select type="text" name="Resp" class="form-control" id="Resp" placeholder="">
+		    <option value="escolha">Escolha</option>
+		      			<option value="Fernando B. Stocco">Fernando B. Stocco</option>
+				      <option value="Andrea Mara Issa">Andrea Mara Issa</option>
+		    </select>
+		</div>
+		<div class="row">
+		    <div class="form-group col-md-12">
+		        <label for="consideracoes">Observação</label>
+		        <textarea rows="5" name="consideracoes" id="consideracoes" class="form-control"></textarea>
+		    </div>
+		</div>
+    </div>
+</div>
+
+
+</form>
+</div>
+
+<script>
+        window.onload = function() {
+            var today = new Date();
+            var day = String(today.getDate()).padStart(2, '0');
+            var month = String(today.getMonth() + 1).padStart(2, '0'); // Janeiro é 0!
+            var year = today.getFullYear();
+
+            var currentDate = year + '-' + month + '-' + day; // Formato YYYY-MM-DD
+
+            // Define o valor do campo com id "data_inicio"
+            document.getElementById("data_inicio").value = currentDate;
+        };
+</script>
+<script scr="returnFlag.js"></script>
+</body>
+</html>

@@ -1,0 +1,523 @@
+<html>
+<head>
+	<link type="text/css" rel="stylesheet" href="/style-guide/css/fluig-style-guide.min.css"/>
+	<script type="text/javascript" src="/portal/resources/js/jquery/jquery.js"></script>
+	<script type="text/javascript" src="/portal/resources/js/jquery/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="/portal/resources/js/mustache/mustache-min.js"></script>
+	<script type="text/javascript" src="/style-guide/js/fluig-style-guide.min.js" charset="utf-8"></script>
+</head>
+<body>
+<div class="fluig-style-guide">
+<form name="form" role="form">
+
+<div id="panel1" class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">Etapa 1</h3>
+    </div>
+    <div class="panel-body">
+    <div class="row">
+		<div id="opcaoo" class="form-group col-md-10">
+		  <label for="opcoes">Código - Matéria prima</label>
+		    <select type="opcao" name="opcao" class="form-control" id="opcao" placeholder="">
+		      <option value="MP01 - 1-Naphtol (Fotossensível)">MP01 - 1-Naphtol (Fotossensível)</option>
+		      <option value="MP02 - Acetona - CONTROLADO">MP02 - Acetona - CONTROLADO</option>
+		      <option value="MP03 - Ácido Acético Glacial - CONTROLADO 99%">MP03 - Ácido Acético Glacial - CONTROLADO 99%</option>
+		      <option value="MP04 - Ácido Cítrico anidro">MP04 - Ácido Cítrico anidro</option>
+		      <option value="MP05 - Ácido Clorídrico - CONTROLADO">MP05 - Ácido Clorídrico - CONTROLADO</option>
+		      <option value="MP06 - Ácido Fosfotúngstico">MP06 - Ácido Fosfotúngstico</option>
+		      <option value="MP07 - Ácido Lático - 85%">MP07 - Ácido Lático - 85%</option>
+		      <option value="MP08 - Ácido Nalidixico">MP08 - Ácido Nalidixico</option>
+		      <option value="MP09 - Ácido P-Aminobenzoico (PABA) (Fotossensível)">MP09 - Ácido P-Aminobenzoico (PABA) (Fotossensível)</option>
+		      <option value="MP10 - Ácido Sulfanilíco">MP10 - Ácido Sulfanilíco</option>
+		      <option value="MP11 - Ácido Sulfúrico - CONTROLADO">MP11 - Ácido Sulfúrico - CONTROLADO</option>
+		      <option value="MP12 - Adenina Sulfato Dehidratado">MP12 - Adenina Sulfato Dehidratado</option>
+		      <option value="MP13 - Adonitol">MP13 - Adonitol</option>
+		      <option value="MP14 - Agar  Fenilalanina">MP14 - Agar  Fenilalanina</option>
+		      <option value="MP15 - Agar Bacteriológico (Fotossensível marca Conda)">MP15 - Agar Bacteriológico (Fotossensível marca Conda)</option>
+		      <option value="MP16 - Agar Batata dextrose (verificar Concentração)">MP16 - Agar Batata dextrose (verificar Concentração)</option>
+		      <option value="MP17 - Agar Bile esculina (Verificar concentração)">MP17 - Agar Bile esculina (Verificar concentração)</option>
+		      <option value="MP18 - Agar Citrato de Simmons (Verificar concentração)">MP18 - Agar Citrato de Simmons (Verificar concentração)</option>
+		      <option value="MP19 - Agar CLED (Verificar concentração e fotossensível Marca Conda)">MP19 - Agar CLED (Verificar concentração e fotossensível Marca Conda)</option>
+		      <option value="MP20 - Agar Cromogênico UTI - Termolábel exceto Forneced. Himedia">MP20 - Agar Cromogênico UTI - Termolábel exceto Forneced. Himedia</option>
+		      <option value="MP21 - *Citrato de Sódio">MP21 - *Citrato de Sódio</option>
+		      <option value="MP22 - Glicerofosfato de sódio">MP22 - Glicerofosfato de sódio</option>
+		      <option value="MP25 - Agar Dnase (Verificar concentração)">MP25 - Agar Dnase (Verificar concentração)</option>
+		      <option value="MP26 - Agar Entérico de Hektoen (Verificar concentração)">MP26 - Agar Entérico de Hektoen (Verificar concentração)</option>
+		      <option value="MP27 - Ágar Azida Bile esculina">MP27 - Ágar Azida Bile esculina</option>
+		      <option value="MP28 - Agar Eosina Azul de Met-Teague (Verificar concentração)">MP28 - Agar Eosina Azul de Met-Teague (Verificar concentração)</option>
+		      <option value="MP29 - Agar Ferro Triplice Açucar-TSI (Verificar Concentração)">MP29 - Agar Ferro Triplice Açucar-TSI (Verificar Concentração)</option>
+		      <option value="MP30 - Agar Inf. Cerebro Coração - BHI">MP30 - Agar Inf. Cerebro Coração - BHI</option>
+		      <option value="MP31 - Agar Letheen (Verificar concentração)">MP31 - Agar Letheen (Verificar concentração)</option>
+		      <option value="MP32 - Agar MacConkey (Verificar concentração)">MP32 - Agar MacConkey (Verificar concentração)</option>
+		      <option value="MP33 - Agar Metod.Padronizado - PCA (Verificar concentração)">MP33 - Agar Metod.Padronizado - PCA (Verificar concentração)</option>
+		      <option value="MP34 - Agar Mueller Hinton - Verificar Concentração">MP34 - Agar Mueller Hinton - Verificar Concentração</option>
+		      <option value="MP35 - Agar Mycosel (Verificar concentração)">MP35 - Agar Mycosel (Verificar concentração)</option>
+		      <option value="MP37 - Agar Sabouraud dextrose">MP37 - Agar Sabouraud dextrose</option>
+		      <option value="MP38 - Agar Sal manitol (Verificar concentração)">MP38 - Agar Sal manitol (Verificar concentração)</option>
+		      <option value="MP39 - Agar Salmonella/Shigella (Verificar concentração + Vide Observações)">MP39 - Agar Salmonella/Shigella (Verificar concentração + Vide Observações)</option>
+		      <option value="MP40 - Agar Triptico de Soja - TSA">MP40 - Agar Triptico de Soja - TSA</option>
+		      <option value="MP41 - Agar Verde Brilhante (Verificar concentração)">MP41 - Agar Verde Brilhante (Verificar concentração)</option>
+		      <option value="MP42 - Agar XLD (Verificar concentração)">MP42 - Agar XLD (Verificar concentração)</option>
+		      <option value="MP43 - Água Oxigenada 10V (peróxido de hidrogênio) (Fotossensível)">MP43 - Água Oxigenada 10V (peróxido de hidrogênio) (Fotossensível)</option>
+		      <option value="MP44 - Alaranjado G">MP44 - Alaranjado G</option>
+		      <option value="MP45 - Alcool Butilico - CONTROLADO">MP45 - Alcool Butilico - CONTROLADO</option>
+		      <option value="MP46 - Álcool Etílico 96%">MP46 - Álcool Etílico 96%</option>
+		      <option value="MP47 - Álcool Metílico">MP47 - Álcool Metílico</option>
+		      <option value="MP48 - Anfotericina B (Termolábel)">MP48 - Anfotericina B (Termolábel)</option>
+		      <option value="MP49 - Arginina-L">MP49 - Arginina-L</option>
+		      <option value="MP50 - Aroma de Abacaxi">MP50 - Aroma de Abacaxi</option>
+		      <option value="MP51 - Aroma de Abacaxi-pó">MP51 - Aroma de Abacaxi-pó</option>
+		      <option value="MP52 - Aroma de Laranja">MP52 - Aroma de Laranja</option>
+		      <option value="MP53 - Aroma de Laranja-pó">MP53 - Aroma de Laranja-pó</option>
+		      <option value="MP54 - Aroma de Limão">MP54 - Aroma de Limão</option>
+		      <option value="MP55 - Aroma de Limão-pó">MP55 - Aroma de Limão-pó</option>
+		      <option value="MP56 - Asparagina-L">MP56 - Asparagina-L</option>
+		      <option value="MP57 - Azida de Sódio - CONTROLADO">MP57 - Azida de Sódio - CONTROLADO</option>
+		      <option value="MP58 - Azul de Bromotimol">MP58 - Azul de Bromotimol</option>
+		      <option value="MP59 - Azul de Metileno">MP59 - Azul de Metileno</option>
+		      <option value="MP60 - Azure II">MP60 - Azure II</option>
+		      <option value="MP62 - Bacitracina hidrossolúvel (Fotossensível  e Termolábel)">MP62 - Bacitracina hidrossolúvel (Fotossensível  e Termolábel)</option>
+		      <option value="MP63 - Base Agar Baird Parker (Verificar concentração)">MP63 - Base Agar Baird Parker (Verificar concentração)</option>
+		      <option value="MP64 - Base Agar Cetrimida (Verificar a concentração)">MP64 - Base Agar Cetrimida (Verificar a concentração)</option>
+		      <option value="MP65 - Base Agar Columbia (Verificar concentração)">MP65 - Base Agar Columbia (Verificar concentração)</option>
+		      <option value="MP66 - Base Agar GC (Verificar concentração)">MP66 - Base Agar GC (Verificar concentração)</option>
+		      <option value="MP67 - Base Agar Sangue (verificar concentração)">MP67 - Base Agar Sangue (verificar concentração)</option>
+		      <option value="MP68 - Base Ágar sangue triptose (Verificar concentração)">MP68 - Base Ágar sangue triptose (Verificar concentração)</option>
+		      <option value="MP70 - Base Caldo Tetrationato (Verificar concentração)">MP70 - Base Caldo Tetrationato (Verificar concentração)</option>
+		      <option value="MP71 - Base Meio de Lowenstein - VERIFICAR CONCENTRAÇÃO">MP71 - Base Meio de Lowenstein - VERIFICAR CONCENTRAÇÃO</option>
+		      <option value="MP72 - Benzoato de Benzila">MP72 - Benzoato de Benzila</option>
+			    <option value="MP73 - Benzoato de Sódio">MP73 - Benzoato de Sódio</option>
+			    <option value="MP74 - Bicarbonato de Sódio - CONTROLADO">MP74 - Bicarbonato de Sódio - CONTROLADO</option>
+			    <option value="MP75 - Biselenito de Sódio">MP75 - Biselenito de Sódio</option>
+			    <option value="MP76 - Caldo GN">MP76 - Caldo GN</option>
+			    <option value="MP77 - Caldo Inf. Cerebro Coração - B.H.I">MP77 - Caldo Inf. Cerebro Coração - B.H.I</option>
+			    <option value="MP78 - Caldo Lauril Triptose">MP78 - Caldo Lauril Triptose</option>
+			    <option value="MP79 - Caldo Letheen Modificado (Verificar concentração)">MP79 - Caldo Letheen Modificado (Verificar concentração)</option>
+			    <option value="MP80 - Caldo Lisina Descarboxilase">MP80 - Caldo Lisina Descarboxilase</option>
+			    <option value="MP81 - Caldo Malonato">MP81 - Caldo Malonato</option>
+			    <option value="MP82 - Caldo Mueller Hinton">MP82 - Caldo Mueller Hinton</option>
+			    <option value="MP85 - Caldo Tioglicolato com indicador (Verificar concentração)">MP85 - Caldo Tioglicolato com indicador (Verificar concentração)</option>
+			    <option value="MP86 - Caldo tioglicolato sem indicador">MP86 - Caldo tioglicolato sem indicador</option>
+			    <option value="MP87 - Caldo Tríptico de Soja - TSB">MP87 - Caldo Tríptico de Soja - TSB</option>
+			    <option value="MP88 - Caldo Uréia">MP88 - Caldo Uréia</option>
+			    <option value="MP89 - Caldo Verde Brilhante - Bile 2%">MP89 - Caldo Verde Brilhante - Bile 2%</option>
+			    <option value="MP90 - Carbonato de Lítio">MP90 - Carbonato de Lítio</option>
+			    <option value="MP91 - Cianeto de Potássio - CONTROLADO (Fotossensível)">MP91 - Cianeto de Potássio - CONTROLADO (Fotossensível)</option>
+			    <option value="MP92 - Cicloheximida (Fotossensível e Termolábel)">MP92 - Cicloheximida (Fotossensível e Termolábel)</option>
+			    <option value="MP93 - Cistina-L">MP93 - Cistina-L</option>
+			    <option value="MP94 - Citrato de Amônio e Ferro III">MP94 - Citrato de Amônio e Ferro III</option>
+			    <option value="MP95 - Citrato de Ferro III">MP95 - Citrato de Ferro III</option>
+			    <option value="MP96 - Citrato de Magnésio Tribásico Anidro">MP96 - Citrato de Magnésio Tribásico Anidro</option>
+			    <option value="MP97 - Citrato de Sódio Anidro">MP97 - Citrato de Sódio Anidro</option>
+			    <option value="MP98 - Cloranfenicol Levogiro">MP98 - Cloranfenicol Levogiro</option>
+			    <option value="MP99 - Cloreto de ferro III  hexahidratado">MP99 - Cloreto de ferro III  hexahidratado</option>
+			    <option value="MP100 - Cloreto de Magnésio hexahidratado">MP100 - Cloreto de Magnésio hexahidratado</option>
+			    <option value="MP101 - Cloreto de Sódio - CONTROLADO">MP101 - Cloreto de Sódio - CONTROLADO</option>
+			    <option value="MP102 - Cloridrato de tiamina">MP102 - Cloridrato de tiamina</option>
+			    <option value="MP103 - Cloridrato de Vancomicina - Pó para solução injetável 500 mg">MP103 - Cloridrato de Vancomicina - Pó para solução injetável 500 mg</option>
+			    <option value="MP106 - Corante alimentício amarelo crepusculo">MP106 - Corante alimentício amarelo crepusculo</option>
+			    <option value="MP107 - Corante alimentício amarelo tartrazina">MP107 - Corante alimentício amarelo tartrazina</option>
+			    <option value="MP108 - Corante alimentício azul brilhante">MP108 - Corante alimentício azul brilhante</option>
+			    <option value="MP109 - D (+) Frutose">MP109 - D (+) Frutose</option>
+			    <option value="MP110 - D(+) Celobiose">MP110 - D(+) Celobiose</option>
+			    <option value="MP111 - D(+) Sacarose">MP111 - D(+) Sacarose</option>
+			    <option value="MP112 - D(+)Lactose PA">MP112 - D(+)Lactose PA</option>
+			    <option value="MP113 - D(+)Maltose">MP113 - D(+)Maltose</option>
+			    <option value="MP114 - D(+)Xilose">MP114 - D(+)Xilose</option>
+			    <option value="MP115 - Dextrose anidra">MP115 - Dextrose anidra</option>
+			    <option value="MP116 - EDTA-Sal Dissódico">MP116 - EDTA-Sal Dissódico</option>
+			    <option value="MP117 - Eos. Azul de Metil. Seg Wright">MP117 - Eos. Azul de Metil. Seg Wright</option>
+			    <option value="MP118 - Eosina Amarelada">MP118 - Eosina Amarelada</option>
+			    <option value="MP119 - Eosina Azul de Metileno segundo Leishman">MP119 - Eosina Azul de Metileno segundo Leishman</option>
+			    <option value="MP120 - Eosina Azul de Metileno May Grunwald">MP120 - Eosina Azul de Metileno May Grunwald</option>
+			    <option value="MP121 - Eosina Azul de Metileno segundo Giemsa">MP121 - Eosina Azul de Metileno segundo Giemsa</option>
+			    <option value="MP122 - Extrato de Carne">MP122 - Extrato de Carne</option>
+			    <option value="MP123 - Extrato de Levedura">MP123 - Extrato de Levedura</option>
+			    <option value="MP124 - Fenol (Ácido Fênico)">MP124 - Fenol (Ácido Fênico)</option>
+			    <option value="MP125 - Fermento Biologico (Termolábel)">MP125 - Fermento Biologico (Termolábel)</option>
+			    <option value="MP126 - Caldo Rápido para Coliformes (Verificar concentração)">MP126 - Caldo Rápido para Coliformes (Verificar concentração)</option>
+			    <option value="MP127 - Formol Estabilizado 37%">MP127 - Formol Estabilizado 37%</option>
+			    <option value="MP128 - Fosfato de Potássio Monobásico">MP128 - Fosfato de Potássio Monobásico</option>
+			    <option value="MP129 - Fosfato de Sódio Dibásico Anidro">MP129 - Fosfato de Sódio Dibásico Anidro</option>
+			    <option value="MP130 - Fucsina Básica">MP130 - Fucsina Básica</option>
+			    <option value="MP131 - Gelatina bacteriologica">MP131 - Gelatina bacteriologica</option>
+			    <option value="MP132 - Gentamicina 40mg/mL (s/ picking)">MP132 - Gentamicina 40mg/mL (s/ picking)</option>
+			    <option value="MP133 - Glicerina bidestilada - CONTROLADO">MP133 - Glicerina bidestilada - CONTROLADO</option>
+			    <option value="MP134 - Glutamato de Sódio">MP134 - Glutamato de Sódio</option>
+			    <option value="MP135 - Hematoxilina">MP135 - Hematoxilina</option>
+			    <option value="MP136 - Hemina Bovina (Fotossensível e Termolábel)">MP136 - Hemina Bovina (Fotossensível e Termolábel)</option>
+			    <option value="MP137 - Hidróxido de Potássio - CONTROLADO">MP137 - Hidróxido de Potássio - CONTROLADO</option>
+			    <option value="MP138 - Hidróxido de Sódio - CONTROLADO">MP138 - Hidróxido de Sódio - CONTROLADO</option>
+			    <option value="MP139 - Inositol">MP139 - Inositol</option>
+			    <option value="MP140 - Iodeto de Potássio">MP140 - Iodeto de Potássio</option>
+			    <option value="MP141 - Iodo - CONTROLADO">MP141 - Iodo - CONTROLADO</option>
+			    <option value="MP143 - L-Glutamina">MP143 - L-Glutamina</option>
+			    <option value="MP144 - Lisina-L-Hidrocloride">MP144 - Lisina-L-Hidrocloride</option>
+			    <option value="MP145 - L-Rhamnose">MP145 - L-Rhamnose</option>
+			    <option value="MP146 - Marrom de Bismarck Y">MP146 - Marrom de Bismarck Y</option>
+			    <option value="MP147 - Meio MIO">MP147 - Meio MIO</option>
+			    <option value="MP148 - Meio MR-VP">MP148 - Meio MR-VP</option>
+			    <option value="MP149 - Meio SIM (Verificar Concentração)">MP149 - Meio SIM (Verificar Concentração)</option>
+			    <option value="MP150 - Methyl Blue">MP150 - Methyl Blue</option>
+			    <option value="MP151 - N,N-Dimethyl-1,4-phenylenediamine oxalate (Fotossensível)">MP151 - N,N-Dimethyl-1,4-phenylenediamine oxalate (Fotossensível)</option>
+			    <option value="MP152 - N,N-Dimethyl-1-Naphthylamine (Fotossensível)">MP152 - N,N-Dimethyl-1-Naphthylamine (Fotossensível)</option>
+			    <option value="MP153 - New Methylene Blue">MP153 - New Methylene Blue</option>
+			    <option value="MP154 - Nistatina">MP154 - Nistatina</option>
+			    <option value="MP155 - Nitrato de Potássio - CONTROLADO">MP155 - Nitrato de Potássio - CONTROLADO</option>
+			    <option value="MP156 -  Novobiocina (Termolábel)">MP156 -  Novobiocina (Termolábel)</option>
+			    <option value="MP157 - OF Base">MP157 - OF Base</option>
+			    <option value="MP158 - Óleo de Rícino">MP158 - Óleo de Rícino</option>
+			    <option value="MP159 - Etilhidrocupreine (Fotossensível e Termolábel)">MP159 - Etilhidrocupreine (Fotossensível e Termolábel)</option>
+			    <option value="MP160 - Ornitina-L-Cloridrato">MP160 - Ornitina-L-Cloridrato</option>
+			    <option value="MP161 - Oxalato de Amônio">MP161 - Oxalato de Amônio</option>
+			    <option value="MP162 - Óxido de Mercurio II Amarelo">MP162 - Óxido de Mercurio II Amarelo</option>
+			    <option value="MP163 - Parafina">MP163 - Parafina</option>
+			    <option value="MP164 - P-Dimetilaminobenzaldeido (Fotossensível)">MP164 - P-Dimetilaminobenzaldeido (Fotossensível)</option>
+			    <option value="MP165 - Penicilina G.Potássica">MP165 - Penicilina G.Potássica</option>
+			    <option value="Peptona Bacteriológica (Fotossensível marca Conda)">MP166 - Peptona Bacteriológica (Fotossensível marca Conda)</option>
+			    <option value="MP167 - Peptona Caseina (triptona)">MP167 - Peptona Caseina (triptona)</option>
+			    <option value="MP168 - Polianetol Sulfonato de Sódio">MP168 - Polianetol Sulfonato de Sódio</option>
+			    <option value="MP169 - Polietileno Glicol 1500">MP169 - Polietileno Glicol 1500</option>
+			    <option value="MP170 - Púrpura de Bromocresol">MP170 - Púrpura de Bromocresol</option>
+			    <option value="MP171 - Resazurinaoption">MP171 - Resazurinaoption</option>
+			    <option value="MP172 - Sangue de carneiro desfibrinado Bolsa (Termolábel)">MP172 - Sangue de carneiro desfibrinado Bolsa (Termolábel)</option>
+			    <option value="MP173 - Sangue de coelho (Termolábel)">MP173 - Sangue de coelho (Termolábel)</option>
+			    <option value="MP174 - Sorbitol">MP174 - Sorbitol</option>
+			    <option value="MP175 - Sulfato de Alumínio e Potássio">MP175 - Sulfato de Alumínio e Potássio</option>
+			    <option value="MP176 - Sulfato de colistina">MP176 - Sulfato de colistina</option>
+			    <option value="MP178 - Telurito de Potássio">MP178 - Telurito de Potássio</option>
+			    <option value="MP179 - Timerosal (Fotossensível)">MP179 - Timerosal (Fotossensível)</option>
+			    <option value="MP180 - Tiossulfato de Sódio">MP180 - Tiossulfato de Sódio</option>
+			    <option value="MP181 - Todd Hewitt Broth (Verificar concentração)">MP181 - Todd Hewitt Broth (Verificar concentração)</option>
+			    <option value="MP182 - Toluidine Blue">MP182 - Toluidine Blue</option>
+			    <option value="MP183 - Transport Medium (Stuart) (Verificar concentração)">MP183 - Transport Medium (Stuart) (Verificar concentração)</option>
+			    <option value="MP184 - Triptofano-L">MP184 - Triptofano-L</option>
+			    <option value="MP185 - Uréia - CONTROLADO">MP185 - Uréia - CONTROLADO</option>
+			    <option value="MP186 - Vaselina líquida">MP186 - Vaselina líquida</option>
+			    <option value="MP188 - Verde luz">MP188 - Verde luz</option>
+			    <option value="MP189 - Verde Malaquita">MP189 - Verde Malaquita</option>
+			    <option value="MP190 - Vermelho de Feno">MP190 - Vermelho de Fenol</option>
+			    <option value="MP191 - Violeta de Genciana">MP191 - Violeta de Genciana</option>
+			    <option value="MP192 - Vitamina B12">MP192 - Vitamina B12</option>
+			    <option value="MP193 - Zinco Granulado 20 mesh">MP193 - Zinco Granulado 20 mesh</option>
+			    <option value="MP194 - Ágar Sabouraud c/  cloranfenicol">MP194 - Ágar Sabouraud c/  cloranfenicol</option>
+			    <option value="MP195 - Cloreto de cobalto II">MP195 - Cloreto de cobalto II</option>
+			    <option value="MP196 - Fenolftaleína">MP196 - Fenolftaleína</option>
+			    <option value="MP197 - Cloreto de cálcio dihidratado">MP197 - Cloreto de cálcio dihidratado</option>
+			    <option value="MP198 - Ferricianeto de potássio (Fotossensível)">MP198 - Ferricianeto de potássio (Fotossensível)</option>
+			    <option value="MP199 - Tioglicolato de sódio">MP199 - Tioglicolato de sódio</option>
+			    <option value="MP200 - Vermelho de metila">MP200 - Vermelho de metila</option>
+			    <option value="MP201 - Fio Nikrotal bs 19">MP201 - Fio Nikrotal bs 19</option>
+			    <option value="MP202 - Fio Nikrotal bs 24">MP202 - Fio Nikrotal bs 24</option>
+			    <option value="MP203 - Fio Nikrotal bs 26">MP203 - Fio Nikrotal bs 26</option>
+			    <option value="MP204 - Ovos de galinha (Termolábel)">MP204 - Ovos de galinha (Termolábel)</option>
+			    <option value="MP205 - Alça de platina 0,001">MP205 - Alça de platina 0,001</option>
+			    <option value="MP206 - Alça de platina 0,01">MP206 - Alça de platina 0,01</option>
+			    <option value="MP207 - Alça de platina não calibrada">MP207 - Alça de platina não calibrada</option>
+			    <option value="MP208 - Agulha de platina">MP208 - Agulha de platina</option>
+			  <option value="MP209 - Folha disco OPT">MP209 - Folha disco OPT</option>
+			  <option value="MP210 - Folha disco NOV">MP210 - Folha disco NOV</option>
+			  <option value="MP211 - Folha disco VX c/ 50 discos">MP211 - Folha disco VX c/ 50 discos</option>
+			  <option value="MP212 - Folha disco BAC">MP212 - Folha disco BAC</option>
+			  <option value="MP213 - Sulfato de manganês">MP213 - Sulfato de manganês</option>
+			  <option value="MP214 - Dextrose PA">MP214 - Dextrose PA</option>
+			  <option value="MP215 - Água purificada">MP215 - Água purificada</option>
+			  <option value="MP216 - Agar Cromogênico Candida (Verificar concentração)">MP216 - Agar Cromogênico Candida (Verificar concentração)</option>
+			  <option value="MP217 - Ágar Cromogênico Aureus">MP217 - Ágar Cromogênico Aureus</option>
+			  <option value="MP218 - Álcool etílico absoluto">MP218 - Álcool etílico absoluto</option>
+			  <option value="MP219 - Folha Disco V folha c/ 50 discos">MP219 - Folha Disco V folha c/ 50 discos</option>
+			  <option value="MP220 - Tiras para Oxidase">MP220 - Tiras para Oxidase</option>
+			  <option value="MP221 - Folha disco X folha c/ 50 discos">MP221 - Folha disco X folha c/ 50 discos</option>
+			  <option value="MP222 - Sachê de sílica 1g (s/ picking)">MP222 - Sachê de sílica 1g (s/ picking)</option>
+			  <option value="MP223 - Cilindro de CO2">MP223 - Cilindro de CO2</option>
+			  <option value="MP224 - Tubo termocontrátil 3,0X1,50mm">MP224 - Tubo termocontrátil 3,0X1,50mm</option>
+			  <option value="MP225 - Vareta de aluminio Ox-5 3,2mm">MP225 - Vareta de aluminio Ox-5 3,2mm</option>
+			  <option value="MP226 - Pipeta de Pasteur 1 mL estéril - sem picking">MP226 - Pipeta de Pasteur 1 mL estéril - sem picking</option>
+			  <option value="MP227 - Carbonato de sódio - CONTROLADO">MP227 - Carbonato de sódio - CONTROLADO</option>
+			  <option value="MP228 - Sangue de cavalo (Termolábel)">MP228 - Sangue de cavalo (Termolábel)</option>
+			  <option value="MP229 - Fosfato de Potássio dibásico">MP229 - Fosfato de Potássio dibásico</option>
+			  <option value="MP230 - Seringa descartável estéril 10 mL tipo luer slip">MP230 - Seringa descartável estéril 10 mL tipo luer slip</option>
+			  <option value="MP232 - Lactose Monohidratada">MP232 - Lactose Monohidratada</option>
+			  <option value="MP233 - Base Caldo Uréia (Verificar a Concentração)">MP233 - Base Caldo Uréia (Verificar a Concentração)</option>
+			  <option value="MP234 - N,N,N.N-Tetrametil-p-fenilenodiamina (Fotossensível)">MP234 - N,N,N.N-Tetrametil-p-fenilenodiamina (Fotossensível)</option>
+			  <option value="MP235 - Haste flexível">MP235 - Haste flexível</option>
+			  <option value="MP236 - Sulfato de amônia PA (Fotossensível)">MP236 - Sulfato de amônia PA (Fotossensível)</option>
+			  <option value="MP237 - Malonato de sódio anidro">MP237 - Malonato de sódio anidro</option>
+			  <option value="MP238 - Tira de papel para hemolisina">MP238 - Tira de papel para hemolisina</option>
+			  <option value="MP239 - Polymixin Supplement">MP239 - Polymixin Supplement</option>
+			  <option value="MP240 - Ágar Base MYP - Verificar Concentração">MP240 - Ágar Base MYP - Verificar Concentração</option>
+			  <option value="MP241 - Listeria Selec Agar Supplement - Termolábel - VERIFICAR CONCENTRAÇÃO">MP241 - Listeria Selec Agar Supplement - Termolábel - VERIFICAR CONCENTRAÇÃO</option>
+			  <option value="MP243 - Listeria Selec Agar - ALOA - VERIFICAR CONCENTRAÇÃO">MP243 - Listeria Selec Agar - ALOA - VERIFICAR CONCENTRAÇÃO</option>
+			  <option value="MP244 - TTC - Trifenil Tetrazolio (Vermelho de Tetrazolio) - Termolábel">MP244 - TTC - Trifenil Tetrazolio (Vermelho de Tetrazolio) - Termolábel</option>
+			  <option value="MP245 - DRBC AGAR (BAM)">MP245 - DRBC AGAR (BAM)</option>
+			  <option value="MP246 - Listeria Ágar Enrichment Suplemment - Termolábel - VERIFICAR CONCENTRAÇÃO">MP246 - Listeria Ágar Enrichment Suplemment - Termolábel - VERIFICAR CONCENTRAÇÃO</option>
+			  <option value="MP247 - Amino-2 Metil-2 Propano">MP247 - Amino-2 Metil-2 Propano</option>
+			  <option value="MP248 - Propilenoglicol PA">MP248 - Propilenoglicol PA</option>
+			  <option value="MP249 - Azul de Cresil Brilhante">MP249 - Azul de Cresil Brilhante</option>
+			  <option value="MP250 - Swab de Rayon Estéril pcte c/ 100 un">MP250 - Swab de Rayon Estéril pcte c/ 100 un</option>
+			  <option value="MP251 - Hidroxietilcelulose (HEC)">MP251 - Hidroxietilcelulose (HEC)</option>
+			  <option value="MP252 - Tween 20">MP252 - Tween 20</option>
+			  <option value="MP253 - Marrom de Bismarck  R">MP253 - Marrom de Bismarck  R</option>
+			  <option value="MP254 - Shiguella flexneri ATCC 12022 ou similar">MP254 - Shiguella flexneri ATCC 12022 ou similar</option>
+			  <option value="MP255 - Pseudomonas aeruginosa ATCC 27853 ou similar">MP255 - Pseudomonas aeruginosa ATCC 27853 ou similar</option>
+			  <option value="MP256 - Klebsiella pneumoniae ATCC 13883 ou similar">MP256 - Klebsiella pneumoniae ATCC 13883 ou similar</option>
+			  <option value="MP257 - Salmonella typhimurium ATCC 14028 ou similar">MP257 - Salmonella typhimurium ATCC 14028 ou similar</option>
+			  <option value="MP258 - Escherichia coli ATCC 25922 ou similar">MP258 - Escherichia coli ATCC 25922 ou similar</option>
+			  <option value="MP259 - Proteus mirabilis ATCC 25933 ou similar">MP259 - Proteus mirabilis ATCC 25933 ou similar</option>
+			  <option value="MP260 - Staphylococcus aureus ATCC 25923 ou similar">MP260 - Staphylococcus aureus ATCC 25923 ou similar</option>
+			  <option value="MP261 - Enterococcus faecalis ATCC 29212 ou similar">MP261 - Enterococcus faecalis ATCC 29212 ou similar</option>
+			  <option value="MP262 - Streptococcus pneumoniae ATCC 49619 ou similar">MP262 - Streptococcus pneumoniae ATCC 49619 ou similar</option>
+			  <option value="MP263 - Streptococcus pneumoniae ATCC 49619 ou similar">MP263 - Streptococcus pneumoniae ATCC 49619 ou similar</option>
+			  <option value="MP264 - Haemophilus influenzae ATCC 10211 ou similar">MP264 - Haemophilus influenzae ATCC 10211 ou similar</option>
+			  <option value="MP265 - Candida albicans ATCC 10231 ou similar">MP265 - Candida albicans ATCC 10231 ou similar</option>
+			  <option value="MP266 - Neisseria meningitidis ATCC 13090 ou similar">MP266 - Neisseria meningitidis ATCC 13090 ou similar</option>
+			  <option value="MP267 - Proteus vulgaris ATCC 13315 ou similar">MP267 - Proteus vulgaris ATCC 13315 ou similar</option>
+			  <option value="MP268 - Staphylococcus epidermidis ATCC 12228 ou similar">MP268 - Staphylococcus epidermidis ATCC 12228 ou similar</option>
+			  <option value="MP269 - Enterobacter cloacae ATCC 13047 ou similar">MP269 - Enterobacter cloacae ATCC 13047 ou similar</option>
+			  <option value="MP270 - Enterobacter aerogenes ATCC 13048 ou similar">MP270 - Enterobacter aerogenes ATCC 13048 ou similar</option>
+			  <option value="MP271 - Serratia marcescens ATCC 43861 ou similar">MP271 - Serratia marcescens ATCC 43861 ou similar</option>
+			  <option value="MP272 - Burkholeria cepacia ATCC 17759 ou similar">MP272 - Burkholeria cepacia ATCC 17759 ou similar</option>
+			  <option value="MP273 - Stenotrophomonas maltophilia ATCC 13637 ou similar">MP273 - Stenotrophomonas maltophilia ATCC 13637 ou similar</option>
+			  <option value="MP274 - Streptococcus agalactiae ATCC 13813 ou similar">MP274 - Streptococcus agalactiae ATCC 13813 ou similar</option>
+			  <option value="MP275 - Acinetobacter baumannii ATCC 19606 ou similar">MP275 - Acinetobacter baumannii ATCC 19606 ou similar</option>
+			  <option value="MP276 - Staphylococcus saprophyticus ATCC ou similar">MP276 - Staphylococcus saprophyticus ATCC ou similar</option>
+			  <option value="MP277 - Morganella morganii ATCC 25830 ou similar">MP277 - Morganella morganii ATCC 25830 ou similar</option>
+			  <option value="MP278 - Bacteroides fragilis ATCC 25285 ou similar">MP278 - Bacteroides fragilis ATCC 25285 ou similar</option>
+			  <option value="MP279 - Enterococcus faecalis ATCC 51299 ou similar">MP279 - Enterococcus faecalis ATCC 51299 ou similar</option>
+			  <option value="MP280 - Staphylococcus aureus ATCC 6538 ou similar">MP280 - Staphylococcus aureus ATCC 6538 ou similar</option>
+			  <option value="MP281 - Escherichia coli ATCC 8739 ou similar">MP281 - Escherichia coli ATCC 8739 ou similar</option>
+			  <option value="MP282 - Aspergillus niger ATCC 16404 ou similar">MP282 - Aspergillus niger ATCC 16404 ou similar</option>
+			  <option value="MP283 - Clostridium sporogenes ATCC 11437 ou similar">MP283 - Clostridium sporogenes ATCC 11437 ou similar</option>
+			  <option value="MP284 - Bacillus subtilis ATCC 6633 ou similar">MP284 - Bacillus subtilis ATCC 6633 ou similar</option>
+			  <option value="MP285 - Enterococcus faecalis ATCC 19433 ou similar">MP285 - Enterococcus faecalis ATCC 19433 ou similar</option>
+			  <option value="MP286 - Escherichia coli ATCC 35218 ou similar">MP286 - Escherichia coli ATCC 35218 ou similar</option>
+			  <option value="MP287 - Pseudomonas aeruginosa ATCC 9027 ou similar">MP287 - Pseudomonas aeruginosa ATCC 9027 ou similar</option>
+			  <option value="MP288 - Bacillus cereus ATCC 11778 ou similar (CCCD-B001)">MP288 - Bacillus cereus ATCC 11778 ou similar (CCCD-B001)</option>
+			  <option value="MP289 - Klebsiella pneumoniae ATCC 700603">MP289 - Klebsiella pneumoniae ATCC 700603</option>
+			  
+			  <option value="MP290 - Klebsiella pneumoniae ATCC BAA1705 ou similar (KPC)">MP290 - Klebsiella pneumoniae ATCC BAA1705 ou similar (KPC)</option>
+			  <option value="MP291 - Enterococcus faecium ATCC 700221 ou similar (VRE)">MP291 - Enterococcus faecium ATCC 700221 ou similar (VRE)</option>
+			  <option value="MP292 - Staphylococcus aureus ATCC 33591 ou similar (MRSA)">MP292 - Staphylococcus aureus ATCC 33591 ou similar (MRSA)</option>
+			  <option value="MP293 - Candida tropicalis INCQS 40281 ou similar">MP293 - Candida tropicalis INCQS 40281 ou similar</option>
+			  <option value="MP294 - Candida parasilosis ATCC 22019 ou similar">MP294 - Candida parasilosis ATCC 22019 ou similar</option>
+			  <option value="MP295 - Haemophylus influenzae ATCC 49766 (BrCAST)">MP295 - Haemophylus influenzae ATCC 49766 (BrCAST)</option>
+			  <option value="MP296 - Meio Base Ágar Sangue N2">MP296 - Meio Base Ágar Sangue N2</option>
+			  <option value="MP297 - Listeria monocytogenes ATCC 7644 (CCCD-L001)">MP297 - Listeria monocytogenes ATCC 7644 (CCCD-L001)</option>
+			  <option value="MP298 - Cefoxitina">MP298 - Cefoxitina</option>
+			  <option value="MP299 - Fluconazol 150mg">MP299 - Fluconazol 150mg</option>
+			  <option value="MP300 - Discos de Oxidase c/ 50 discos">MP300 - Discos de Oxidase c/ 50 discos</option>
+			  <option value="MP301 - BF Aspergillus Brasilienses CCCD AA001">MP301 - BF Aspergillus Brasilienses CCCD AA001</option>
+			  <option value="MP302 - Acetato de Sódio Anidro P.A.">MP302 - Acetato de Sódio Anidro P.A.</option>
+			  <option value="MP321 - Agar Urea Base (Termolábel - BD e Acumedia)">MP321 - Agar Urea Base (Termolábel - BD e Acumedia)</option>
+			  <option value="MP323 - Fenilalanina (L-Fenilalanina) Purex">MP323 - Fenilalanina (L-Fenilalanina) Purex</option>
+			  <option value="MP324 - Agar Dnase com azul de toluidina">MP324 - Agar Dnase com azul de toluidina</option>
+			  <option value="MP325 - Agar Colúmbia CNA">MP325 - Agar Colúmbia CNA</option>
+			  <option value="MP327 - Agar Cromogênico para Estreptococos do grupo B (Estreptococcus)">MP327 - Agar Cromogênico para Estreptococos do grupo B (Estreptococcus)</option>
+			  <option value="MP328 - Ácido Para-Nitrobenzóico (PNB) - CONTROLADO">MP328 - Ácido Para-Nitrobenzóico (PNB) - CONTROLADO</option>
+			  <option value="MP329 - Estereato de Magnésio">MP329 - Estereato de Magnésio</option>
+			  <option value="MP330 - Sangue de carneiro desfibrinado frasco 50 ml - Estéril">MP330 - Sangue de carneiro desfibrinado frasco 50 ml - Estéril</option>
+			  <option value="MP331 - Optochin (5mcg) 50 discs DD009">MP331 - Optochin (5mcg) 50 discs DD009</option>
+			  <option value="MP332 - Citrato de Magnésio Tribásico Nonahidratado">MP332 - Citrato de Magnésio Tribásico Nonahidratado</option>
+			  <option value="MP333 - Ceftazidine Pentahidrato">MP333 - Ceftazidine Pentahidrato</option>
+			  <option value="MP334 - Staphylococcus aureus ATCC 29213">MP334 - Staphylococcus aureus ATCC 29213</option>
+			  <option value="MP340 - Cocarboxilase - Monofosfato de Tiamina (Termolábel)">MP340 - Cocarboxilase - Monofosfato de Tiamina (Termolábel)</option>
+			  <option value="MP341 - Ácido Ascórbico">MP341 - Ácido Ascórbico</option>
+			  <option value="MP342 - Agar Cromogênico Salmonella">MP342 - Agar Cromogênico Salmonella</option>
+			  <option value="MP343 - Hicrome ESBL Ágar Base M1829">MP343 - Hicrome ESBL Ágar Base M1829</option>
+			  <option value="MP344 - Suplemento para KPC - (Termolábel)">MP344 - Suplemento para KPC - (Termolábel)</option>
+			  <option value="MP345 - Base Ágar Cromogênico MeReSa">MP345 - Base Ágar Cromogênico MeReSa</option>
+			  <option value="MP346 - HiCrome ESBL Ágar Supplement (FD278) (Termolábel)">MP346 - HiCrome ESBL Ágar Supplement (FD278) (Termolábel)</option>
+			  <option value="MP347 - MeReSa Selective Supplement (FD229) (Termolábel)">MP347 - MeReSa Selective Supplement (FD229) (Termolábel)</option>
+			  <option value="MP348 - Ágar Base para KPC">MP348 - Ágar Base para KPC</option>
+			  <option value="MP349 - Nicotinamida adenina dinucleotídeo (B-NAD) - - Líquido - Termolábel">MP349 - Nicotinamida adenina dinucleotídeo (B-NAD) - - Líquido - Termolábel</option>
+			  <option value="MP351 - Cefoxitin Supplement FD259 (Termolábel)">MP351 - Cefoxitin Supplement FD259 (Termolábel)</option>
+			  <option value="MP352 - Hicrome VRE Ágar Base M1925">MP352 - Hicrome VRE Ágar Base M1925</option>
+			  <option value="MP353 - HiCrome VRE Selective Supplement FD277 (Termolábel)">MP353 - HiCrome VRE Selective Supplement FD277 (Termolábel)</option>
+			  <option value="MP354 - Suplemento Seletivo de Ágar Strep. B (GCN Selec. Suppl.)">MP354 - Suplemento Seletivo de Ágar Strep. B (GCN Selec. Suppl.)</option>
+			  <option value="MP355 - Carbopol 940">MP355 - Carbopol 940</option>
+			  <option value="MP356 - Albumina Bovina fração V - segundo Cohn, grau padrão - Termolábel">MP356 - Albumina Bovina fração V - segundo Cohn, grau padrão - Termolábel</option>
+			  <option value="MP357 - Sulfato de Magnésio 7H²O">MP357 - Sulfato de Magnésio 7H²O</option>
+			  <option value="MP358 - Cloreto de potássio P.A. - CONTROLADO">MP358 - Cloreto de potássio P.A. - CONTROLADO</option>
+			  <option value="MP359 - Nicotinamida adenina dinucleotídeo (B-NAD) - Termolábel Verificar concentração">MP359 - Nicotinamida adenina dinucleotídeo (B-NAD) - Termolábel Verificar concentração</option>
+			  <option value="MP360 - Dermasel Selective Suplement ( Cylohexamida + Cloranfenicol) - Termolábel">MP360 - Dermasel Selective Suplement ( Cylohexamida + Cloranfenicol) - Termolábel</option>
+			  <option value="MP361 - Citrato de Ferro Monohidratado III">MP361 - Citrato de Ferro Monohidratado III</option>
+			  <option value="MP362 - Aztreonam">MP362 - Aztreonam</option>
+			  <option value="MP363 - Ceftriaxone Sal Dissódico Heptahidratado">MP363 - Ceftriaxone Sal Dissódico Heptahidratado</option>
+			  <option value="MP364 - Oxacilina Sódica">MP364 - Oxacilina Sódica</option>
+			  <option value="MP365 - Cefotaxime Sal Sódica">MP365 - Cefotaxime Sal Sódica</option>
+			  <option value="MP366 - Fluconazol 2 mg/mL (s/ picking)">MP366 - Fluconazol 2 mg/mL (s/ picking)</option>
+			  <option value="MP367 - Polimixina B Sulfato - Termolábel e Fotossensível">MP367 - Polimixina B Sulfato - Termolábel e Fotossensível</option>
+			  <option value="MP368 - Ceftazidine Hidrato">MP368 - Ceftazidine Hidrato</option>
+			  <option value="MP369 - Meropenem">MP369 - Meropenem</option>
+			  <option value="MP370 - Vancomicina">MP370 - Vancomicina</option>
+			  <option value="MP371 - Streptococcus pyogenes ATCC 19615 ou similar">MP371 - Streptococcus pyogenes ATCC 19615 ou similar</option>
+			  <option value="MP372 - Filtro estéril 0,22M para seringa 30mm (s/picking)">MP372 - Filtro estéril 0,22M para seringa 30mm (s/picking)</option>
+			  <option value="MP373 - Dextrose Monohidratada - VIDE OBSERVAÇÃO">MP373 - Dextrose Monohidratada - VIDE OBSERVAÇÃO</option>
+			  <option value="MP374 - Álcool etílico absoluto P.A.">MP374 - Álcool etílico absoluto P.A.</option>
+			  <option value="MP375 - Trimetropin">MP375 - Trimetropin</option>
+			  <option value="MP376 - Pipeta de Pasteur 10 mL">MP376 - Pipeta de Pasteur 10 mL</option>
+			  
+			  
+		    </select>
+		</div>
+		<div class="form-group col-md-2">
+	        <label for="data_inicio">Data</label>
+	        <input type="date" name="data_inicio" id="data_inicio" class="form-control" placeholder="Data">
+	    </div>
+		</div>
+		
+		<div class="row">
+		    <div class="form-group col-md-2">
+		        <label for="procedencia">Procedência</label>
+		        <input type="text" name="dosagem" class="form-control" id="dosagem" placeholder="g/ml">
+		    </div>
+		    <div class="form-group col-md-3">
+		        <label for="lote">Lote</label>
+		        <input type="text" name="lote" class="form-control" id="lote" placeholder="lote">
+		    </div>
+		    <div class="form-group col-md-2">
+		        <label for="procedencia">N° Solicitação Fluig</label>
+		        <input type="text" id="numeroSolicitacao" name="numeroSolicitacao" class="form-control" readonly>
+		    </div>
+		</div>
+		
+		<table class="table table-bordered">
+		    <tr>
+		        <th style="width: 50%;">Itens</th>
+		        <th style="width: 50%;">Valor</th>
+		    </tr>
+		    <tr>
+		        <td>Quantidade Recebida / Quantidade para Amostragem</td>
+		        <td><textarea name="question1" id="question1" rows="2" style="width: 100%;"></textarea></td>
+		    </tr>
+		    <tr>
+		        <td>Amostragem Destrutiva</td>
+		        <td><textarea name="question2" id="question2" rows="2" style="width: 100%;"></textarea></td>
+		    </tr>
+		    
+		   
+		    <tr>
+		        <td>Aspecto (Odor)</td>
+		        <td><textarea name="question5" id="question5" rows="2" style="width: 100%;"></textarea></td>
+		    </tr>
+		    <tr>
+		        <td>Aspecto da Solução (Cor)</td>
+		        <td><textarea name="question6" id="question6" rows="2" style="width: 100%;"></textarea></td>
+		    </tr>
+		    <tr>
+		        <td>pH</td>
+		        <td><textarea name="question7" id="question7" rows="2" style="width: 100%;"></textarea></td>
+		    </tr>
+		    <tr>
+		        <td>Densidade</td>
+		        <td><textarea name="question8" id="question8" rows="2" style="width: 100%;"></textarea></td>
+		    </tr>
+		    <tr>
+		        <td>Peso Específico</td>
+		        <td><textarea name="question9" id="question9" rows="2" style="width: 100%;"></textarea></td>
+		    </tr>
+		    <tr>
+		        <td>Solubilidade</td>
+		        <td><textarea name="question10" id="question10" rows="2" style="width: 100%;"></textarea></td>
+		    </tr>
+		    <tr>
+		        <td>Índice de Refração</td>
+		        <td><textarea name="question11" id="question11" rows="2" style="width: 100%;"></textarea></td>
+		    </tr>
+		    <tr>
+		        <td>Teor Alcoólico</td>
+		        <td><textarea name="question12" id="question12" rows="2" style="width: 100%;"></textarea></td>
+		    </tr>
+		    <tr>
+		        <td>Ponto de Fusão</td>
+		        <td><textarea name="question13" id="question13" rows="2" style="width: 100%;"></textarea></td>
+		    </tr>
+		    
+		    <tr>
+		        <td>Identificação / Lote Reagente</td>
+		        <td><textarea name="question15" id="question15" rows="2" style="width: 100%;"></textarea></td>
+		    </tr>
+		    <tr>
+		        <td>Dosagem em g/ml</td>
+		        <td><textarea name="question4" id="question4" rows="2" style="width: 100%;"></textarea></td>
+		    </tr>
+		    <tr>
+		        <td>
+		            Teste de Função 
+		            <div style="font-size: smaller; color: gray;">
+		                Caso realizado, necessário Anexar O.P. 
+		            </div>
+		        </td>
+		        <td><textarea name="question16" id="question16" rows="2" style="width: 100%;"></textarea></td>
+		    </tr>
+		    <tr>
+		        <td>Analista</td>
+		        <td><textarea name="question17" id="question17" rows="2" style="width: 100%;"></textarea></td>
+		    </tr>
+		    
+		</table>
+		<input type="hidden" id="returnFromActivity5" name="returnFromActivity5" value="false">	
+    </div>
+</div>
+
+<div id="panelwarning" class="panel panel-warning">
+    <div class="panel-heading">
+        <h3 class="panel-title">Etapa 2</h3>
+    </div>
+    <div class="panel-body">
+		<div class="row">
+		    <div class="form-group col-md-6">
+		    <label>Validação</label>
+		        <div class="radio">
+		            <label><input type="radio" name="aprovado_reprovado" id="aprovado_reprovado" value="aprovado">Aprovado</label></br>
+		            <label><input type="radio" name="aprovado_reprovado" id="aprovado_reprovado" value="reprovado">Reprovado</label>
+		        </div>		
+		    </div>
+		</div>
+		<div class="row">
+		    <div class="form-group col-md-7">
+		    <label>Status:</label>
+		        <div class="radio">
+		            <label><input type="radio" name="aprovado" id="aprovado" value="aprovado">Produto aprovado</label>
+		            <label><input type="radio" name="aprovado" id="aprovado" value="reprovado">Produto reprovado</label>
+		            
+		            </div>
+		    </div>
+		</div>
+		<div id="opcaoo" class="form-group col-md-4">
+		  <label for="Resp">Responsável pela Liberação</label>
+		    <select type="text" name="Resp" class="form-control" id="Resp" placeholder="">
+		    <option value="escolha">Escolha</option>
+		      			<option value="Fernando B. Stocco">Fernando B. Stocco</option>
+				      <option value="Andrea Mara Issa">Andrea Mara Issa</option>
+		    </select>
+		</div>
+		<div class="row">
+		    <div class="form-group col-md-12">
+		        <label for="consideracoes">Observação</label>
+		        <textarea rows="5" name="consideracoes" id="consideracoes" class="form-control"></textarea>
+		    </div>
+		</div>
+    </div>
+</div>
+
+
+</form>
+</div>
+
+<script>
+        window.onload = function() {
+            var today = new Date();
+            var day = String(today.getDate()).padStart(2, '0');
+            var month = String(today.getMonth() + 1).padStart(2, '0'); // Janeiro é 0!
+            var year = today.getFullYear();
+
+            var currentDate = year + '-' + month + '-' + day; // Formato YYYY-MM-DD
+
+            // Define o valor do campo com id "data_inicio"
+            document.getElementById("data_inicio").value = currentDate;
+        };
+</script>
+<script scr="returnFlag.js"></script>
+</body>
+</html>

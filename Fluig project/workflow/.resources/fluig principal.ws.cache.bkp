@@ -1,0 +1,1871 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="1.8.0_202" class="java.beans.XMLDecoder">
+ <object class="java.util.HashMap">
+  <void method="put">
+   <string>volume</string>
+   <array class="java.lang.String" length="1">
+    <void index="0">
+     <string>Default</string>
+    </void>
+   </array>
+  </void>
+  <void method="put">
+   <string>expediente</string>
+   <array class="java.lang.String" length="2">
+    <void index="0">
+     <string>001</string>
+    </void>
+    <void index="1">
+     <string>Default</string>
+    </void>
+   </array>
+  </void>
+  <void method="put">
+   <string>processosServidor</string>
+   <object class="java.util.ArrayList">
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.ProcessDefinitionDto">
+      <void property="companyId">
+       <int>1</int>
+      </void>
+      <void property="processDescription">
+       <string> Controle de temperatura de área 10 a 30º C - Teste</string>
+      </void>
+      <void property="processId">
+       <string>BPM -  Controle de temperatura de área 10 a 30 C</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.ProcessDefinitionDto">
+      <void property="companyId">
+       <int>1</int>
+      </void>
+      <void property="processDescription">
+       <string>Abertura de chamados para a T.I</string>
+      </void>
+      <void property="processId">
+       <string>BPM - Abertura de chamados</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.ProcessDefinitionDto">
+      <void property="companyId">
+       <int>1</int>
+      </void>
+      <void property="processDescription">
+       <string>Abertura de chamados para T.I</string>
+      </void>
+      <void property="processId">
+       <string>BPM - Abertura de chamados TI</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.ProcessDefinitionDto">
+      <void property="companyId">
+       <int>1</int>
+      </void>
+      <void property="processDescription">
+       <string>Ata de reunião</string>
+      </void>
+      <void property="processId">
+       <string>BPM - Ata de reunião</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.ProcessDefinitionDto">
+      <void property="companyId">
+       <int>1</int>
+      </void>
+      <void property="processDescription">
+       <string>Ata de revisão gerencial </string>
+      </void>
+      <void property="processId">
+       <string>BPM - Ata de revisão gerencial</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.ProcessDefinitionDto">
+      <void property="companyId">
+       <int>1</int>
+      </void>
+      <void property="processDescription">
+       <string>Auditoria externa - Parceiros de negócios</string>
+      </void>
+      <void property="processId">
+       <string>BPM - Auditoria externa</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.ProcessDefinitionDto">
+      <void property="companyId">
+       <int>1</int>
+      </void>
+      <void property="processDescription">
+       <string>Auditoria interna da qualidade</string>
+      </void>
+      <void property="processId">
+       <string>BPM - Auditoria interna</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.ProcessDefinitionDto">
+      <void property="companyId">
+       <int>1</int>
+      </void>
+      <void property="processDescription">
+       <string>Autoclave vertical - Descontaminação - Teste</string>
+      </void>
+      <void property="processId">
+       <string>BPM - Autoclave vertical - Descontaminação</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.ProcessDefinitionDto">
+      <void property="companyId">
+       <int>1</int>
+      </void>
+      <void property="processDescription">
+       <string>Avaliação de desempenho de liderança - teste</string>
+      </void>
+      <void property="processId">
+       <string>BPM - Avaliação de desempenho de liderança</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.ProcessDefinitionDto">
+      <void property="companyId">
+       <int>1</int>
+      </void>
+      <void property="processDescription">
+       <string>Avaliação de desempenho dos colaboradores -  teste</string>
+      </void>
+      <void property="processId">
+       <string>BPM - Avaliação de desempenho dos colaboradores</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.ProcessDefinitionDto">
+      <void property="companyId">
+       <int>1</int>
+      </void>
+      <void property="processDescription">
+       <string>Carta de transferência de função-setor</string>
+      </void>
+      <void property="processId">
+       <string>BPM - Carta de transferência de função-setor</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.ProcessDefinitionDto">
+      <void property="companyId">
+       <int>1</int>
+      </void>
+      <void property="processDescription">
+       <string>Consumo de insumos</string>
+      </void>
+      <void property="processId">
+       <string>BPM - Consumo de insumos</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.ProcessDefinitionDto">
+      <void property="companyId">
+       <int>1</int>
+      </void>
+      <void property="processDescription">
+       <string>Controle de mudanças</string>
+      </void>
+      <void property="processId">
+       <string>BPM - Controle de mudanças</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.ProcessDefinitionDto">
+      <void property="companyId">
+       <int>1</int>
+      </void>
+      <void property="processDescription">
+       <string>Controle de temperatura de área 10 a 30°C até 80% </string>
+      </void>
+      <void property="processId">
+       <string>BPM - Controle de temp de área 10 a 30C até 80</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.ProcessDefinitionDto">
+      <void property="companyId">
+       <int>1</int>
+      </void>
+      <void property="processDescription">
+       <string>Controle de temperatura de área 18 a 25°C até 80% </string>
+      </void>
+      <void property="processId">
+       <string>BPM - Controle de temperatura de área</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.ProcessDefinitionDto">
+      <void property="companyId">
+       <int>1</int>
+      </void>
+      <void property="processDescription">
+       <string>Controle de temperatura e umidade de área 15 a 25° C até 80% </string>
+      </void>
+      <void property="processId">
+       <string>BPM - Controle de temperatura e umidade</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.ProcessDefinitionDto">
+      <void property="companyId">
+       <int>1</int>
+      </void>
+      <void property="processDescription">
+       <string>Controle de umidade até 60% </string>
+      </void>
+      <void property="processId">
+       <string>BPM - Controle de umidade até 60</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.ProcessDefinitionDto">
+      <void property="companyId">
+       <int>1</int>
+      </void>
+      <void property="processDescription">
+       <string>Devolução de produtos</string>
+      </void>
+      <void property="processId">
+       <string>BPM - Devolução de produtos</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.ProcessDefinitionDto">
+      <void property="companyId">
+       <int>1</int>
+      </void>
+      <void property="processDescription">
+       <string>Dúvidas Técnicas/SAC</string>
+      </void>
+      <void property="processId">
+       <string>BPM - Dúvidas Técnicas</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.ProcessDefinitionDto">
+      <void property="companyId">
+       <int>1</int>
+      </void>
+      <void property="processDescription">
+       <string>Envio de equipamentos calibração - Teste</string>
+      </void>
+      <void property="processId">
+       <string>BPM - Envio de equipamentos calibração 2</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.ProcessDefinitionDto">
+      <void property="companyId">
+       <int>1</int>
+      </void>
+      <void property="processDescription">
+       <string>Envio de equipamentos para terceiros</string>
+      </void>
+      <void property="processId">
+       <string>BPM - Envio de equipamentos para calibração</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.ProcessDefinitionDto">
+      <void property="companyId">
+       <int>1</int>
+      </void>
+      <void property="processDescription">
+       <string>Investigação da causa raiz </string>
+      </void>
+      <void property="processId">
+       <string>BPM - Investigação da causa raiz</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.ProcessDefinitionDto">
+      <void property="companyId">
+       <int>1</int>
+      </void>
+      <void property="processDescription">
+       <string>Limpeza e manutenção preventiva de equipamentos - Semanal - Teste</string>
+      </void>
+      <void property="processId">
+       <string>BPM - Limpeza e manutenção</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.ProcessDefinitionDto">
+      <void property="companyId">
+       <int>1</int>
+      </void>
+      <void property="processDescription">
+       <string>Manutenção preventiva de equipamentos - Anual - Teste</string>
+      </void>
+      <void property="processId">
+       <string>BPM - Limpeza e manutenção anual</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.ProcessDefinitionDto">
+      <void property="companyId">
+       <int>1</int>
+      </void>
+      <void property="processDescription">
+       <string>Limpeza e manutenção preventiva de equipamentos - Mensal - Teste</string>
+      </void>
+      <void property="processId">
+       <string>BPM - Limpeza e manutenção mensal</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.ProcessDefinitionDto">
+      <void property="companyId">
+       <int>1</int>
+      </void>
+      <void property="processDescription">
+       <string>Limpeza preventiva de equipamentos - Diária - Teste</string>
+      </void>
+      <void property="processId">
+       <string>BPM - Limpeza e manutenção preventiva</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.ProcessDefinitionDto">
+      <void property="companyId">
+       <int>1</int>
+      </void>
+      <void property="processDescription">
+       <string>Limpeza preventiva de equipamentos - Quinzenal - Teste</string>
+      </void>
+      <void property="processId">
+       <string>BPM - Limpeza e manutenção quinzenal</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.ProcessDefinitionDto">
+      <void property="companyId">
+       <int>1</int>
+      </void>
+      <void property="processDescription">
+       <string>Manutenção preventiva de equipamentos - Semestral - Teste</string>
+      </void>
+      <void property="processId">
+       <string>BPM - Limpeza e manutenção Semestral</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.ProcessDefinitionDto">
+      <void property="companyId">
+       <int>1</int>
+      </void>
+      <void property="processDescription">
+       <string>Manutenção corretiva de equipamentos</string>
+      </void>
+      <void property="processId">
+       <string>BPM - Manutenção corretiva de equipamentos</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.ProcessDefinitionDto">
+      <void property="companyId">
+       <int>1</int>
+      </void>
+      <void property="processDescription">
+       <string>Manutenção Predial</string>
+      </void>
+      <void property="processId">
+       <string>BPM - Manutenção Predial</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.ProcessDefinitionDto">
+      <void property="companyId">
+       <int>1</int>
+      </void>
+      <void property="processDescription">
+       <string>Monitoramento de temperatura - Equipamentos Controle de qualidade </string>
+      </void>
+      <void property="processId">
+       <string>BPM - Monitoramento de temperatura</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.ProcessDefinitionDto">
+      <void property="companyId">
+       <int>1</int>
+      </void>
+      <void property="processDescription">
+       <string>Monitoramento de temperatura - Equipamentos logística </string>
+      </void>
+      <void property="processId">
+       <string>BPM - Monitoramento de temperatura logística</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.ProcessDefinitionDto">
+      <void property="companyId">
+       <int>1</int>
+      </void>
+      <void property="processDescription">
+       <string>Monitoramento de temperatura – Equipamentos meio de cultura </string>
+      </void>
+      <void property="processId">
+       <string>BPM - Monitoramento de temperatura MC</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.ProcessDefinitionDto">
+      <void property="companyId">
+       <int>1</int>
+      </void>
+      <void property="processDescription">
+       <string>Monitoramento de temperatura - Equipamentos almoxarifado de suprimentos </string>
+      </void>
+      <void property="processId">
+       <string>BPM - Monitoramento de temperatura – AS</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.ProcessDefinitionDto">
+      <void property="companyId">
+       <int>1</int>
+      </void>
+      <void property="processDescription">
+       <string>Qualificação dos Parceiros de Negócios</string>
+      </void>
+      <void property="processId">
+       <string>BPM - Qualificação dos Parceiros de Negócios</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.ProcessDefinitionDto">
+      <void property="companyId">
+       <int>1</int>
+      </void>
+      <void property="processDescription">
+       <string> Reanálise de Produtos-Amostra Retenção</string>
+      </void>
+      <void property="processId">
+       <string>BPM - Reanálise de Produtos-Amostra Retenção</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.ProcessDefinitionDto">
+      <void property="companyId">
+       <int>1</int>
+      </void>
+      <void property="processDescription">
+       <string>Reclamações de clientes/SAC</string>
+      </void>
+      <void property="processId">
+       <string>BPM - Reclamação de clientes e-ou Dúvidas Técnicas</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.ProcessDefinitionDto">
+      <void property="companyId">
+       <int>1</int>
+      </void>
+      <void property="processDescription">
+       <string>Registro de RPNC</string>
+      </void>
+      <void property="processId">
+       <string>BPM - Registro de RPNC</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.ProcessDefinitionDto">
+      <void property="companyId">
+       <int>1</int>
+      </void>
+      <void property="processDescription">
+       <string>Renovação de documentos regulatórios </string>
+      </void>
+      <void property="processId">
+       <string>BPM - Renovação de documentos regulatórios</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.ProcessDefinitionDto">
+      <void property="companyId">
+       <int>1</int>
+      </void>
+      <void property="processDescription">
+       <string>Requerimento do usuário - Teste</string>
+      </void>
+      <void property="processId">
+       <string>BPM - Requerimento do usuário</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.ProcessDefinitionDto">
+      <void property="companyId">
+       <int>1</int>
+      </void>
+      <void property="processDescription">
+       <string>Solicitação de adiantamento de 13</string>
+      </void>
+      <void property="processId">
+       <string>BPM - Solicitação de adiantamento de 13</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.ProcessDefinitionDto">
+      <void property="companyId">
+       <int>1</int>
+      </void>
+      <void property="processDescription">
+       <string>Solicitação de contratação de colaboradores</string>
+      </void>
+      <void property="processId">
+       <string>BPM - solicitação de contratação de colaboradores</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.ProcessDefinitionDto">
+      <void property="companyId">
+       <int>1</int>
+      </void>
+      <void property="processDescription">
+       <string>BPM - Solicitação de crachá</string>
+      </void>
+      <void property="processId">
+       <string>BPM - Solicitação de crachá</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.ProcessDefinitionDto">
+      <void property="companyId">
+       <int>1</int>
+      </void>
+      <void property="processDescription">
+       <string>Solicitação de demissão</string>
+      </void>
+      <void property="processId">
+       <string>BPM - Solicitação de Demissão</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.ProcessDefinitionDto">
+      <void property="companyId">
+       <int>1</int>
+      </void>
+      <void property="processDescription">
+       <string>Solicitação de dispensa</string>
+      </void>
+      <void property="processId">
+       <string>BPM - Solicitação de dispensa</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.ProcessDefinitionDto">
+      <void property="companyId">
+       <int>1</int>
+      </void>
+      <void property="processDescription">
+       <string>Solicitação de dispositivos</string>
+      </void>
+      <void property="processId">
+       <string>BPM - Solicitação de dispositivos</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.ProcessDefinitionDto">
+      <void property="companyId">
+       <int>1</int>
+      </void>
+      <void property="processDescription">
+       <string>Solicitação de férias</string>
+      </void>
+      <void property="processId">
+       <string>BPM - Solicitação de férias</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.ProcessDefinitionDto">
+      <void property="companyId">
+       <int>1</int>
+      </void>
+      <void property="processDescription">
+       <string>Solicitação de hora extra</string>
+      </void>
+      <void property="processId">
+       <string>BPM - Solicitação de hora extra</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.ProcessDefinitionDto">
+      <void property="companyId">
+       <int>1</int>
+      </void>
+      <void property="processDescription">
+       <string>Solicitação de pagamento</string>
+      </void>
+      <void property="processId">
+       <string>BPM - Solicitação de pagamento</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.ProcessDefinitionDto">
+      <void property="companyId">
+       <int>1</int>
+      </void>
+      <void property="processDescription">
+       <string>Solicitação de Visita Técnica - teste</string>
+      </void>
+      <void property="processId">
+       <string>BPM - Solicitação de Visita Técnica</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.ProcessDefinitionDto">
+      <void property="companyId">
+       <int>1</int>
+      </void>
+      <void property="processDescription">
+       <string>Solicitação para baixa de equipamento - Teste</string>
+      </void>
+      <void property="processId">
+       <string>BPM - Solicitação para baixa de equipamento</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.ProcessDefinitionDto">
+      <void property="companyId">
+       <int>1</int>
+      </void>
+      <void property="processDescription">
+       <string>Teste relatório</string>
+      </void>
+      <void property="processId">
+       <string>BPM - Teste</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.ProcessDefinitionDto">
+      <void property="companyId">
+       <int>1</int>
+      </void>
+      <void property="processDescription">
+       <string>Tindalização - Teste</string>
+      </void>
+      <void property="processId">
+       <string>BPM - Tindalização</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.ProcessDefinitionDto">
+      <void property="companyId">
+       <int>1</int>
+      </void>
+      <void property="processDescription">
+       <string>Verificação de balanças </string>
+      </void>
+      <void property="processId">
+       <string>BPM - Verifcação de balanças</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.ProcessDefinitionDto">
+      <void property="companyId">
+       <int>1</int>
+      </void>
+      <void property="processDescription">
+       <string> Banho Maria - Verificação de temperatura</string>
+      </void>
+      <void property="processId">
+       <string>BPM - Verificação de temperatura - Banho Maria</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.ProcessDefinitionDto">
+      <void property="companyId">
+       <int>1</int>
+      </void>
+      <void property="processDescription">
+       <string>Autoclave Horizontal - Verificação e Monitoramento Teste</string>
+      </void>
+      <void property="processId">
+       <string>BPM - Verificação e Monitoramento Autoclave</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.ProcessDefinitionDto">
+      <void property="companyId">
+       <int>1</int>
+      </void>
+      <void property="processDescription">
+       <string>Check list de revisão periódica</string>
+      </void>
+      <void property="processId">
+       <string>BPM-Check list de revisão periódica</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.ProcessDefinitionDto">
+      <void property="companyId">
+       <int>1</int>
+      </void>
+      <void property="processDescription">
+       <string>Check list dos itens do protocolo e relatório de validação externa</string>
+      </void>
+      <void property="processId">
+       <string>BPM-Checklist dos itens do protocolo</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.ProcessDefinitionDto">
+      <void property="companyId">
+       <int>1</int>
+      </void>
+      <void property="processDescription">
+       <string>Ações corretivas/preventivas</string>
+      </void>
+      <void property="processId">
+       <string>BPM-Controle de ações</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.ProcessDefinitionDto">
+      <void property="companyId">
+       <int>1</int>
+      </void>
+      <void property="processDescription">
+       <string>Processo de Penalidade administrativa</string>
+      </void>
+      <void property="processId">
+       <string>BPM-Processo de Penalidade administrativa</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.ProcessDefinitionDto">
+      <void property="companyId">
+       <int>1</int>
+      </void>
+      <void property="processDescription">
+       <string>Processo de integração de novos colaboradores</string>
+      </void>
+      <void property="processId">
+       <string>BPM-Processodeintegraçãodenovoscoaboradores</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.ProcessDefinitionDto">
+      <void property="companyId">
+       <int>1</int>
+      </void>
+      <void property="processDescription">
+       <string>Qualificação de componentes</string>
+      </void>
+      <void property="processId">
+       <string>BPM-Qualificaçãodecomponentes</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.ProcessDefinitionDto">
+      <void property="companyId">
+       <int>1</int>
+      </void>
+      <void property="processDescription">
+       <string>Registro de Análises - Meio de Cultura Placas</string>
+      </void>
+      <void property="processId">
+       <string>BPM-Registrodeanálises-MeiodeCulturaPlacas</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.ProcessDefinitionDto">
+      <void property="companyId">
+       <int>1</int>
+      </void>
+      <void property="processDescription">
+       <string>Listar Tarefas</string>
+      </void>
+      <void property="processId">
+       <string>FLUIGADHOC</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.ProcessDefinitionDto">
+      <void property="companyId">
+       <int>1</int>
+      </void>
+      <void property="processDescription">
+       <string>Registro de Análises - Bioquímica LÍQUIDO</string>
+      </void>
+      <void property="processId">
+       <string>Registro de Análises - CQ GLUC UP-LACT UP LÍQUIDO</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.ProcessDefinitionDto">
+      <void property="companyId">
+       <int>1</int>
+      </void>
+      <void property="processDescription">
+       <string>Registro de Análises - Bioquímica PÓ</string>
+      </void>
+      <void property="processId">
+       <string>Registro de Análises - CQ GLUC UP-LACT UP PÓ</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.ProcessDefinitionDto">
+      <void property="companyId">
+       <int>1</int>
+      </void>
+      <void property="processDescription">
+       <string>Teste</string>
+      </void>
+      <void property="processId">
+       <string>Teste</string>
+      </void>
+     </object>
+    </void>
+   </object>
+  </void>
+  <void method="put">
+   <string>mecanismo</string>
+   <array class="[Ljava.lang.Object;" length="9">
+    <void index="0">
+     <array class="java.lang.Object" length="2">
+      <void index="0">
+       <string>Atribuição por Associação</string>
+      </void>
+      <void index="1">
+       <string>Associado</string>
+      </void>
+     </array>
+    </void>
+    <void index="1">
+     <array class="java.lang.Object" length="2">
+      <void index="0">
+       <string>Atribuição por Campo de Formulário</string>
+      </void>
+      <void index="1">
+       <string>Campo Formulário</string>
+      </void>
+     </array>
+    </void>
+    <void index="2">
+     <array class="java.lang.Object" length="2">
+      <void index="0">
+       <string>Atribuição por Executor de Atividade</string>
+      </void>
+      <void index="1">
+       <string>Executor Atividade</string>
+      </void>
+     </array>
+    </void>
+    <void index="3">
+     <array class="java.lang.Object" length="2">
+      <void index="0">
+       <string>Atribuição por Grupo</string>
+      </void>
+      <void index="1">
+       <string>Grupo</string>
+      </void>
+     </array>
+    </void>
+    <void index="4">
+     <array class="java.lang.Object" length="2">
+      <void index="0">
+       <string>Atribuição por Grupos do Colaborador</string>
+      </void>
+      <void index="1">
+       <string>Grupos Colaborador</string>
+      </void>
+     </array>
+    </void>
+    <void index="5">
+     <array class="java.lang.Object" length="2">
+      <void index="0">
+       <string>Atribuição por Papel</string>
+      </void>
+      <void index="1">
+       <string>Papel</string>
+      </void>
+     </array>
+    </void>
+    <void index="6">
+     <array class="java.lang.Object" length="2">
+      <void index="0">
+       <string>Atribuição para um Grupo</string>
+      </void>
+      <void index="1">
+       <string>Pool Grupo</string>
+      </void>
+     </array>
+    </void>
+    <void index="7">
+     <array class="java.lang.Object" length="2">
+      <void index="0">
+       <string>Atribuição para um Papel</string>
+      </void>
+      <void index="1">
+       <string>Pool Papel</string>
+      </void>
+     </array>
+    </void>
+    <void index="8">
+     <array class="java.lang.Object" length="2">
+      <void index="0">
+       <string>Atribuição por Usuário</string>
+      </void>
+      <void index="1">
+       <string>Usuário</string>
+      </void>
+     </array>
+    </void>
+   </array>
+  </void>
+  <void method="put">
+   <string>forms</string>
+   <object class="java.util.LinkedList">
+    <void method="add">
+     <object class="com.totvs.technology.ecmrestclient.cardindexpublisher.FormVO">
+      <void property="datasetName">
+       <string>DS_revisaoDocumentos</string>
+      </void>
+      <void property="documentDescription">
+       <string>Formulário do Processo de Revisão de Documentos</string>
+      </void>
+      <void property="documentId">
+       <int>9246</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.technology.ecmrestclient.cardindexpublisher.FormVO">
+      <void property="datasetName">
+       <string>DSFormulariodeAberturadechamadosparaaT.I</string>
+      </void>
+      <void property="documentDescription">
+       <string>Formulário de Abertura de chamados para a T.I</string>
+      </void>
+      <void property="documentId">
+       <int>11901</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.technology.ecmrestclient.cardindexpublisher.FormVO">
+      <void property="datasetName">
+       <string>DSAtadeReuniao</string>
+      </void>
+      <void property="documentDescription">
+       <string>Ata de Reunião</string>
+      </void>
+      <void property="documentId">
+       <int>15717</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.technology.ecmrestclient.cardindexpublisher.FormVO">
+      <void property="datasetName">
+       <string>DSFormulariodeManutencaocorretivadeequipamentos_1709213597066</string>
+      </void>
+      <void property="documentDescription">
+       <string>Formulário de Manutenção corretiva de equipamentos</string>
+      </void>
+      <void property="documentId">
+       <int>16546</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.technology.ecmrestclient.cardindexpublisher.FormVO">
+      <void property="datasetName">
+       <string>DSSolicitacaodeCracha</string>
+      </void>
+      <void property="documentDescription">
+       <string>Solicitação de Crachá</string>
+      </void>
+      <void property="documentId">
+       <int>21619</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.technology.ecmrestclient.cardindexpublisher.FormVO">
+      <void property="datasetName">
+       <string>DSFormulariodeSolicitacaodeadiantamentode13</string>
+      </void>
+      <void property="documentDescription">
+       <string>Formulário de Solicitação de adiantamento de 13</string>
+      </void>
+      <void property="documentId">
+       <int>21629</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.technology.ecmrestclient.cardindexpublisher.FormVO">
+      <void property="datasetName">
+       <string>DSFormulariodeCartadetransferenciadefuncao-setor</string>
+      </void>
+      <void property="documentDescription">
+       <string>Formulário de Carta de transferência de função-setor</string>
+      </void>
+      <void property="documentId">
+       <int>21635</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.technology.ecmrestclient.cardindexpublisher.FormVO">
+      <void property="datasetName">
+       <string>DSFormulariodeSolicitacaodehoraextra</string>
+      </void>
+      <void property="documentDescription">
+       <string>Formulário de Solicitação de hora extra</string>
+      </void>
+      <void property="documentId">
+       <int>21647</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.technology.ecmrestclient.cardindexpublisher.FormVO">
+      <void property="datasetName">
+       <string>DSFormulariodeControledeacoes</string>
+      </void>
+      <void property="documentDescription">
+       <string>Formulário de Controle de ações</string>
+      </void>
+      <void property="documentId">
+       <int>21741</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.technology.ecmrestclient.cardindexpublisher.FormVO">
+      <void property="datasetName">
+       <string>DSFormulariodeSolicitacaodeferias</string>
+      </void>
+      <void property="documentDescription">
+       <string>Formulário de Solicitação de férias</string>
+      </void>
+      <void property="documentId">
+       <int>21742</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.technology.ecmrestclient.cardindexpublisher.FormVO">
+      <void property="datasetName">
+       <string>DSFormulariodeSolicitacaodedispensa</string>
+      </void>
+      <void property="documentDescription">
+       <string>Formulário de Solicitação de dispensa</string>
+      </void>
+      <void property="documentId">
+       <int>21743</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.technology.ecmrestclient.cardindexpublisher.FormVO">
+      <void property="datasetName">
+       <string>DSFormulariodeReanalisedeProdutos-AmostraRetencao</string>
+      </void>
+      <void property="documentDescription">
+       <string>Formulário de  Reanálise de Produtos-Amostra Retenção</string>
+      </void>
+      <void property="documentId">
+       <int>21744</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.technology.ecmrestclient.cardindexpublisher.FormVO">
+      <void property="datasetName">
+       <string>DSFormulariodeQualificacaodosParceirosdeNegocios</string>
+      </void>
+      <void property="documentDescription">
+       <string>Formulário de Qualificação dos Parceiros de Negócios</string>
+      </void>
+      <void property="documentId">
+       <int>21745</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.technology.ecmrestclient.cardindexpublisher.FormVO">
+      <void property="datasetName">
+       <string>DSFormulariodeDevolucaodeprodutos</string>
+      </void>
+      <void property="documentDescription">
+       <string>Formulário de Devolução de produtos</string>
+      </void>
+      <void property="documentId">
+       <int>21746</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.technology.ecmrestclient.cardindexpublisher.FormVO">
+      <void property="datasetName">
+       <string>DSFormulariodeRenovacaodedocumentosregulatorios</string>
+      </void>
+      <void property="documentDescription">
+       <string>Formulário de Renovação de documentos regulatórios</string>
+      </void>
+      <void property="documentId">
+       <int>21747</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.technology.ecmrestclient.cardindexpublisher.FormVO">
+      <void property="datasetName">
+       <string>DSFormulariodeSolicitacaodecontratacaodecolaboradores</string>
+      </void>
+      <void property="documentDescription">
+       <string>Formulário de Solicitação de contratação de colaboradores</string>
+      </void>
+      <void property="documentId">
+       <int>21748</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.technology.ecmrestclient.cardindexpublisher.FormVO">
+      <void property="datasetName">
+       <string>DSFormulariodeSolicitacaodedemissao</string>
+      </void>
+      <void property="documentDescription">
+       <string>Formulário de Solicitação de demissão</string>
+      </void>
+      <void property="documentId">
+       <int>22846</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.technology.ecmrestclient.cardindexpublisher.FormVO">
+      <void property="datasetName">
+       <string>DSFormulariodeManutencaoPredial</string>
+      </void>
+      <void property="documentDescription">
+       <string>Formulário de Manutenção Predial</string>
+      </void>
+      <void property="documentId">
+       <int>22848</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.technology.ecmrestclient.cardindexpublisher.FormVO">
+      <void property="datasetName">
+       <string>DSFormulariodeSolicitacaodepagamento</string>
+      </void>
+      <void property="documentDescription">
+       <string>Formulário de Solicitação de pagamento</string>
+      </void>
+      <void property="documentId">
+       <int>22989</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.technology.ecmrestclient.cardindexpublisher.FormVO">
+      <void property="datasetName">
+       <string>DSFormulariodeSolicitacaodedispositivos</string>
+      </void>
+      <void property="documentDescription">
+       <string>Formulário de Solicitação de dispositivos</string>
+      </void>
+      <void property="documentId">
+       <int>23019</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.technology.ecmrestclient.cardindexpublisher.FormVO">
+      <void property="datasetName">
+       <string>DSFormulariodeInvestigacaodacausaraiz</string>
+      </void>
+      <void property="documentDescription">
+       <string>Formulário de Investigação da causa raiz</string>
+      </void>
+      <void property="documentId">
+       <int>23029</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.technology.ecmrestclient.cardindexpublisher.FormVO">
+      <void property="datasetName">
+       <string>DSFormulariodeRegistrodeRPNC</string>
+      </void>
+      <void property="documentDescription">
+       <string>Formulário de Registro de RPNC</string>
+      </void>
+      <void property="documentId">
+       <int>23030</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.technology.ecmrestclient.cardindexpublisher.FormVO">
+      <void property="datasetName">
+       <string>DSFormulariodeReclamacaodeclientese-ouDuvidasTecnicas</string>
+      </void>
+      <void property="documentDescription">
+       <string>Formulário de Reclamação de clientes</string>
+      </void>
+      <void property="documentId">
+       <int>23079</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.technology.ecmrestclient.cardindexpublisher.FormVO">
+      <void property="datasetName">
+       <string>DSFormulariodeControledemudancas</string>
+      </void>
+      <void property="documentDescription">
+       <string>Formulário de Controle de mudanças</string>
+      </void>
+      <void property="documentId">
+       <int>23291</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.technology.ecmrestclient.cardindexpublisher.FormVO">
+      <void property="datasetName">
+       <string>DSFormulariodeAuditoriaexterna-Parceirosdenegocios</string>
+      </void>
+      <void property="documentDescription">
+       <string>Formulário de Auditoria externa - Parceiros de negócios</string>
+      </void>
+      <void property="documentId">
+       <int>23361</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.technology.ecmrestclient.cardindexpublisher.FormVO">
+      <void property="datasetName">
+       <string>DSFormulariodeAuditoriaexterna-Parceirosdenegociosteste</string>
+      </void>
+      <void property="documentDescription">
+       <string>Formulário de Auditoria externa - Parceiros de negócios</string>
+      </void>
+      <void property="documentId">
+       <int>23561</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.technology.ecmrestclient.cardindexpublisher.FormVO">
+      <void property="datasetName">
+       <string>DSFormulariodeAtaderevisaogerencial</string>
+      </void>
+      <void property="documentDescription">
+       <string>Formulário de Ata de revisão gerencial</string>
+      </void>
+      <void property="documentId">
+       <int>23573</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.technology.ecmrestclient.cardindexpublisher.FormVO">
+      <void property="datasetName">
+       <string>DSFormulariodeAuditoriainternadaqualidade-teste</string>
+      </void>
+      <void property="documentDescription">
+       <string>Formulário de Auditoria interna da qualidade</string>
+      </void>
+      <void property="documentId">
+       <int>23584</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.technology.ecmrestclient.cardindexpublisher.FormVO">
+      <void property="datasetName">
+       <string>DSFormulariodeAvaliacaodedesempenhodoscolaboradores</string>
+      </void>
+      <void property="documentDescription">
+       <string>Formulário de Avaliação de desempenho dos colaboradores</string>
+      </void>
+      <void property="documentId">
+       <int>23662</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.technology.ecmrestclient.cardindexpublisher.FormVO">
+      <void property="datasetName">
+       <string>DSFormulariodeAvaliacaodedesempenhodelideranca</string>
+      </void>
+      <void property="documentDescription">
+       <string>Formulário de Avaliação de desempenho de liderança</string>
+      </void>
+      <void property="documentId">
+       <int>23689</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.technology.ecmrestclient.cardindexpublisher.FormVO">
+      <void property="datasetName">
+       <string>DSFormulariodeDuvidasTecnicas-Teste</string>
+      </void>
+      <void property="documentDescription">
+       <string>Formulário de Dúvidas Técnicas</string>
+      </void>
+      <void property="documentId">
+       <int>23887</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.technology.ecmrestclient.cardindexpublisher.FormVO">
+      <void property="datasetName">
+       <string>DSFormulariodeControledetemperaturadearea10a30C</string>
+      </void>
+      <void property="documentDescription">
+       <string>Formulário de  Controle de temperatura de área 10 a 30º C</string>
+      </void>
+      <void property="documentId">
+       <int>23987</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.technology.ecmrestclient.cardindexpublisher.FormVO">
+      <void property="datasetName">
+       <string>DSFormulariodeControledetemperaturadearea10a30Cate80%</string>
+      </void>
+      <void property="documentDescription">
+       <string>Formulário de Controle de temperatura de área 10 a 30°C até 80%</string>
+      </void>
+      <void property="documentId">
+       <int>23989</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.technology.ecmrestclient.cardindexpublisher.FormVO">
+      <void property="datasetName">
+       <string>DSFormulariodeControledetemperaturaeumidadedearea15a25Cate80%</string>
+      </void>
+      <void property="documentDescription">
+       <string>Formulário de Controle de temperatura e umidade de área 15 a 25° C até 80%</string>
+      </void>
+      <void property="documentId">
+       <int>23991</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.technology.ecmrestclient.cardindexpublisher.FormVO">
+      <void property="datasetName">
+       <string>DSFormulariodeControledetemperaturadearea18a25Cate80%</string>
+      </void>
+      <void property="documentDescription">
+       <string>Formulário de Controle de temperatura de área 18 a 25°C até 80%</string>
+      </void>
+      <void property="documentId">
+       <int>23992</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.technology.ecmrestclient.cardindexpublisher.FormVO">
+      <void property="datasetName">
+       <string>DSFormulariodeControledeumidadeate60%-teste</string>
+      </void>
+      <void property="documentDescription">
+       <string>Formulário de Controle de umidade até 60%</string>
+      </void>
+      <void property="documentId">
+       <int>23996</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.technology.ecmrestclient.cardindexpublisher.FormVO">
+      <void property="datasetName">
+       <string>DSFormulariodeLimpezaemanutencaopreventivadeequipamentos</string>
+      </void>
+      <void property="documentDescription">
+       <string>Formulário de Limpeza e manutenção preventiva de equipamentos</string>
+      </void>
+      <void property="documentId">
+       <int>24266</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.technology.ecmrestclient.cardindexpublisher.FormVO">
+      <void property="datasetName">
+       <string>DSFormulariodeRequerimentodousuario-Teste</string>
+      </void>
+      <void property="documentDescription">
+       <string>Formulário de Requerimento do usuário - Teste</string>
+      </void>
+      <void property="documentId">
+       <int>24268</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.technology.ecmrestclient.cardindexpublisher.FormVO">
+      <void property="datasetName">
+       <string>DSFormulariodeMonitoramentodetemperatura-EquipamentosControledequalidade</string>
+      </void>
+      <void property="documentDescription">
+       <string>Formulário de Monitoramento de temperatura - Equipamentos Controle de qualidade</string>
+      </void>
+      <void property="documentId">
+       <int>24314</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.technology.ecmrestclient.cardindexpublisher.FormVO">
+      <void property="datasetName">
+       <string>DSFormulariodeMonitoramentodetemperaturaEquipamentosmeiodecultura-teste</string>
+      </void>
+      <void property="documentDescription">
+       <string>Formulário de Monitoramento de temperatura – Equipamentos meio de cultura</string>
+      </void>
+      <void property="documentId">
+       <int>24318</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.technology.ecmrestclient.cardindexpublisher.FormVO">
+      <void property="datasetName">
+       <string>DSFormulariodeMonitoramentodetemperatura-Equipamentosalmoxarifadodesuprimentos-Teste</string>
+      </void>
+      <void property="documentDescription">
+       <string>Formulário de Monitoramento de temperatura - Equipamentos almoxarifado de suprimentos</string>
+      </void>
+      <void property="documentId">
+       <int>24319</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.technology.ecmrestclient.cardindexpublisher.FormVO">
+      <void property="datasetName">
+       <string>DSFormulariodeMonitoramentodetemperatura-Equipamentoslogistica-Teste</string>
+      </void>
+      <void property="documentDescription">
+       <string>Formulário de Monitoramento de temperatura - Equipamentos logística</string>
+      </void>
+      <void property="documentId">
+       <int>24332</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.technology.ecmrestclient.cardindexpublisher.FormVO">
+      <void property="datasetName">
+       <string>DSFormulariodeVerificacaodebalancas</string>
+      </void>
+      <void property="documentDescription">
+       <string>Formulário de Verificação de balanças</string>
+      </void>
+      <void property="documentId">
+       <int>24530</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.technology.ecmrestclient.cardindexpublisher.FormVO">
+      <void property="datasetName">
+       <string>DSFormulariodeVerificacaodetemperatura-BanhoMaria-Teste</string>
+      </void>
+      <void property="documentDescription">
+       <string>Formulário de Verificação de temperatura - Banho Maria</string>
+      </void>
+      <void property="documentId">
+       <int>24534</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.technology.ecmrestclient.cardindexpublisher.FormVO">
+      <void property="datasetName">
+       <string>DSFormulariodeVerificacaoeMonitoramento-Autoclavehorizontal</string>
+      </void>
+      <void property="documentDescription">
+       <string>Formulário de Verificação e Monitoramento - Autoclave horizontal</string>
+      </void>
+      <void property="documentId">
+       <int>24537</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.technology.ecmrestclient.cardindexpublisher.FormVO">
+      <void property="datasetName">
+       <string>DSFormulariodeEnviodeequipamentosparacalibracao-Teste</string>
+      </void>
+      <void property="documentDescription">
+       <string>Formulário de Envio de equipamentos para terceiros</string>
+      </void>
+      <void property="documentId">
+       <int>24554</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.technology.ecmrestclient.cardindexpublisher.FormVO">
+      <void property="datasetName">
+       <string>DSFormulariodeEnviodeequipamentoscalibracao-Teste</string>
+      </void>
+      <void property="documentDescription">
+       <string>Formulário de Envio de equipamentos calibração - Teste</string>
+      </void>
+      <void property="documentId">
+       <int>24555</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.technology.ecmrestclient.cardindexpublisher.FormVO">
+      <void property="datasetName">
+       <string>DSFormulariodeAutoclavevertical-Descontaminacao-Teste</string>
+      </void>
+      <void property="documentDescription">
+       <string>Formulário de Autoclave vertical - Descontaminação</string>
+      </void>
+      <void property="documentId">
+       <int>24561</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.technology.ecmrestclient.cardindexpublisher.FormVO">
+      <void property="datasetName">
+       <string>DSFormulariodeTindalizacao-Teste</string>
+      </void>
+      <void property="documentDescription">
+       <string>Formulário de Tindalização - Teste</string>
+      </void>
+      <void property="documentId">
+       <int>24562</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.technology.ecmrestclient.cardindexpublisher.FormVO">
+      <void property="datasetName">
+       <string>DSFormulariodeSolicitacaoparabaixadeequipamento</string>
+      </void>
+      <void property="documentDescription">
+       <string>Formulário de Solicitação para baixa de equipamento</string>
+      </void>
+      <void property="documentId">
+       <int>24614</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.technology.ecmrestclient.cardindexpublisher.FormVO">
+      <void property="datasetName">
+       <string>DSFormulariodeSolicitacaodeVisitaTecnica</string>
+      </void>
+      <void property="documentDescription">
+       <string>Formulário de Solicitação de Visita Técnica</string>
+      </void>
+      <void property="documentId">
+       <int>24616</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.technology.ecmrestclient.cardindexpublisher.FormVO">
+      <void property="datasetName">
+       <string>DSFormulariodeLimpezaemanutencaopreventivadeequipamentos-Semanal</string>
+      </void>
+      <void property="documentDescription">
+       <string>Formulário de Limpeza e manutenção preventiva de equipamentos - Semanal</string>
+      </void>
+      <void property="documentId">
+       <int>24944</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.technology.ecmrestclient.cardindexpublisher.FormVO">
+      <void property="datasetName">
+       <string>DSFormulariodeLimpezaemanutencaopreventivadeequipamentos-Mensal</string>
+      </void>
+      <void property="documentDescription">
+       <string>Formulário de Limpeza e manutenção preventiva de equipamentos - Mensal</string>
+      </void>
+      <void property="documentId">
+       <int>24945</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.technology.ecmrestclient.cardindexpublisher.FormVO">
+      <void property="datasetName">
+       <string>DSFormulariodeLimpezapreventivadeequipamentos-Quinzenal</string>
+      </void>
+      <void property="documentDescription">
+       <string>Formulário de Limpeza preventiva de equipamentos - Quinzenal</string>
+      </void>
+      <void property="documentId">
+       <int>24946</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.technology.ecmrestclient.cardindexpublisher.FormVO">
+      <void property="datasetName">
+       <string>DSFormulariodeManutencaopreventivadeequipamentos-Semestral</string>
+      </void>
+      <void property="documentDescription">
+       <string>Formulário de Manutenção preventiva de equipamentos - Semestral</string>
+      </void>
+      <void property="documentId">
+       <int>24959</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.technology.ecmrestclient.cardindexpublisher.FormVO">
+      <void property="datasetName">
+       <string>DSFormulariodeManutencaopreventivadeequipamentos-Anual</string>
+      </void>
+      <void property="documentDescription">
+       <string>Formulário de Manutenção preventiva de equipamentos - Anual</string>
+      </void>
+      <void property="documentId">
+       <int>24960</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.technology.ecmrestclient.cardindexpublisher.FormVO">
+      <void property="datasetName">
+       <string>DSFormulariodeTesterelatorio</string>
+      </void>
+      <void property="documentDescription">
+       <string>Formulário de Teste relatório</string>
+      </void>
+      <void property="documentId">
+       <int>25617</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.technology.ecmrestclient.cardindexpublisher.FormVO">
+      <void property="datasetName">
+       <string>DSFormulariodeConsumodeinsumos</string>
+      </void>
+      <void property="documentDescription">
+       <string>Formulário de Consumo de insumos</string>
+      </void>
+      <void property="documentId">
+       <int>29762</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.technology.ecmrestclient.cardindexpublisher.FormVO">
+      <void property="datasetName">
+       <string>DSRegistrodeAnalises-ControledequalidadeGLUCUP-LACTUPLIQUIDO</string>
+      </void>
+      <void property="documentDescription">
+       <string>Registro de Análises - Controle de qualidade GLUC UP-LACT UP LÍQUIDO</string>
+      </void>
+      <void property="documentId">
+       <int>39087</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.technology.ecmrestclient.cardindexpublisher.FormVO">
+      <void property="datasetName">
+       <string>DSRegistrodeAnalises-ControledequalidadeGLUCUP-LACTUPPO</string>
+      </void>
+      <void property="documentDescription">
+       <string>Registro de Análises - Controle de qualidade GLUC UP-LACT UP PÓ</string>
+      </void>
+      <void property="documentId">
+       <int>39088</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.technology.ecmrestclient.cardindexpublisher.FormVO">
+      <void property="datasetName">
+       <string>DSProcessodePenalidadeadministrativa</string>
+      </void>
+      <void property="documentDescription">
+       <string>Processo de Penalidade administrativa</string>
+      </void>
+      <void property="documentId">
+       <int>39408</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.technology.ecmrestclient.cardindexpublisher.FormVO">
+      <void property="datasetName">
+       <string>DSChecklistderevisaoperiodica</string>
+      </void>
+      <void property="documentDescription">
+       <string>Check list de revisão periódica</string>
+      </void>
+      <void property="documentId">
+       <int>39544</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.technology.ecmrestclient.cardindexpublisher.FormVO">
+      <void property="datasetName">
+       <string>DSChecklistdositensdoprotocoloerelatoriodevalidacao</string>
+      </void>
+      <void property="documentDescription">
+       <string>Check list dos itens do protocolo e relatório de validação</string>
+      </void>
+      <void property="documentId">
+       <int>39565</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.technology.ecmrestclient.cardindexpublisher.FormVO">
+      <void property="datasetName">
+       <string>DSRegistrodeanalises-meioculturaplacas</string>
+      </void>
+      <void property="documentDescription">
+       <string>Registro de análises - meio cultura placas</string>
+      </void>
+      <void property="documentId">
+       <int>42137</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.technology.ecmrestclient.cardindexpublisher.FormVO">
+      <void property="datasetName">
+       <string>DSProcessodeintegracaodenovoscolaboradores</string>
+      </void>
+      <void property="documentDescription">
+       <string>Processo de integração de novos colaboradores</string>
+      </void>
+      <void property="documentId">
+       <int>42275</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.technology.ecmrestclient.cardindexpublisher.FormVO">
+      <void property="datasetName">
+       <string>DSQualificacaodecomponentes</string>
+      </void>
+      <void property="documentDescription">
+       <string>Qualificação de componentes</string>
+      </void>
+      <void property="documentId">
+       <int>43202</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.technology.ecmrestclient.cardindexpublisher.FormVO">
+      <void property="datasetName">
+       <string>DSCartadeTransferenciadefuncao-setor</string>
+      </void>
+      <void property="documentDescription">
+       <string>Carta de Transferência de função-setor</string>
+      </void>
+      <void property="documentId">
+       <int>43625</int>
+      </void>
+     </object>
+    </void>
+   </object>
+  </void>
+ </object>
+</java>

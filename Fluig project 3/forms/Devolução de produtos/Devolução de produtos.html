@@ -1,0 +1,477 @@
+<html>
+<head>
+	<link type="text/css" rel="stylesheet" href="/style-guide/css/fluig-style-guide.min.css"/>
+	<script type="text/javascript" src="/portal/resources/js/jquery/jquery.js"></script>
+	<script type="text/javascript" src="/portal/resources/js/jquery/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="/portal/resources/js/mustache/mustache-min.js"></script>
+	<script type="text/javascript" src="/style-guide/js/fluig-style-guide.min.js" charset="utf-8"></script>
+	
+	<style>
+	.info-textarea2 {
+		width: 100%;
+		color: #000000; /* Cor do texto preta */
+		border: 1px solid #cccccc; /* Borda cinza clara */
+		border-radius: 4px;
+		background-color: #DCDCDC;
+	}
+	</style>
+</head>
+<body>
+<div class="fluig-style-guide">
+<form name="form" role="form">
+
+<div id="panelwarning1" class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">Produto</h3>
+    </div>
+    <div class="panel-body">
+		 <div class="row">
+		    <div class="form-group col-md-6">
+		        <label for="solicitante">Responsável pela Autorização</label>
+		        <input type="text" name="solicitante" class="form-control" id="solicitante" placeholder="Coloque o nome do responsável">
+		    </div>
+		    <div class="form-group col-md-2">
+		        <label for="data_solicitacao">Data da Solicitação</label>
+		        <input type="text" name="data_solicitacao" class="form-control" id="data_solicitacao" placeholder="Coloque a data">
+		    </div>
+			<div class="form-group col-md-2">
+			    <label for="procedencia">N° Solicitação Fluig</label>
+			    <input type="text" id="numeroSolicitacao" name="numeroSolicitacao" class="form-control" readonly>
+			</div>
+		</div>
+		
+		<div class="row">
+		    <div class="form-group col-md-6">
+		    <label>Origem</label>
+		        <div class="radio">
+		            <label><input type="radio" name="origemm" id="origemm" value="ciff">Solicitação cliente - Frete CIF</label></br>
+		            <label><input type="radio" name="origemm" id="origemm" value="fobb">SAC - Frete FOB</label></br>
+		        </div>		
+		    </div>
+		</div>
+		<div class="row">
+		    <div class="form-group col-md-6">
+		        <label for="motivo">Motivo</label>
+		        <input type="text" name="motivo" class="form-control" id="motivo" placeholder="Coloque o motivo">
+		    </div>
+		    	    <div class="form-group col-md-6">
+		        <label for="empresa">Empresa responsável pela devolução</label>
+		        <input type="text" name="empresa" class="form-control" id="empresa" placeholder="Coloque a empresa">
+		    </div>
+		</div>
+		<div class="row">
+		    <div class="form-group col-md-6">
+		        <label for="nome_contato">Nome da pessoa de Contato</label>
+		        <input type="text" name="nome_contato" class="form-control" id="nome_contato" placeholder="Coloque nome do contato">
+		    </div>
+		    <div class="form-group col-md-6">
+		        <label for="email_telefone">E-mail ou Telefone</label>
+		        <input type="text" name="email_telefone" class="form-control" id="email_telefone" placeholder="Coloque o e-mail/telefone">
+		    </div>
+		</div>
+		
+		<div class="row">
+  <div>
+    <table class="table" id="tabelaRegistros3" dataset="linhaDinamicaDataset3" datadatasetkey="myDataset3" datadatasetvalue="dynamicTableData3">
+      <thead>
+        <tr>
+          <th class="col-md-4">Código/Descrição</th>
+          <th class="col-md-2">Lote</th>
+          <th class="col-md-2">Validade</th>
+          <th class="col-md-2">Quantidade</th>
+          <th class="col-md-2">NF de Origem</th>
+          <th class="col-md-1">Ações</th> <!-- Coluna para o botão de remover -->
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><textarea name="codigo_descricao_c1" class="form-control" rows="2" placeholder="Digite o código e a descrição"></textarea></td>
+          <td><input type="text" name="lote_c1" class="form-control" placeholder="Digite o lote"></td>
+          <td><input type="date" name="validade_c1" class="form-control"></td>
+          <td><input type="text" name="quantidade_c1" class="form-control" placeholder="Digite a quantidade"></td>
+          <td><input type="text" name="nf_origem_c1" class="form-control" placeholder="Digite a NF"></td>
+          <td><button type="button" onclick="removeRow5(this)"><i class="flaticon flaticon-trash icon-md" aria-hidden="true"></i></button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<button type="button" class="btn btn-info" onclick="addNewRecord3()" id="novoRegistroBtn3">Novo Registro</button>
+<button type="button" class="btn btn-success" onclick="saveAllTables3()">Salvar Dados</button>
+<input type="hidden" name="linhaDinamicaDataset3" id="linhaDinamicaDataset3">
+		
+		
+    </div>
+</div>
+
+<div id="panelwarningC" class="panel panel-warning">
+    <div class="panel-heading">
+        <h3 class="panel-title">Comercial</h3>
+    </div>
+    <div class="panel-body">
+		 
+		<div class="row">
+    <div class="form-group col-md-6">
+        <div class="radio">
+            <label><input type="radio" name="comercial_validacao" id="comercial_validacao" value="comercial_aprovado">Aprovado</label></br>
+            <label><input type="radio" name="comercial_validacao" id="comercial_validacao" value="comercial_reprovado">Reprovado</label></br>
+            <label><input type="radio" name="comercial_validacao" id="comercial_validacao" value="comercial_arrumar">Arrumar</label>
+        </div>		
+    </div>
+</div>
+<div class="row">
+    <div class="form-group col-md-12">
+        <label for="consideracoes_comerc">Observação</label>
+        <textarea rows="3" name="consideracoes_comerc" id="consideracoes_comerc" class="form-control"></textarea>
+    </div>
+</div>
+
+
+    </div>
+</div>
+
+
+<div id="panelreprovacao" class="panel panel-danger">
+    <div class="panel-heading">
+        <h3 class="panel-title">Informativo - Reprovação</h3>
+    </div>
+    <div class="panel-body">
+       <div class="row"></div>
+	    <div class="form-group col-md-12">
+	        <label for="informativo2"></label>
+	        <textarea rows="2"  name="informativo2" id="infoText2" class="info-textarea2" style="text-align: center;" readonly> Informo que esse processo foi finalizado com reprovação, ao terminar a leitura clique em enviar.</textarea>
+	    </div>
+	    </div>
+    </div>
+
+
+
+
+
+<div id="panelwarningS" class="panel panel-warning">
+    <div class="panel-heading">
+        <h3 class="panel-title">Notificação SAC</h3>
+    </div>
+    <div class="panel-body">
+		 
+		   
+		<div class="row">
+    <div class="form-group col-md-12">
+        <label for="informativo"></label>
+        <textarea rows="2"  name="informativo3" id="infoText3" class="info-textarea2" style="text-align: center;" readonly>Informo que essa devolução foi aprovada. Ao terminar a leitura clique em enviar para começar o processo. </textarea>
+    </div>
+    </div>
+    </div>
+</div>
+
+
+<div id="panelwarning4" class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">Faturamento</h3>
+    </div>
+    <div class="panel-body">
+    <div class="row">
+        <div class="form-group col-md-4">
+		        <label for="n_nf_devolucao">Se distribuidor</label>
+		        <input type="text" name="n_nf_devolucao" class="form-control" id="n_nf_devolucao" placeholder="Anexar NF de devolução">
+		    </div>
+		<div class="form-group col-md-6">
+	        <label for="resp_faturamento">Se cliente</label>
+	        <input type="text" name="resp_faturamento" class="form-control" id="resp_faturamento" placeholder="Faturamento gera NF devolução">
+	    </div>
+		</div>
+		<div class="row">
+		    <div class="form-group col-md-6">
+		    <label>Movimentação estoque - Produtos enviados p/ Depósito</label>
+		        <div class="radio">
+		            <label><input type="radio" name="transferencia" id="transferencia" value="almox">07 - Almox. Produto Acabado</label></br>
+		            <label><input type="radio" name="transferencia" id="transferencia" value="quarentena">06 - Quarentena</label></br>
+		            <label><input type="radio" name="transferencia" id="transferencia" value="bloqueado">12 - Bloqueado</label></br>
+		            <label><input type="radio" name="transferencia" id="transferencia" value="descarte">11 - Descarte</label>
+		        </div>		
+		    </div>
+		</div>
+    </div>
+</div>
+
+<div id="panelwarning2" class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">Responsável pela coleta</h3>
+    </div>
+    <div class="panel-body">
+        <div class="row">
+		    <div class="form-group col-md-4">
+		    <label>Solicitar Coleta</label>
+		        <div class="radio">
+		            <label><input type="radio" name="solicitar_coleta" id="solicitar_coleta" value="frete_fob">Sim - Frete FOB</label></br>
+		            <label><input type="radio" name="solicitar_coleta" id="solicitar_coleta" value="frete_cif">Não - Frete CIF</label>
+		        </div>		
+		    </div>
+		    
+		    </div>
+    </div>
+</div>
+
+<div id="panelwarning3" class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">Responsável pelo recebimento da devolução</h3>
+    </div>
+    <div class="panel-body">
+    <label for="datacalendario">Data de recebimento do produto na Newprov</label>
+		<div class="row">
+		    
+		     <div class="form-group col-md-2">
+		        <input type="date" name="datacalendario" id="datacalendario" class="form-control" placeholder="Data">
+		    </div>
+		</div>
+		
+		<div class="row">
+		     
+			<div class="form-group col-md-6">
+		        <label for="resp">Responsável</label>
+		        <input type="text" name="resp" class="form-control" id="resp" placeholder="Coloque o nome do responsável">
+		    </div>
+		    <div class="form-group col-md-6">
+		        <label for="se_perecivel">Se perecível registrar a temperatura de recebimento</label>
+		        <input type="text" name="se_perecivel" class="form-control" id="se_perecivel" placeholder="Coloque a temperatura">
+		    </div>
+		    
+		</div>
+		
+    </div>
+</div>
+
+
+
+<div id="panelwarning5" class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">Preenchimento pelo controle de qualidade</h3>
+    </div>
+    <div class="panel-body">
+		 <div class="row">
+		    <div class="form-group col-md-6">
+		    <label>Necessário abertura de processo p/Reanálise de produtos/amostra de retenção?</label>
+		        <div class="radio">
+		            <label><input type="radio" name="processo_reanalise" id="processo_reanalise" value="sim">Sim</label><input type="text" name="descricao_outros" id="descricao_outros" style="display: inline-block; width: 250px; border: none; border-bottom: 1px solid #000; background: none; outline: none; height: 20px;" placeholder="Colocar n° solic. reanálise de produtos/AR"></br>
+		            <label><input type="radio" name="processo_reanalise" id="processo_reanalise" value="nao">Não</label>
+		        </div>		
+		    </div>
+		    </div>
+		     <div class="row">
+		    <div class="form-group col-md-6">
+		    <label>Movimentação estoque pelo CQ</label>
+		        <div class="radio">
+		            <label><input type="radio" name="transferencia2" id="transferencia2" value="almoxx">07 - Reintegrar estoque Almox. Produto Acabado</label></br>
+		            <label><input type="radio" name="transferencia2" id="transferencia2" value="retrabalho">12 - Retrabalho</label></br>
+		            <label><input type="radio" name="transferencia2" id="transferencia2" value="descarte">11 - Descarte</label>
+		        </div>		
+		    </div>
+		</div>
+		<div class="row">
+		    <div class="form-group col-md-12">
+		        <label for="consideracoes">Observação</label>
+		        <textarea rows="3" name="consideracoes" id="consideracoes" class="form-control"></textarea>
+		    </div>
+		</div>
+    </div>
+</div>
+
+
+<div id="panelmovimentacao" class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">Movimentação</h3>
+    </div>
+    <div class="panel-body">
+        <div class="row">
+    <div class="form-group col-md-12">
+        <label for="movimentacao">Foi realizado a movimentação físico e sistema?</label>
+        <input type="text" name="movimentacao" class="form-control" id="movimentacao" placeholder="">
+    </div>
+</div>
+    </div>
+</div>
+
+<div id="panelwarning6" class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">Gerar desconto dos produtos</h3>
+    </div>
+    <div class="panel-body">
+		 
+		   
+		<div class="row">
+		    <div class="form-group col-md-12">
+		        <label for="consideracoes_faturamento">Observação</label>
+		        <textarea rows="3" name="consideracoes_faturamento" id="consideracoes_faturamento" class="form-control"></textarea>
+		    </div>
+		</div>
+    </div>
+</div>
+
+<div id="panelwarning7" class="panel panel-warning">
+    <div class="panel-heading">
+        <h3 class="panel-title">Notificação</h3>
+    </div>
+    <div class="panel-body">
+		 
+		   
+		<div class="row">
+    <div class="form-group col-md-12">
+        <label for="informativo"></label>
+        <textarea rows="2"  name="informativo" id="infoText2" class="info-textarea2" style="text-align: center;" readonly>Informo que essa devolução foi finalizada com sucesso, por favor informar cliente. Ao terminar a leitura clique em enviar para finalizar o formulário. </textarea>
+    </div>
+    </div>
+    </div>
+</div>
+<input type="hidden" id="returnFromActivity5" name="returnFromActivity5" value="false">
+</form>
+</div>
+<script>
+        function preencherDataAtual() {
+            var dataAtual = new Date();
+            
+            // Formatação da data e hora no padrão brasileiro
+            var ano = dataAtual.getFullYear();
+            var mes = String(dataAtual.getMonth() + 1).padStart(2, '0'); // Meses começam em 0
+            var dia = String(dataAtual.getDate()).padStart(2, '0');
+            var horas = String(dataAtual.getHours()).padStart(2, '0');
+            var minutos = String(dataAtual.getMinutes()).padStart(2, '0');
+            
+            // Formato 'DD/MM/YYYY HH:mm' para texto
+            var dataFormatada = `${dia}/${mes}/${ano} ${horas}:${minutos}`; 
+
+            // Preencher os campos se estiverem vazios
+            if (document.getElementById("panelwarning1").style.display !== "none") {
+                var campoDataInicio = document.getElementById("data_solicitacao");
+                if (!campoDataInicio.value) { // Verifica se o campo está vazio
+                    campoDataInicio.value = dataFormatada; // Preenche com a data atual
+                }
+            }
+            
+            if (document.getElementById("panel2").style.display !== "none") {
+                var campoDataInicio2 = document.getElementById("datainicio2");
+                if (!campoDataInicio2.value) {
+                    campoDataInicio2.value = dataFormatada;
+                }
+            }
+            
+            if (document.getElementById("panel3").style.display !== "none") {
+                var campoDataFinal = document.getElementById("data_final_esterilidade");
+                if (!campoDataFinal.value) {
+                    campoDataFinal.value = dataFormatada;
+                }
+            }
+            
+            if (document.getElementById("panel4").style.display !== "none") {
+                var campoCalendario = document.getElementById("data_final_microbiologico");
+                if (!campoCalendario.value) {
+                    campoCalendario.value = dataFormatada;
+                }
+                var campoCalendario = document.getElementById("datacalendario");
+                if (!campoCalendario.value) {
+                    campoCalendario.value = dataFormatada; // Preenche apenas com a data
+                }
+            }
+        }
+
+        // Chama a função ao carregar a página
+        window.onload = function() {
+            preencherDataAtual();
+        };
+        
+
+        // Coloque todo o código JavaScript fornecido aqui
+        let record3IdCounter = 1; // Começa com 1 para corresponder ao exemplo HTML
+
+        function addNewRecord3() {
+            console.log("Adicionando nova linha na Tabela 3");
+            const tabela = document.getElementById('tabelaRegistros3').getElementsByTagName('tbody')[0];
+            const newRow = tabela.insertRow();
+
+            const index = record3IdCounter++; // Incrementa o contador para gerar um ID único
+            console.log("Novo index para Tabela 3:", index);
+
+            const cells = [
+                `<textarea name="codigo_descricao_c${index}" class="form-control" rows="2" placeholder="Digite o código e a descrição"></textarea>`,
+                `<input type="text" name="lote_c${index}" class="form-control" placeholder="Digite o lote">`,
+                `<input type="date" name="validade_c${index}" class="form-control">`,
+                `<input type="text" name="quantidade_c${index}" class="form-control" placeholder="Digite a quantidade">`,
+                `<input type="text" name="nf_origem_c${index}" class="form-control" placeholder="Digite a NF">`,
+                `<button type="button" onclick="removeRow5(this)"><i class="flaticon flaticon-trash icon-md" aria-hidden="true"></i></button>`
+            ];
+
+            cells.forEach((cellHtml, cellIndex) => {
+                const newCell = newRow.insertCell(cellIndex);
+                newCell.innerHTML = cellHtml;
+            });
+
+            saveTableData3();
+        }
+
+        function saveTableData3() {
+            console.log("Salvando dados da Tabela 3");
+            const tabela = document.getElementById('tabelaRegistros3').getElementsByTagName('tbody')[0];
+            const rows = tabela.rows;
+            const data = [];
+
+            for (let i = 0; i < rows.length; i++) {
+                const row = rows[i];
+                const rowData = {
+                    codigo_descricao: row.cells[0].children[0].value || '',
+                    lote: row.cells[1].children[0].value || '',
+                    validade: row.cells[2].children[0].value || '',
+                    quantidade: row.cells[3].children[0].value || '',
+                    nf_origem: row.cells[4].children[0].value || ''
+                };
+                console.log("Dados da linha", i, ":", rowData);
+                data.push(rowData);
+            }
+
+            console.log("Dados salvos para Tabela 3:", JSON.stringify(data));
+
+            // Atualizar o campo hidden com os dados
+            document.getElementById('linhaDinamicaDataset3').value = JSON.stringify(data);
+        }
+
+        function loadTableData3() {
+            console.log("Carregando dados da Tabela 3");
+            const data = JSON.parse(document.getElementById('linhaDinamicaDataset3').value || '[]');
+            console.log("Dados carregados para Tabela 3:", data);
+            const tabela = document.getElementById('tabelaRegistros3').getElementsByTagName('tbody')[0];
+
+            // Limpar a tabela
+            tabela.innerHTML = '';
+            record3IdCounter = 1; // Resetar IDs para começar a partir de 1
+
+            data.forEach((item, index) => {
+                const newRow = tabela.insertRow();
+
+                newRow.insertCell(0).innerHTML = `<textarea name="codigo_descricao_c${index + 1}" class="form-control" rows="2" placeholder="Digite o código e a descrição">${item.codigo_descricao || ''}</textarea>`;
+                newRow.insertCell(1).innerHTML = `<input type="text" name="lote_c${index + 1}" class="form-control" placeholder="Digite o lote" value="${item.lote || ''}">`;
+                newRow.insertCell(2).innerHTML = `<input type="date" name="validade_c${index + 1}" class="form-control" value="${item.validade || ''}">`;
+                newRow.insertCell(3).innerHTML = `<input type="text" name="quantidade_c${index + 1}" class="form-control" placeholder="Digite a quantidade" value="${item.quantidade || ''}">`;
+                newRow.insertCell(4).innerHTML = `<input type="text" name="nf_origem_c${index + 1}" class="form-control" placeholder="Digite a NF" value="${item.nf_origem || ''}">`;
+                newRow.insertCell(5).innerHTML = '<button type="button" onclick="removeRow5(this)"><i class="flaticon flaticon-trash icon-md" aria-hidden="true"></i></button>';
+            });
+        }
+
+        function saveAllTables3() {
+            saveTableData3();
+            console.log("Todos os dados das tabelas foram salvos.");
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log("Página carregada, carregando dados da Tabela 3");
+            loadTableData3();
+            console.log("Dados da Tabela 3 carregados");
+        });
+
+        function removeRow5(button) {
+            const row = button.closest('tr');
+            row.remove();
+            saveTableData3();
+        }
+    </script>
+    <script scr="returnFlag.js"></script>
+    <script scr="tabelass.js"></script>
+</body>
+</html>

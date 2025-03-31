@@ -1,0 +1,266 @@
+<html>
+<head>
+	<link type="text/css" rel="stylesheet" href="/style-guide/css/fluig-style-guide.min.css"/>
+	<script type="text/javascript" src="/portal/resources/js/jquery/jquery.js"></script>
+	<script type="text/javascript" src="/portal/resources/js/jquery/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="/portal/resources/js/mustache/mustache-min.js"></script>
+	<script type="text/javascript" src="/style-guide/js/fluig-style-guide.min.js" charset="utf-8"></script>
+	
+	<style>
+	.textarea-fixed-size {
+            width: 100%; /* Faz o textarea ocupar toda a largura da célula */
+            height: 50px; /* Define a altura do textarea */
+            min-height: 50px;
+            box-sizing: border-box; /* Inclui padding e border no tamanho total */
+            resize: vertical; /* Permite apenas redimensionar verticalmente */
+            white-space: pre-wrap; /* Permite quebra de linha e preserva espaços */
+            word-wrap: break-word;
+        }
+        
+        .info-textarea2 {
+		width: 100%;
+		color: #000000; /* Cor do texto preta */
+		border: 1px solid #cccccc; /* Borda cinza clara */
+		border-radius: 4px;
+		background-color: #DCDCDC;
+	}
+	
+	</style>
+</head>
+<body>
+<div class="fluig-style-guide">
+<form name="form" role="form">
+
+
+<div id="panel1" class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">Solicitação</h3>
+    </div>
+    <div class="panel-body">
+		<div class="row">
+		    <div class="form-group col-md-6">
+		        <label for="solicitante">Nome do solicitante</label>
+		        <input type="text" name="solicitante" class="form-control" id="solicitante" placeholder="Coloque o nome inteiro">
+		    </div>
+		    <div class="form-group col-md-2">
+		        <label for="setor">Setor</label>
+		        <input type="text" name="setor" class="form-control" id="setor" placeholder="Coloque o setor">
+		    </div>
+		    <div class="form-group col-md-4">
+		        <label for="autorizado">Autorizado por</label>
+		        <input type="text" name="autorizado" class="form-control" id="autorizado" placeholder="Coloque o nome da pessoa que autorizou">
+		    </div>
+		</div>
+		<div class="row">
+		    <div class="form-group col-md-4">
+		        <label for="periodo">Período</label>
+		        <input type="text" name="periodo" class="form-control" id="periodo" placeholder="10/10/2024 a 15/11/2024">
+		    </div>
+		    <div class="form-group col-md-2">
+		        <label for="data_envio">Data de envio</label>
+		        <input type="text" name="data_envio" class="form-control" id="data_envio" placeholder="data">
+		    </div>
+		    <div class="form-group col-md-4">
+		        <label for="reembolso">Reembolso por KM</label>
+		        <input type="text" name="reembolso" class="form-control" id="reembolso" placeholder="Coloque o reembolso">
+		    </div>
+		    <div class="form-group col-md-2">
+		        <label for="procedencia">N° Solicitação Fluig</label>
+		        <input type="text" id="numeroSolicitacao" name="numeroSolicitacao" class="form-control" readonly>
+		    </div>
+		    
+		</div>
+		<div class="row">
+		    <div class="form-group col-md-3">
+		        <label for="total_reembolso">Total do Reembolso</label>
+		        <input type="text" name="total_reembolso" class="form-control" id="total_reembolso" placeholder="Coloque o total do reembolso">
+		    </div>
+		</div>
+				<table class="table table-bordered">
+				  <thead>
+		    <tr>
+		      <th>Data</th>
+		      <th>Fornecedor</th>
+		      <th>NF</th>
+		      <th>Categoria</th>
+		      <th>Total</th>
+		    </tr>
+		  </thead>
+		  <tbody>
+		    <tr>
+		      <td><input type="date" class="form-control" name="data1"></td>
+		      <td><input type="text" class="form-control" name="fornecedor1"></td>
+		      <td><input type="text" class="form-control" name="nf1"></td>
+		      <td>
+		        <select class="form-control" name="categoria1">
+		          <option>Escolha</option>
+		          <option>Passagem Aérea</option>
+		          <option>Hospedagem</option>
+		          <option>Transporte (locação, táxi, combustível)</option>
+		          <option>Refeições</option>
+		          <option>Cursos e Treinamento</option>
+		          <option>Quilômetros</option>
+		          <option>Reembolso de KM</option>
+		          <option>Diversos</option>
+		        </select>
+		      </td>
+		      <td><input type="text" class="form-control" name="nf_1"></td>
+		    </tr>
+		    <tr>
+		      <td><input type="date" class="form-control" name="data2"></td>
+		      <td><input type="text" class="form-control" name="fornecedor2"></td>
+		      <td><input type="text" class="form-control" name="nf2"></td>
+		      <td>
+		        <select class="form-control" name="categoria2">
+		        <option>Escolha</option>
+		          <option>Passagem Aérea</option>
+		          <option>Hospedagem</option>
+		          <option>Transporte (locação, táxi, combustível)</option>
+		          <option>Refeições</option>
+		          <option>Cursos e Treinamento</option>
+		          <option>Quilômetros</option>
+		          <option>Reembolso de KM</option>
+		          <option>Diversos</option>
+		        </select>
+		      </td>
+		      <td><input type="text" class="form-control" name="nf_2"></td>
+		    </tr>
+		    <tr>
+		      <td><input type="date" class="form-control" name="data3"></td>
+		      <td><input type="text" class="form-control" name="fornecedor3"></td>
+		      <td><input type="text" class="form-control" name="nf3"></td>
+		      <td>
+		        <select class="form-control" name="categoria3">
+		        <option>Escolha</option>
+		          <option>Passagem Aérea</option>
+		          <option>Hospedagem</option>
+		          <option>Transporte (locação, táxi, combustível)</option>
+		          <option>Refeições</option>
+		          <option>Cursos e Treinamento</option>
+		          <option>Quilômetros</option>
+		          <option>Reembolso de KM</option>
+		          <option>Diversos</option>
+		        </select>
+		        
+		      </td>
+		      <td><input type="text" class="form-control" name="nf_3"></td>
+		    </tr>
+		    <tr>
+		      <td><input type="date" class="form-control" name="data4"></td>
+		      <td><input type="text" class="form-control" name="fornecedor4"></td>
+		      <td><input type="text" class="form-control" name="nf4"></td>
+		      <td>
+		        <select class="form-control" name="categoria4">
+		        <option>Escolha</option>
+		          <option>Passagem Aérea</option>
+		          <option>Hospedagem</option>
+		          <option>Transporte (locação, táxi, combustível)</option>
+		          <option>Refeições</option>
+		          <option>Cursos e Treinamento</option>
+		          <option>Quilômetros</option>
+		          <option>Reembolso de KM</option>
+		          <option>Diversos</option>
+		        </select>
+		      </td>
+		      <td><input type="text" class="form-control" name="nf_6"></td>
+		    </tr>
+		    <tr>
+		      <td><input type="date" class="form-control" name="data5"></td>
+		      <td><input type="text" class="form-control" name="fornecedor5"></td>
+		      <td><input type="text" class="form-control" name="nf5"></td>
+		      <td>
+		        <select class="form-control" name="categoria5">
+		        <option>Escolha</option>
+		          <option>Passagem Aérea</option>
+		          <option>Hospedagem</option>
+		          <option>Transporte (locação, táxi, combustível)</option>
+		          <option>Refeições</option>
+		          <option>Cursos e Treinamento</option>
+		          <option>Quilômetros</option>
+		          <option>Reembolso de KM</option>
+		          <option>Diversos</option>
+		        </select>
+		        
+		      </td>
+		      <td><input type="text" class="form-control" name="nf_4"></td>
+		    </tr>
+		    
+		  </tbody>
+		</table>
+		
+		
+		<div class="row">
+	    <div class="form-group col-md-12">
+	        <label for="informativo2"></label>
+	        <textarea rows="2"  name="informativo2" id="infoText2" class="info-textarea2" style="text-align: center;" readonly> Anexar nota referente ao reembolso</textarea>
+	    </div>
+	    </div>
+    </div>
+</div>
+
+<div id="panelwarning" class="panel panel-warning">
+    <div class="panel-heading">
+        <h3 class="panel-title">Validação</h3>
+    </div>
+    <div class="panel-body">
+		 <div class="row">
+		    <div class="form-group col-md-6">
+		        <div class="radio">
+		            <label><input type="radio" name="itempreenchimento" id="itempreenchimento" value="aprovado">Aprovado</label></br>
+		            <label><input type="radio" name="itempreenchimento" id="itempreenchimento" value="reprovado">Reprovado</label></br>
+		            <label><input type="radio" name="itempreenchimento" id="itempreenchimento" value="corrigir">Corrigir</label>
+		        </div>		
+		    </div>
+			<div class="row">
+		    <div class="form-group col-md-12">
+		        <label for="consideracoes">Observação</label>
+		        <textarea rows="5" name="consideracoes" id="consideracoes" class="form-control"></textarea>
+		    </div>
+		</div>
+		<input type="hidden" id="returnFromActivity5" name="returnFromActivity5" value="false">
+		</div>
+    </div>
+</div>
+
+
+
+
+<div id="panelaprovado" class="panel panel-primary">
+    <div class="panel-heading">Verificação</h3>
+    </div>
+    <div class="panel-body">
+        <div class="form-group col-md-6">
+		        <div class="radio">
+		            <label><input type="radio" name="liberacao" id="liberacao" value="liberado">Liberado</label></br>
+		            <label><input type="radio" name="liberacao" id="liberacao" value="Não liberado">Não liberado</label></br>    
+		        </div>		
+		    </div>
+		    <div class="row">
+		    <div class="form-group col-md-12">
+		        <label for="consideracoes_liberacao">Observação</label>
+		        <textarea rows="5" name="consideracoes_liberacao" id="consideracoes_liberacao" class="form-control"></textarea>
+		    </div>
+		</div>
+    </div>
+</div>
+
+
+
+</form>
+</div>
+<script>
+    window.onload = function() {
+        var today = new Date();
+        var day = String(today.getDate()).padStart(2, '0');
+        var month = String(today.getMonth() + 1).padStart(2, '0'); // Janeiro é 0!
+        var year = today.getFullYear();
+
+        var currentDate = day + '/' + month + '/' + year; // Formato DD/MM/YYYY
+
+        // Define o valor do campo com id "data_envio"
+        document.getElementById("data_envio").value = currentDate;
+    };
+</script>
+<script scr="returnFlag.js"></script>
+</body>
+</html>

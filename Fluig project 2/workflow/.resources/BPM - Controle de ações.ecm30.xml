@@ -9,7 +9,7 @@
     <active>true</active>
     <publicProcess>false</publicProcess>
     <volumeId>Default</volumeId>
-    <categoryId>Teste Eclipse</categoryId>
+    <categoryId>Qualidade</categoryId>
     <managerEngineAllocationId></managerEngineAllocationId>
     <snapshotFrequency>0</snapshotFrequency>
     <baseDay>0</baseDay>
@@ -28,10 +28,10 @@
     <processDefinitionVersionPK>
       <companyId>1</companyId>
       <processId>Ações corretivas/preventivas</processId>
-      <version>1</version>
+      <version>27</version>
     </processDefinitionVersionPK>
     <versionDescription></versionDescription>
-    <formId>0</formId>
+    <formId>21741</formId>
     <editionMode>true</editionMode>
     <updateAttachmentsVersion>false</updateAttachmentsVersion>
     <controlsAttachmentsSecurity>false</controlsAttachmentsSecurity>
@@ -53,8 +53,8 @@
         <version>1</version>
         <sequence>4</sequence>
       </processStatePK>
-      <stateName>Início</stateName>
-      <stateDescription>Início</stateDescription>
+      <stateName>Ações corretivas/preventivas</stateName>
+      <stateDescription>Ações corretivas/preventivas</stateDescription>
       <instruction></instruction>
       <deadlineTime>0</deadlineTime>
       <joint>false</joint>
@@ -107,9 +107,10 @@
       <stateDescription>Tomando uma decisão</stateDescription>
       <instruction></instruction>
       <deadlineTime>0</deadlineTime>
-      <deadlineFieldName></deadlineFieldName>
+      <deadlineFieldName>resposta3</deadlineFieldName>
       <joint>false</joint>
       <agreementPercentage>0</agreementPercentage>
+      <engineAllocationId></engineAllocationId>
       <selectColleague>1</selectColleague>
       <initialState>false</initialState>
       <notifyAuthorityDelay>true</notifyAuthorityDelay>
@@ -157,9 +158,10 @@
       <stateDescription>Status da atividade</stateDescription>
       <instruction></instruction>
       <deadlineTime>0</deadlineTime>
-      <deadlineFieldName></deadlineFieldName>
+      <deadlineFieldName>resposta3</deadlineFieldName>
       <joint>false</joint>
       <agreementPercentage>0</agreementPercentage>
+      <engineAllocationId></engineAllocationId>
       <selectColleague>1</selectColleague>
       <initialState>false</initialState>
       <notifyAuthorityDelay>true</notifyAuthorityDelay>
@@ -203,13 +205,14 @@
         <version>1</version>
         <sequence>15</sequence>
       </processStatePK>
-      <stateName>Validação da ação pelo solicitante</stateName>
-      <stateDescription>Validação da ação pelo solicitante</stateDescription>
+      <stateName>Validação da ação</stateName>
+      <stateDescription>Validação da ação</stateDescription>
       <instruction></instruction>
-      <deadlineTime>0</deadlineTime>
+      <deadlineTime>86400</deadlineTime>
       <deadlineFieldName></deadlineFieldName>
       <joint>false</joint>
       <agreementPercentage>0</agreementPercentage>
+      <engineAllocationId></engineAllocationId>
       <selectColleague>1</selectColleague>
       <initialState>false</initialState>
       <notifyAuthorityDelay>true</notifyAuthorityDelay>
@@ -350,7 +353,7 @@
         <companyId>1</companyId>
         <processId>BPM-Controledeações</processId>
         <expressionOrder>1</expressionOrder>
-        <version>1</version>
+        <version>27</version>
         <sequence>10</sequence>
       </conditionProcessStatePK>
       <condition></condition>
@@ -364,7 +367,7 @@
         <companyId>1</companyId>
         <processId>BPM-Controledeações</processId>
         <expressionOrder>2</expressionOrder>
-        <version>1</version>
+        <version>27</version>
         <sequence>10</sequence>
       </conditionProcessStatePK>
       <condition></condition>
@@ -378,7 +381,7 @@
         <companyId>1</companyId>
         <processId>BPM-Controledeações</processId>
         <expressionOrder>3</expressionOrder>
-        <version>1</version>
+        <version>27</version>
         <sequence>10</sequence>
       </conditionProcessStatePK>
       <condition></condition>
@@ -390,7 +393,7 @@
         <companyId>1</companyId>
         <processId>BPM-Controledeações</processId>
         <expressionOrder>1</expressionOrder>
-        <version>1</version>
+        <version>27</version>
         <sequence>17</sequence>
       </conditionProcessStatePK>
       <condition></condition>
@@ -402,7 +405,21 @@
         <companyId>1</companyId>
         <processId>BPM-Controledeações</processId>
         <expressionOrder>2</expressionOrder>
-        <version>1</version>
+        <version>27</version>
+        <sequence>17</sequence>
+      </conditionProcessStatePK>
+      <condition></condition>
+      <destinationSequenceId>13</destinationSequenceId>
+      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;BaseActivity&gt;13&lt;/BaseActivity&gt;&lt;Returns&gt;Last&lt;/Returns&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
+      <engineAllocationId>Executor Atividade</engineAllocationId>
+      <conditionType>1</conditionType>
+    </ConditionProcessState>
+    <ConditionProcessState>
+      <conditionProcessStatePK>
+        <companyId>1</companyId>
+        <processId>BPM-Controledeações</processId>
+        <expressionOrder>3</expressionOrder>
+        <version>27</version>
         <sequence>17</sequence>
       </conditionProcessStatePK>
       <condition></condition>
@@ -656,6 +673,15 @@
       <ruleOrder>1</ruleOrder>
       <field>validacao_solicitante</field>
       <value>validacao_solicitanteN</value>
+      <operator>1</operator>
+      <valueType>1</valueType>
+    </ConditionProcessAutomaticRules>
+    <ConditionProcessAutomaticRules>
+      <sequence>17</sequence>
+      <expressionOrder>3</expressionOrder>
+      <ruleOrder>1</ruleOrder>
+      <field>validacao_solicitante</field>
+      <value>validacao_transferencia</value>
       <operator>1</operator>
       <valueType>1</valueType>
     </ConditionProcessAutomaticRules>

@@ -4,28 +4,44 @@ function enableFields(form){
 	log.info("enableFields - atv_atual: " + atv_atual);
 	
 	if(atv_atual == 4) {
-		desabilitarSolicitante5(form)
-		desabilitarSolicitante9(form)
+		desabilitarSolicitante5(form);
+		desabilitarSolicitante9(form);
+		desabilitarSolicitante20(form);
 	}
 	
 	
 	else if(atv_atual == 5){
 		desabilitarSolicitante(form);
 		desabilitarSolicitante9(form);
+		desabilitarSolicitante20(form);
 		
 	}
 	
 	else if(atv_atual == 7){
 		desabilitarSolicitante(form);
 		desabilitarSolicitante5(form);
+		desabilitarSolicitante20(form);
 	}
 	
 	else if(atv_atual == 9){
 		desabilitarSolicitante(form);
 		desabilitarSolicitante5(form);
 		desabilitarSolicitante7(form);
+		desabilitarSolicitante20(form);
 	}
 	
+	else if(atv_atual == 17){
+		desabilitarSolicitante(form);
+		desabilitarSolicitante5(form);
+		desabilitarSolicitante7(form);
+		desabilitarSolicitante9(form);
+		desabilitarSolicitante20(form);
+	}
+	
+	else if(atv_atual == 20){
+		desabilitarSolicitante(form);
+		
+	}
 	
 }
 	
@@ -36,6 +52,8 @@ function desabilitarSolicitante(form){
 	form.setEnabled("cliente", false);
 	form.setEnabled("endereco", false);
 	form.setEnabled("Telefone", false);
+	form.setEnabled("nome_setor", false);
+	form.setEnabled("nome_lab_ins", false);
 	form.setEnabled("email", false);
 	form.setEnabled("categoria", false);
 	form.setEnabled("aspecto_alterado", false);
@@ -72,13 +90,20 @@ function desabilitarSolicitante5(form){
 	form.setEnabled("comment5", false);
 	form.setEnabled("question6", false);
 	form.setEnabled("comment6", false);
-	form.setEnabled("question7", false);
 	form.setEnabled("comment7", false);
+	form.setEnabled("question7", false);
+	form.setEnabled("question77", false);
+	form.setEnabled("question777", false);
+	form.setEnabled("outros_consideracao", false);
+	
 
 }
 
 function desabilitarSolicitante7(form){
-	form.setEnabled("conclusao", false);
+	form.setEnabled("confirmada", false);
+	form.setEnabled("provavel", false);
+	form.setEnabled("inconclusiva", false);
+	form.setEnabled("descartada", false);
 	form.setEnabled("observacao_conclusao", false);
 	
 	
@@ -88,4 +113,10 @@ function desabilitarSolicitante9(form){
 	form.setEnabled("validacao_gq", false);
 	form.setEnabled("consideracoes_nao_conforme", false);
 }
+
+function desabilitarSolicitante20(form){
+	form.setEnabled("validacao_1", false);
+	form.setEnabled("comentario_1", false);
+}
+
 

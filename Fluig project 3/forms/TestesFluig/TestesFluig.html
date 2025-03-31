@@ -1,0 +1,131 @@
+<html>
+<head>
+	<link type="text/css" rel="stylesheet" href="/style-guide/css/fluig-style-guide.min.css"/>
+	<script type="text/javascript" src="/portal/resources/js/jquery/jquery.js"></script>
+	<script type="text/javascript" src="/portal/resources/js/jquery/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="/portal/resources/js/mustache/mustache-min.js"></script>
+	<script type="text/javascript" src="/style-guide/js/fluig-style-guide.min.js" charset="utf-8"></script>
+	<link rel="stylesheet" href="teste.css">
+</head>
+<body>
+<div class="fluig-style-guide">
+<form name="form" role="form">
+
+<div class="row">
+		    <div class="form-group col-md-2">
+		        <label for="procedencia">Número da Solicitação</label>
+		        <input type="text" id="numeroSolicitacao" name="numeroSolicitacao" class="form-control" readonly>
+		    </div>
+		</div>
+		
+
+<div class="row">
+  <div>
+    <table class="table" id="tabelaRegistros3" dataset="linhaDinamicaDataset3" datadatasetkey="myDataset3" datadatasetvalue="dynamicTableData3">
+      <thead>
+        <tr>
+          <th class="col-md-4">Código/Descrição</th>
+          <th class="col-md-2">Lote</th>
+          <th class="col-md-2">Validade</th>
+          <th class="col-md-2">Quantidade</th>
+          <th class="col-md-2">NF de Origem</th>
+          <th class="col-md-1">Ações</th> <!-- Coluna para o botão de remover -->
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><textarea name="codigo_descricao_c1" class="form-control" rows="2" placeholder="Digite o código e a descrição"></textarea></td>
+          <td><input type="text" name="lote_c1" class="form-control" placeholder="Digite o lote"></td>
+          <td><input type="date" name="validade_c1" class="form-control"></td>
+          <td><input type="text" name="quantidade_c1" class="form-control" placeholder="Digite a quantidade"></td>
+          <td><input type="text" name="nf_origem_c1" class="form-control" placeholder="Digite a NF"></td>
+          <td><button type="button" onclick="removeRow5(this)"><i class="flaticon flaticon-trash icon-md" aria-hidden="true"></i></button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<button type="button" class="btn btn-info" onclick="addNewRecord3()" id="novoRegistroBtn3">Novo Registro</button>
+<button type="button" class="btn btn-success" onclick="saveAllTables3()">Salvar Dados</button>
+<input type="hidden" name="linhaDinamicaDataset3" id="linhaDinamicaDataset3">
+
+<h2>Participantes</h2>
+
+    <!-- Campo de input com autocomplete -->
+    <input  name="nome_input" type="text" id="nome-input" class="form-control" placeholder="Digite um nome">
+
+    <!-- Lista de sugestões -->
+    <ul id="suggestions-list" class="suggestions-list"></ul>
+
+    <!-- Contêiner para exibir os nomes selecionados -->
+    <div id="selected-names" class="selected-names"></div>
+
+    <!-- Campo oculto para salvar os dados -->
+    <input type="hidden" id="nomesData" name="nomesData">
+
+<table class="table" id="tabelaRegistros" dataset="linhaDinamicaDataset" datadatasetkey="myDataset" datadatasetvalue="dynamicTableData">
+    <thead>
+        <tr>
+            <th>Item</th>
+            <th>Ações propostas</th>
+            <th>Prazo</th>
+            <th>Status</th>
+            <th>Observações</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><textarea name="codigo_1" class="form-control col-md-3"></textarea></td>
+            <td><textarea name="lote_1" class="form-control col-md-3"></textarea></td>
+            <td><input type="text" name="quantidade_1" class="form-control col-md-2"></td>
+            <td><input type="text" name="datafabricacao_1" class="form-control col-md-2"></td>
+            <td><textarea name="datavalidade_1" class="form-control col-md-2"></textarea></td>
+            <td><button type="button" onclick="removeRow(this)">Remover</button></td>
+        </tr>
+    </tbody>
+</table>
+<button type="button" class="btn btn-info" onclick="addNewRecord()" id="novoRegistroBtn">Novo Registro</button>
+<button type="button" class="btn btn-success" onclick="saveAllTables()">Salvar Dados</button>
+<input type="hidden" name="linhaDinamicaDataset" id="linhaDinamicaDataset">
+
+		
+		
+</br></br></br><div class="row">
+    <label><b>Ações geradas nessa reunião</b></label>
+    </div>
+			  
+		<div class="row">
+		  <div>
+		    <table class="table" id="tabelaRegistros4" dataset="linhaDinamicaDataset4" datadatasetkey="myDataset4" datadatasetvalue="dynamicTableData4">
+		      <thead>
+		        <tr>
+		          <th class="col-md-3">Ação</th>
+		          <th class="col-md-3">Responsável</th>
+		          <th class="col-md-3">Prazo</th>
+		          <th class="col-md-2">N° Solicitação fluig</th>
+		        </tr>
+		      </thead>
+		      <tbody>
+		        <tr>
+		          <td><textarea name="what_c1" class="form-control textarea-fixed-size"  rows="2" ></textarea></td>
+		          <td><textarea name="when_c1" class="form-control textarea-fixed-size"  rows="2"></textarea></td>
+		          <td><textarea name="who_c1" class="form-control textarea-fixed-size"  rows="2"></textarea></td>
+		          <td><input type="text" name="solicitacaoFluig_c1" class="form-control textarea-fixed-size"  style="height: 50px; rows="2"></td>
+		          <td><button type="button" onclick="removeRow5(this)"><i class="flaticon flaticon-trash icon-md" aria-hidden="true"></i></button></td>
+		        </tr>
+		      </tbody>
+		    </table>
+		  </div>
+		</div>
+		<button type="button" class="btn btn-info" onclick="addNewRecord3()" id="novoRegistroBtn3">Novo Registro</button>
+		<button type="button" class="btn btn-success" onclick="saveAllTables3()">Salvar Dados</button>
+		<input type="hidden" name="linhaDinamicaDataset4" id="linhaDinamicaDataset4">		
+</form>
+</div>
+<script src="teste.js"></script>
+<script src="salvar.js"></script>
+<script src="tabela.js"></script>
+<script src="testetabela.js"></script>
+<script src="tabela1.js"></script>
+</body>
+</html>

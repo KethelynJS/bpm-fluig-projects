@@ -48,21 +48,21 @@
       </anchors>
     </children>
     <children active="true" visible="true" xsi:type="pi:ContainerShape">
-      <graphicsAlgorithm filled="false" height="56" lineVisible="false" lineWidth="1" transparency="0.0" width="106" x="110" xsi:type="al:Rectangle" y="210"/>
+      <graphicsAlgorithm filled="false" height="60" lineVisible="false" lineWidth="1" transparency="0.0" width="106" x="110" xsi:type="al:Rectangle" y="210"/>
       <link businessObjects="task5"/>
       <anchors incomingConnections="/0/@connections.0" outgoingConnections="/0/@connections.1" xsi:type="pi:ChopboxAnchor"/>
       <anchors active="true" referencedGraphicsAlgorithm="/0/@children.2/@graphicsAlgorithm" relativeHeight="0.51" relativeWidth="1.0" visible="true" xsi:type="pi:BoxRelativeAnchor">
         <graphicsAlgorithm filled="false" lineVisible="false" xsi:type="al:Ellipse"/>
       </anchors>
       <children visible="true">
-        <graphicsAlgorithm cornerHeight="5" cornerWidth="5" height="56" lineWidth="1" style="/0/@styles.36" transparency="0.0" width="106" xsi:type="al:RoundedRectangle"/>
+        <graphicsAlgorithm cornerHeight="5" cornerWidth="5" height="60" lineWidth="1" style="/0/@styles.36" transparency="0.0" width="106" xsi:type="al:RoundedRectangle"/>
       </children>
       <children visible="true">
-        <graphicsAlgorithm filled="false" font="/0/@fonts.1" height="46" horizontalAlignment="ALIGNMENT_CENTER" lineVisible="true" lineWidth="1" style="/0/@styles.37" transparency="0.0" value="Dire&#231;&#227;o" width="96" x="5" xsi:type="al:MultiText" y="5"/>
+        <graphicsAlgorithm filled="false" font="/0/@fonts.1" height="50" horizontalAlignment="ALIGNMENT_CENTER" lineVisible="true" lineWidth="1" style="/0/@styles.37" transparency="0.0" value="Dire&#231;&#227;o" width="96" x="5" xsi:type="al:MultiText" y="5"/>
       </children>
     </children>
     <children active="true" visible="true" xsi:type="pi:ContainerShape">
-      <graphicsAlgorithm filled="false" height="102" lineVisible="false" lineWidth="1" transparency="0.0" width="60" x="270" xsi:type="al:Rectangle" y="50">
+      <graphicsAlgorithm filled="false" height="108" lineVisible="false" lineWidth="1" transparency="0.0" width="60" x="270" xsi:type="al:Rectangle" y="50">
         <graphicsAlgorithmChildren filled="true" height="60" lineWidth="1" style="/0/@styles.44" transparency="0.0" width="60" xsi:type="al:Polygon">
           <points y="30"/>
           <points x="30"/>
@@ -82,7 +82,7 @@
         <graphicsAlgorithm filled="false" lineVisible="false" xsi:type="al:Ellipse"/>
       </anchors>
       <children visible="true">
-        <graphicsAlgorithm filled="false" font="/0/@fonts.1" height="42" horizontalAlignment="ALIGNMENT_CENTER" lineVisible="true" lineWidth="1" style="/0/@styles.45" transparency="0.0" value="Exclusiv&#10;o&#10;" width="60" xsi:type="al:MultiText" y="60"/>
+        <graphicsAlgorithm filled="false" font="/0/@fonts.1" height="48" horizontalAlignment="ALIGNMENT_CENTER" lineVisible="true" lineWidth="1" style="/0/@styles.45" transparency="0.0" value="Exclusi&#10;vo&#10;" width="60" xsi:type="al:MultiText" y="60"/>
       </children>
     </children>
     <children active="true" visible="true" xsi:type="pi:ContainerShape">
@@ -96,31 +96,31 @@
       </anchors>
     </children>
     <children active="true" visible="true" xsi:type="pi:ContainerShape">
-      <graphicsAlgorithm filled="false" height="56" lineVisible="false" lineWidth="1" transparency="0.0" width="105" x="330" xsi:type="al:Rectangle" y="210"/>
+      <graphicsAlgorithm filled="false" height="60" lineVisible="false" lineWidth="1" transparency="0.0" width="106" x="330" xsi:type="al:Rectangle" y="210"/>
       <link businessObjects="task11"/>
       <anchors incomingConnections="/0/@connections.3" outgoingConnections="/0/@connections.4" xsi:type="pi:ChopboxAnchor"/>
       <anchors active="true" referencedGraphicsAlgorithm="/0/@children.5/@graphicsAlgorithm" relativeHeight="0.51" relativeWidth="1.0" visible="true" xsi:type="pi:BoxRelativeAnchor">
         <graphicsAlgorithm filled="false" lineVisible="false" xsi:type="al:Ellipse"/>
       </anchors>
       <children visible="true">
-        <graphicsAlgorithm cornerHeight="5" cornerWidth="5" height="56" lineWidth="1" style="/0/@styles.49" transparency="0.0" width="105" xsi:type="al:RoundedRectangle"/>
+        <graphicsAlgorithm cornerHeight="5" cornerWidth="5" height="60" lineWidth="1" style="/0/@styles.49" transparency="0.0" width="106" xsi:type="al:RoundedRectangle"/>
       </children>
       <children visible="true">
-        <graphicsAlgorithm filled="false" font="/0/@fonts.1" height="46" horizontalAlignment="ALIGNMENT_CENTER" lineVisible="true" lineWidth="1" style="/0/@styles.50" transparency="0.0" value="RH - Exame" width="95" x="5" xsi:type="al:MultiText" y="5"/>
+        <graphicsAlgorithm filled="false" font="/0/@fonts.1" height="50" horizontalAlignment="ALIGNMENT_CENTER" lineVisible="true" lineWidth="1" style="/0/@styles.50" transparency="0.0" value="RH - Exame" width="96" x="5" xsi:type="al:MultiText" y="5"/>
       </children>
     </children>
     <children active="true" visible="true" xsi:type="pi:ContainerShape">
-      <graphicsAlgorithm filled="false" height="56" lineVisible="false" lineWidth="1" transparency="0.0" width="105" x="490" xsi:type="al:Rectangle" y="210"/>
+      <graphicsAlgorithm filled="false" height="76" lineVisible="false" lineWidth="1" transparency="0.0" width="106" x="490" xsi:type="al:Rectangle" y="210"/>
       <link businessObjects="task13"/>
       <anchors incomingConnections="/0/@connections.4" outgoingConnections="/0/@connections.5" xsi:type="pi:ChopboxAnchor"/>
       <anchors active="true" referencedGraphicsAlgorithm="/0/@children.6/@graphicsAlgorithm" relativeHeight="0.51" relativeWidth="1.0" visible="true" xsi:type="pi:BoxRelativeAnchor">
         <graphicsAlgorithm filled="false" lineVisible="false" xsi:type="al:Ellipse"/>
       </anchors>
       <children visible="true">
-        <graphicsAlgorithm cornerHeight="5" cornerWidth="5" height="56" lineWidth="1" style="/0/@styles.52" transparency="0.0" width="105" xsi:type="al:RoundedRectangle"/>
+        <graphicsAlgorithm cornerHeight="5" cornerWidth="5" height="76" lineWidth="1" style="/0/@styles.52" transparency="0.0" width="106" xsi:type="al:RoundedRectangle"/>
       </children>
       <children visible="true">
-        <graphicsAlgorithm filled="false" font="/0/@fonts.1" height="46" horizontalAlignment="ALIGNMENT_CENTER" lineVisible="true" lineWidth="1" style="/0/@styles.53" transparency="0.0" value="Contabilidade" width="95" x="5" xsi:type="al:MultiText" y="5"/>
+        <graphicsAlgorithm filled="false" font="/0/@fonts.1" height="66" horizontalAlignment="ALIGNMENT_CENTER" lineVisible="true" lineWidth="1" style="/0/@styles.53" transparency="0.0" value="Contabilidade" width="96" x="5" xsi:type="al:MultiText" y="5"/>
       </children>
     </children>
     <children active="true" visible="true" xsi:type="pi:ContainerShape">
@@ -1890,20 +1890,20 @@
     <fonts name="Arial" size="8"/>
     <fonts bold="true" name="Arial" size="8"/>
   </pi:Diagram>
-  <bpmn2:BpmnProcess author="" cardIndex="Carta de transfer&#234;ncia de fun&#231;&#227;o-setor" category="RH" complementsLevel="1" expedient="Default" extendedFields="&lt;list/&gt;" formSource="local" id="BPM - Cartadetransfer&#234;nciadefun&#231;&#227;o-setor" instruction="" keyWord="" name="Carta de transfer&#234;ncia de fun&#231;&#227;o-setor" notifyRequisitionerComplements="true" notifyResponsibleComplements="true" serverId="fluig principal" version="6" volume="Default"/>
+  <bpmn2:BpmnProcess author="" cardIndex="Carta de transfer&#234;ncia de fun&#231;&#227;o-setor" category="RH" complementsLevel="1" expedient="Default" extendedFields="&lt;list/&gt;" formSource="local" id="BPM - Cartadetransfer&#234;nciadefun&#231;&#227;o-setor" instruction="" keyWord="" name="Carta de transfer&#234;ncia de fun&#231;&#227;o-setor" notifyRequisitionerComplements="true" notifyResponsibleComplements="true" serverId="fluig principal" version="7" volume="Default"/>
   <bpmn2:BpmnPool cores="FFFFFF" id="pool1" name="Pool"/>
   <bpmn2:BpmnSwimLane cores="9F9F9F" id="swimlane2" name="Reporter"/>
   <bpmn2:BpmnSwimLane cores="C0C0C0" id="swimlane3" name="Assignee"/>
   <bpmn2:BpmnStartEvent esforcoCalculo="0" expediente="" id="startevent4" name="In&#237;cio" outgoing="flow6" selecionaColaboradores="1" signalId="0" type="10"/>
   <bpmn2:BpmnTask authNotify="true" esforcoCalculo="0" executionAttempts="0" expediente="" frequency="0" id="task5" incoming="flow6" loopType="0" managerAssignmentControllerString="&lt;org.eclipse.bpmn2.impl.AssignmentControllerColleague&gt;&#10;  &lt;colleagueId&gt;barbara.albini&lt;/colleagueId&gt;&#10;  &lt;mechanismName&gt;Usu&#225;rio&lt;/mechanismName&gt;&#10;&lt;/org.eclipse.bpmn2.impl.AssignmentControllerColleague&gt;" managerMechanism="Usu&#225;rio" name="Dire&#231;&#227;o" outgoing="flow8" selecionaColaboradores="1" type="80"/>
   <bpmn2:SequenceFlow atividadeFluxo="" atividadeRetorno="" extendedFields="&lt;list/&gt;" id="flow6" name="" sourceRef="startevent4" targetRef="task5"/>
-  <bpmn2:BpmnGateway condition="&lt;list&gt;&#10;  &lt;org.eclipse.bpmn2.impl.ConditionImpl&gt;&#10;    &lt;order&gt;1&lt;/order&gt;&#10;    &lt;expression&gt;&lt;/expression&gt;&#10;    &lt;targetTask&gt;task11&lt;/targetTask&gt;&#10;    &lt;mechanism&gt;Usu&#225;rio&lt;/mechanism&gt;&#10;    &lt;conditionType&gt;1&lt;/conditionType&gt;&#10;    &lt;mecanismoAtribuicaoConfiguracao class=&quot;org.eclipse.bpmn2.impl.AssignmentControllerColleague&quot;&gt;&#10;      &lt;colleagueId&gt;luci.taborda&lt;/colleagueId&gt;&#10;      &lt;mechanismName&gt;Usu&#225;rio&lt;/mechanismName&gt;&#10;    &lt;/mecanismoAtribuicaoConfiguracao&gt;&#10;    &lt;rules&gt;&#10;      &lt;com.totvs.tds.ecm.workflow.model.ConditionProcessAutomaticRules&gt;&#10;        &lt;tenantId&gt;0&lt;/tenantId&gt;&#10;        &lt;version&gt;0&lt;/version&gt;&#10;        &lt;sequence&gt;7&lt;/sequence&gt;&#10;        &lt;expressionOrder&gt;1&lt;/expressionOrder&gt;&#10;        &lt;ruleOrder&gt;1&lt;/ruleOrder&gt;&#10;        &lt;field&gt;validacao&lt;/field&gt;&#10;        &lt;value&gt;aprovado&lt;/value&gt;&#10;        &lt;operator&gt;1&lt;/operator&gt;&#10;        &lt;valueType&gt;1&lt;/valueType&gt;&#10;      &lt;/com.totvs.tds.ecm.workflow.model.ConditionProcessAutomaticRules&gt;&#10;    &lt;/rules&gt;&#10;  &lt;/org.eclipse.bpmn2.impl.ConditionImpl&gt;&#10;  &lt;org.eclipse.bpmn2.impl.ConditionImpl&gt;&#10;    &lt;order&gt;2&lt;/order&gt;&#10;    &lt;expression&gt;&lt;/expression&gt;&#10;    &lt;targetTask&gt;endevent9&lt;/targetTask&gt;&#10;    &lt;conditionType&gt;1&lt;/conditionType&gt;&#10;    &lt;rules&gt;&#10;      &lt;com.totvs.tds.ecm.workflow.model.ConditionProcessAutomaticRules&gt;&#10;        &lt;tenantId&gt;0&lt;/tenantId&gt;&#10;        &lt;version&gt;0&lt;/version&gt;&#10;        &lt;sequence&gt;7&lt;/sequence&gt;&#10;        &lt;expressionOrder&gt;2&lt;/expressionOrder&gt;&#10;        &lt;ruleOrder&gt;1&lt;/ruleOrder&gt;&#10;        &lt;field&gt;validacao&lt;/field&gt;&#10;        &lt;value&gt;reprovado&lt;/value&gt;&#10;        &lt;operator&gt;1&lt;/operator&gt;&#10;        &lt;valueType&gt;1&lt;/valueType&gt;&#10;      &lt;/com.totvs.tds.ecm.workflow.model.ConditionProcessAutomaticRules&gt;&#10;    &lt;/rules&gt;&#10;  &lt;/org.eclipse.bpmn2.impl.ConditionImpl&gt;&#10;&lt;/list&gt;" id="exclusivegateway7" incoming="flow8" name="Exclusivo" outgoing="flow10 flow12" type="120"/>
+  <bpmn2:BpmnGateway condition="&lt;list&gt;&#10;  &lt;org.eclipse.bpmn2.impl.ConditionImpl&gt;&#10;    &lt;order&gt;1&lt;/order&gt;&#10;    &lt;expression&gt;&lt;/expression&gt;&#10;    &lt;targetTask&gt;task11&lt;/targetTask&gt;&#10;    &lt;mechanism&gt;Usu&#225;rio&lt;/mechanism&gt;&#10;    &lt;conditionType&gt;1&lt;/conditionType&gt;&#10;    &lt;mecanismoAtribuicaoConfiguracao class=&quot;org.eclipse.bpmn2.impl.AssignmentControllerColleague&quot;&gt;&#10;      &lt;colleagueId&gt;gestao.pessoas&lt;/colleagueId&gt;&#10;      &lt;mechanismName&gt;Usu&#225;rio&lt;/mechanismName&gt;&#10;    &lt;/mecanismoAtribuicaoConfiguracao&gt;&#10;    &lt;rules&gt;&#10;      &lt;com.totvs.tds.ecm.workflow.model.ConditionProcessAutomaticRules&gt;&#10;        &lt;tenantId&gt;0&lt;/tenantId&gt;&#10;        &lt;version&gt;0&lt;/version&gt;&#10;        &lt;sequence&gt;0&lt;/sequence&gt;&#10;        &lt;expressionOrder&gt;1&lt;/expressionOrder&gt;&#10;        &lt;ruleOrder&gt;1&lt;/ruleOrder&gt;&#10;        &lt;field&gt;validacao&lt;/field&gt;&#10;        &lt;value&gt;aprovado&lt;/value&gt;&#10;        &lt;operator&gt;1&lt;/operator&gt;&#10;        &lt;valueType&gt;1&lt;/valueType&gt;&#10;      &lt;/com.totvs.tds.ecm.workflow.model.ConditionProcessAutomaticRules&gt;&#10;    &lt;/rules&gt;&#10;  &lt;/org.eclipse.bpmn2.impl.ConditionImpl&gt;&#10;  &lt;org.eclipse.bpmn2.impl.ConditionImpl&gt;&#10;    &lt;order&gt;2&lt;/order&gt;&#10;    &lt;expression&gt;&lt;/expression&gt;&#10;    &lt;targetTask&gt;endevent9&lt;/targetTask&gt;&#10;    &lt;conditionType&gt;1&lt;/conditionType&gt;&#10;    &lt;rules&gt;&#10;      &lt;com.totvs.tds.ecm.workflow.model.ConditionProcessAutomaticRules&gt;&#10;        &lt;tenantId&gt;0&lt;/tenantId&gt;&#10;        &lt;version&gt;0&lt;/version&gt;&#10;        &lt;sequence&gt;7&lt;/sequence&gt;&#10;        &lt;expressionOrder&gt;2&lt;/expressionOrder&gt;&#10;        &lt;ruleOrder&gt;1&lt;/ruleOrder&gt;&#10;        &lt;field&gt;validacao&lt;/field&gt;&#10;        &lt;value&gt;reprovado&lt;/value&gt;&#10;        &lt;operator&gt;1&lt;/operator&gt;&#10;        &lt;valueType&gt;1&lt;/valueType&gt;&#10;      &lt;/com.totvs.tds.ecm.workflow.model.ConditionProcessAutomaticRules&gt;&#10;    &lt;/rules&gt;&#10;  &lt;/org.eclipse.bpmn2.impl.ConditionImpl&gt;&#10;&lt;/list&gt;" id="exclusivegateway7" incoming="flow8" name="Exclusivo" outgoing="flow10 flow12" type="120"/>
   <bpmn2:SequenceFlow atividadeFluxo="" atividadeRetorno="" extendedFields="&lt;list/&gt;" id="flow8" name="" sourceRef="task5" targetRef="exclusivegateway7"/>
   <bpmn2:BpmnEndEvent id="endevent9" incoming="flow10" name="Fim" signalId="0" type="60"/>
   <bpmn2:SequenceFlow atividadeFluxo="" atividadeRetorno="" extendedFields="&lt;list/&gt;" id="flow10" name="" sourceRef="exclusivegateway7" targetRef="endevent9"/>
   <bpmn2:BpmnTask authNotify="true" esforcoCalculo="0" executionAttempts="0" expediente="" frequency="0" id="task11" incoming="flow12" loopType="0" name="RH - Exame" outgoing="flow14" selecionaColaboradores="1" type="80"/>
   <bpmn2:SequenceFlow atividadeFluxo="" atividadeRetorno="" extendedFields="&lt;list/&gt;" id="flow12" name="" sourceRef="exclusivegateway7" targetRef="task11"/>
-  <bpmn2:BpmnTask authNotify="true" esforcoCalculo="0" executionAttempts="0" expediente="" frequency="0" id="task13" incoming="flow14" loopType="0" managerAssignmentControllerString="&lt;org.eclipse.bpmn2.impl.AssignmentControllerColleague&gt;&#10;  &lt;colleagueId&gt;luci.taborda&lt;/colleagueId&gt;&#10;  &lt;mechanismName&gt;Usu&#225;rio&lt;/mechanismName&gt;&#10;&lt;/org.eclipse.bpmn2.impl.AssignmentControllerColleague&gt;" managerMechanism="Usu&#225;rio" name="Contabilidade" outgoing="flow16" selecionaColaboradores="1" type="80"/>
+  <bpmn2:BpmnTask authNotify="true" esforcoCalculo="0" executionAttempts="0" expediente="" frequency="0" id="task13" incoming="flow14" loopType="0" managerAssignmentControllerString="&lt;org.eclipse.bpmn2.impl.AssignmentControllerColleague&gt;&#10;  &lt;colleagueId&gt;gestao.pessoas&lt;/colleagueId&gt;&#10;  &lt;mechanismName&gt;Usu&#225;rio&lt;/mechanismName&gt;&#10;&lt;/org.eclipse.bpmn2.impl.AssignmentControllerColleague&gt;" managerMechanism="Usu&#225;rio" name="Contabilidade" outgoing="flow16" selecionaColaboradores="1" type="80"/>
   <bpmn2:SequenceFlow atividadeFluxo="" atividadeRetorno="" extendedFields="&lt;list/&gt;" id="flow14" name="" sourceRef="task11" targetRef="task13"/>
   <bpmn2:BpmnEndEvent id="endevent15" incoming="flow16" name="Fim" signalId="0" type="60"/>
   <bpmn2:SequenceFlow atividadeFluxo="" atividadeRetorno="" extendedFields="&lt;list/&gt;" id="flow16" name="" sourceRef="task13" targetRef="endevent15"/>

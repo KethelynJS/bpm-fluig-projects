@@ -1,0 +1,243 @@
+<html>
+<head>
+	<link type="text/css" rel="stylesheet" href="/style-guide/css/fluig-style-guide.min.css"/>
+	<script type="text/javascript" src="/portal/resources/js/jquery/jquery.js"></script>
+	<script type="text/javascript" src="/portal/resources/js/jquery/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="/portal/resources/js/mustache/mustache-min.js"></script>
+	<script type="text/javascript" src="/style-guide/js/fluig-style-guide.min.js" charset="utf-8"></script>
+	
+	
+	<style>
+	.info-textarea2 {
+		width: 100%;
+		color: #000000; /* Cor do texto preta */
+		border: 1px solid #cccccc; /* Borda cinza clara */
+		border-radius: 4px;
+		background-color: #DCDCDC;
+	}
+	
+	</style>
+</head>
+<body>
+<div class="fluig-style-guide">
+<form name="form" role="form">
+
+<div id="panel1" class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">Identificação e Classificação</h3>
+    </div>
+    <div class="panel-body">
+		<div class="row">
+		    <div class="form-group col-md-3">
+		        <label for="ano">Ano de Referência</label>
+		        <input type="text" name="ano" class="form-control" id="ano" placeholder="Coloque o ano">
+		    </div>
+		    <div class="form-group col-md-5">
+		        <label for="responsavel">Responsável</label>
+		        <input type="text" name="responsavel" class="form-control" id="responsavel" placeholder="Coloque o nome do responsável">
+		    </div>
+		    <div class="form-group col-md-2">
+		        <label for="data_solicitacao">Data</label>
+		        <input type="text" name="data_solicitacao" class="form-control" id="data_solicitacao" placeholder="data">
+		    </div>
+		    <div class="form-group col-md-2">
+			    <label for="procedencia">N° Solicitação Fluig</label>
+			    <input type="text" id="numeroSolicitacao" name="numeroSolicitacao" class="form-control" readonly>
+			</div>
+		</div>
+		
+		<div class="row"></div>
+	    <div class="form-group col-md-12">
+	        <label for="informativo2"></label>
+	        <textarea rows="2"  name="informativo7" id="infoText2" class="info-textarea2" style="text-align: center;" readonly> Anexar a planilha utilizada para o levantamento de dados e a classificação dos fornecedores. </textarea>
+	    </div>
+	    
+	    
+	    <div class="row">
+    <div class="form-group col-md-6">
+    <label>Houve fornecedores desqualificados (Pontuação < 70%)?</label>
+        <div class="radio">
+            <label><input type="radio" name="itempreenchimento" id="itempreenchimento" value="sim">Sim. Se sim, preencher tabela abaixo</label></br>
+            <label><input type="radio" name="itempreenchimento" id="itempreenchimento" value="nao">Não</label>
+        </div>		
+    </div>
+</div>
+
+<div class="row">
+		
+	 <div>
+		<table class="table"  id="tabelaRegistros" dataset="linhaDinamicaDataset" datadatasetkey="myDataset" datadatasetvalue="dynamicTableData">
+		<thead>
+		    <tr>
+		        <th class="col-md-4">Fornecedores Desqualificados</th>
+		        <th class="col-md-4">Atualização no SAP (Inativo)</th>
+		        <th class="col-md-2">Previsão para Auditoria da Qualidade</th>
+		        <th class="col-md-2">Prazo e etapas de requalificação</th>
+		        
+		    </tr>
+		</thead>
+		<tbody>
+		    <tr>
+		        <td><input type="text" name="codigo_1" class="form-control"></td>
+		        <td><input type="text" name="lote_1" class="form-control"></td>
+		        <td><input type="text" name="quantidade_1" class="form-control"></td>
+		        <td><input type="text" name="datafabricacao_1" class="form-control"></td>
+		        <td><button type="button" onclick="removeRow(this)"><i class="flaticon flaticon-trash icon-md" aria-hidden="true"></i></button></td>
+		    </tr>
+		</tbody>
+		</table>
+		</div>
+		</div>
+		<button type="button" class="btn btn-info" onclick="addNewRecord()" id="novoRegistroBtn">Novo Registro</button>
+		<button type="button" class="btn btn-success" onclick="saveAllTables()" id="btnSalvar">Salvar Dados</button>
+		<input type="hidden" name="linhaDinamicaDataset" id="linhaDinamicaDataset">
+		
+		</br></br><div class="row">
+    <div class="form-group col-md-12">
+        <label for="consideracoes">Comentário</label>
+        <textarea rows="5" name="consideracoes" id="consideracoes" class="form-control" placeholder="Descrever detalhes adicionais, como o motivo da desqualificação ou problemas identificados."></textarea>
+    </div>
+</div>
+    </div>
+    </div>
+
+
+<div id="panel2" class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">Ações Corretivas e Retorno</h3>
+    </div>
+    <div class="panel-body">
+    <div class="row">
+        <div class="form-group col-md-6">
+		        <label for="responsavel2">Responsável</label>
+		        <input type="text" name="responsavel2" class="form-control" id="responsavel2" placeholder="Coloque o nome do responsável">
+		    </div>
+		    <div class="form-group col-md-3">
+		        <label for="data_solicitacao2">Data</label>
+		        <input type="text" name="data_solicitacao2" class="form-control" id="data_solicitacao2" placeholder="data">
+		    </div>
+		</div>
+		
+		<div class="row">
+    <div class="form-group col-md-6">
+    <label>Os fornecedores apresentaram o plano de ações e retornaram em até 30 dias após a conclusão do processo de auditoria da qualidade?</label>
+        <div class="radio">
+            <label><input type="radio" name="itempreenchimento2" id="itempreenchimento2" value="sim2">Sim</label></br>
+            <label><input type="radio" name="itempreenchimento2" id="itempreenchimento2" value="nao2">Não</label>
+        </div>		
+    </div>
+</div>
+
+<div class="row">
+    <div class="form-group col-md-12">
+       </br></br> <label for="consideracoes2">Comentário</label>
+        <textarea rows="5" name="consideracoes2" id="consideracoes2" class="form-control" placeholder="Registrar informações relevantes sobre o plano de ações apresentado e o status do retorno."></textarea>
+    </div>
+</div>
+		
+    </div>
+</div>
+
+<div id="panel3" class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">Monitoramento Contínuo</h3>
+    </div>
+    <div class="panel-body">
+        
+        <div class="row">
+		 <div>
+			<table class="table"  id="tabelaRegistross">
+			<thead>
+			    <tr>
+			        <th class="col-md-6">Fornecedores desqualificados</th>
+			        <th class="col-md-6">Plano de ações implementado: Sim ou Não</th>
+			        
+			    </tr>
+			</thead>
+			<tbody>
+			    <tr>
+			        <td><textarea name="causa" class="form-control textarea-fixed-size"></textarea></td>
+			        <td><textarea name="porque" class="form-control textarea-fixed-size"></textarea></td>
+			        <td><button type="button" onclick="removeRow2(this)"><i class="flaticon flaticon-trash icon-xl" aria-hidden="true"></i>
+</button></td>
+			    </tr>
+			</tbody>
+			</table>
+			</div>
+			</div>
+			<button type="button" class="btn btn-info" onclick="addNewRecord2()" id="novoRegistroBtnn">Novo Registro</button>
+			<button id="saveTable2" class="btn btn-success" onclick="saveTableData2()">Salvar Tabela 2</button>
+	    <input type="hidden" name="tabela2Data" id="tabela2Data">
+    
+
+	</br></br><div class="row">
+    <div class="form-group col-md-12">
+       </br></br> <label for="consideracoes3">Comentário</label>
+        <textarea rows="5" name="consideracoes3" id="consideracoes3" class="form-control" placeholder="Registrar observações sobre o desempenho do fornecedor e se a requalificação foi mantida ou revogada."></textarea>
+    </div>
+</div>
+
+<div class="row">
+    <div class="form-group col-md-3">
+        <label for="data_conclusao">Data da conclusão</label>
+        <input type="text" name="data_conclusao" class="form-control" id="data_conclusao" placeholder="">
+    </div>
+</div>
+	</div>
+	</div>
+</form>
+
+</div>
+
+<script>
+    function preencherDataAtual() {
+        var dataAtual = new Date();
+        var ano = dataAtual.getFullYear();
+        var mes = String(dataAtual.getMonth() + 1).padStart(2, '0');
+        var dia = String(dataAtual.getDate()).padStart(2, '0');
+        var horas = String(dataAtual.getHours()).padStart(2, '0');
+        var minutos = String(dataAtual.getMinutes()).padStart(2, '0');
+        var dataFormatada = `${dia}/${mes}/${ano} ${horas}:${minutos}`;
+
+        // Painel 1 - Preencher data_solicitacao
+        var panel1 = document.getElementById("panel1");
+        var campoDataInicio = document.getElementById("data_solicitacao");
+        if (panel1 && campoDataInicio && panel1.style.display !== "none" && !campoDataInicio.value) {
+            campoDataInicio.value = dataFormatada;
+        }
+
+        // Painel 2 - Preencher data_solicitacao2
+        var panel2 = document.getElementById("panel2");
+        var campoDataInicio2 = document.getElementById("data_solicitacao2");
+        if (panel2 && campoDataInicio2 && panel2.style.display !== "none" && !campoDataInicio2.value) {
+            campoDataInicio2.value = dataFormatada;
+        }
+
+        // Painel 3 - Preencher data_conclusao
+        var panel3 = document.getElementById("panel3");
+        var campoDataFinal = document.getElementById("data_conclusao");
+        if (panel3 && campoDataFinal && panel3.style.display !== "none" && !campoDataFinal.value) {
+            campoDataFinal.value = dataFormatada;
+        }
+    }
+
+    // Chamar a função ao carregar a página
+    document.addEventListener("DOMContentLoaded", function() {
+        preencherDataAtual();
+    });
+
+    // Se os painéis forem ativados dinamicamente, chamar a função quando forem exibidos
+    function mostrarPainel(idPainel) {
+        var painel = document.getElementById(idPainel);
+        if (painel) {
+            painel.style.display = "block";
+            preencherDataAtual(); // Chama a função para preencher a data quando o painel for exibido
+        }
+    }
+</script>
+
+
+<script src="tabelaUm.js"></script>
+
+</body>
+</html>

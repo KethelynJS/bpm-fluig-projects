@@ -52,10 +52,14 @@
                 <label for="datacalendario">Data</label>
                 <input type="date" name="datacalendario" id="datacalendario" class="form-control" placeholder="Data da solicitação ">
             </div>
-            <div class="form-group col-md-10">
+            <div class="form-group col-md-8">
                 <label for="motivoQualificacao">Motivo da Qualificação</label>
                 <input type="text" name="motivoQualificacao" class="form-control" id="motivoQualificacao" placeholder="Coloque o motivo">
             </div>
+			  <div class="form-group col-md-2">
+			    <label for="procedencia">N° Solicitação Fluig</label>
+			    <input type="text" id="numeroSolicitacao" name="numeroSolicitacao" class="form-control" readonly>
+			</div>
         </div>
         <div class="form-group col-md-12">
             <label>Componente a ser qualificado</label>
@@ -93,25 +97,19 @@
                             <td><textarea name="caixa3_4" class="form-control textarea-fixed-size" style="height: 35px;"></textarea></td>
                             <td><textarea name="caixa3_5" class="form-control textarea-fixed-size" style="height: 35px;"></textarea></td>
                         </tr>
-                        <tr>
-                            <td><input type="text" name="caixa4_1" class="form-control" style="height: 35px;"></td>
-                            <td><input type="text" name="caixa4_2" class="form-control" style="height: 35px;"></td>
-                            <td><textarea name="caixa4_3" class="form-control textarea-fixed-size" style="height: 35px;"></textarea></td>
-                            <td><textarea name="caixa4_4" class="form-control textarea-fixed-size" style="height: 35px;"></textarea></td>
-                            <td><textarea name="caixa4_5" class="form-control textarea-fixed-size" style="height: 35px;"></textarea></td>
-                        </tr>
-                        <tr>
-                            <td><input type="text" name="caixa5_1" class="form-control" style="height: 35px;"></td>
-                            <td><input type="text" name="caixa5_2" class="form-control" style="height: 35px;"></td>
-                            <td><textarea name="caixa5_3" class="form-control textarea-fixed-size" style="height: 35px;"></textarea></td>
-                            <td><textarea name="caixa5_4" class="form-control textarea-fixed-size" style="height: 35px;"></textarea></td>
-                            <td><textarea name="caixa5_5" class="form-control textarea-fixed-size" style="height: 35px;"></textarea></td>
-                        </tr>
+                        
+                        
                     </tbody>
                 </table>
             </div>
             
         </div>
+        <div class="row">
+            <div class="form-group col-md-12">
+                <label for="justifi">Caso não tenha recebido 3 lotes para análise, solicitar justificativa do setor de compras e descrever:</label>
+                <input type="text" name="justifi" id="justifi" class="form-control" placeholder=" ">
+            </div>
+            </div>
         <div class="row">
             <div class="form-group col-md-12">
                 <label for="componente">Componente compõe qual produto acabado?</label>
@@ -170,6 +168,12 @@
         </div>		
 	</div>
 	</div>
+	<div class="row">
+    <div class="form-group col-md-12">
+        <label for="correcao_compras">Caso corrigir, descreva:</label>
+        <textarea rows="5" name="correcao_compras" id="correcao_compras" class="form-control"></textarea>
+    </div>
+</div>
     </div>
 </div>
 
@@ -232,7 +236,9 @@
                 <tr>
                     <th class="col-md-3">Análise</th>
                     <th class="col-md-3">Especificação</th>
-                    <th class="col-md-4">Resultado</th>
+                    <th class="col-md-4">Resultado Lote 1°</th>
+                    <th class="col-md-4">Resultado Lote 2°</th>
+                    <th class="col-md-4">Resultado Lote 3°</th>
                     <th class="col-md-2">Analista</th>
                 </tr>
             </thead>
@@ -241,30 +247,40 @@
                     <td><input type="text" name="analise_1" class="form-control" style="height: 35px;"></td>
                     <td><input type="text" name="especificacao_1" class="form-control" style="height: 35px;"></td>
                     <td><textarea name="result_1" class="form-control textarea-fixed-size" style="height: 35px;"></textarea></td>
+                    <td><textarea name="result_11" class="form-control textarea-fixed-size" style="height: 35px;"></textarea></td>
+                    <td><textarea name="result_111" class="form-control textarea-fixed-size" style="height: 35px;"></textarea></td>
                     <td><input type="text" name="analista_1" class="form-control" style="height: 35px;"></td>
                 </tr>
                 <tr>
                     <td><input type="text" name="analise_2" class="form-control" style="height: 35px;"></td>
                     <td><input type="text" name="especificacao_2" class="form-control" style="height: 35px;"></td>
                     <td><textarea name="result_2" class="form-control textarea-fixed-size" style="height: 35px;"></textarea></td>
+                    <td><textarea name="result_22" class="form-control textarea-fixed-size" style="height: 35px;"></textarea></td>
+                    <td><textarea name="result_222" class="form-control textarea-fixed-size" style="height: 35px;"></textarea></td>
                     <td><input type="text" name="analista_2" class="form-control" style="height: 35px;"></td>
                 </tr>
                 <tr>
                     <td><input type="text" name="analise_3" class="form-control" style="height: 35px;"></td>
                     <td><input type="text" name="especificacao_3" class="form-control" style="height: 35px;"></td>
                     <td><textarea name="result_3" class="form-control textarea-fixed-size" style="height: 35px;"></textarea></td>
+                    <td><textarea name="result_33" class="form-control textarea-fixed-size" style="height: 35px;"></textarea></td>
+                    <td><textarea name="result_333" class="form-control textarea-fixed-size" style="height: 35px;"></textarea></td>
                     <td><input type="text" name="analista_3" class="form-control" style="height: 35px;"></td>
                 </tr>
                 <tr>
                     <td><input type="text" name="analise_4" class="form-control" style="height: 35px;"></td>
                     <td><input type="text" name="especificacao_4" class="form-control" style="height: 35px;"></td>
                     <td><textarea name="result_4" class="form-control textarea-fixed-size" style="height: 35px;"></textarea></td>
+                    <td><textarea name="result_44" class="form-control textarea-fixed-size" style="height: 35px;"></textarea></td>
+                    <td><textarea name="result_444" class="form-control textarea-fixed-size" style="height: 35px;"></textarea></td>
                     <td><input type="text" name="analista_4" class="form-control" style="height: 35px;"></td>
                 </tr>
                 <tr>
                     <td><input type="text" name="analise_5" class="form-control" style="height: 35px;"></td>
                     <td><input type="text" name="especificacao_5" class="form-control" style="height: 35px;"></td>
                     <td><textarea name="result_5" class="form-control textarea-fixed-size" style="height: 35px;"></textarea></td>
+                    <td><textarea name="result_55" class="form-control textarea-fixed-size" style="height: 35px;"></textarea></td>
+                    <td><textarea name="result_555" class="form-control textarea-fixed-size" style="height: 35px;"></textarea></td>
                     <td><input type="text" name="analista_5" class="form-control" style="height: 35px;"></td>
                 </tr>
             </tbody>
@@ -368,7 +384,9 @@
                 <tr>
                     <th class="col-md-3">Análise</th>
                     <th class="col-md-3">Especificação</th>
-                    <th class="col-md-4">Resultado</th>
+                    <th class="col-md-4">Resultado Lote 1°</th>
+                    <th class="col-md-4">Resultado Lote 2°</th>
+                    <th class="col-md-4">Resultado Lote 3°</th>
                     <th class="col-md-2">Analista</th>
                 </tr>
             </thead>
@@ -377,30 +395,40 @@
                     <td><input type="text" name="analise2_1" class="form-control" style="height: 35px;"></td>
                     <td><input type="text" name="especificacao2_1" class="form-control" style="height: 35px;"></td>
                     <td><textarea name="result2_1" class="form-control textarea-fixed-size" style="height: 35px;"></textarea></td>
+                    <td><textarea name="result2_11" class="form-control textarea-fixed-size" style="height: 35px;"></textarea></td>
+                    <td><textarea name="result2_111" class="form-control textarea-fixed-size" style="height: 35px;"></textarea></td>
                     <td><input type="text" name="analista2_1" class="form-control" style="height: 35px;"></td>
                 </tr>
                 <tr>
                     <td><input type="text" name="analise2_2" class="form-control" style="height: 35px;"></td>
                     <td><input type="text" name="especificacao2_2" class="form-control" style="height: 35px;"></td>
                     <td><textarea name="result2_2" class="form-control textarea-fixed-size" style="height: 35px;"></textarea></td>
+                    <td><textarea name="result2_22" class="form-control textarea-fixed-size" style="height: 35px;"></textarea></td>
+                    <td><textarea name="result2_222" class="form-control textarea-fixed-size" style="height: 35px;"></textarea></td>
                     <td><input type="text" name="analista2_2" class="form-control" style="height: 35px;"></td>
                 </tr>
                 <tr>
                     <td><input type="text" name="analise2_3" class="form-control" style="height: 35px;"></td>
                     <td><input type="text" name="especificacao2_3" class="form-control" style="height: 35px;"></td>
                     <td><textarea name="result2_3" class="form-control textarea-fixed-size" style="height: 35px;"></textarea></td>
+                    <td><textarea name="result2_33" class="form-control textarea-fixed-size" style="height: 35px;"></textarea></td>
+                    <td><textarea name="result2_333" class="form-control textarea-fixed-size" style="height: 35px;"></textarea></td>
                     <td><input type="text" name="analista2_3" class="form-control" style="height: 35px;"></td>
                 </tr>
                 <tr>
                     <td><input type="text" name="analise2_4" class="form-control" style="height: 35px;"></td>
                     <td><input type="text" name="especificacao2_4" class="form-control" style="height: 35px;"></td>
                     <td><textarea name="result2_4" class="form-control textarea-fixed-size" style="height: 35px;"></textarea></td>
+                    <td><textarea name="result2_44" class="form-control textarea-fixed-size" style="height: 35px;"></textarea></td>
+                    <td><textarea name="result2_444" class="form-control textarea-fixed-size" style="height: 35px;"></textarea></td>
                     <td><input type="text" name="analista2_4" class="form-control" style="height: 35px;"></td>
                 </tr>
                 <tr>
                     <td><input type="text" name="analise2_5" class="form-control" style="height: 35px;"></td>
                     <td><input type="text" name="especificacao2_5" class="form-control" style="height: 35px;"></td>
                     <td><textarea name="result2_5" class="form-control textarea-fixed-size" style="height: 35px;"></textarea></td>
+                    <td><textarea name="result2_55" class="form-control textarea-fixed-size" style="height: 35px;"></textarea></td>
+                    <td><textarea name="result2_555" class="form-control textarea-fixed-size" style="height: 35px;"></textarea></td>
                     <td><input type="text" name="analista2_5" class="form-control" style="height: 35px;"></td>
                 </tr>
             </tbody>
@@ -482,16 +510,56 @@
         <h3 class="panel-title">PCP</h3>
     </div>
     <div class="panel-body">
-        <div class="row">
-    <div class="form-group col-md-5">
-        <label for="datacalendario6">Data planejada para fabricação do lote piloto:</label>
-        <input type="date" name="datacalendario6" id="datacalendario6" class="form-control" placeholder="Data ">
-    </div>
-    <div class="form-group col-md-5">
-        <label for="lotepcp">Lote</label>
-        <input type="lotepcp" name="lotepcp" class="form-control" id="lotepcp" placeholder="Coloque o lote">
-    </div>
-</div>
+        <table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Data planejada para fabricação do lote piloto</th>
+            <th>Lote</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Linha 1 -->
+        <tr>
+            <td>
+                <div class="form-group">
+                    <input type="date" name="datacalendario6_1" id="datacalendario6_1" class="form-control" placeholder="Data">
+                </div>
+            </td>
+            <td>
+                <div class="form-group">
+                    <input type="text" name="lotepcp_1" class="form-control" id="lotepcp_1" placeholder="Coloque o lote">
+                </div>
+            </td>
+        </tr>
+        <!-- Linha 2 -->
+        <tr>
+            <td>
+                <div class="form-group">
+                    <input type="date" name="datacalendario6_2" id="datacalendario6_2" class="form-control" placeholder="Data">
+                </div>
+            </td>
+            <td>
+                <div class="form-group">
+                    <input type="text" name="lotepcp_2" class="form-control" id="lotepcp_2" placeholder="Coloque o lote">
+                </div>
+            </td>
+        </tr>
+        <!-- Linha 3 -->
+        <tr>
+            <td>
+                <div class="form-group">
+                    <input type="date" name="datacalendario6_3" id="datacalendario6_3" class="form-control" placeholder="Data">
+                </div>
+            </td>
+            <td>
+                <div class="form-group">
+                    <input type="text" name="lotepcp_3" class="form-control" id="lotepcp_3" placeholder="Coloque o lote">
+                </div>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
     </div>
 </div>
 
@@ -569,6 +637,7 @@
 		        </div>
 		    </div>
 		</div>
+		<input type="hidden" id="returnFromActivity55" name="returnFromActivity55" value="false">
 </div>
 </div>
 
@@ -585,7 +654,9 @@
                 <tr>
                     <th class="col-md-3">Análise</th>
                     <th class="col-md-3">Especificação</th>
-                    <th class="col-md-3">Resultado</th>
+                    <th class="col-md-3">Resultado Lote 1°</th>
+                    <th class="col-md-3">Resultado Lote 2°</th>
+                    <th class="col-md-3">Resultado Lote 3°</th>
                     <th class="col-md-3">Analista</th>
                 </tr>
             </thead>
@@ -594,24 +665,32 @@
                     <td><input type="text" name="analise4_1" class="form-control" style="height: 35px;"></td>
                     <td><input type="text" name="especificacao4_1" class="form-control" style="height: 35px;"></td>
                     <td><textarea name="result4_1" class="form-control textarea-fixed-size" style="height: 35px;"></textarea></td>
+                    <td><textarea name="result4_11" class="form-control textarea-fixed-size" style="height: 35px;"></textarea></td>
+                    <td><textarea name="result4_111" class="form-control textarea-fixed-size" style="height: 35px;"></textarea></td>
                     <td><input type="text" name="analista4_1" class="form-control" style="height: 35px;"></td>
                 </tr>
                 <tr>
                     <td><input type="text" name="analise4_2" class="form-control" style="height: 35px;"></td>
                     <td><input type="text" name="especificacao4_2" class="form-control" style="height: 35px;"></td>
                     <td><textarea name="result4_2" class="form-control textarea-fixed-size" style="height: 35px;"></textarea></td>
+                    <td><textarea name="result4_22" class="form-control textarea-fixed-size" style="height: 35px;"></textarea></td>
+                    <td><textarea name="result4_222" class="form-control textarea-fixed-size" style="height: 35px;"></textarea></td>
                     <td><input type="text" name="analista4_2" class="form-control" style="height: 35px;"></td>
                 </tr>
                 <tr>
                     <td><input type="text" name="analise4_3" class="form-control" style="height: 35px;"></td>
                     <td><input type="text" name="especificacao4_3" class="form-control" style="height: 35px;"></td>
                     <td><textarea name="result4_3" class="form-control textarea-fixed-size" style="height: 35px;"></textarea></td>
+                    <td><textarea name="result4_33" class="form-control textarea-fixed-size" style="height: 35px;"></textarea></td>
+                    <td><textarea name="result4_333" class="form-control textarea-fixed-size" style="height: 35px;"></textarea></td>
                     <td><input type="text" name="analista4_3" class="form-control" style="height: 35px;"></td>
                 </tr>
                 <tr>
                     <td><input type="text" name="analise4_4" class="form-control" style="height: 35px;"></td>
                     <td><input type="text" name="especificacao4_4" class="form-control" style="height: 35px;"></td>
                     <td><textarea name="result4_4" class="form-control textarea-fixed-size" style="height: 35px;"></textarea></td>
+                    <td><textarea name="result4_44" class="form-control textarea-fixed-size" style="height: 35px;"></textarea></td>
+                    <td><textarea name="result4_444" class="form-control textarea-fixed-size" style="height: 35px;"></textarea></td>
                     <td><input type="text" name="analista4_4" class="form-control" style="height: 35px;"></td>
                 </tr>
             </tbody>
@@ -681,6 +760,7 @@
 <script src="descrever.js"></script>
 <script src="cqfqnao.js"></script>
 <script src="cookies.js"></script>
+<script src="returnFlag.js"></script>
 </body>
 </html>
 

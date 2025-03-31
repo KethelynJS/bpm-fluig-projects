@@ -1,26 +1,26 @@
 $(document).ready(function() {
     var opcaoData = {
-        'opcao1': {
+        'PA169 - Gluc Up 100g Limão frasco c/ 300mL': {
             aspecto: 'Líquido incolor translúcido.',
             dosagem: ' g/300 mL',
             analise_microbiologica: 'ausencia',
             motivoAnalise: 'motivoan'
             
         },
-        'opcao2': {
-            aspecto: 'Líquido incolor translúcido. ',
+        'PA170 - Gluc Up 50g Limão frasco c/ 200mL': {
+            aspecto: 'Líquido verde-claro translúcido ',
             dosagem: ' g/200 mL',
             analise_microbiologica: 'ausencia',
             motivoAnalise: 'motivoan'
         },
-        'opcao3': {
+        'PA172 - Gluc Up 75g Laranja frasco c/ 300mL': {
             aspecto: 'Líquido alaranjado translúcido.',
             dosagem: ' g/300 mL',
             analise_microbiologica: 'ausencia',
             motivoAnalise: 'motivoan'
         },
-        'opcao4': {
-            aspecto: 'Líquido incolor translúcido. ',
+        'PA173 - Gluc Up 75g Limão frasco c/ 300mL': {
+            aspecto: 'Líquido verde-claro translúcido. ',
             dosagem: ' g/300 mL',
             analise_microbiologica: 'ausencia',
             motivoAnalise: 'motivoan'
@@ -61,14 +61,14 @@ $(document).ready(function() {
             prioridade: 'naoaplicavel',
             motivoAnalise: 'motivoan'
         },
-        'opcao12': {
+        'PA287 - Lact Up 50g Laranja frasco c/ 300mL': {
             aspecto: 'Líquido alaranjado translúcido. ',
             dosagem: ' g/300 mL',
             analise_microbiologica: 'ausencia',
             motivoAnalise: 'motivoan'
         },
-        'opcao13': {
-            aspecto: 'Líquido incolor a amarelado, translúcido levemente opalescente com possível presença de precipitados.',
+        'PA288 - Lact Up 50g Limão frasco c/ 300mL': {
+            aspecto: 'Líquido amarelo-claro, translúcido levemente opalescente com possível presença de precipitados.',
             dosagem: ' g/300 mL',
             analise_microbiologica: 'ausencia',
             motivoAnalise: 'motivoan'
@@ -86,6 +86,18 @@ $(document).ready(function() {
         },
         'opcao16': {
             aspecto: 'Após reconstituição com água: Líquido branco a amarelo-claro leitoso.',
+            dosagem: ' g/300 mL',
+            prioridade: 'naoaplicavel',
+            motivoAnalise: 'motivoan'
+        },
+        'PA414 - Gluc Up SC 75g Limão frasco c/ 300mL': {
+            aspecto: 'Aspecto Final: Especificação: Líquido incolor translúcido. Resultado: Adequado',
+            dosagem: ' g/300 mL',
+            prioridade: 'naoaplicavel',
+            motivoAnalise: 'motivoan'
+        },
+        'PA415 - Lact Up SC 50g Limão frasco c/ 300mL': {
+            aspecto: 'Especificação: Líquido incolor a amarelado translúcido a levemente opalescente com possível presença de precipitados. Resultado: Adequado',
             dosagem: ' g/300 mL',
             prioridade: 'naoaplicavel',
             motivoAnalise: 'motivoan'
@@ -120,35 +132,3 @@ $(document).ready(function() {
 });
 
 
-$(document).ready(function() {
-    console.log('Script para preencher data carregado');
-
-    // Função para preencher data e hora
-    function setCurrentDateTime() {
-        var now = new Date();
-        var day = ('0' + now.getDate()).slice(-2);
-        var month = ('0' + (now.getMonth() + 1)).slice(-2);
-        var year = now.getFullYear();
-        var hours = ('0' + now.getHours()).slice(-2);
-        var minutes = ('0' + now.getMinutes()).slice(-2);
-        var formattedDateTime = `${year}-${month}-${day}T${hours}:${minutes}`;
-
-        // Preencher os campos com data e hora atual
-        var fields = ['datacainicio2', 'datacafinall'];
-        fields.forEach(function(fieldId) {
-            var $field = $('#' + fieldId);
-            if ($field.length && $field.val() === '') {
-                $field.val(formattedDateTime);
-            }
-        });
-
-        // Preencher campo de data sem hora
-        var formattedDate = `${day}/${month}/${year}`;
-        var $datacalendario = $('#datacalendario');
-        if ($datacalendario.length && $datacalendario.val() === '') {
-            $datacalendario.val(formattedDate);
-        }
-    }
-
-    setCurrentDateTime();
-});

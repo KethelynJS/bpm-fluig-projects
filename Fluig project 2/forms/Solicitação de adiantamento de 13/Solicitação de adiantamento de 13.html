@@ -1,0 +1,99 @@
+<html>
+<head>
+	<link type="text/css" rel="stylesheet" href="/style-guide/css/fluig-style-guide.min.css"/>
+	<script type="text/javascript" src="/portal/resources/js/jquery/jquery.js"></script>
+	<script type="text/javascript" src="/portal/resources/js/jquery/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="/portal/resources/js/mustache/mustache-min.js"></script>
+	<script type="text/javascript" src="/style-guide/js/fluig-style-guide.min.js" charset="utf-8"></script>
+</head>
+<body>
+<div class="fluig-style-guide">
+<form name="form" role="form">
+<div id="panel1" class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">Solicitante</h3>
+    </div>
+    <div class="panel-body">
+        <div class="row">
+    <div class="form-group col-md-4">
+        <label for="colaborador">Nome</label>
+        <input type="colaborador" name="colaborador" class="form-control" id="colaborador" placeholder="Coloque o nome do colaborador">
+    </div>
+    <div class="form-group col-md-4">
+        <label for="funcao">Função</label>
+        <input type="funcao" name="funcao" class="form-control" id="funcao" placeholder="Coloque a função">
+    </div>
+    <div class="form-group col-md-2">
+        <label for="setor">Setor</label>
+        <input type="setor" name="setor" class="form-control" id="setor" placeholder="Coloque o setor">
+    </div>
+		<div class="form-group col-md-2">
+		    <label for="procedencia">N° Solicitação Fluig</label>
+		    <input type="text" id="numeroSolicitacao" name="numeroSolicitacao" class="form-control" readonly>
+		</div>
+	</div>
+	
+	<div class="row">
+	    <div class="form-group col-md-6">
+	        <label for="lider">Líder</label>
+	        <input type="lider" name="lider" class="form-control" id="lider" placeholder="Coloque o nome do lider">
+	    </div>
+		<div class="form-group col-md-2">
+	        <label for="datacalendario">Data</label>
+	        <input type="date" name="datacalendario" id="datacalendario" class="form-control" placeholder="Data">
+	    </div>
+	</div>
+    </div>
+</div>
+
+
+<div id="panel2" class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">RH</h3>
+    </div>
+    <div class="panel-body">
+		 <div class="row">
+		    <div class="form-group col-md-6">
+		        <label for="admissao">Admissão</label>
+		        <input type="admissao" name="admissao" class="form-control" id="admissao" placeholder="Coloque a admissão">
+		    </div>
+		<div class="form-group col-md-6">
+	        <label for="valor_13">Valor do 13° salário</label>
+	        <input type="valor_13" name="valor_13" class="form-control" id="valor_13" placeholder="Coloque o valor">
+	    </div>
+		</div>
+		<div class="row">
+		    <div class="form-group col-md-6">
+		    <label>Validação</label>
+		        <div class="radio">
+		            <label><input type="radio" name="validar" id="validar" value="aprovado">Aprovado</label></br>
+		            <label><input type="radio" name="validar" id="validar" value="recusado">Recusado</label>
+		        </div>		
+		    </div>
+		</div>
+    </div>
+</div>
+
+
+<div id="panel3" class="panel panel-warning">
+    <div class="panel-heading">
+        <h3 class="panel-title">Informativo</h3>
+    </div>
+    <div class="panel-body">
+	 <div class="form-group col-md-4">
+	    <label>Resposta para o solicitante</label>
+	    <div class="checkbox">
+	        <label><input type="checkbox" name="informativo">Sim, recebi as informações</label>
+	        
+	        
+	    </div>
+	</div>
+    </div>
+</div>
+
+
+</form>
+</div>
+<script src="data.js"></script>
+</body>
+</html>

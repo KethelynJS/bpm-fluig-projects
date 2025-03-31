@@ -36,6 +36,36 @@ function validateActivity4(form) {
     if (form.getValue("acionar_ti") == "") {
         msg += "Campo específico TI não foi preenchido\n";
     }
+    if (form.getValue("n_matricula") == "") {
+        msg += "Campo número de matrícula não foi preenchido\n";
+    }
+    if (form.getValue("hor_trabalho") == "") {
+        msg += "Campo horário não foi preenchido\n";
+    }
+    if (form.getValue("opcao") == "") {
+        msg += "Campo opcao não foi preenchido\n";
+    }
+    if (form.getValue("data_nascimento") == "") {
+        msg += "Campo data de nascimento não foi preenchido\n";
+    }
+    if (form.getValue("email_pessoal") == "") {
+        msg += "Campo email não foi preenchido\n";
+    }
+    if (form.getValue("celular") == "") {
+        msg += "Campo celular não foi preenchido\n";
+    }
+    if (form.getValue("estado_civil") == "") {
+        msg += "Campo estado civil não foi preenchido\n";
+    }
+    if (form.getValue("plano_saude") == "") {
+        msg += "Campo plano de saúde não foi preenchido\n";
+    }
+    if (form.getValue("alergia") == "") {
+        msg += "Campo alergia não foi preenchido\n";
+    }
+    if (form.getValue("contato_emergencia") == "") {
+        msg += "Campo contato de emergencia não foi preenchido\n";
+    }
     
 
     if (msg !== "") {

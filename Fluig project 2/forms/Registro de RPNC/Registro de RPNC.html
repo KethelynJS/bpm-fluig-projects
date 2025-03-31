@@ -49,10 +49,14 @@
 		        <label for="data_inicio">Data da abertura RPNC</label>
 		        <input type="date" name="data_inicio" id="data_inicio" class="form-control" placeholder="Data">
 		    </div>
-			<div class="form-group col-md-10">
+			<div class="form-group col-md-8">
 		        <label for="resp_pelo_envio">Responsável pelo envio da RPNC</label>
 		        <input type="resp_pelo_envio" name="resp_pelo_envio" class="form-control" id="resp_pelo_envio" placeholder="Coloque o nome do responsável">
 		    </div>
+			<div class="form-group col-md-2">
+			    <label for="procedencia">N° Solicitação Fluig</label>
+			    <input type="text" id="numeroSolicitacao" name="numeroSolicitacao" class="form-control" readonly>
+			</div>
 		</div>
 		
 	<div class="row">
@@ -85,13 +89,15 @@
 	            <label><input type="radio" name="natureza_desvio" id="natureza_desvio" value="contaminacao">Contaminação</label></br>
 	            <label><input type="radio" name="natureza_desvio" id="natureza_desvio" value="erro_operacional">Erro Operacional</label></br>
 	            <label><input type="radio" name="natureza_desvio" id="natureza_desvio" value="desempenho">Desempenho Insatisfatório</label></br>
-	            <label><input type="radio" name="natureza_desvio" id="natureza_desvio" value="rendimento">Rendimento real acima ou abaixo 10% do RT</label></br>
-	            <label><input type="radio" name="natureza_desvio" id="natureza_desvio" value="fora_especificacao">Fora da Especificação</label></br>
+	            <label><input type="radio" name="natureza_desvio" id="natureza_desvio" value="rendimento">Rendimento real acima ou abaixo 5% do RT</label></br>
 	            <label><input type="radio" name="natureza_desvio" id="natureza_desvio" value="falta_suprimentos">Falta de Suprimentos</label></br>
 	            <label><input type="radio" name="natureza_desvio" id="natureza_desvio" value="avarias">Avarias</label></br>
 	            <label><input type="radio" name="natureza_desvio" id="natureza_desvio" value="itens_vencidos">Itens Vencidos</label></br>
 	            <label><input type="radio" name="natureza_desvio" id="natureza_desvio" value="erro_separacao">Erro de Separação</label></br>
 	            <label><input type="radio" name="natureza_desvio" id="natureza_desvio" value="problemas_equipamentos">Problemas em Equipamentos</label></br>
+	            <label><input type="radio" name="natureza_desvio" id="natureza_desvio" value="Componente não conforme">Componente não conforme</label></br>
+	            <label><input type="radio" name="natureza_desvio" id="natureza_desvio" value="Auditoria da Qualidade">Auditoria da Qualidade</label></br>
+	            <label><input type="radio" name="natureza_desvio" id="natureza_desvio" value="Inspeção sanitária">Inspeção sanitária</label></br>
 	            <label><input type="radio" name="natureza_desvio" id="natureza_desvio" value="outros_desvio">Outros: </label> <input type="text" name="descricao_outros" id="descricao_outros" style="display: inline-block; width: 200px; border: none; border-bottom: 1px solid #000; background: none; outline: none; height: 20px;" placeholder="Descreva o desvio">
 	        </div>		
 	    </div>
@@ -173,10 +179,11 @@
     </div>
     <div class="panel-body">
 		<div class="row">
-		    <div class="form-group col-md-6">
+		    <div class="form-group col-md-9">
 		        <div class="radio">
-		            <label><input type="radio" name="validando_primeira" id="validando_primeira" value="validando_conforme">Conforme</label></br>
-		            <label><input type="radio" name="validando_primeira" id="validando_primeira" value="validando_nao_conforme">Não conforme</label>
+		            <label><input type="radio" name="validando_primeira" id="validando_primeira" value="Investigação Imediata: não conformidades de auditoria da qualidade, inspeção sanitária, desempenho insatisfatório de produtos">Investigação Imediata: não conformidades de auditoria da qualidade, inspeção sanitária, desempenho insatisfatório de produtos</label></br>
+		            <label><input type="radio" name="validando_primeira" id="validando_primeira" value="Investigação caso o indicador esteja fora da meta">Investigação caso o indicador esteja fora da meta</label></br>
+		            <label><input type="radio" name="validando_primeira" id="validando_primeira" value="Necessário revisar os campos de abertura da RPNC">Necessário revisar os campos de abertura da RPNC</label>
 		        </div>		
 		    </div>
 		</div>
@@ -337,7 +344,8 @@
 		    <div class="form-group col-md-6">
 		        <div class="radio">
 		            <label><input type="radio" name="validando_final" id="validando_final" value="validando_final_apr">Aprovado</label></br>
-		            <label><input type="radio" name="validando_final" id="validando_final" value="validando_final_repr">Reprovado</label>
+		            <label><input type="radio" name="validando_final" id="validando_final" value="validando_final_repr">Reprovado</label></br>
+		            <label><input type="radio" name="validando_final" id="validando_final" value="outros">Outros</label> <input type="text" name="descricao_outros_validacao" id="descricao_outros_validacao" style="display: inline-block; width: 200px; border: none; border-bottom: 1px solid #000; background: none; outline: none; height: 20px;" placeholder="">
 		        </div>		
 		    </div>
 		</div>

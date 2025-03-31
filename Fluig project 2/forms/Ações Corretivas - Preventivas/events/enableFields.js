@@ -38,6 +38,7 @@ function desabilitarSolicitante(form){
 	form.setEnabled("resposta6", false);
 	form.setEnabled("resposta7", false);
 	form.setEnabled("descricao_outros_acao", false);
+	form.setEnabled("classificacao_comentario", false);
 	
 }
 

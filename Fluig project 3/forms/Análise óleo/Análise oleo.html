@@ -1,0 +1,165 @@
+<html>
+<head>
+	<link type="text/css" rel="stylesheet" href="/style-guide/css/fluig-style-guide.min.css"/>
+	<script type="text/javascript" src="/portal/resources/js/jquery/jquery.js"></script>
+	<script type="text/javascript" src="/portal/resources/js/jquery/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="/portal/resources/js/mustache/mustache-min.js"></script>
+	<script type="text/javascript" src="/style-guide/js/fluig-style-guide.min.js" charset="utf-8"></script>
+</head>
+<body>
+<div class="fluig-style-guide">
+<form name="form" role="form">
+
+<div id="panel1" class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">Etapa 1</h3>
+    </div>
+    <div class="panel-body">
+    <div class="row">
+		<div id="opcaoo" class="form-group col-md-10">
+		  <label for="opcoes">Código</label>
+		    <select type="opcao" name="opcao" class="form-control" id="opcao" placeholder="">
+		      <option value="PA285 - Óleo de Imersão frasco c/ 100mL"> PA285 - Óleo de Imersão frasco c/ 100mL</option>
+			    
+		    </select>
+		</div>
+		<div class="form-group col-md-2">
+	        <label for="data_inicio">Data</label>
+	        <input type="date" name="data_inicio" id="data_inicio" class="form-control" placeholder="Data">
+	    </div>
+		</div>
+		
+		<div class="row">
+		    
+		    <div class="form-group col-md-3">
+		        <label for="lote">Lote</label>
+		        <input type="text" name="lote" class="form-control" id="lote" placeholder="lote">
+		    </div>
+		    <div class="form-group col-md-2">
+		        <label for="procedencia">N° Solicitação Fluig</label>
+		        <input type="text" id="numeroSolicitacao" name="numeroSolicitacao" class="form-control" readonly>
+		    </div>
+		</div>
+		
+		<table class="table table-bordered">
+		    <tr>
+		        <th style="width: 50%;">Itens</th>
+		        <th style="width: 50%;">Valor</th>
+		    </tr>
+		    
+
+		    <tr>
+		        <td>Aspecto</td>
+		        <td><textarea name="question6" id="question6" rows="2" style="width: 100%;" placeholder="Líquido viscoso, amarelo-claro, translúcido e sem precipitados"></textarea></td>
+		    </tr>
+		    <tr>
+		        <td>Indice de refração</td>
+		        <td><textarea name="question7" id="question7" rows="2" style="width: 100%;" placeholder="1,495 - 1,5050"></textarea></td>
+		    </tr>
+		    <tr>
+		        <td>Densidade</td>
+		        <td><textarea name="question8" id="question8" rows="2" style="width: 100%;" placeholder="0,980 - 0,999 g/ml"></textarea></td>
+		    </tr>
+		    <tr>
+		        <td>Viscosidade</td>
+		        <td><textarea name="question9" id="question9" rows="2" style="width: 100%;" placeholder="250 - 300 cSt"></textarea></td>
+		    </tr>
+		    <tr>
+		        <td>Visualização em lâminas coradas</td>
+		        <td><textarea name="question10" id="question10" rows="2" style="width: 100%;"></textarea></td>
+		    </tr>
+		    	    <tr>
+		        <td>Analista</td>
+		        <td><textarea name="question11" id="question11" rows="2" style="width: 100%;"></textarea></td>
+		    </tr>
+		    
+		    
+		</table>
+		<input type="hidden" id="returnFromActivity5" name="returnFromActivity5" value="false">	
+    </div>
+</div>
+
+<div id="panelwarning" class="panel panel-warning">
+    <div class="panel-heading">
+        <h3 class="panel-title">Etapa 2</h3>
+    </div>
+    <div class="panel-body">
+		<div class="row">
+		    <div class="form-group col-md-6">
+		        <div class="radio">
+		            <label><input type="radio" name="aprovado_reprovado" id="aprovado_reprovado" value="aprovado">Aprovado</label></br>
+		            <label><input type="radio" name="aprovado_reprovado" id="aprovado_reprovado" value="reprovado">Reprovado</label>
+		        </div>		
+		    </div>
+		</div>
+		
+		<div class="row">
+		    <div class="form-group col-md-7">
+		    <label for="analiseop">Análise da OP(RHP) do produto:</label>
+		        <div class="radio">
+		            <label><input type="radio" name="prioridade" id="prioridade" value="conforme">Conforme</label>
+		            <label><input type="radio" name="prioridade" id="prioridade" value="naoconforme">Não conforme</label>
+		            
+			</div>	
+			</div>
+		
+		<div class="row">
+		    <div class="form-group col-md-7">
+		    <label>Status:</label>
+		        <div class="radio">
+		            <label><input type="radio" name="aprovado" id="aprovado" value="aprovado">Produto aprovado</label>
+		            <label><input type="radio" name="aprovado" id="aprovado" value="reprovado">Produto reprovado</label>
+		            
+		            </div>
+		    </div>
+		</div>
+		<div class="row">
+		    <div class="form-group col-md-2">
+		        <label for="datacalendario">Data da conclusão</label>
+		        <input type="text" name="datacalendario" id="datacalendario" class="form-control" placeholder="Data da solicitação ">
+		    </div>
+		<div id="opcaoo" class="form-group col-md-4">
+		  <label for="Resp">Responsável pela liberação do produto</label>
+		    <select type="text" name="Resp" class="form-control" id="Resp" placeholder="">
+		    <option value="escolha">Escolha</option>
+		      			<option value="fernando">Fernando B. Stocco</option>
+				      <option value="andrea">Andrea Mara Issa</option>
+		    </select>
+		</div>
+		</div>
+		<div class="row">
+		    <div class="form-group col-md-12">
+		        <label for="consideracoes">Observação</label>
+		        <textarea rows="5" name="consideracoes" id="consideracoes" class="form-control"></textarea>
+		    </div>
+		</div>
+    </div>
+</div>
+
+
+</form>
+</div>
+
+<script>
+    window.onload = function() {
+        var today = new Date();
+
+        // Obtém a data
+        var day = String(today.getDate()).padStart(2, '0');
+        var month = String(today.getMonth() + 1).padStart(2, '0'); // Janeiro é 0!
+        var year = today.getFullYear();
+
+        // Formata a data no padrão DD/MM/YYYY
+        var currentDate = day + '/' + month + '/' + year;
+
+        // Define o valor do campo com id "data_inicio"
+        document.getElementById("data_inicio").value = currentDate;
+
+        // Define o valor do campo com id "datacalendario"
+        document.getElementById("datacalendario").value = currentDate;
+    };
+</script>
+
+<script scr="returnFlag.js"></script>
+</body>
+</html>

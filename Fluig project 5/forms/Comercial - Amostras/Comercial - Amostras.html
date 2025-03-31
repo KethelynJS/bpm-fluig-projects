@@ -1,0 +1,153 @@
+<html>
+<head>
+	<link type="text/css" rel="stylesheet" href="/style-guide/css/fluig-style-guide.min.css"/>
+	<script type="text/javascript" src="/portal/resources/js/jquery/jquery.js"></script>
+	<script type="text/javascript" src="/portal/resources/js/jquery/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="/portal/resources/js/mustache/mustache-min.js"></script>
+	<script type="text/javascript" src="/style-guide/js/fluig-style-guide.min.js" charset="utf-8"></script>
+	<link rel="stylesheet" href="participante.css">
+	
+	
+</head>
+<body>
+<div class="fluig-style-guide">
+<form name="form" role="form">
+
+<div id="panel1" class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">Envio de amostra Grátis</h3>
+    </div>
+    <div class="panel-body">
+		<div class="row">
+		    <div class="form-group col-md-2">
+		        <label for="datacalendario">Data</label>
+		        <input type="text" name="datacalendario" id="datacalendario" class="form-control" placeholder="Data">
+		    </div>
+		    <div class="form-group col-md-8">
+		        <label for="dados_solicitante">Dados do Solicitante</label>
+		        <input type="text" name="dados_solicitante" id="dados_solicitante" class="form-control" placeholder="Dados">
+		    </div>
+			<div class="form-group col-md-2">
+			    <label for="procedencia">N° Solicitação Fluig</label>
+			    <input type="text" id="numeroSolicitacao" name="numeroSolicitacao" class="form-control" readonly>
+			</div>
+		    
+
+		</br></br></br><div class="form-group col-md-4">
+		    <label>Tipo de cliente:</label>
+		    <div class="radio">
+		        <label><input type="radio" name="cliente_tipo" value="Cliente Novo">Cliente Novo</label></br>
+		        <label><input type="radio" name="cliente_tipo" value="Cliente Base">Cliente Base</label></br>
+		        
+		    </div>
+		</div>
+		
+
+	<div class="row">
+		
+	 <div>
+		<table class="table"  id="tabelaRegistros" dataset="linhaDinamicaDataset" datadatasetkey="myDataset" datadatasetvalue="dynamicTableData">
+		<thead>
+		    <tr>
+		        <th class="col-md-3">PA</th>
+		        <th class="col-md-4">Produto</th>
+		        <th class="col-md-2">Quantidade enviada</th>
+		        <th class="col-md-2">Validado</th>
+		        
+		    </tr>
+		</thead>
+		<tbody>
+		    <tr>
+		        <td><textarea name="codigo_1" class="form-control"></textarea></td>
+		        <td><input type="text" name="lote_1" class="form-control"></td>
+		        <td><input type="text" name="quantidade_1" class="form-control"></td>
+		        <td><input type="text" name="datafabricacao_1" class="form-control"></td>
+		        <td><button type="button" onclick="removeRow(this)"><i class="flaticon flaticon-trash icon-md" aria-hidden="true"></i></button></td>
+		    </tr>
+		</tbody>
+		</table>
+		</div>
+		</div>
+		<button type="button" class="btn btn-info" onclick="addNewRecord()" id="novoRegistroBtn">Novo Registro</button>
+		<button type="button" class="btn btn-success" onclick="saveAllTables()" id="btnSalvar">Salvar Dados</button>
+		<input type="hidden" name="linhaDinamicaDataset" id="linhaDinamicaDataset">
+		
+		</div></br></br>
+		<div class="row">
+		<div class="form-group col-md-3">
+			    <label for="data_finalizacao">Data de finalização da validação</label>
+			    <input type="date" id="data_finalizacao" name="data_finalizacao" class="form-control">
+			</div>
+			
+			
+			<div class="form-group col-md-3">
+			    <label for="volume">Volume de negócio no mês em R$</label>
+			    <input type="text" id="volume" name="volume" class="form-control" placeholder="R$:">
+			</div>
+		</div>
+		       
+    </div>
+</div>
+
+
+<div id="panel5" class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">Validação</h3>
+    </div>
+    <div class="panel-body">
+    
+    <div class="row">
+		<div class="form-group col-md-4">
+		    <label>Abertura de SAC</label>
+		    <div class="radio">
+		        <label><input type="radio" name="abertuda_sac" value="Sim">Sim</label></br>
+		        <label><input type="radio" name="abertuda_sac" value="Não">Não</label></br>
+		        
+		    </div>
+		</div>
+			
+			
+			<div class="form-group col-md-3">
+			    <label for="numero_sac">Número do SAC</label>
+			    <input type="text" id="numero_sac" name="numero_sac" class="form-control">
+			</div>
+		</div>
+    
+    <div class="row">
+    <div class="form-group col-md-12">
+        <label for="observacao">Observação</label>
+        <textarea rows="5" name="observacao" id="observacao" class="form-control"></textarea>
+    </div>
+</div>
+    
+        <div class="row">
+		<div class="form-group col-md-6">
+		        <div class="radio">
+		            <label><input type="radio" name="validar" id="validar" value="Finalizar">Finalizar</label></br>
+		            <label><input type="radio" name="validar" id="validar" value="Arrumar">Arrumar</label>
+		        </div>		
+		    </div>
+		</div>
+		
+    </div>
+</div>
+
+</form>
+</div>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    var hoje = new Date();
+    var dia = String(hoje.getDate()).padStart(2, '0');
+    var mes = String(hoje.getMonth() + 1).padStart(2, '0'); // Mês começa do zero
+    var ano = hoje.getFullYear();
+    
+    var dataFormatada = dia + "/" + mes + "/" + ano; // Formato DD/MM/YYYY
+    
+    document.getElementById("datacalendario").value = dataFormatada;
+});
+
+</script>
+<script src="tabelas.js"></script>
+
+</body>
+</html>

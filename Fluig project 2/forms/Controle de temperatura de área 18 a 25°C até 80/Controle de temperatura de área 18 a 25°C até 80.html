@@ -1,0 +1,166 @@
+<html>
+<head>
+	<link type="text/css" rel="stylesheet" href="/style-guide/css/fluig-style-guide.min.css"/>
+	<script type="text/javascript" src="/portal/resources/js/jquery/jquery.js"></script>
+	<script type="text/javascript" src="/portal/resources/js/jquery/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="/portal/resources/js/mustache/mustache-min.js"></script>
+	<script type="text/javascript" src="/style-guide/js/fluig-style-guide.min.js" charset="utf-8"></script>
+</head>
+<body>
+<div class="fluig-style-guide">
+<form name="form" role="form">
+
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">1° Temperatura do dia</h3>
+    </div>
+    <div class="panel-body">
+        <div class="row">
+		    <div class="form-group col-md-7">
+		        <label for="informativo1">Especificação</label></br>
+		        <label name="informativo1" id="infoText2" class="info-textarea2" style="text-align: center;" readonly>Faixa de temperatura: Entre 18 e 25ºC / Faixa de umidade:  Até 80%</label>
+		    </div>
+		    <div class="form-group col-md-2">
+		        <label for="datacalendario">Data</label>
+		        <input type="date" name="datacalendario" id="datacalendario" class="form-control" placeholder="Data">
+		    </div>
+		    </div>
+		 
+		<div class="row">
+		    <div class="form-group col-md-5">
+		        <label for="informativo2">1º Horário</label></br>
+		        <label  name="informativo2" id="infoText2" class="info-textarea2" style="text-align: center;" readonly>10H </label>
+		    </div>
+		    </div>
+		    <div class="row">
+			<div class="form-group col-md-6">
+		        <label for="responsavel_leitura">Responsável pela leitura/Horário atual</label>
+		        <input type="text" name="responsavel_leitura" class="form-control" id="responsavel_leitura" placeholder="Coloque o nome do responsável">
+		    </div>
+		</div>
+		<div class="row">
+		    <div class="form-group col-md-6">
+		        <div class="radio">
+		            <label><input type="radio" name="itempreenchimento" id="itempreenchimento" value="meio_cultura_comum1">Meios de cultura: Área Comum</label></br>
+		            <label><input type="radio" name="itempreenchimento" id="itempreenchimento" value="meio_cultura_limpa1">Meios de cultura: Área limpa</label></br>
+		            <label><input type="radio" name="itempreenchimento" id="itempreenchimento" value="bioquimica_po1">Bioquímica: Produção pó</label></br>
+		            <label><input type="radio" name="itempreenchimento" id="itempreenchimento" value="bioquimica_liquido1">Bioquímica: Produção líquido</label></br>
+		            <label><input type="radio" name="itempreenchimento" id="itempreenchimento" value="almox_central_corante1">Almox. suprimentos: Central de pesagem corante</label></br>
+		            <label><input type="radio" name="itempreenchimento" id="itempreenchimento" value="almox_central1">Almox. suprimentos: Central de pesagem</label>
+		            <label><input type="radio" name="itempreenchimento" id="itempreenchimento" value="almox_quarentena1">Almox. suprimentos: Quarentena</label>
+		            <label><input type="radio" name="itempreenchimento" id="itempreenchimento" value="almox_componentes1">Almox. suprimentos: Sala de produtos componentes c/ temp controlada</label>
+		            <label><input type="radio" name="itempreenchimento" id="itempreenchimento" value="embalagem_quarentena1">Embalagem: Quarentena</label>
+		            <label><input type="radio" name="itempreenchimento" id="itempreenchimento" value="embalagem_comum1">Embalagem: Área comum</label>
+		            <label><input type="radio" name="itempreenchimento" id="itempreenchimento" value="controle_cqfq1">Controle de qualidade: CQFQ</label>
+		            <label><input type="radio" name="itempreenchimento" id="itempreenchimento" value="controle_cqm1">Controle de qualidade: CQM</label>
+		            <label><input type="radio" name="itempreenchimento" id="itempreenchimento" value="controle_cqh1">Controle de Qualidade: CQH</label>
+		        </div>		
+		    </div>
+		</div>
+		<div class="row">
+		    <div class="form-group col-md-3">
+		        <label for="temperatura_atual">Temperatura atual (ºC)</label>
+		        <input type="text" name="temperatura_atual" class="form-control" id="temperatura_atual" placeholder="Coloque a temperatura">
+		    </div>
+		    <div class="form-group col-md-3">
+		        <label for="umidade_relativa">Umidade Relativa (%)</label>
+		        <input type="text" name="umidade_relativa" class="form-control" id="umidade_relativa" placeholder="Coloque a umidade">
+		    </div>
+		</div>
+		<div class="row">
+		    <div class="form-group col-md-12">
+		        <label for="comentario">Comentário</label>
+		        <textarea rows="5" name="comentario" id="comentario" class="form-control"></textarea>
+		    </div>
+		</div>
+		<div class="row">
+		<label>Resultado</label>
+		    <div class="form-group col-md-6">
+		        <div class="radio">
+		            <label><input type="radio" name="conforme_nao" id="conforme_nao" value="conforme">Conforme especificação - Temperatura entre 18 e 25ºC e umidade até 80%</label></br>
+		            <label><input type="radio" name="conforme_nao" id="conforme_nao" value="nao_conforme">Não Conforme</label>
+		        </div>		
+		    </div>
+		</div>
+    </div>
+</div>
+
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">2° Temperatura do dia</h3>
+    </div>
+    <div class="panel-body">
+        <div class="row">
+		    <div class="form-group col-md-7">
+		        <label for="informativo3">Especificação</label></br>
+		        <label name="informativo3" id="infoText2" class="info-textarea2" style="text-align: center;" readonly>Faixa de temperatura: Entre 10 e  30ºC / Faixa de umidade:  Até 80%</label>
+		    </div>
+		    <div class="form-group col-md-2">
+		        <label for="datacalendario1">Data</label>
+		        <input type="date" name="datacalendario1" id="datacalendario1" class="form-control" placeholder="Data">
+		    </div>
+		    </div>
+		 
+		<div class="row">
+		    <div class="form-group col-md-5">
+		        <label for="informativo4">1º Horário</label></br>
+		        <label  name="informativo4" id="infoText2" class="info-textarea2" style="text-align: center;" readonly>16H </label>
+		    </div>
+		    </div>
+		    <div class="row">
+			<div class="form-group col-md-6">
+		        <label for="responsavel_leitura2">Responsável pela leitura/Horário atual</label>
+		        <input type="text" name="responsavel_leitura2" class="form-control" id="responsavel_leitura2" placeholder="Coloque o nome do responsável">
+		    </div>
+		</div>
+		<div class="row">
+		    <div class="form-group col-md-6">
+		        <div class="radio">
+		            <label><input type="radio" name="itempreenchimento2" id="itempreenchimento2" value="meio_cultura2">Meios de cultura: Área Comum</label></br>
+		            <label><input type="radio" name="itempreenchimento2" id="itempreenchimento2" value="meio_cultura_limpa2">Meios de cultura: Área limpa</label></br>
+		            <label><input type="radio" name="itempreenchimento2" id="itempreenchimento2" value="bioquimica_po2">Bioquímica: Produção pó</label></br>
+		            <label><input type="radio" name="itempreenchimento2" id="itempreenchimento2" value="bioquimica_liquida2">Bioquímica: Produção líquido</label></br>
+		            <label><input type="radio" name="itempreenchimento2" id="itempreenchimento2" value="almox_corante2">Almox. suprimentos: Central de pesagem corante</label></br>
+		            <label><input type="radio" name="itempreenchimento2" id="itempreenchimento2" value="almox_central2">Almox. suprimentos: Central de pesagem</label>
+		            <label><input type="radio" name="itempreenchimento2" id="itempreenchimento2" value="almox_quarentena2">Almox. suprimentos: Quarentena</label>
+		            <label><input type="radio" name="itempreenchimento2" id="itempreenchimento2" value="almox_produtos2">Almox. suprimentos: Sala de produtos componentes c/ temp controlada</label>
+		            <label><input type="radio" name="itempreenchimento2" id="itempreenchimento2" value="emabalagem_quarentena2">Embalagem: Quarentena</label>
+		            <label><input type="radio" name="itempreenchimento2" id="itempreenchimento2" value="embalagem_area2">Embalagem: Área comum</label>
+		            <label><input type="radio" name="itempreenchimento2" id="itempreenchimento2" value="controle_cqfq2">Controle de qualidade: CQFQs</label>
+		            <label><input type="radio" name="itempreenchimento2" id="itempreenchimento2" value="controle_cqm2">Controle de qualidade: CQM</label>
+		            <label><input type="radio" name="itempreenchimento2" id="itempreenchimento2" value="controle_cqh2">Controle de Qualidade: CQH</label>
+		        </div>		
+		    </div>
+		</div>
+		<div class="row">
+		    <div class="form-group col-md-3">
+		        <label for="temperatura_atual2">Temperatura atual (ºC)</label>
+		        <input type="text" name="temperatura_atual2" class="form-control" id="temperatura_atual2" placeholder="Coloque a temperatura">
+		    </div>
+		    <div class="form-group col-md-3">
+		        <label for="umidade_relativa2">Umidade Relativa (%)</label>
+		        <input type="text" name="umidade_relativa2" class="form-control" id="umidade_relativa2" placeholder="Coloque a umidade">
+		    </div>
+		</div>
+		<div class="row">
+		    <div class="form-group col-md-12">
+		        <label for="comentario2">Comentário</label>
+		        <textarea rows="5" name="comentario2" id="comentario2" class="form-control"></textarea>
+		    </div>
+		</div>
+		<div class="row">
+		    <div class="form-group col-md-6">
+		        <div class="radio">
+		            <label><input type="radio" name="conforme_nao2" id="conforme_nao2" value="conforme2">Conforme especificação - Temperatura entre 18 e 25ºC e umidade até 80%</label></br>
+		            <label><input type="radio" name="conforme_nao2" id="conforme_nao2" value="nao_conforme2">Não Conforme</label>
+		        </div>		
+		    </div>
+		</div>
+    </div>
+</div>
+
+
+</form>
+</div>
+</body>
+</html>

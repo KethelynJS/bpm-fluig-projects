@@ -52,10 +52,14 @@
 		        <label for="solicitante">Solicitante</label>
 		        <input type="solicitante" name="solicitante" class="form-control" id="solicitante" placeholder="Coloque o nome do solicitante">
 		    </div>
-		    <div class="form-group col-md-6">
+		    <div class="form-group col-md-4">
 		        <label for="setor">Setor</label>
 		        <input type="setor" name="setor" class="form-control" id="setor" placeholder="Coloque o nome do setor">
 		    </div>
+			<div class="form-group col-md-2">
+			    <label for="procedencia">N° Solicitação Fluig</label>
+			    <input type="text" id="numeroSolicitacao" name="numeroSolicitacao" class="form-control" readonly>
+			</div>
 		</div>
 			<div class="row">
 			    <div class="form-group col-md-2">
@@ -80,6 +84,47 @@
     </div>
 </div>
 
+<div id="panelurgencia" class="panel panel-warning">
+    <div class="panel-heading">
+        <h3 class="panel-title">Nível de prioridade</h3>
+    </div>
+    <div class="panel-body">
+        <div class="row">
+    <div class="form-group col-md-12">
+        <div class="radio">
+            <label><input type="radio" name="itempreenchimento" id="itempreenchimento" value="Urgente">Urgente: Quando o equipamento estiver inoperante e impactando diretamente a produção. </label></br>
+            <label><input type="radio" name="itempreenchimento" id="itempreenchimento" value="Alta">Alta: Quando o equipamento estiver em funcionamento, mas apresentando falhas que requerem atenção imediata.</label></br>
+            <label><input type="radio" name="itempreenchimento" id="itempreenchimento" value="Média">Média: Quando o equipamento necessita de pequenos reparos.</label></br>
+            <label><input type="radio" name="itempreenchimento" id="itempreenchimento" value="Baixa">Baixa: Quando o equipamento requer reparos que podem ser planejados a longo prazo.</label>
+        </div>		
+    </div>
+</div>
+    </div>
+</div>
+<input type="hidden" id="returnFromActivity5" name="returnFromActivity5" value="false">	
+<div id="validando" class="panel panel-warning">
+    <div class="panel-heading">
+        <h3 class="panel-title">Validando informações</h3>
+    </div>
+    <div class="panel-body">
+        <div class="row">
+    <div class="form-group col-md-6">
+        <div class="radio">
+            <label><input type="radio" name="validandoc" id="validandoc" value="continuar">Continuar</label></br>
+            <label><input type="radio" name="validandoc" id="validandoc" value="corrigir">Corrigir</label>
+        </div>		
+    </div>
+</div>
+
+<div class="row">
+    <div class="form-group col-md-12">
+        <label for="consideracoesvalidar">Observação</label>
+        <textarea rows="3" name="consideracoesvalidar" id="consideracoesvalidar" class="form-control"></textarea>
+    </div>
+</div>
+    </div>
+</div>
+
 <div id="panel2" class="panel panel-primary">
     <div class="panel-heading">
         <h3 class="panel-title">Analisando tipo de manutenção</h3>
@@ -89,8 +134,8 @@
 		    <div class="form-group col-md-6">
 		    <label>Manutenção por:</label>
 		        <div class="radio">
-		            <label><input type="radio" name="interno_externo" id="interno_externo" value="analista_interno">Analista Interno</label></br>
-		            <label><input type="radio" name="interno_externo" id="interno_externo" value="prestador_servico">Prestador de serviço</label>
+		            <label><input type="radio" name="interno_externo" id="interno_externo" value="Analista interno">Analista Interno</label></br>
+		            <label><input type="radio" name="interno_externo" id="interno_externo" value="Prestador de serviço">Prestador de serviço</label>
 		        </div>		
 		</div>
 		</div>
@@ -141,8 +186,8 @@
 		    <div class="form-group col-md-6">
 		    <label>Validar manutenção corretiva? </label>
 		        <div class="radio">
-		            <label><input type="radio" name="validar" id="validar" value="validarS">Sim</label></br>
-		            <label><input type="radio" name="validar" id="validar" value="validarN">Não</label>
+		            <label><input type="radio" name="validar" id="validar" value="Validado">Sim</label></br>
+		            <label><input type="radio" name="validar" id="validar" value="Não Validado">Não</label>
 		        </div>		
 		</div>
 		</div>

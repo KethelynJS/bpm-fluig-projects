@@ -7,6 +7,7 @@ function enableFields(form) {
     if (atv_atual == 4) {
         log.info("Chamada para validacaoanexo na atividade 4");
         validacaoanexo(form);
+        compras62(form)
     } else if (atv_atual == 4) {
     	compras62(form);
     } else if (atv_atual == 5) {
@@ -136,6 +137,7 @@ function validacaoanexo(form) {
 function compras62(form){
 	form.setEnabled("validacao_anexo", false);
     form.setEnabled("observacao_validacao", false);
+    form.setEnabled("correcao_compras", false);
 }
 	
 function compras4(form){
@@ -161,6 +163,7 @@ function compras4(form){
 	form.setEnabled("caixa5_2", false);
 	form.setEnabled("caixa5_3", false);
 	form.setEnabled("caixa5_4", false);
+	form.setEnabled("justifi", false);
 	form.setEnabled("componente", false);
 	form.setEnabled("anexo1", false);
 	form.setEnabled("caixa1_5", false);
@@ -209,7 +212,6 @@ function cqfq1(form){
 	form.setEnabled("analista_2", false);
 	form.setEnabled("analise_3", false);
 	form.setEnabled("especificacao_3", false);
-	form.setEnabled("result_3", false);
 	form.setEnabled("analista_3", false);
 	form.setEnabled("analise_4", false);
 	form.setEnabled("especificacao_4", false);
@@ -217,6 +219,7 @@ function cqfq1(form){
 	form.setEnabled("analista_4", false);
 	form.setEnabled("analise_5", false);
 	form.setEnabled("especificacao_5", false);
+	
 	form.setEnabled("result_5", false);
 	form.setEnabled("analista_5", false);
 	form.setEnabled("lotebancada", false);
@@ -235,10 +238,30 @@ function cqfq1(form){
 	form.setEnabled("hematologica", false);
 	form.setEnabled("citologica", false);
 	form.setEnabled("fisicoquimica", false);
+	form.setEnabled("result_33", false);
+	form.setEnabled("result_333", false);
+	form.setEnabled("result_11", false);
+	form.setEnabled("result_111", false);
+	form.setEnabled("result_22", false);
+	form.setEnabled("result_222", false);
+	form.setEnabled("result_44", false);
+	form.setEnabled("result_444", false);
+	form.setEnabled("result_55", false);
+	form.setEnabled("result_555", false);
 	
 }
 
 function cqm1(form){
+	form.setEnabled("result2_33", false);
+	form.setEnabled("result2_333", false);
+	form.setEnabled("result2_11", false);
+	form.setEnabled("result2_111", false);
+	form.setEnabled("result2_22", false);
+	form.setEnabled("result2_222", false);
+	form.setEnabled("result2_44", false);
+	form.setEnabled("result2_444", false);
+	form.setEnabled("result2_55", false);
+	form.setEnabled("result2_555", false);
 	form.setEnabled("analise2_1", false);
 	form.setEnabled("especificacao2_1", false);
 	form.setEnabled("result2_1", false);
@@ -274,8 +297,12 @@ function lotepiloto(form){
 }
 
 function pcp(form){
-	form.setEnabled("datacalendario6", false);
-	form.setEnabled("lotepcp", false);
+	form.setEnabled("datacalendario6_1", false);
+	form.setEnabled("lotepcp_1", false);
+	form.setEnabled("datacalendario6_2", false);
+	form.setEnabled("lotepcp_2", false);
+	form.setEnabled("datacalendario6_3", false);
+	form.setEnabled("lotepcp_3", false);
 }
 
 function producao(form){
@@ -311,6 +338,16 @@ function cqm2(form){
 	form.setEnabled("analise4_1", false);
 	form.setEnabled("especificacao4_1", false);
 	form.setEnabled("result4_1", false);
+	form.setEnabled("result4_11", false);
+	form.setEnabled("result4_111", false);
+	form.setEnabled("result4_22", false);
+	form.setEnabled("result4_222", false);
+	form.setEnabled("result4_33", false);
+	form.setEnabled("result4_333", false);
+	form.setEnabled("result4_44", false);
+	form.setEnabled("result4_444", false);
+	form.setEnabled("result4_55", false);
+	form.setEnabled("result4_555", false);
 	form.setEnabled("analista4_1", false);
 	form.setEnabled("analise4_2", false);
 	form.setEnabled("especificacao4_2", false);

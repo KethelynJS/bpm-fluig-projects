@@ -1,6 +1,6 @@
 $(document).ready(function(){
     // Aplica a máscara de CNPJ ao campo com id "setor"
-    $('#setor').mask('00.000.000/0001-00');
+    $('#setor').mask('00.000.000/0000-00');
 });
 
 function updateReturnFlag() {

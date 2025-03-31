@@ -5,13 +5,57 @@
 	<script type="text/javascript" src="/portal/resources/js/jquery/jquery-ui.min.js"></script>
 	<script type="text/javascript" src="/portal/resources/js/mustache/mustache-min.js"></script>
 	<script type="text/javascript" src="/style-guide/js/fluig-style-guide.min.js" charset="utf-8"></script>
+	<style>
+    .rating {
+      direction: rtl; /* Para alinhar as estrelas da direita para a esquerda */
+      display: inline-flex;
+      font-size: 30px;
+    }
+
+    .rating input {
+      display: none; /* Esconde os botões de rádio */
+    }
+
+    .rating label {
+      color: lightgray;
+      cursor: pointer;
+      font-size: 30px;
+      padding: 0 5px;
+    }
+
+    .rating label::before {
+  content: "\2605"; /* Código Unicode para estrela */
+    }
+
+    .rating input:checked ~ label {
+      color: gold; /* Cor das estrelas selecionadas */
+    }
+
+    .rating label:hover,
+    .rating label:hover ~ label {
+      color: gold; /* Cor das estrelas ao passar o mouse */
+    }
+    
+    
+    
+	.info-textarea2 {
+		width: 100%;
+		color: #000000; /* Cor do texto preta */
+		border: 1px solid #cccccc; /* Borda cinza clara */
+		border-radius: 4px;
+		background-color: #DCDCDC;
+	}
+	
+  </style>
 </head>
 <body>
 <div class="fluig-style-guide">
 <form name="form" role="form">
-<div id="panelsolicitante" class="panel panel-primary">
-    <div class="panel-heading>
-        <h3 class="panel-title"><i class="flaticon flaticon-person icon-xl" aria-hidden="true"></i>Solicitante</h3>
+
+
+<div id="panel1" class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title"><i class="flaticon flaticon-person icon-xl" aria-hidden="true"></i> Solicitante</h3>
     </div>
     <div class="panel-body">
         <div class="row">
@@ -32,30 +76,29 @@
    		 <div class="row">
     		<div class="form-group col-md-2">
 				<label for="datacalendario">Data</label>
-				<input type="datacalendario" name="datacalendario" id="datacalendario" class="form-control" placeholder="Data da solicitação ">
+				<input type="date" name="datacalendario" id="datacalendario" class="form-control" placeholder="Data da solicitação ">
 			</div>
     	</div>
-</div>
+    </div>
 </div>
 <div id="paneltipo" class="panel panel-primary">
     <div  class="panel-heading">
-        <h3 class="panel-title"><i class="flaticon flaticon-description icon-xl" aria-hidden="true"></i>Tipo de Solicitação</h3>
+        <h3 class="panel-title"><i class="flaticon flaticon-description icon-xl" aria-hidden="true"></i> Tipo de Solicitação</h3>
     </div>
     <div class="panel-body">
         <div class="row">
 		<div class="form-group col-md-6">
 			<div class=radio>
 				<label for="tipomotivo"><b>Motivo</b></label></br></br>
-				<label><input type="radio" name="tipomotivo" id="tipomotivo" value="quebra">Hardware (computadores, impressoras, etc.)</label></br>
-				<label><input type="radio" name="tipomotivo" id="tipomotivo" value="quebra">Software (aplicações, sistemas operacionais, etc.)</label></br>
-				<label><input type="radio" name="tipomotivo" id="tipomotivo" value="quebra">Rede (conexões, internet, etc.)</label></br>
-				<label><input type="radio" name="tipomotivo" id="tipomotivo" value="quebra">Acesso (contas, pastas, permissões, etc.)</label></br>
-				<label><input type="radio" name="tipomotivo" id="tipomotivo" value="quebra">Suporte SAP Business One</label></br>
-				<label><input type="radio" name="tipomotivo" id="tipomotivo" value="quebra">Suporte Fluig</label></br>
-				<label><input type="radio" name="tipomotivo" id="tipomotivo" value="quebra">Desenvolvimento ( Relatórios, automações, etc)</label></br>
-				<label><input type="radio" name="tipomotivo" id="tipomotivo" value="quebra">Telecomunicações (Ramais, câmeras, etc)</label></br>
-				<label><input type="radio" name="tipomotivo" id="tipomotivo" value="quebra">Site, Email</label></br>
-				<label><input type="radio" name="tipomotivo" id="tipomotivo" value="quebra">Outros</label>
+				<label><input type="radio" name="tipomotivo" id="tipomotivo" value="hardware">Hardware (computadores, impressoras, etc.)</label></br>
+				<label><input type="radio" name="tipomotivo" id="tipomotivo" value="software">Software (aplicações, sistemas operacionais, etc.)</label></br>
+				<label><input type="radio" name="tipomotivo" id="tipomotivo" value="rede">Rede (conexões, internet, etc.)</label></br>
+				<label><input type="radio" name="tipomotivo" id="tipomotivo" value="acesso">Acesso (contas, pastas, permissões, etc.)</label></br>
+				<label><input type="radio" name="tipomotivo" id="tipomotivo" value="suporte_sap">Suporte SAP Business One</label></br>
+				<label><input type="radio" name="tipomotivo" id="tipomotivo" value="suporte_fluig">Suporte Fluig</label></br>
+				<label><input type="radio" name="tipomotivo" id="tipomotivo" value="telecomu">Telecomunicações (Ramais, câmeras, etc)</label></br>
+				<label><input type="radio" name="tipomotivo" id="tipomotivo" value="site">Site, Email</label></br>
+				<label><input type="radio" name="tipomotivo" id="tipomotivo" value="outros_motivo">Outros</label>
 			</div>	
 		</div>
 	</div>
@@ -69,16 +112,16 @@
     </div>
     <div id="panelwarning" class="panel panel-warning">
     <div class="panel-heading">
-        <h3 class="panel-title"><i class="flaticon flaticon-timer icon-xl" aria-hidden="true"></i>Prioridade</h3>
+        <h3 class="panel-title"><i class="flaticon flaticon-timer icon-xl" aria-hidden="true"></i> Prioridade</h3>
     </div>
     <div class="panel-body">
        	<div class="row">
-    		<div class="form-group col-md-6">
+    		<div class="form-group col-md-12">
     			<div class="radio">
-					<label><input type="radio" name="prioridade" id="prioridade" value="prioridade">Urgente</label></br>
-					<label><input type="radio" name="prioridade" id="prioridade" value="prioridade">Alta</label></br>
-					<label><input type="radio" name="prioridade" id="prioridade" value="prioridade">Média</label></br>
-					<label><input type="radio" name="prioridade" id="prioridade" value="prioridade">Baixa</label>
+					<label><input type="radio" name="prioridade" id="prioridade" value="urgente">Urgente - Impactos graves.</label></br>
+					<label><input type="radio" name="prioridade" id="prioridade" value="alta">Alta - Importante, mas não crítico.</label></br>
+					<label><input type="radio" name="prioridade" id="prioridade" value="media">Média - Relevância moderada.</label></br>
+					<label><input type="radio" name="prioridade" id="prioridade" value="baixa">Baixa - Sem urgência.</label>
 				</div>		
 		</div>
     </div>
@@ -86,7 +129,7 @@
 </div>
 <div id="panelti" class="panel panel-primary">
     <div class="panel-heading">
-        <h3 class="panel-title"><i class="flaticon flaticon-desktop icon-xl" aria-hidden="true"></i>Considerações T.I</h3>
+        <h3 class="panel-title"><i class="flaticon flaticon-desktop icon-xl" aria-hidden="true"></i> Considerações T.I</h3>
     </div>
     <div class="panel-body">
        <div class="row">
@@ -98,8 +141,10 @@
 		<div class="row">
 		<div class="form-group col-md-6">
 			<label for="status"><b>Status</b></label></br>
+			<div class="radio">
 			<label><input type="radio" name="status" id="status" value="resolvido">Resolvido</label></br>
 			<label><input type="radio" name="status" id="status" value="validar">Validar</label>
+			</div>
 		</div>
 	</div>
     
@@ -107,24 +152,65 @@
 </div>
 <div id="panelvalidado" class="panel panel-primary">
     <div class="panel-heading">
-        <h3 class="panel-title"><i class="flaticon flaticon-person-star icon-xl" aria-hidden="true"></i>Solicitação Validada?</h3>
+        <h3 class="panel-title"><i class="flaticon flaticon-person-star icon-xl" aria-hidden="true"></i> Solicitação Validada?</h3>
     </div>
     <div class="panel-body">
 		<div class="row">
-		<div class="form-group col-md-6">
-			<label for="validado"></label>
-			<label><input type="radio" class="validado" name="validado" id="validado" value="sim">Sim</label></br>
-			<label><input type="radio" class="validado" name="validado" id="validado" value="nao">Não</label>
+		    <div class="form-group col-md-12">
+		        <label for="consideracoes_usuario">Considerações Usuário</label>
+		        <textarea rows="5" name="consideracoes_usuario" id="consideracoes_usuario" class="form-control"></textarea>
+		    </div>
 		</div>
-	</div>
+		    <input type="hidden" id="returnFromActivity5" name="returnFromActivity5" value="false">
+		   
+		<div class="row">
+		<div class="form-group col-md-6">
+		<label for="validado"></label>
+			<div class="radio">
+			
+			<label><input type="radio" class="validado" name="validado" id="validado" value="sim"> Sim</label></br>
+			<label><input type="radio" class="validado" name="validado" id="validado" value="nao"> Não</label>
+			</div>
+		</div>
+		</div>
+		<div class="row">
+		<label>Avaliação do suporte</label></br>
+			<div class="rating">
+			  <input type="radio" id="star5" name="rating" value="5" />
+			  <label for="star5" title="5 estrelas"></label>
+			  <input type="radio" id="star4" name="rating" value="4" />
+			  <label for="star4" title="4 estrelas"></label>
+			  <input type="radio" id="star3" name="rating" value="3" />
+			  <label for="star3" title="3 estrelas"></label>
+			  <input type="radio" id="star2" name="rating" value="2" />
+			  <label for="star2" title="2 estrelas"></label>
+			  <input type="radio" id="star1" name="rating" value="1" />
+			  <label for="star1" title="1 estrela"></label>
+			</div>
+		</div>
     
 </div>			
 </div>
+
+<div id="panelnotificacao" class="panel panel-danger">
+    <div class="panel-heading">
+        <h3 class="panel-title">Informativo</h3>
+    </div>
+    <div class="panel-body">
+       <div class="row"></div>
+	    <div class="form-group col-md-12">
+	        <label for="informativo2"></label>
+	        <textarea rows="2"  name="informativo2" id="infoText2" class="info-textarea2" style="text-align: center;" readonly> Informo que esse processo foi finalizado com sucesso, ao terminar a leitura clique em enviar.</textarea>
+	    </div>
+	    </div>
+    </div>
+
 
 </form>
 </div>
 </body>
 <script type="text/javascript">
-var caendariodata = FLUIGC.calendar('#datacalendario');
 </script>
+<script scr="estrela2.js"></script>
+<script src="data.js"></script>
 </html>

@@ -5,6 +5,7 @@ function enableFields(form){
 	
 	if(atv_atual == 4) {
 		desabilitarSolicitante5(form)
+		desabilitarSolicitante31(form);
 	}
 	
 	
@@ -12,23 +13,32 @@ function enableFields(form){
 		desabilitarSolicitante(form);
 		desabilitarSolicitante14(form);
 		desabilitarSolicitante27(form);
+		desabilitarSolicitante31(form)
 	}
 	
 	else if(atv_atual == 10){
 		desabilitarSolicitante(form);
 		desabilitarSolicitante5(form);
+		desabilitarSolicitante31(form)
 	}
 	
 	else if(atv_atual == 14){
 		desabilitarSolicitante(form);
 		desabilitarSolicitante5(form);
 		desabilitarSolicitante10(form);
+		desabilitarSolicitante31(form)
 	}
 	
 	else if(atv_atual == 27){
 		desabilitarSolicitante(form);
 		desabilitarSolicitante5(form);
 		desabilitarSolicitante10(form);
+		desabilitarSolicitante31(form)
+	}
+	
+	else if(atv_atual == 31){
+		desabilitarSolicitante(form);
+		
 	}
 	
  
@@ -42,6 +52,14 @@ function desabilitarSolicitante(form){
 	form.setEnabled("equipamento_modelo", false);
 	form.setEnabled("n_equipamento", false);
 	form.setEnabled("ocorrencia", false);
+	form.setEnabled("itempreenchimento", false);
+	
+}
+
+function desabilitarSolicitante31(form){
+	form.setEnabled("validandoc", false);
+	form.setEnabled("consideracoesvalidar", false);
+	
 	
 }
 

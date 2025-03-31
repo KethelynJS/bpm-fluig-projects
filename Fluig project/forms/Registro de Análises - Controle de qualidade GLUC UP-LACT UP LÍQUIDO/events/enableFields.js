@@ -20,6 +20,7 @@ function enableFields(form){
 	
 function desabilitarSolicitante4(form){
 		form.setEnabled("aspecto", false);
+		form.setEnabled("observ_rep", false);
 		
 		
 }
@@ -33,11 +34,14 @@ function desabilitarSolicitante(form){
 	form.setEnabled("Resp", false);
 	form.setEnabled("dosagem", false);
 	form.setEnabled("valor1", false);
+	form.setEnabled("leitura_refratormetro", false);
+	form.setEnabled("massa_volume", false);
 	
 }
 
 function desabilitarCamposAtividade5(form) {
 	form.setEnabled("datainicio2", false);
+	form.setEnabled("lote_reagende", false);
 	form.setEnabled("Resp4", false);
 	
 }

@@ -1,0 +1,323 @@
+<html>
+<head>
+	<link type="text/css" rel="stylesheet" href="/style-guide/css/fluig-style-guide.min.css"/>
+	<script type="text/javascript" src="/portal/resources/js/jquery/jquery.js"></script>
+	<script type="text/javascript" src="/portal/resources/js/jquery/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="/portal/resources/js/mustache/mustache-min.js"></script>
+	<script type="text/javascript" src="/style-guide/js/fluig-style-guide.min.js" charset="utf-8"></script>
+	
+	<style>
+	.info-textarea2 {
+		width: 100%;
+		color: #000000; /* Cor do texto preta */
+		border: 1px solid #cccccc; /* Borda cinza clara */
+		border-radius: 4px;
+		background-color: #DCDCDC;
+	}
+	
+	</style>
+</head>
+<body>
+<div class="fluig-style-guide">
+<form name="form" role="form">
+
+<div id="panel1" class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">Requerimento</h3>
+    </div>
+    <div class="panel-body">
+		<div class="row">
+		    <div class="form-group col-md-2">
+		        <label for="data_solici">Data</label>
+		        <input type="date" name="data_solici" class="form-control" id="data_solici" placeholder="Coloque a data">
+		    </div>
+		    <div class="form-group col-md-4">
+		        <label for="respons_solic">Responsável pela solicitação/ Setor</label>
+		        <input type="text" name="respons_solic" class="form-control" id="respons_solic" placeholder="Coloque o responsável">
+		    </div>
+		    <div class="form-group col-md-6">
+		        <label for="desc_equipa">Nome do equipamento</label>
+		        <input type="text" name="desc_equipa" class="form-control" id="desc_equipa" placeholder="Coloque o nome do equipamento">
+		    </div>
+		</div>
+		<div class="row">
+		    <div class="form-group col-md-12">
+		        <label for="consideracoes_finalidade">Qual a finalidade do equipamento?</label>
+		        <textarea rows="5" name="consideracoes_finalidade" id="consideracoes_finalidade" class="form-control" placeholder="Processo produtivo, inspeção e teste, armazenamento de produtos ou outros"></textarea>
+		    </div>
+		</div>
+		
+		<div class="row">
+		    <div class="form-group col-md-12">
+		        <label for="produto_manipulado">Qual tipo de produto será manipulado, testado ou armazenado pelo equipamento?</label>
+		        <input type="text" name="produto_manipulado" class="form-control" id="produto_manipulado" placeholder="">
+		    </div>
+		</div>
+		<div class="row">
+		    <div class="form-group col-md-6">
+		        <label for="espaco_dispo">Qual o espaço de instalação disponível?</label>
+		        <input type="text" name="espaco_dispo" class="form-control" id="espaco_dispo" placeholder="">
+		    </div>
+		    <div class="form-group col-md-6">
+		        <label for="material">Qual o tipo de material de fabricação?</label>
+		        <input type="text" name="material" class="form-control" id="material" placeholder="">
+		    </div>
+		</div>
+		<div class="row">
+		    <div class="form-group col-md-6">
+		        <label for="precisao">Qual deverá ser a precisão do equipamento?</label>
+		        <input type="text" name="precisao" class="form-control" id="precisao" placeholder="">
+		    </div>
+		    <div class="form-group col-md-6">
+		        <label for="calibracao">Há necessidade de calibração? Quais faixas ?</label>
+		        <input type="text" name="calibracao" class="form-control" id="calibracao" placeholder="">
+		    </div>
+		</div>
+		<div class="row">
+		    <div class="form-group col-md-6">
+		        <label for="qualificacao">Há necessidade de qualificação? Quais faixas?</label>
+		        <input type="text" name="qualificacao" class="form-control" id="qualificacao" placeholder="">
+		    </div>
+		    <div class="form-group col-md-6">
+		        <label for="certificado">Há necessidade de certificação ? Quais faixas ou qual norma deverá atender ?</label>
+		        <input type="text" name="certificado" class="form-control" id="certificado" placeholder="">
+		    </div>
+		</div>
+		<div class="row">
+		    <div class="form-group col-md-12">
+		        <label for="purificado">Há necessidade de saída de ar purificado, ar comprimido, água purificada entre outras utilidades? Quais?</label>
+		        <input type="text" name="purificado" class="form-control" id="purificado" placeholder="">
+		    </div>
+		</div>
+		<div class="row">
+		    <div class="form-group col-md-12">
+		        <label for="utilizacao">Quais acessórios deverão ser adquiridos para utilização com o equipamento?</label>
+		        <input type="text" name="utilizacao" class="form-control" id="utilizacao" placeholder="">
+		    </div>
+		</div>
+		<div class="row">
+		    <div class="form-group col-md-12">
+		        <label for="consideracoes_fabricacao">Descrever o material de fabricação dos acessórios e quantidade de cada</label>
+		        <textarea rows="5" name="consideracoes_fabricacao" id="consideracoes_fabricacao" class="form-control"></textarea>
+		    </div>
+		</div>
+    </div>
+</div>
+
+
+<div id="panel2" class="panel panel-warning">
+    <div class="panel-heading">
+        <h3 class="panel-title">Orçamentos e cotações</h3>
+    </div>
+    <div class="panel-body">
+		<div class="row">
+		    <div class="form-group col-md-4">
+		        <label for="fornecedor_1">Fornecedor 1</label>
+		        <input type="text" name="fornecedor_1" class="form-control" id="fornecedor_1" placeholder="">
+		    </div>
+		    <div class="form-group col-md-4">
+		        <label for="fornecedor_2">Fornecedor 2</label>
+		        <input type="text" name="fornecedor_2" class="form-control" id="fornecedor_2" placeholder="">
+		    </div>
+		    <div class="form-group col-md-4">
+		        <label for="fornecedor_3">Fornecedor 3</label>
+		        <input type="text" name="fornecedor_3" class="form-control" id="fornecedor_3" placeholder="">
+		    </div>
+		</div>
+		<div class="row">
+		    <div class="form-group col-md-4">
+		        <label for="valor_cotacao_1">Valor da cotação 1</label>
+		        <input type="text" name="valor_cotacao_1" class="form-control" id="valor_cotacao_1" placeholder="">
+		    </div>
+		    <div class="form-group col-md-4">
+		        <label for="valor_cotacao_2">Valor da cotação 2</label>
+		        <input type="text" name="valor_cotacao_2" class="form-control" id="valor_cotacao_2" placeholder="">
+		    </div>
+		    <div class="form-group col-md-4">
+		        <label for="valor_cotacao_3">Valor da cotação 3</label>
+		        <input type="text" name="valor_cotacao_3" class="form-control" id="valor_cotacao_3" placeholder="">
+		    </div>
+		</div>
+		<div class="row">
+		    <div class="form-group col-md-6">
+		        <label for="prazo_entrega">Prazo de entrega</label>
+		        <input type="text" name="prazo_entrega" class="form-control" id="prazo_entrega" placeholder="">
+		    </div>
+		    <div class="form-group col-md-6">
+		        <label for="condicoes_pagamento">Condições de pagamento</label>
+		        <input type="text" name="condicoes_pagamento" class="form-control" id="condicoes_pagamento" placeholder="">
+		    </div>
+		</div>
+    
+		<div class="row">
+		    <div class="form-group col-md-12">
+		        <label for="observac_orcamento">Observação</label>
+		        <textarea rows="5" name="observac_orcamento" id="observac_orcamento" class="form-control"></textarea>
+		    </div>
+		</div>
+		
+	    
+		<div class="row">
+		    <div class="form-group col-md-6">
+		    <label> Os equipamentos orçados estão de acordo com o detalhamento técnico?</label>
+		        <div class="radio">
+		            <label><input type="radio" name="detalhamento_tecnico" id="detalhamento_tecnico" value="itemexistente">Sim</label></br>
+		            <label><input type="radio" name="detalhamento_tecnico" id="detalhamento_tecnico" value="itemnovo">Não</label></br>
+		            <label><input type="radio" name="detalhamento_tecnico" id="detalhamento_tecnico" value="itemnovo">Não aplicável</label>
+		        </div>		
+		    </div>
+		    <div class="form-group col-md-6">
+		    <label> Há manual com informações de instalação, utilização, limpeza e manutenção?</label>
+		        <div class="radio">
+		            <label><input type="radio" name="inf_instal" id="inf_instal" value="itemexistente">Sim</label></br>
+		            <label><input type="radio" name="inf_instal" id="inf_instal" value="itemnovo">Não</label></br>
+		            <label><input type="radio" name="inf_instal" id="inf_instal" value="itemnovo">Não aplicável</label>
+		        </div>		
+		    </div>
+		</div>
+		<div class="row">
+		    <div class="form-group col-md-12">
+		        <label for="comentario">Comentário</label>
+		        <input type="text" name="comentario" class="form-control" id="comentario" placeholder="">
+		    </div>
+		</div>
+		<div class="row">
+	    <div class="form-group col-md-12">
+	        <label for="informativo2"></label>
+	        <textarea rows="2"  name="informativo3" id="infoText2" class="info-textarea2" style="text-align: center;" readonly> Anexar: Descrição das opções de equipamentos e valores</textarea>
+	    </div>
+	    </div>
+    </div>
+</div>
+
+
+<div id="panel3" class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">Compras</h3>
+    </div>
+    <div class="panel-body">
+		<div class="row">
+		    <div class="form-group col-md-6">
+		    <label>Autorizada compra do equipamento pela Direção?</label>
+		        <div class="radio">
+		            <label><input type="radio" name="autorizada" id="autorizada" value="sim">Sim</label></br>
+		            <label><input type="radio" name="autorizada" id="autorizada" value="nao">Não</label>
+		        </div>		
+		    </div>
+		</div>
+		<div class="row">
+		    <div class="form-group col-md-6">
+		        <label for="pedido_sap">Descrever o nº do pedido/autorização SAP</label>
+		        <input type="text" name="pedido_sap" class="form-control" id="pedido_sap" placeholder="">
+		    </div>
+		    <div class="form-group col-md-3">
+		        <label for="data_recebimento">Data do recebimento do equipamento</label>
+		        <input type="date" name="data_recebimento" class="form-control" id="data_recebimento" placeholder="">
+		    </div>
+		</div>
+    </div>
+</div>
+
+
+<div id="panel4" class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">Equipamentos</h3>
+    </div>
+    <div class="panel-body">
+	<div class="row">
+		    <div class="form-group col-md-6">
+		    <label> O equipamento foi instalado corretamente?</label>
+		        <div class="radio">
+		            <label><input type="radio" name="instalado_corretamente" id="instalado_corretamente" value="sim">Sim</label></br>
+		            <label><input type="radio" name="instalado_corretamente" id="instalado_corretamente" value="nao">Não</label></br>
+		            <label><input type="radio" name="instalado_corretamente" id="instalado_corretamente" value="na">Não aplicável</label>
+		        </div>		
+		    </div>
+		    <div class="form-group col-md-6">
+		    <label>O equipamento foi cadastrado?</label>
+		        <div class="radio">
+		            <label><input type="radio" name="equipamento_cadastrado" id="equipamento_cadastrado" value="sim">Sim</label></br>
+		            <label><input type="radio" name="equipamento_cadastrado" id="equipamento_cadastrado" value="nao">Não</label></br>
+		            <label><input type="radio" name="equipamento_cadastrado" id="equipamento_cadastrado" value="na">Não aplicável</label>
+		        </div>		
+		    </div>
+		</div>
+
+		<div class="row">
+		    <div class="form-group col-md-6">
+		    <label>Foi realizado calibração?</label>
+		        <div class="radio">
+		            <label><input type="radio" name="calibracao_2" id="calibracao" value="sim">Sim</label></br>
+		            <label><input type="radio" name="calibracao_2" id="calibracao" value="nao">Não</label></br>
+		            <label><input type="radio" name="calibracao_2" id="calibracao" value="na">Não aplicável</label>
+		        </div>		
+		    </div>
+		    <div class="form-group col-md-6">
+		    <label>Foi realizado qualificação?</label>
+		        <div class="radio">
+		            <label><input type="radio" name="qualificacao_2" id="qualificacao_2" value="sim">Sim</label></br>
+		            <label><input type="radio" name="qualificacao_2" id="qualificacao_2" value="nao">Não</label></br>
+		            <label><input type="radio" name="qualificacao_2" id="qualificacao_2" value="na">Não aplicável</label>
+		        </div>		
+		    </div>
+		</div>
+
+		<div class="row">
+		    <div class="form-group col-md-6">
+		    <label> Foi realizado certificação?</label>
+		        <div class="radio">
+		           <label><input type="radio" name="certificacao" id="certificacao" value="sim">Sim</label></br>
+		            <label><input type="radio" name="certificacao" id="certificacao" value="nao">Não</label></br>
+		            <label><input type="radio" name="certificacao" id="certificacao" value="na">Não aplicável</label>
+		        </div>		
+		    </div>
+		    <div class="form-group col-md-6">
+		    <label>A IT foi elaborada conforme manual do equipamento ou desenvolvimento interno ?</label>
+		        <div class="radio">
+		            <label><input type="radio" name="manual_equipamento" id="manual_equipamento" value="sim">Sim</label></br>
+		            <label><input type="radio" name="manual_equipamento" id="manual_equipamento" value="nao">Não</label></br>
+		            <label><input type="radio" name="manual_equipamento" id="manual_equipamento" value="na">Não aplicável</label>
+		        </div>		
+		    </div>
+		</div>
+
+		<div class="row">
+		    <div class="form-group col-md-6">
+		    <label>A IT possui todos os itens conforme modelo de IT para equipamentos?</label>
+		        <div class="radio">
+		            <label><input type="radio" name="modelo" id="modelo" value="itemexistente">Sim</label></br>
+		            <label><input type="radio" name="modelo" id="modelo" value="itemnovo">Não</label></br>
+		            <label><input type="radio" name="modelo" id="modelo" value="itemnovo">Não aplicável</label>
+		        </div>		
+		    </div>
+		    <div class="form-group col-md-6">
+		    <label>Os colaboradores que utilizarão o equipamento foram treinados? O treinamento e a verificação de eficácia estão registrados?</label>
+		        <div class="radio">
+		            <label><input type="radio" name="treinados" id="treinados" value="sim">Sim</label></br>
+		            <label><input type="radio" name="treinados" id="treinados" value="não">Não</label></br>
+		            <label><input type="radio" name="treinados" id="treinados" value="na">Não aplicável</label>
+		        </div>		
+		    </div>
+		</div>
+
+		<div class="row">
+		    <div class="form-group col-md-6">
+		        <label for="liberacao_equipamento">Data de liberação do equipamento para utilização</label>
+		        <input type="text" name="liberacao_equipamento" class="form-control" id="liberacao_equipamento" placeholder="">
+		    </div>
+		    <div class="form-group col-md-6">
+		        <label for="respons">Responsável</label>
+		        <input type="text" name="respons" class="form-control" id="respons" placeholder="">
+		    </div>
+		</div>
+
+    </div>
+</div>
+
+
+
+
+</form>
+</div>
+</body>
+</html>

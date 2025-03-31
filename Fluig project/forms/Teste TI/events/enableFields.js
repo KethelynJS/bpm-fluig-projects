@@ -9,10 +9,16 @@ function enableFields(form){
 	
 	else if(atv_atual == 5){
 		desabilitarSolicitante(form);
+		desabilitarCamposAtividade13(form)
 	}
 	else if (atv_atual == 13 || atv_atual == 11 || atv_atual == 9) {
 		desabilitarSolicitante(form);
         desabilitarCamposAtividade5(form);
+    }
+	else if (atv_atual == 24) {
+		desabilitarSolicitante(form);
+        desabilitarCamposAtividade5(form);
+        desabilitarCamposAtividade13(form)
     }
 }
 
@@ -31,4 +37,10 @@ function desabilitarSolicitante(form){
 function desabilitarCamposAtividade5(form) {
 	form.setEnabled("status", false);
 	form.setEnabled("consideracoes", false);
+}
+
+function desabilitarCamposAtividade13(form) {
+	form.setEnabled("rating", false);
+	form.setEnabled("validado", false);
+	form.setEnabled("consideracoes_usuario", false);
 }

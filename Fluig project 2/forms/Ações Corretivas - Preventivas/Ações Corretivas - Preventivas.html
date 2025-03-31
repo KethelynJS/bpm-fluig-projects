@@ -39,11 +39,15 @@
 		<div class="row">
 		    <div class="form-group col-md-2">
 		        <label for="data_inicio">Data</label>
-		        <input type="date" name="data_inicio" id="data_inicio" class="form-control" placeholder="Data">
+		        <input type="text" name="data_inicio" id="data_inicio" class="form-control" placeholder="Data">
 		    </div>
-			<div class="form-group col-md-10">
+			<div class="form-group col-md-8">
 		        <label for="identificacao_processo">Identificação do processo de origem</label>
-		        <input type="identificacao_processo" name="identificacao_processo" class="form-control" id="identificacao_processo" placeholder="Ex: N° CM/RC/RPNC/Tecnovigilância, nome do projeto, motivo da reunião, etc..">
+		        <input type="text" name="identificacao_processo" class="form-control" id="identificacao_processo" placeholder="Ex: N° CM/RC/RPNC/Tecnovigilância, nome do projeto, motivo da reunião, etc..">
+		    </div>
+		    <div class="form-group col-md-2">
+		        <label for="procedencia">N° Solicitação Fluig</label>
+		        <input type="text" id="numeroSolicitacao" name="numeroSolicitacao" class="form-control" readonly>
 		    </div>
 		    </div>
 		    <div class="row">
@@ -64,11 +68,18 @@
 		            <label><input type="radio" name="processo_origem" id="processo_origem" value="outros">Outros</label> <input type="text" name="descricao_outros_acao" id="descricao_outros_acao" style="display: inline-block; width: 200px; border: none; border-bottom: 1px solid #000; background: none; outline: none; height: 20px;" placeholder="Descreva a ação">
 		        </div>		
 		    </div>
-		<div class="form-group col-md-2">
+		<div class="form-group col-md-4">
 		<label>Tipo:</label>
 	        <div class="radio">
 	            <label><input type="radio" name="tipo" id="tipo" value="tipo_corretiva">Corretiva</label></br>
 	            <label><input type="radio" name="tipo" id="tipo" value="tipo_preventiva">Preventiva</label>
+	        </div>		
+	    </div>
+	    <div class="form-group col-md-7">
+		<label>Classificação:</label>
+	        <div class="radio">
+	            <label><input type="radio" name="classificacao_comentario" id="classificacao_comentario" value="critica">Críticas: ações que tem impacto direto na qualidade dos processos e/ou produtos</label></br>
+	            <label><input type="radio" name="classificacao_comentario" id="classificacao_comentario" value="nao_critica">Não Críticas: ações que tem impacto indireto e que não afetam a qualidade dos processos e/ou produtos</label>
 	        </div>		
 	    </div>
 		
@@ -92,7 +103,7 @@
 		    </tr>
 		    <tr>
 		      <td>Prazo para realização da atividade - Quando?</td>
-		      <td><textarea name="resposta3" class="form-control textarea-fixed-size"></textarea></td>
+		      <td><input type="date" name="resposta3" class="form-control textarea-fixed-size"></td>
 		    </tr>
 		    <tr>
 		      <td>Por que?</td>
@@ -127,7 +138,7 @@
 		        <div class="radio">
 		            <label><input type="radio" name="validacao_acoes_responsavel" id="validacao_acoes_responsavel" value="continuar">Continuar</label></br>
 		            <label><input type="radio" name="validacao_acoes_responsavel" id="validacao_acoes_responsavel" value="corrigir">Corrigir</label></br>
-		            <label><input type="radio" name="validacao_acoes_responsavel" id="validacao_acoes_responsavel" value="transferencia_atividade">Transferência de atividade</label>
+		            <label><input type="radio" name="validacao_acoes_responsavel" id="validacao_acoes_responsavel" value="transferencia_atividade">Transferência de atividade</label> 
 		        </div>		
 		    </div>
 		</div>
@@ -148,7 +159,7 @@
 		 <div class="row">
 		    <div class="form-group col-md-2">
 		        <label for="data_realizacao_acao">Data da realização da ação</label>
-		        <input type="date" name="data_realizacao_acao" id="data_realizacao_acao" class="form-control" placeholder="Data">
+		        <input type="text" name="data_realizacao_acao" id="data_realizacao_acao" class="form-control" placeholder="Data">
 		    </div>
 		</div>
 		 <div class="row">
@@ -162,14 +173,14 @@
 		
 		<div class="row">
 		    <div class="form-group col-md-12">
-		        <label for="motivos">Se não realizada, descrever motivo</label>
+		        <label for="motivos">Comentário</label>
 		        <textarea rows="3" name="motivos" id="motivos" class="form-control"></textarea>
 		    </div>
 		</div>
 			<div class="row">
 		    <div class="form-group col-md-12">
 		        <label for="informativo"></label>
-		        <textarea rows="2"  name="informativo" id="infoText2" class="info-textarea2" style="text-align: center;" readonly>Se realizada - OBRIGATÓRIO ANEXAR EVIDÊNCIA </textarea>
+		        <textarea rows="2"  name="informativo" id="infoText2" class="info-textarea2" style="text-align: center;" readonly>Se realizada - OBRIGATÓRIO ANEXAR EVIDÊNCIA e enviar para o gestor responsável da área</textarea>
 		    </div>
 		    </div>
 		    
@@ -178,27 +189,28 @@
 
 <div id="panelwarning4" class="panel panel-primary">
     <div class="panel-heading">
-        <h3 class="panel-title">Validação da ação pelo solicitante</h3>
+        <h3 class="panel-title">Validação da ação</h3>
     </div>
     <div class="panel-body">
         <div class="row">
     <div class="form-group col-md-6">
         <div class="radio">
             <label><input type="radio" name="validacao_solicitante" id="validacao_solicitante" value="validacao_solicitanteC">Conforme</label></br>
-            <label><input type="radio" name="validacao_solicitante" id="validacao_solicitante" value="validacao_solicitanteN">Não conforme</label>
+            <label><input type="radio" name="validacao_solicitante" id="validacao_solicitante" value="validacao_solicitanteN">Não conforme</label></br>
+            <label><input type="radio" name="validacao_solicitante" id="validacao_solicitante" value="validacao_transferencia">Necessário alterar o responsável pela validação:</label> <input type="text" name="descricao_outros_acao1" id="descricao_outros_acao1" style="display: inline-block; width: 200px; border: none; border-bottom: 1px solid #000; background: none; outline: none; height: 20px;" placeholder="Colocar nome do novo gestor responsável">
         </div>		
     </div>
 	</div>
 	<div class="row">
 	    <div class="form-group col-md-12">
-	        <label for="motivo_nao_conforme">Se não conforme, descrever motivo:</label>
+	        <label for="motivo_nao_conforme">Comentário</label>
 	        <textarea rows="5" name="motivo_nao_conforme" id="motivo_nao_conforme" class="form-control"></textarea>
 	    </div>
 	</div>
 	<div class="row">
 	    <div class="form-group col-md-2">
 	        <label for="data_conclusao">Data da conclusão pelo solicitante</label>
-	        <input type="date" name="data_conclusao" id="data_conclusao" class="form-control" placeholder="Data">
+	        <input type="text" name="data_conclusao" id="data_conclusao" class="form-control" placeholder="Data">
 	    </div>
 	</div>
     </div>
@@ -206,7 +218,33 @@
 
 </form>
 </div>
+<script>
+function preencherDataAtual() {
+    var dataAtual = new Date();
+    
+    // Formatação da data no padrão DD/MM/YYYY
+    var ano = dataAtual.getFullYear();
+    var mes = String(dataAtual.getMonth() + 1).padStart(2, '0'); 
+    var dia = String(dataAtual.getDate()).padStart(2, '0');
+    
+    var dataFormatada = `${dia}/${mes}/${ano}`;
 
+    var panel = document.getElementById("panelwarning1");
+    var campoDataInicio = document.getElementById("data_inicio");
+
+    if (panel && panel.style.display !== "none" && campoDataInicio) {
+        if (!campoDataInicio.value) {
+            campoDataInicio.value = dataFormatada;
+        }
+    }
+}
+
+window.onload = preencherDataAtual;
+</script>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+
+    
 <script src="data.js"></script>
 </body>
 </html>

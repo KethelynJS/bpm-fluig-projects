@@ -9,17 +9,20 @@ function enableFields(form){
 	
 	else if(atv_atual == 11){
 		desabilitarSolicitante(form);
+		desabilitarSolicitante27(form)
 	}
 	
 	else if(atv_atual == 13){
 		desabilitarSolicitante11(form);
 		desabilitarSolicitante(form);
+		desabilitarSolicitante27(form)
 	}
 	
 	else if(atv_atual == 16){
 		desabilitarSolicitante11(form);
 		desabilitarSolicitante(form);
 		desabilitarSolicitante13(form);
+		desabilitarSolicitante27(form)
 	}
 	
 	else if(atv_atual == 18){
@@ -27,6 +30,11 @@ function enableFields(form){
 		desabilitarSolicitante(form);
 		desabilitarSolicitante13(form);
 		desabilitarSolicitante16(form);
+		desabilitarSolicitante27(form)
+	}
+	else if(atv_atual == 26){
+		desabilitarSolicitante(form);
+		
 	}
 	
  
@@ -39,7 +47,18 @@ function desabilitarSolicitante(form){
 	form.setEnabled("funcao", false);
 	form.setEnabled("data_prevista", false);
 	form.setEnabled("acionar_ti", false);
-	form.setEnabled("consideracoes", false);
+	form.setEnabled("n_matricula", false);
+	form.setEnabled("hor_trabalho", false);
+	form.setEnabled("opcao", false);
+	form.setEnabled("data_nascimento", false);
+	form.setEnabled("email_pessoal", false);
+	form.setEnabled("celular", false);
+	form.setEnabled("estado_civil", false);
+	form.setEnabled("plano_saude", false);
+	form.setEnabled("alergia", false);
+	form.setEnabled("contato_emergencia", false);
+	form.setEnabled("filhos", false);
+	
 	
 	
 }
@@ -47,6 +66,23 @@ function desabilitarSolicitante(form){
 function desabilitarSolicitante11(form){
 	form.setEnabled("acessos_solicitados", false);
 	form.setEnabled("observacao_ti", false);
+	
+}
+
+
+function desabilitarSolicitante27(form){
+	form.setEnabled("sap", false);
+	form.setEnabled("fluig", false);
+	form.setEnabled("email", false);
+	form.setEnabled("spark", false);
+	form.setEnabled("site", false);
+	form.setEnabled("redessociais", false);
+	form.setEnabled("powerbi", false);
+	form.setEnabled("whatsapp", false);
+	form.setEnabled("notebook", false);
+	form.setEnabled("impressora", false);
+	form.setEnabled("celularr", false);
+	form.setEnabled("checkbox", false);
 	
 }
 

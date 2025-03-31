@@ -67,9 +67,7 @@ function validateActivity5(form) {
     if (form.getValue("question6") == "") {
         msg += "Campo question6 não foi preenchido\n";
     }
-    if (form.getValue("question7") == "") {
-        msg += "Campo question7 não foi preenchido\n";
-    }
+
     if (form.getValue("question2") == "") {
         msg += "Campo question2 não foi preenchido\n";
     }

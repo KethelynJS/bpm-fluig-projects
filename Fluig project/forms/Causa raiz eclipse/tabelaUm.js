@@ -87,7 +87,7 @@ function loadTableData() {
     
 }
 
-// Função para adicionar uma nova linha à Tabela 2 (tabelaRegistross)
+//Função para adicionar uma nova linha à Tabela 2 (tabelaRegistross)
 function addNewRecord2() {
     console.log("Adicionando nova linha na Tabela 2");
     const tabela = document.getElementById('tabelaRegistross').getElementsByTagName('tbody')[0];
@@ -155,12 +155,10 @@ function loadTableData2() {
     data.forEach((item, index) => {
         const newRow = tabela.insertRow();
 
-        newRow.insertCell(0).innerHTML = `<input type="text" id="causa_${index}" name="causa_${index}" class="form-control col-md-6" value="${item.causa || ''}">`;
-        newRow.insertCell(1).innerHTML = `<input type="text" id="porque_${index}" name="porque_${index}" class="form-control col-md-6" value="${item.porque || ''}">`;
+        newRow.insertCell(0).innerHTML = `<textarea id="causa_${index}" name="causa_${index}" class="form-control textarea-fixed-size col-md-6" rows="2">${item.causa || ''}</textarea>`;
+        newRow.insertCell(1).innerHTML = `<textarea id="porque_${index}" name="porque_${index}" class="form-control textarea-fixed-size col-md-6" rows="2">${item.porque || ''}</textarea>`;
         newRow.insertCell(2).innerHTML = '<button type="button" onclick="removeRow2(this)">Remover</button>';
     });
-
-    
 }
 
 // Função para submeter o formulário, salvando os dados das tabelas

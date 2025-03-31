@@ -1,0 +1,208 @@
+<html>
+<head>
+	<link type="text/css" rel="stylesheet" href="/style-guide/css/fluig-style-guide.min.css"/>
+	<script type="text/javascript" src="/portal/resources/js/jquery/jquery.js"></script>
+	<script type="text/javascript" src="/portal/resources/js/jquery/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="/portal/resources/js/mustache/mustache-min.js"></script>
+	<script type="text/javascript" src="/style-guide/js/fluig-style-guide.min.js" charset="utf-8"></script>
+	
+	
+	<style>
+	.info-textarea2 {
+    width: 100%;
+    color: #000000; /* Cor do texto preta */
+    border: 1px solid #DAA520; /* Borda cinza clara */
+    border-radius: 4px;
+    background-color: #DAA520;
+    font-weight: bold !important; /* Garantindo que o negrito seja aplicado */
+}
+	
+	</style>
+</head>
+<body>
+<div class="fluig-style-guide">
+<form name="form" role="form">
+
+
+<div id="panel1" class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">Solicitação</h3>
+    </div>
+    <div class="panel-body">
+        <div class="row">
+		    <div class="form-group col-md-6">
+		        <label for="solicitante">Nome do solicitante</label>
+		        <input type="text" name="solicitante" class="form-control" id="solicitante" placeholder="Coloque o nome do solicitante">
+		    </div>
+		    <div class="form-group col-md-4">
+		        <label for="setor">Setor</label>
+		        <input type="text" name="setor" class="form-control" id="setor" placeholder="Coloque o setor">
+		    </div>
+		    <div class="form-group col-md-2">
+		        <label for="data_inicio">Data</label>
+		        <input type="text" name="data_inicio" class="form-control" id="data_inicio" placeholder="Coloque a data">
+		    </div>
+		</div>
+		
+		
+		<div class="row">
+		    <div class="form-group col-md-6">
+		    <label>Tipo de solicitação</label>
+		        <div class="radio">
+		            <label><input type="radio" name="tipo_solicitacao" id="tipo_solicitacao" value="NovoProcessoFluig">Novo processo - FLUIG</label></br>
+		            <label><input type="radio" name="tipo_solicitacao" id="tipo_solicitacao" value="ModificacaodeFluig">Modificação de processo Existente - FLUIG</label></br>
+		            <label><input type="radio" name="tipo_solicitacao" id="tipo_solicitacao" value="CustomizacaoFluig">Customização Relatório - FLUIG</label></br>
+		            <label><input type="radio" name="tipo_solicitacao" id="tipo_solicitacao" value="DesenvolvimentoSAP">Desenvolvimento no SAP</label></br>
+		            <label><input type="radio" name="tipo_solicitacao" id="tipo_solicitacao" value="CriacaocamposSAP">Criação de novos campos - SAP</label></br>
+		            <label><input type="radio" name="tipo_solicitacao" id="tipo_solicitacao" value="CustomizacaoSAP">Customização de Relatório - SAP</label></br>
+		            <label><input type="radio" name="tipo_solicitacao" id="tipo_solicitacao" value="ModificacaoRelatorioSAP">Modificação de Relatório - SAP</label></br>
+		            <label><input type="radio" name="tipo_solicitacao" id="tipo_solicitacao" value="AutomacaodeProcesso">Automação de Processo - SAP</label></br>
+		            <label><input type="radio" name="tipo_solicitacao" id="tipo_solicitacao" value="DesenvolvimentoBI">Desenvolvimento - B.I</label></br>
+		            <label><input type="radio" name="tipo_solicitacao" id="tipo_solicitacao" value="Outros">Outros</label> <input type="text" name="descricao_outros_acao" id="descricao_outros_acao" style="display: inline-block; width: 200px; border: none; border-bottom: 1px solid #000; background: none; outline: none; height: 20px;" placeholder="Descreva se outros">
+		        </div>		
+		    </div>
+		</div>
+		
+		<div class="row">
+		    <div class="form-group col-md-12">
+		        <label for="consideracoes">Descrição do que precisa ser feito</label>
+		        <textarea rows="5" name="consideracoes" id="consideracoes" class="form-control"></textarea>
+		    </div>
+		</div>
+		<div class="row">
+		    <div class="form-group col-md-6">
+		        <label for="referencia">Há alguma referência de outro formulário/processo?</label>
+		        <input type="text" name="referencia" class="form-control" id="referencia" placeholder="Caso tenha algo parecido já existente">
+		    </div>
+		    <div class="form-group col-md-6">
+		        <label for="responsavel_etapa">Quem será o responsável por cada etapa do processo?</label>
+		        <input type="text" name="responsavel_etapa" class="form-control" id="responsavel_etapa" placeholder="Coloque o responsável ou não por cada etapa no desenho">
+		    </div>
+		</div>
+		
+		<div class="row">
+		    <div class="form-group col-md-12">
+		        <label for="finalidade">Qual será a finalidade desse desenvolvimento?</label>
+		        <textarea rows="5" name="finalidade" id="finalidade" class="form-control"></textarea>
+		    </div>
+		</div>
+		
+		<div class="row">
+		    <div class="form-group col-md-12">
+		        <label for="informativo2"></label>
+		        <textarea rows="2"  name="informativo3" id="infoText2" class="info-textarea2" style="text-align: center;" readonly>É obrigatório anexar um desenho contendo todas as informações necessárias para o desenvolvimento do processo, incluindo etapas, campos e frases.</textarea>
+		    </div>
+	    </div>
+		
+		
+    </div>
+</div>
+
+
+<div id="panel2" class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">Análise</h3>
+    </div>
+    <div class="panel-body">
+		<div class="row">
+		    <div class="form-group col-md-6">
+		    <label>Foi passado todas as informações necessárias para o desenvolvimento ou modificação?</label>
+		        <div class="radio">
+		            <label><input type="radio" name="informacoes_TI" id="informacoes_TI" value="sim">Sim, todas as informações foram fornecidas.</label></br>
+		            <label><input type="radio" name="informacoes_TI" id="informacoes_TI" value="nao">Não, informações estão incompletas.</label>
+		        </div>		
+		    </div>
+		</div>
+		<div class="row">
+		    <div class="form-group col-md-12">
+		        <label for="observacao_TI">Quais informações estão faltando para o desenvolvimento?</label>
+		        <textarea rows="5" name="observacao_TI" id="observacao_TI" class="form-control"></textarea>
+		    </div>
+		</div>
+    </div>
+</div>
+
+
+<div id="panel3" class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">Desenvolvimento</h3>
+    </div>
+    <div class="panel-body">
+		<div class="row">
+		    <div class="form-group col-md-12">
+		        <label for="consideracoes_desenvolvimentp">Considerações TI</label>
+		        <textarea rows="5" name="consideracoes_desenvolvimentp" id="consideracoes_desenvolvimentp" class="form-control"></textarea>
+		    </div>
+		</div>
+    </div>
+</div>
+
+
+<div id="panel4" class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">Testes e validação</h3>
+    </div>
+    <div class="panel-body">
+		    <div class="row">
+		    <div class="form-group col-md-6">
+		    <label>Validado?</label>
+		        <div class="radio">
+		        
+		            <label><input type="radio" name="validado" id="validado" value="Sim2">Sim</label></br>
+		            <label><input type="radio" name="validado" id="validado" value="Nao2">Não</label>
+		        </div>		
+		    </div>
+		</div>
+		<div class="row">
+		    <div class="form-group col-md-12">
+		        <label for="consideracoes_usuario">Considerações do usuário</label>
+		        <textarea rows="5" name="consideracoes_usuario" id="consideracoes_usuario" class="form-control"></textarea>
+		    </div>
+		</div>
+    </div>
+</div>
+<input type="hidden" id="returnFromActivity5" name="returnFromActivity5" value="false">
+<input type="hidden" id="returnFromActivity15" name="returnFromActivity15" value="false">
+<div id="panel5" class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">Implantação</h3>
+    </div>
+    <div class="panel-body">
+        <div class="row">
+		    <div class="form-group col-md-12">
+		        <label for="informativo2"></label>
+		        <textarea rows="2"  name="informativo2" id="infoText2" class="info-textarea2" style="text-align: center;" readonly>Processo validado e testado. A solicitação está pronta para implantação. Ao finalizar a leitura, clique em "Enviar" para finalizar.</textarea>
+		    </div>
+	    </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+</form>
+</div>
+<script>
+window.onload = function() {
+    var today = new Date();
+
+    // Obtém a data
+    var day = String(today.getDate()).padStart(2, '0');
+    var month = String(today.getMonth() + 1).padStart(2, '0'); // Janeiro é 0!
+    var year = today.getFullYear();
+
+    // Formata a data no padrão DD/MM/YYYY
+    var currentDate = day + '/' + month + '/' + year;
+
+    // Define o valor do campo com id "data_inicio"
+    document.getElementById("data_inicio").value = currentDate;
+
+    
+};
+</script>
+<script src="returnFlag.js"></script>
+</body>
+</html>

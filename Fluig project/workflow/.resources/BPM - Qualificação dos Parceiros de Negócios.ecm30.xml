@@ -28,7 +28,7 @@
     <processDefinitionVersionPK>
       <companyId>1</companyId>
       <processId>Qualificação dos Parceiros de Negócios</processId>
-      <version>7</version>
+      <version>10</version>
     </processDefinitionVersionPK>
     <versionDescription></versionDescription>
     <formId>21745</formId>
@@ -53,8 +53,8 @@
         <version>1</version>
         <sequence>4</sequence>
       </processStatePK>
-      <stateName>Início</stateName>
-      <stateDescription>Início</stateDescription>
+      <stateName>Qualificação dos Parceiros de Negócios</stateName>
+      <stateDescription>Qualificação dos Parceiros de Negócios</stateDescription>
       <instruction></instruction>
       <deadlineTime>0</deadlineTime>
       <joint>false</joint>
@@ -110,8 +110,8 @@
       <deadlineFieldName></deadlineFieldName>
       <joint>false</joint>
       <agreementPercentage>0</agreementPercentage>
-      <engineAllocationId>Usuário</engineAllocationId>
-      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;User&gt;renata.tuchtler&lt;/User&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
+      <engineAllocationId>Pool Grupo</engineAllocationId>
+      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;Group&gt;Qualidade&lt;/Group&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
       <selectColleague>1</selectColleague>
       <initialState>false</initialState>
       <notifyAuthorityDelay>true</notifyAuthorityDelay>
@@ -213,8 +213,8 @@
       <deadlineFieldName></deadlineFieldName>
       <joint>false</joint>
       <agreementPercentage>0</agreementPercentage>
-      <engineAllocationId>Usuário</engineAllocationId>
-      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;User&gt;renata.tuchtler&lt;/User&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
+      <engineAllocationId>Pool Grupo</engineAllocationId>
+      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;Group&gt;Qualidade&lt;/Group&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
       <selectColleague>1</selectColleague>
       <initialState>false</initialState>
       <notifyAuthorityDelay>true</notifyAuthorityDelay>
@@ -258,8 +258,8 @@
         <version>1</version>
         <sequence>9</sequence>
       </processStatePK>
-      <stateName>Reprovado</stateName>
-      <stateDescription>Reprovado</stateDescription>
+      <stateName>Validando</stateName>
+      <stateDescription>Validando</stateDescription>
       <joint>false</joint>
       <initialState>false</initialState>
       <transferAttachments>false</transferAttachments>
@@ -355,7 +355,7 @@
         <companyId>1</companyId>
         <processId>QualificacaoPN</processId>
         <expressionOrder>1</expressionOrder>
-        <version>7</version>
+        <version>10</version>
         <sequence>9</sequence>
       </conditionProcessStatePK>
       <condition></condition>
@@ -369,7 +369,7 @@
         <companyId>1</companyId>
         <processId>QualificacaoPN</processId>
         <expressionOrder>2</expressionOrder>
-        <version>7</version>
+        <version>10</version>
         <sequence>9</sequence>
       </conditionProcessStatePK>
       <condition></condition>
@@ -383,7 +383,7 @@
         <companyId>1</companyId>
         <processId>QualificacaoPN</processId>
         <expressionOrder>1</expressionOrder>
-        <version>7</version>
+        <version>10</version>
         <sequence>21</sequence>
       </conditionProcessStatePK>
       <condition></condition>
@@ -397,7 +397,7 @@
         <companyId>1</companyId>
         <processId>QualificacaoPN</processId>
         <expressionOrder>2</expressionOrder>
-        <version>7</version>
+        <version>10</version>
         <sequence>21</sequence>
       </conditionProcessStatePK>
       <condition></condition>
@@ -411,7 +411,7 @@
         <companyId>1</companyId>
         <processId>QualificacaoPN</processId>
         <expressionOrder>3</expressionOrder>
-        <version>7</version>
+        <version>10</version>
         <sequence>21</sequence>
       </conditionProcessStatePK>
       <condition></condition>
@@ -425,7 +425,7 @@
         <companyId>1</companyId>
         <processId>QualificacaoPN</processId>
         <expressionOrder>4</expressionOrder>
-        <version>7</version>
+        <version>10</version>
         <sequence>21</sequence>
       </conditionProcessStatePK>
       <condition></condition>
@@ -439,7 +439,7 @@
         <companyId>1</companyId>
         <processId>QualificacaoPN</processId>
         <expressionOrder>5</expressionOrder>
-        <version>7</version>
+        <version>10</version>
         <sequence>21</sequence>
       </conditionProcessStatePK>
       <condition></condition>
@@ -630,7 +630,7 @@
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>QualificacaoPN</processId>
-        <version>7</version>
+        <version>10</version>
         <linkSequence>6</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -641,7 +641,7 @@
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>QualificacaoPN</processId>
-        <version>7</version>
+        <version>10</version>
         <linkSequence>20</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>

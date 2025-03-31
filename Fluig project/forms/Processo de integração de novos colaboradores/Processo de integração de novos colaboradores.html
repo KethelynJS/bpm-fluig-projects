@@ -5,13 +5,25 @@
 	<script type="text/javascript" src="/portal/resources/js/jquery/jquery-ui.min.js"></script>
 	<script type="text/javascript" src="/portal/resources/js/mustache/mustache-min.js"></script>
 	<script type="text/javascript" src="/style-guide/js/fluig-style-guide.min.js" charset="utf-8"></script>
+	
+	<style>
+	.info-textarea2 {
+		width: 100%;
+		color: #000000; /* Cor do texto preta */
+		border: 1px solid #cccccc; /* Borda cinza clara */
+		border-radius: 4px;
+		background-color: #DCDCDC;
+	}
+	
+	</style>
+	
 </head>
 <body>
 <div class="fluig-style-guide">
 <form name="form" role="form">
 <div id="panel1" class="panel panel-primary">
     <div class="panel-heading">
-        <h3 class="panel-title">Gestão de pessoas</h3>
+        <h3 class="panel-title">Cadastro dos colaboradores</h3>
     </div>
     <div class="panel-body">
 		 <div class="row">
@@ -19,21 +31,80 @@
 		        <label for="novo_colaborador">Nome do novo colaborador</label>
 		        <input type="novo_colaborador" name="novo_colaborador" class="form-control" id="novo_colaborador" placeholder="Coloque o nome do novo colaborador">
 		    </div>
-		    <div class="form-group col-md-6">
+		    <div class="form-group col-md-4">
 		        <label for="setor_atuante">Setor atuante</label>
 		        <input type="setor_atuante" name="setor_atuante" class="form-control" id="setor_atuante" placeholder="Coloque o nome do setor">
 		    </div>
+			<div class="form-group col-md-2">
+			    <label for="procedencia">N° Solicitação Fluig</label>
+			    <input type="text" id="numeroSolicitacao" name="numeroSolicitacao" class="form-control" readonly>
+			</div>
 		</div>
 		<div class="row">
-		    <div class="form-group col-md-6">
+		    <div class="form-group col-md-3">
 		        <label for="funcao">Função</label>
 		        <input type="funcao" name="funcao" class="form-control" id="funcao" placeholder="Coloque o nome da função">
 		    </div>
-		    <div class="form-group col-md-3">
-		        <label for="data_prevista">Data previsto para início</label>
+		    <div class="form-group col-md-2">
+		        <label for="data_prevista">Previsão para início</label>
 		        <input type="date" name="data_prevista" class="form-control" id="data_prevista" placeholder="Coloque a data de início">
 		    </div>
+		    <div class="form-group col-md-2">
+		        <label for="n_matricula">Nº matrícula</label>
+		        <input type="text" name="n_matricula" class="form-control" id="n_matricula" placeholder="Coloque o n° da matrícula">
+		    </div>
+		    <div class="form-group col-md-3">
+		        <label for="hor_trabalho">Horário de trabalho</label>
+		        <input type="text" name="hor_trabalho" class="form-control" id="hor_trabalho" placeholder="Coloque horário de trabalho">
+		    </div>
+			<div id="opcaoo" class="form-group col-md-2">
+			  <label for="opcoes">Empresa:</label>
+			    <select type="opcao" name="opcao" class="form-control" id="opcao" placeholder="">
+			    	<option value="opcao1">Escolha</option>
+			      <option value="opcao1">Newprov</option>
+			      <option value="opcao2">Pereira e Albini</option>
+			    </select>
+			</div>
 		</div>
+		<label> Dados pessoais: </label>
+		<div class="row">
+		    <div class="form-group col-md-2">
+		        <label for="data_nascimento">Data de nascimento</label>
+		        <input type="text" name="data_nascimento" class="form-control" id="data_nascimento" placeholder="Coloque a data de nascimento">
+		    </div>
+		    <div class="form-group col-md-3">
+		        <label for="email_pessoal">E-mail pessoal</label>
+		        <input type="text" name="email_pessoal" class="form-control" id="email_pessoal" placeholder="Coloque o e-mail pessoal">
+		    </div>
+		    <div class="form-group col-md-2">
+		        <label for="celular"> celular</label>
+		        <input type="text" name="celular" class="form-control" id="celular" placeholder="Coloque o celular pessoal">
+		    </div>
+		    <div class="form-group col-md-2">
+		        <label for="estado_civil"> Estado civil</label>
+		        <input type="text" name="estado_civil" class="form-control" id="estado_civil" placeholder="Coloque o estado civil">
+		    </div>
+		    <div class="form-group col-md-3">
+		        <label for="plano_saude"> Plano de saúde</label>
+		        <input type="text" name="plano_saude" class="form-control" id="plano_saude" placeholder="Coloque o plano de saúde">
+		    </div>
+		</div>
+		<div class="row">
+		    <div class="form-group col-md-2">
+		        <label for="alergia"> Alergia</label>
+		        <input type="text" name="alergia" class="form-control" id="alergia" placeholder="Coloque as alergias">
+		    </div>
+		    <div class="form-group col-md-5">
+		        <label for="contato_emergencia">Contato de emergência com parentesco</label>
+		        <input type="text" name="contato_emergencia" class="form-control" id="contato_emergencia" placeholder="Coloque contato de emergencia">
+		    </div>
+		    <div class="form-group col-md-5">
+		        <label for="filhos"> filhos</label>
+		        <input type="text" name="filhos" class="form-control" id="filhos" placeholder="Coloque nome dos filhos caso ter">
+		    </div>
+		   
+		</div>
+		
 		<div class="row">
 		    <div class="form-group col-md-6">
 		    <label>Colaborador vai atuar com cargo que necessita acionar a TI?</label>
@@ -44,14 +115,42 @@
 		</div>
 		</div>
 		<div class="row">
-		    <div class="form-group col-md-12">
-		        <label for="consideracoes">Se sim, quais as necessidades:</label>
-		        <textarea rows="3" name="consideracoes" id="consideracoes" class="form-control" placeholder="Descrever as necessidades de acesso para o colaborador como e-mail, assinatura digital, acesso SAP e/ou Fluig, ramal p/telefone, spark, aquisição de computador e/ou telefone."></textarea>
-		    </div>
-		</div>
+	    <div class="form-group col-md-12">
+	        <label for="informativo2"></label>
+	        <textarea rows="2"  name="informativo2" id="infoText2" class="info-textarea2" style="text-align: center;" readonly> Se você selecionou 'sim' para a necessidade de acionar o TI, envie o formulário ao gestor responsável, para que ele informe o que o novo colaborador precisará da TI.</textarea>
+	    </div>
+	    </div>
+		
 		
     </div>
 </div>
+
+
+<div id="panelgestor" class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">Gestor: verificação de itens necessários</h3>
+    </div>
+    <div  class="panel-body">
+        <div class="form-group col-md-4">
+		    <label>Se sim, quais as necessidades:</label>
+		    <div class="checkbox">
+		        <label><input type="checkbox" name="sap">SAP</label></br>
+		        <label><input type="checkbox" name="fluig">Fluig</label></br>
+		        <label><input type="checkbox" name="email">E-mail com assinatura de e-mail</label></br>
+		        <label><input type="checkbox" name="spark">Spark</label></br>
+		        <label><input type="checkbox" name="site">Site</label></br>
+		        <label><input type="checkbox" name="redessociais">Redes sociais</label></br>
+		        <label><input type="checkbox" name="powerbi">PowerBI</label></br>
+		        <label><input type="checkbox" name="whatsapp">Whatsapp web</label></br>
+		        <label><input type="checkbox" name="notebook">Notebook/Desktop</label></br>
+		        <label><input type="checkbox" name="impressora">Impressora</label></br>
+		        <label><input type="checkbox" name="celularr">Celular</label>
+		        
+		    </div>
+		</div>
+    </div>
+</div>
+
 
 <div id="panel2" class="panel panel-primary">
     <div class="panel-heading">
@@ -61,21 +160,27 @@
 		 <div class="row">
 		    <div class="form-group col-md-4">
 		        <label for="acessos_solicitados">Criado todos os acessos solicitados?</label>
-		        <input type="acessos_solicitados" name="acessos_solicitados" class="form-control" id="acessos_solicitados" placeholder="">
+		        <input type="text" name="acessos_solicitados" class="form-control" id="acessos_solicitados" placeholder="">
 		    </div>
 		</div>
 		<div class="row">
 		    <div class="form-group col-md-12">
-		        <label for="observacao_ti">Observação</label>
+		        <label for="observacao_ti"> Descrever usuário de spark, e-mail, Fluig, SAP, número de cadastro dos recursos disponibilizados (notebook, desktop, etc...).</label>
 		        <textarea rows="3" name="observacao_ti" id="observacao_ti" class="form-control"></textarea>
 		    </div>
 		</div>
+		<div class="row">
+	    <div class="form-group col-md-12">
+	        <label for="informativo2"></label>
+	        <textarea rows="2"  name="informativo3" id="infoText2" class="info-textarea2" style="text-align: center;" readonly> Se for necessário assinar o termo de entrega de itens, anexe-o após a assinatura.</textarea>
+	    </div>
+	    </div>
     </div>
 </div>
 
 <div id="panel3" class="panel panel-primary">
     <div class="panel-heading">
-        <h3 class="panel-title">1 Dia do colaborador</h3>
+        <h3 class="panel-title">Integração</h3>
     </div>
     <div class="panel-body">
 		 <table class="table table-striped">
@@ -88,32 +193,27 @@
 		  </thead>
 		  <tbody>
 		    <tr>
-		      <td>Colaborador entregou todo os documentos admissionais</td>
+		      <td>Colaborador entregou todos os documentos admissionais, citar quais documentos e anexa-los</td>
 		      <td><input type="radio" name="pergunta1" value="sim"></td>
 		      <td><input type="radio" name="pergunta1" value="nao"></td>
 		    </tr>
 		    <tr>
-		      <td>Realizou exame admissional</td>
+		      <td>Realizou exame admissional, anexar</td>
 		      <td><input type="radio" name="pergunta2" value="sim"></td>
 		      <td><input type="radio" name="pergunta2" value="nao"></td>
 		    </tr>
 		    <tr>
-		      <td>Assinou o contrato de trabalho?</td>
+		      <td>Assinou o contrato de trabalho? Anexar</td>
 		      <td><input type="radio" name="pergunta3" value="sim"></td>
 		      <td><input type="radio" name="pergunta3" value="nao"></td>
 		    </tr>
 		    <tr>
-		      <td>Entregou documentos admissionais?</td>
-		      <td><input type="radio" name="pergunta4" value="sim"></td>
-		      <td><input type="radio" name="pergunta4" value="nao"></td>
-		    </tr>
-		    <tr>
-		      <td>Assinou a ordem de serviço?</td>
+		      <td>Assinou a ordem de serviço? Anexar</td>
 		      <td><input type="radio" name="pergunta5" value="sim"></td>
 		      <td><input type="radio" name="pergunta5" value="nao"></td>
 		    </tr>
 		    <tr>
-		      <td>Assinou o termo de responsabilidade TI?</td>
+		      <td>Assinou o termo de responsabilidade TI? Anexar</td>
 		      <td><input type="radio" name="pergunta6" value="sim"></td>
 		      <td><input type="radio" name="pergunta6" value="nao"></td>
 		    </tr>
@@ -135,51 +235,107 @@
     </div>
     <div class="panel-body">
 		<table class="table table-striped">
-		  <thead>
-		    <tr>
-		      <th>Pergunta</th>
-		      <th>Sim</th>
-		      <th>Não</th>
-		    </tr>
-		  </thead>
-		  <tbody>
-		    <tr>
-		      <td>Foi criado uma pasta com o nome do colaborador no Fluig(pasta GP) e anexados todos os documentos nessa?</td>
-		      <td><input type="radio" name="questao1" value="sim"></td>
-		      <td><input type="radio" name="questao1" value="nao"></td>
-		    </tr>
-		    <tr>
-		      <td>Foi entregue ao colaborador o crachá em treinamento e explicado a respeito do uso (durante todo o período de experência)?</td>
-		      <td><input type="radio" name="questao2" value="sim"></td>
-		      <td><input type="radio" name="questao2" value="nao"></td>
-		    </tr>
-		    <tr>
-		      <td>Os EPI's foram entregues ao colaborador, e o FOR 5.1.3.1.2 Controle de Entrega de EPI's assinado? (Criar como campo obrigatório anexo o For assinado)</td>
-		      <td><input type="radio" name="questao3" value="sim"></td>
-		      <td><input type="radio" name="questao3" value="nao"></td>
-		    </tr>
-		    <tr>
-		      <td>Os uniformes e chaves dos armários foram entregues ao colaborador?</td>
-		      <td><input type="radio" name="questao4" value="sim"></td>
-		      <td><input type="radio" name="questao4" value="nao"></td>
-		    </tr>
-		    <tr>
-		      <td>O colaborador foi icluído no grupo de comunicação Newprov?</td>
-		      <td><input type="radio" name="questao5" value="sim"></td>
-		      <td><input type="radio" name="questao5" value="nao"></td>
-		    </tr>
-		    <tr>
-		      <td>Foi realizado cadastro do colaborador no ponto digital e colaborador orientado em relação aos horários, hora extra, horário de almoço?</td>
-		      <td><input type="radio" name="questao6" value="sim"></td>
-		      <td><input type="radio" name="questao6" value="nao"></td>
-		    </tr>
-		    <tr>
-		      <td>Foi realizada a publicação no fluig do novo colaborador integrante na Newprov (c/foto) e comunicação interna com todas as áres p/ conhecimento?</td>
-		      <td><input type="radio" name="questao7" value="sim"></td>
-		      <td><input type="radio" name="questao7" value="nao"></td>
-		    </tr>  
-		  </tbody>
-		</table>
+    <thead>
+        <tr>
+            <th>Pergunta</th>
+            <th>Sim</th>
+            <th>Não</th>
+            <th>Detalhes</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Foi criado uma pasta com o nome do colaborador no Fluig (pasta GP) e anexados todos os documentos nela?</td>
+            <td><input type="radio" name="questao1" value="sim"></td>
+            <td><input type="radio" name="questao1" value="nao"></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Foi entregue ao colaborador o crachá em treinamento e explicado a respeito do uso (durante todo o período de experiência)?</td>
+            <td><input type="radio" name="questao2" value="sim"></td>
+            <td><input type="radio" name="questao2" value="nao"></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Os EPI's foram entregues ao colaborador, e o FOR 5.1.3.1.2 Controle de Entrega de EPI's foi assinado?</td>
+            <td><input type="radio" name="questao3" value="sim"></td>
+            <td><input type="radio" name="questao3" value="nao"></td>
+            <td><input type="text" class="form-control" name="detalhesEntregaEPI" placeholder="Quais? (colocar CA)"></td>
+        </tr>
+        <tr>
+            <td>Os uniformes e chaves dos armários foram entregues ao colaborador?</td>
+            <td><input type="radio" name="questao4" value="sim"></td>
+            <td><input type="radio" name="questao4" value="nao"></td>
+            <td><input type="text" class="form-control" name="detalhesUniformesChaves" placeholder="Qual número?"></td>
+        </tr>
+        <tr>
+            <td>O colaborador foi incluído no grupo de comunicação Newprov?</td>
+            <td><input type="radio" name="questao5" value="sim"></td>
+            <td><input type="radio" name="questao5" value="nao"></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Foi realizado cadastro do colaborador no ponto digital e colaborador orientado em relação aos horários, hora extra, horário de almoço?</td>
+            <td><input type="radio" name="questao6" value="sim"></td>
+            <td><input type="radio" name="questao6" value="nao"></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Foi realizada a publicação no Fluig do novo colaborador integrante na Newprov (com foto) e comunicação interna com todas as áreas para conhecimento?</td>
+            <td><input type="radio" name="questao7" value="sim"></td>
+            <td><input type="radio" name="questao7" value="nao"></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>O colaborador já foi orientado e cadastrou assinatura digital?</td>
+            <td><input type="radio" name="questao8" value="sim"></td>
+            <td><input type="radio" name="questao8" value="nao"></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Foi realizada a entrega de uniformes?</td>
+            <td><input type="radio" name="entregaUniformes" value="sim"></td>
+            <td><input type="radio" name="entregaUniformes" value="nao"></td>
+            <td><input type="text" class="form-control" name="detalhesEntregaUniformes" placeholder="Quais?"></td>
+        </tr>
+        <tr>
+            <td>Foi realizada a entrega de crachá?</td>
+            <td><input type="radio" name="entregaCracha" value="sim"></td>
+            <td><input type="radio" name="entregaCracha" value="nao"></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Foi realizada a entrega do manual de integração dos colaboradores?</td>
+            <td><input type="radio" name="entregaManualIntegracao" value="sim"></td>
+            <td><input type="radio" name="entregaManualIntegracao" value="nao"></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Foi realizada a entrega do código de ética e conduta?</td>
+            <td><input type="radio" name="entregaCodigoEtica" value="sim"></td>
+            <td><input type="radio" name="entregaCodigoEtica" value="nao"></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Foi realizada a visita às dependências da empresa?</td>
+            <td><input type="radio" name="visitaDependencias" value="sim"></td>
+            <td><input type="radio" name="visitaDependencias" value="nao"></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Foi realizado o plano de treinamento de integração?</td>
+            <td><input type="radio" name="planoTreinamento" value="sim"></td>
+            <td><input type="radio" name="planoTreinamento" value="nao"></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Foi adicionado o colaborador nos grupos de WhatsApp?</td>
+            <td><input type="radio" name="adicaoGrupoWhatsApp" value="sim"></td>
+            <td><input type="radio" name="adicaoGrupoWhatsApp" value="nao"></td>
+            <td><input type="text" class="form-control" name="detalhesAdicaoGrupoWhatsApp" placeholder="Quais?"></td>
+        </tr>
+    </tbody>
+</table>
 
     </div>
 </div>
@@ -220,7 +376,12 @@
 			    </tr>
 			  </tbody>
 		</table>
-
+<div class="row"></div>
+	    <div class="form-group col-md-12">
+	        <label for="informativo2"></label>
+	        <textarea rows="2"  name="informativo5" id="infoText2" class="info-textarea2" style="text-align: center;" readonly> Obs: O documento deve ser enviado para todos os gestores que têm treinamentos para aquele cargo.</textarea>
+	    </div>
+	    </div>
     </div>
 </div>
 

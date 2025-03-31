@@ -1,15 +1,23 @@
 function displayFields(form, customHTML) {
+	var numSolicitacao = getValue("WKNumProces");
+
+    // Preenche o campo de número de solicitação se o valor estiver disponível
+    if (numSolicitacao) {
+        form.setValue("numeroSolicitacao", numSolicitacao);
+    } else {
+        log.info("Número da solicitação não disponível.");
+    }
     var atv_atual = getValue("WKNumState");
-var returnFromActivity5 = form.getValue("returnFromActivity5");
+var returnFromActivity55 = form.getValue("returnFromActivity55");
 	
 	log.info("atv_atual: " + atv_atual);
-	log.info("Return From Activity 5: " + returnFromActivity5);
+	log.info("Return From Activity 62: " + returnFromActivity55);
     
     // Atividades 0 e 4
     if (atv_atual == 0 || atv_atual == 4) {
         // Exibe o painel se retornar da atividade 5
-        form.setVisibleById("panelalmox", atv_atual == 4 && returnFromActivity5 == 'true');
-        form.setVisibleById("validacao_anexoo", false);
+        form.setVisibleById("validacao_anexoo", atv_atual == 4 && returnFromActivity55 == 'true');
+        
         form.setVisibleById("panelcqfq1", false);
         form.setVisibleById("panelcqm1", false);
         form.setVisibleById("panelcqfq2", false);
@@ -25,7 +33,7 @@ var returnFromActivity5 = form.getValue("returnFromActivity5");
 
         // Resetar a flag após usar
         if (atv_atual == 4) {
-            form.setValue("returnFromActivity5", 'true');
+            form.setValue("returnFromActivity55", 'true');
         }
 	
 	else if(atv_atual == 5){
@@ -40,7 +48,7 @@ var returnFromActivity5 = form.getValue("returnFromActivity5");
         form.setVisibleById("panelcqfqqualify", false);
         form.setVisibleById("panelcomprasnotify2", false);
         form.setVisibleById("validacao_anexoo", false);
-		form.setValue("returnFromActivity5", 'true');
+		
 	}
 
     // Atividades 0 e 4
@@ -76,6 +84,7 @@ var returnFromActivity5 = form.getValue("returnFromActivity5");
         form.setVisibleById("panelcqm2", false);
         form.setVisibleById("panelcqfqqualify", false);
         form.setVisibleById("panelcomprasnotify2", false);
+        form.setValue("returnFromActivity55", 'true');
     }
 
 

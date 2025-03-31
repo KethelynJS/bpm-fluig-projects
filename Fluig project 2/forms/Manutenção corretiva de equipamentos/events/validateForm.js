@@ -38,6 +38,9 @@ function validateActivity4(form) {
     if (form.getValue("ocorrencia") == "") {
         msg += "Campo ocorrência não foi preenchido\n";
     }
+    if (form.getValue("itempreenchimento") == "") {
+        msg += "Campo nível de prioridade não foi preenchido\n";
+    }
 
     if (msg !== "") {
         console.log("Erros na Atividade 4: " + msg);

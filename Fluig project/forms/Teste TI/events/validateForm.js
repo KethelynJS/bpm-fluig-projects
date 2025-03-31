@@ -15,6 +15,9 @@ function validateForm(form){
 	if(form.getValue("datacalendario") == ""){
 		msg += "Campo data não foi preenchido";
 	}
+	if(form.getValue("prioridade") == ""){
+		msg += "Campo prioridade não foi preenchido";
+	}
 	
 	/*motivo*/
 	if(form.getValue("tipomotivo") == ""){

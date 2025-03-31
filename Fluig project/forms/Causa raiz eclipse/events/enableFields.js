@@ -20,8 +20,6 @@ function enableFields(form){
 		desabilitarSolicitante9(form);
 	}
 	
- 
-	
 }
 	
 function desabilitarSolicitante(form){
@@ -33,7 +31,11 @@ function desabilitarSolicitante(form){
 	form.setEnabled("processo1", false);
 	form.setEnabled("observacgq", false);
 	form.setEnabled("composicao_text", false);
-	
+	form.setEnabled("setor_outro", false);
+	form.setEnabled("nome_resp", false);
+	form.setEnabled("descricao_outros_acao", false);
+	form.setEnabled("descricao_tecnovigilancia", false);
+	form.setEnabled("descricao_desempenho", false);
 	
 }
 
@@ -51,6 +53,8 @@ function desabilitarSolicitante5(form){
 	form.setEnabled("material", false);
 	form.setEnabled("maodeobra", false);
 	form.setEnabled("composicao_text", false);
+	form.setEnabled("setor_outro", false);
+	form.setEnabled("nome_resp", false);
 	
 }
 
@@ -69,6 +73,9 @@ function desabilitarSolicitante9(form){
 	form.setEnabled("maodeobra", false);
 	form.setEnabled("processo", false);
 	form.setEnabled("composicao_text", false);
+	form.setEnabled("observac", false);
+	form.setEnabled("conclusao", false);
+	
 	
 }
 

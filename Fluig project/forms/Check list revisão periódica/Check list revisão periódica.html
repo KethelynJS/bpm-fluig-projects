@@ -42,8 +42,22 @@
 	    <div class="row">
 	    <div class="form-group col-md-6">
 	        <label for="processovalidado">Nome do processo validado:</label>
-	        <input type="processovalidado" name="processovalidado" class="form-control" id="processovalidado" placeholder="Coloque o nome do processo">
+	        <input type="text" name="processovalidado" class="form-control" id="processovalidado" placeholder="Coloque o nome do processo">
 	    </div>
+	    </div>
+	    <div class="row">
+	    <div class="form-group col-md-3">
+        <label for="data_inicio">Data conclusão validação</label>
+        <input type="date" name="data_inicio" id="data_inicio" class="form-control" placeholder="Data">
+    </div>
+    <div class="form-group col-md-3">
+        <label for="data_ultima">Data da última rev. periódica</label>
+        <input type="date" name="data_ultima" id="data_ultima" class="form-control" placeholder="Data">
+    </div>
+		<div class="form-group col-md-2">
+		    <label for="procedencia">N° Solicitação Fluig</label>
+		    <input type="text" id="numeroSolicitacao" name="numeroSolicitacao" class="form-control" readonly>
+		</div>
 		</div>
         <div class="container-table">
     <table class="table table-bordered">
@@ -57,46 +71,36 @@
         </thead>
         <tbody>
             <tr>
-                <td>Alteração de normativa e legislação relacionada</br> e impactos</td>
+                <td>Validação inicial e/ou revisão periódica anterior.</td>
                 <td><textarea name="caixa1_1" class="form-control textarea-fixed-size" ></textarea></td>
                 <td><textarea name="caixa1_2" class="form-control textarea-fixed-size" ></textarea></td>
                 
             </tr>
             <tr>
-                <td>Controles de mudança e se eles impactaram no</br> status de validação</td>
+                <td>Análise dos documentos citados na validação</td>
                 <td><textarea name="caixa2_1" class="form-control textarea-fixed-size" ></textarea></td>
                 <td><textarea name="caixa2_2" class="form-control textarea-fixed-size" ></textarea></td>
                 
             </tr>
             <tr>
-                <td>Não conformidades e se as ações tomadas</br> foram eficazes e/ou impactaram no status de validação</td>
+                <td>Controle de mudança</td>
                 <td><textarea name="caixa3_1" class="form-control textarea-fixed-size" ></textarea></td>
                 <td><textarea name="caixa3_2" class="form-control textarea-fixed-size" ></textarea></td>
                 
             </tr>
             <tr>
-                <td>Reclamações de clientes ou tecnovigilancia</td>
+                <td>Não conformidades: RC's; RPNC's e tecnovigilância.</td>
                 <td><textarea name="caixa4_1" class="form-control textarea-fixed-size" ></textarea></td>
                 <td><textarea name="caixa4_2" class="form-control textarea-fixed-size" ></textarea></td>
                 
             </tr>
             <tr>
-                <td>Resultados de manutenções preventivas</td>
+                <td>Manutenção preventivas / corretivas dos equipamentos envolvidos na validação</td>
                 <td><textarea name="caixa5_1" class="form-control textarea-fixed-size" ></textarea></td>
                 <td><textarea name="caixa5_2" class="form-control textarea-fixed-size" ></textarea></td>
                 
             </tr>
-            <tr>
-                <td>Manutenções corretivas e possíveis impactos</td>
-                <td><textarea name="caixa6_1" class="form-control textarea-fixed-size" ></textarea></td>
-                <td><textarea name="caixa6_2" class="form-control textarea-fixed-size" ></textarea></td>
-                
-            </tr>
-            <tr>
-                <td>Toda a documentação da validação inicial ou da </br>revisão periódica anterior (quando houver)</td>
-                <td><textarea name="caixa7_1" class="form-control textarea-fixed-size" ></textarea></td>
-                <td><textarea name="caixa7_2" class="form-control textarea-fixed-size" ></textarea></td>
-            </tr>
+            
             
         </tbody>
     </table>

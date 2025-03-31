@@ -1,0 +1,87 @@
+<html>
+<head>
+	<link type="text/css" rel="stylesheet" href="/style-guide/css/fluig-style-guide.min.css"/>
+	<script type="text/javascript" src="/portal/resources/js/jquery/jquery.js"></script>
+	<script type="text/javascript" src="/portal/resources/js/jquery/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="/portal/resources/js/mustache/mustache-min.js"></script>
+	<script type="text/javascript" src="/style-guide/js/fluig-style-guide.min.js" charset="utf-8"></script>
+</head>
+<body>
+<div class="fluig-style-guide">
+<form name="form" role="form">
+<div id="panelwarning1" class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">Solicitação</h3>
+    </div>
+    <div class="panel-body">
+		 <div class="row">
+		    <div class="form-group col-md-6">
+		        <label for="solicitante">Nome do solicitante</label>
+		        <input type="text" name="solicitante" class="form-control" id="solicitante" placeholder="Coloque o nome do solicitante">
+		    </div>
+			<div class="form-group col-md-2">
+		        <label for="datacalendario">Data</label>
+		        <input type="date" name="datacalendario" id="datacalendario" class="form-control" placeholder="Data">
+		    </div>
+		    <div class="form-group col-md-4">
+		        <label for="valor">Valor</label>
+		        <input type="text" name="valor" class="form-control" id="valor" placeholder="Coloque o valor">
+		    </div>
+		</div>
+		
+		<div class="row">
+		    <div class="form-group col-md-12">
+		        <label for="finalidade">Finalidade do dinheiro</label>
+		        <textarea rows="5" name="finalidade" id="finalidade" class="form-control"></textarea>
+		    </div>
+		</div>
+    </div>
+</div>
+
+<div id="panelwarning" class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">Financeiro</h3>
+    </div>
+    <div class="panel-body">
+			<div class="row">
+			    <div class="form-group col-md-6">
+			    <label>Validação</label>
+			        <div class="radio">
+			            <label><input type="radio" name="validacao" id="validacao" value="aprovado">Aprovado</label></br>
+			            <label><input type="radio" name="validacao" id="validacao" value="reprovado">Reprovado</label></br>
+			            <label><input type="radio" name="validacao" id="validacao" value="corrigir">Corrigir</label>
+			        </div>		
+			    </div>
+			</div>
+			
+			<div class="row">
+			    <div class="form-group col-md-12">
+			        <label for="consideracoes">Observação</label>
+			        <textarea rows="5" name="consideracoes" id="consideracoes" class="form-control"></textarea>
+			    </div>
+			</div>
+			<input type="hidden" id="returnFromActivity5" name="returnFromActivity5" value="false">
+    </div>
+    
+</div>
+
+
+</form>
+</div>
+<script>
+        window.onload = function() {
+            var today = new Date();
+            var day = String(today.getDate()).padStart(2, '0');
+            var month = String(today.getMonth() + 1).padStart(2, '0'); // Janeiro é 0!
+            var year = today.getFullYear();
+
+            var currentDate = year + '-' + month + '-' + day; // Formato YYYY-MM-DD
+
+            // Define o valor do campo
+            document.getElementById("datacalendario").value = currentDate;
+        };
+        
+  
+</script>
+</body>
+</html>

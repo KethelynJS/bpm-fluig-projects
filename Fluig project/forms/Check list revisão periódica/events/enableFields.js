@@ -36,6 +36,8 @@ function desabilitarSolicitante(form){
 	form.setEnabled("responsavel", false);
 	form.setEnabled("datacalendario", false);
 	form.setEnabled("processovalidado", false);
+	form.setEnabled("data_inicio", false);
+	form.setEnabled("data_ultima", false);
 	
 }
 

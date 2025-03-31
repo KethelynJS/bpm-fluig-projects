@@ -17,6 +17,12 @@ function validateActivity4(form) {
     if (form.getValue("opcao7") == "") {
         msg += "Campo produto não foi preenchido\n";
     }
+    if (form.getValue("leitura_refratormetro") == "") {
+        msg += "Campo leitura não foi preenchido\n";
+    }
+    if (form.getValue("massa_volume") == "") {
+        msg += "Campo massa_volume não foi preenchido\n";
+    }
     if (form.getValue("lote") == "") {
         msg += "Campo lote não foi preenchido\n";
     }
@@ -25,12 +31,6 @@ function validateActivity4(form) {
     }
     if (form.getValue("dosagem") == "") {
         msg += "Campo dosagem não foi preenchido\n";
-    }
-    if (form.getValue("prioridade") == "") {
-        msg += "Campo validação não foi preenchido\n";
-    }
-    if (form.getValue("aprovado") == "") {
-        msg += "Campo validação não foi preenchido\n";
     }
     if (form.getValue("Respp1") == "") {
         msg += "Campo resp não foi preenchido\n";
@@ -42,3 +42,4 @@ function validateActivity4(form) {
     }
 
 }
+

@@ -83,14 +83,20 @@
     </div>
     <div class="panel-body">
         <div class="row">
-    <div class="form-group">
+    <div class="form-group col-md-6">
         <div class="radio">
-            <label><input type="radio" name="prioridade" id="desempenho" value="sim">Desempenho Insatisfatório</label></br>
-            <label><input type="radio" name="prioridade" id="tecnovigilancia" value="nao">Tecnovigilância</label></br>
-            <label><input type="radio" name="prioridade" id="outros" value="nao">Outros</label>
-            <input type="text" name="composicao_text" class="form-control textarea-fixed-size" style=" width: 150px; margin-left: 30px;">
+            <label><input type="radio" name="prioridade" id="desempenho" value="Desempenho Insatisfatório">Desempenho Insatisfatório</label> <input type="text" name="descricao_desempenho" id="descricao_desempenho" style="display: inline-block; width: 100px; border: none; border-bottom: 1px solid #000; background: none; outline: none; height: 20px;" placeholder=""></br>
+            <label><input type="radio" name="prioridade" id="tecnovigilancia" value="Tecnovigilância">Tecnovigilância</label> <input type="text" name="descricao_tecnovigilancia" id="descricao_tecnovigilancia" style="display: inline-block; width: 100px; border: none; border-bottom: 1px solid #000; background: none; outline: none; height: 20px;" placeholder=""></br>
+            <label><input type="radio" name="prioridade" id="outros" value="Outros">Outros:</label> <input type="text" name="descricao_outros_acao" id="descricao_outros_acao" style="display: inline-block; width: 200px; border: none; border-bottom: 1px solid #000; background: none; outline: none; height: 20px;" placeholder="Descreva outro">
+		        		
+            
         </div>		
 </div>
+
+		<div class="form-group col-md-2">
+		    <label for="procedencia">N° Solicitação Fluig</label>
+		    <input type="text" id="numeroSolicitacao" name="numeroSolicitacao" class="form-control" readonly>
+		</div>
     </div>
 </div>
 </div>
@@ -102,21 +108,23 @@
         <div class="row">
     <div class="form-group">
         <div class="radio">
-            <label><input type="radio" name="setores" id="almox1" value="sim">Almox. Suprimentos</label></br>
-            <label><input type="radio" name="setores" id="almox2" value="nao">Almox. PA/Expedição</label></br>
-            <label><input type="radio" name="setores" id="bioquimica" value="nao">Bioquímica</label></br>
-            <label><input type="radio" name="setores" id="compras" value="nao">Compras</label></br>
-            <label><input type="radio" name="setores" id="qualid" value="nao">Controle de Qualidade</label></br>
-            <label><input type="radio" name="setores" id="corantes" value="nao">Corantes</label></br>
-            <label><input type="radio" name="setores" id="comercial" value="nao">Comercial</label></br>
-            <label><input type="radio" name="setores" id="cultura" value="nao">Meio de Cultura</label></br>
-            <label><input type="radio" name="setores" id="equipamento" value="nao">Equipamentos</label></br>
-            <label><input type="radio" name="setores" id="embalagem" value="nao">Embalagem</label></br>
-            <label><input type="radio" name="setores" id="financeiro" value="nao">Financeiro/Faturamento</label></br>
-            <label><input type="radio" name="setores" id="gestao" value="nao">Gestão de Pessoas</label></br>
-            <label><input type="radio" name="setores" id="garantia" value="nao">Garantia da Qualidade</label></br>
-            <label><input type="radio" name="setores" id="pd" value="nao">P&D</label></br>
-            <label><input type="radio" name="setores" id="setornenhum" value="nao">Nenhum setor específico</label>
+            <label><input type="radio" name="setores" id="almox1" value="Almox_suprimentos">Almox. Suprimentos</label></br>
+            <label><input type="radio" name="setores" id="almox2" value="Almox_PA">Almox. PA/Expedição</label></br>
+            <label><input type="radio" name="setores" id="bioquimica" value="Bioquimica">Bioquímica</label></br>
+            <label><input type="radio" name="setores" id="compras" value="Compras">Compras</label></br>
+            <label><input type="radio" name="setores" id="qualid" value="Controle_de_Qualidade">Controle de Qualidade</label></br>
+            <label><input type="radio" name="setores" id="corantes" value="Corantes">Corantes</label></br>
+            <label><input type="radio" name="setores" id="comercial" value="Comercial">Comercial</label></br>
+            <label><input type="radio" name="setores" id="cultura" value="Meio_de_Cultura">Meio de Cultura</label></br>
+            <label><input type="radio" name="setores" id="equipamento" value="Equipamentos">Equipamentos</label></br>
+            <label><input type="radio" name="setores" id="embalagem" value="Embalagem">Embalagem</label></br>
+            <label><input type="radio" name="setores" id="financeiro" value="Financeiro/Faturamento">Financeiro/Faturamento</label></br>
+            <label><input type="radio" name="setores" id="gestao" value="Gestao_de_pessoas">Gestão de Pessoas</label></br>
+            <label><input type="radio" name="setores" id="garantia" value="Garantia_Qualidade">Garantia da Qualidade</label></br>
+            <label><input type="radio" name="setores" id="pd" value="P&D">P&D</label></br>
+            <label><input type="radio" name="setores" id="pd" value="TI">TI</label></br>
+            <label><input type="radio" name="setores" id="pd" value="PCP">PCP</label></br>
+            <label><input type="radio" name="setores" id="setornenhum" value="Nenhum">Nenhum setor específico</label>
         </div>		
 </div>
     </div>
@@ -127,7 +135,7 @@
 		<table class="table"  id="tabelaRegistros" dataset="linhaDinamicaDataset" datadatasetkey="myDataset" datadatasetvalue="dynamicTableData">
 		<thead>
 		    <tr>
-		        <th>Código</th>
+		        <th>Código/Descrição</th>
 		        <th>Lote</th>
 		        <th>Quantidade</th>
 		        <th>Data de Fabricação</th>
@@ -173,7 +181,7 @@
 </div>
 <div id="panelwarning3" class="panel panel-primary">
     <div class="panel-heading">
-        <h3 class="panel-title">Relatório</h3>
+        <h3 class="panel-title">Investigação Causa Raiz</h3>
     </div>
     <div class="panel-body">
         <div class="row">
@@ -235,8 +243,8 @@
 		<table class="table"  id="tabelaRegistross">
 		<thead>
 		    <tr>
-		        <th>Causa</th>
-		        <th>Porquê?</th>
+		        <th class="col-md-5">Causa</th>
+		        <th class="col-md-5">Porquê?</th>
 		        
 		    </tr>
 		</thead>
@@ -255,7 +263,7 @@
     </div>
     <input type="hidden" name="tabela2Data" id="tabela2Data">
 		<div class="row" style="text-align: center;">
-		    </br></br><label style="text-decoration: underline;">Ações Corretivas - Causa raiz (5W2H)</label>
+		    </br></br><label style="text-decoration: underline;">Descrição das Ações Corretivas</label>
 		</div>
 		<div class="row">
 		  <div>
@@ -290,28 +298,9 @@
 		    
     
 </div>
-<div id="panelwarning5" class="panel panel-primary">
-    <div class="panel-heading">
-        <h3 class="panel-title">Existem ações corretivas para serem cadastradas?</h3>
-    </div>
-    <div class="panel-body">
-        <div class="row">
-    <div class="form-group">
-        <div class="radio">
-            <label><input type="radio" name="processo" id="processo" value="sim">Sim. Cadastrar no Processo ações corretivas/preventivas com o motivo desse processo</label></br>
-            <label><input type="radio" name="processo" id="processanao" value="nao">Não.</label>
-        </div>		
-	</div>
-    </div>
-    <div class="row">
-    <div class="form-group col-md-12">
-        <label for="observac">Observações e número das ações corretivas</label>
-        <textarea rows="3" name="observac" id="observac" class="form-control"></textarea>
-    </div>
-    </div>
-    </div>
-</div>
-    <div id="panelwarning6" class="panel panel-primary">
+
+
+<div id="panelwarning6" class="panel panel-primary">
     <div class="panel-heading">
         <h3 class="panel-title">Conclusão</h3>
     </div>
@@ -319,31 +308,66 @@
          <div class="row">
     <div class="form-group">
         <div class="radio">
-            <label><input type="radio" name="conclusao" id="confirmada" value="sim">CONFIRMADA por meio de ensaios técnicos ou por evidências visíveis;</label></br>
-            <label><input type="radio" name="conclusao" id="provavel" value="nao">PROVÁVEL não foi confirmada mas existem fortes evidências do desvio da qualidade do produto ou da irregularidade</label>
-            <label><input type="radio" name="conclusao" id="inconclusiva" value="nao">INCONCLUSIVA não foi confirmada. Pois as informações levantadas durante a investigação são insuficientes ou contraditórias e não podem ser completadas ou verificadas</label>
-            <label><input type="radio" name="conclusao" id="descartada" value="nao">DESCARTADA quando não confirmada;</label>
+            <label><input type="radio" name="conclusao" id="confirmada" value="CONFIRMADA por meio de ensaios técnicos ou por evidências visíveis;">CONFIRMADA por meio de ensaios técnicos ou por evidências visíveis;</label></br>
+            <label><input type="radio" name="conclusao" id="provavel" value="PROVÁVEL não foi confirmada mas existem fortes evidências do desvio da qualidade do produto ou da irregularidade">PROVÁVEL não foi confirmada mas existem fortes evidências do desvio da qualidade do produto ou da irregularidade</label></br>
+            <label><input type="radio" name="conclusao" id="inconclusiva" value="INCONCLUSIVA não foi confirmada. Pois as informações levantadas durante a investigação são insuficientes ou contraditórias e não podem ser completadas ou verificadas">INCONCLUSIVA não foi confirmada. Pois as informações levantadas durante a investigação são insuficientes ou contraditórias e não podem ser completadas ou verificadas</label></br>
+            <label><input type="radio" name="conclusao" id="descartada" value="DESCARTADA quando não confirmada;">DESCARTADA quando não confirmada;</label>
         </div>		
 	</div>
     </div>
     </div>
 </div>
-<div id="panelwarning7" class="panel panel-primary">
+
+
+<div id="panelwarning5" class="panel panel-primary">
     <div class="panel-heading">
-        <h3 class="panel-title">Validação GQ</h3>
+        <h3 class="panel-title">Validação</h3>
     </div>
     <div class="panel-body">
-         <div class="row">
+        <div class="row">
     <div class="form-group">
+    <label>Enviar p/ validação de outro setor?</label>
         <div class="radio">
-            <label><input type="radio" name="processo1" id="processo" value="sim2">Sim. Cadastrar no Processo ações corretivas/preventivas com o motivo desse processo</label></br>
-            <label><input type="radio" name="processo1" id="processanao" value="nao2">Não.</label>
+            <label><input type="radio" name="processo" id="processo" value="sim">Sim</label></br>
+            <label><input type="radio" name="processo" id="processanao" value="nao">Não</label>
         </div>		
 	</div>
     </div>
     <div class="row">
     <div class="form-group col-md-12">
-        <label for="observacgq">Observações GQ</label>
+        <label for="observac">Observações</label>
+        <textarea rows="3" name="observac" id="observac" class="form-control"></textarea>
+    </div>
+    </div>
+    </div>
+</div>
+    
+<div id="panelwarning7" class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">Análise por outro setor</h3>
+    </div>
+    <div class="panel-body">
+	<div class="row">
+	    <div class="form-group col-md-6">
+	        <label for="setor_outro">Nome do setor</label>
+	        <input type="setor_outro" name="setor_outro" class="form-control" id="setor_outro" placeholder="Coloque o nome do setor">
+	    </div>
+	    <div class="form-group col-md-6">
+	        <label for="nome_resp">Nome do responsável</label>
+	        <input type="nome_resp" name="nome_resp" class="form-control" id="nome_resp" placeholder="Coloque o nome do responsável">
+	    </div>
+	</div>
+         <div class="row">
+    <div class="form-group">
+        <div class="radio">
+            <label><input type="radio" name="processo1" id="processo" value="Conforme">Conforme</label></br>
+            <label><input type="radio" name="processo1" id="processanao" value="Não Conforme">Não Conforme</label>
+        </div>		
+	</div>
+    </div>
+    <div class="row">
+    <div class="form-group col-md-12">
+        <label for="observacgq">Observações</label>
         <textarea rows="3" name="observacgq" id="observacgq" class="form-control"></textarea>
     </div>
     </div>

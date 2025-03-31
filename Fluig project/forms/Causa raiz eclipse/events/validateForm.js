@@ -7,10 +7,10 @@ function validateForm(form) {
         validateActivity4(form);
     } else if (atv_atual == 5) {
         console.log("Validando atividade 5");
-   
+        
     } else if (atv_atual == 9) {
         console.log("Validando atividade 9");
-        validateActivity5(form)
+        validateActivity9(form)
     } else if (atv_atual == 11) {
         console.log("Validando atividade 11");
         validateActivity11
@@ -58,12 +58,28 @@ function validateActivity5(form) {
     }
 }
 
-function validateActivity11(form) {
+function validateActivity9(form) {
     var msg = "";
 
     if (form.getValue("conclusao") == "") {
         msg += "Campo específico conclusão não foi preenchido\n";
     }
+    
+    if (form.getValue("processo") == "") {
+        msg += "Campo específico processo não foi preenchido\n";
+    }
+    
+
+    if (msg !== "") {
+        console.log("Erros na Atividade 9: " + msg);
+        throw msg;
+    }
+}
+
+
+function validateActivity11(form) {
+    var msg = "";
+
     if (form.getValue("processo1") == "") {
         msg += "Campo específico validação não foi preenchido\n";
     }

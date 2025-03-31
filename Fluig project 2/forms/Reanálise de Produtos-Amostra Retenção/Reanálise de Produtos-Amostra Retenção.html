@@ -1,0 +1,191 @@
+<html>
+<head>
+	<link type="text/css" rel="stylesheet" href="/style-guide/css/fluig-style-guide.min.css"/>
+	<script type="text/javascript" src="/portal/resources/js/jquery/jquery.js"></script>
+	<script type="text/javascript" src="/portal/resources/js/jquery/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="/portal/resources/js/mustache/mustache-min.js"></script>
+	<script type="text/javascript" src="/style-guide/js/fluig-style-guide.min.js" charset="utf-8"></script>
+	
+	<style>
+	.info-textarea2 {
+		width: 100%;
+		color: #000000; /* Cor do texto preta */
+		border: 1px solid #cccccc; /* Borda cinza clara */
+		border-radius: 4px;
+		background-color: #DCDCDC;
+	}
+	
+	</style>
+	
+</head>
+<body>
+<div class="fluig-style-guide">
+<form name="form" role="form">
+<div id="painel1" class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">Solicitação</h3>
+    </div>
+    <div class="panel-body">
+		<div class="row">
+		    <div class="form-group col-md-2">
+		        <label for="datacalendario">Data</label>
+		        <input type="text" name="datacalendario" id="datacalendario" class="form-control" placeholder="Data">
+		    </div>
+			<div class="form-group col-md-2">
+			    <label for="procedencia">N° Solicitação Fluig</label>
+			    <input type="text" id="numeroSolicitacao" name="numeroSolicitacao" class="form-control" readonly>
+			</div>
+		</div>
+		<div class="row">
+		
+		    <div class="form-group col-md-6">
+		    <label>Tipo de amostra</label>
+		        <div class="radio">
+		            <label><input type="radio" name="tipo_amostra" id="tipo_amostra" value="amostra_retencao">Amostra de Retenção</label></br>
+		            <label><input type="radio" name="tipo_amostra" id="tipo_amostra" value="amostra_estoque">Amostra do estoque</label></br>
+		            <label><input type="radio" name="tipo_amostra" id="tipo_amostra" value="devolucao">Devolução</label></br>
+		            <label><input type="radio" name="tipo_amostra" id="tipo_amostra" value="outros">Outros: </label> <input type="text" name="descricao_outros_acao" id="descricao_outros_acao" style="display: inline-block; width: 200px; border: none; border-bottom: 1px solid #000; background: none; outline: none; height: 20px;" placeholder="Descreva se outros">
+		        </div>		
+		    </div>
+		</div>
+		<div class="row">
+		    <div class="form-group col-md-8">
+		        <label for="codigo_nome">Código/nome do produto</label>
+		        <input type="text" name="codigo_nome" class="form-control" id="codigo_nome" placeholder="Coloque o código/nome">
+		    </div>
+		    <div class="form-group col-md-4">
+		        <label for="lote">Lote</label>
+		        <input type="text" name="lote" class="form-control" id="lote" placeholder="Coloque o lote">
+		    </div>
+			<div class="row">
+			    <div class="form-group col-md-3">
+			        <label for="data_fabricacao">Data de fabricação</label>
+			        <input type="date" name="data_fabricacao" class="form-control" id="data_fabricacao" placeholder="Coloque a data da fabricação">
+			    </div>
+			    <div class="form-group col-md-3">
+			        <label for="data_validade">Data validade</label>
+			        <input type="date" name="data_validade" class="form-control" id="data_validade" placeholder="Coloque a data">
+			    </div>
+			</div>
+		<div class="row">
+		    <div class="form-group col-md-12">
+		        <label for="motivo_solicitacao">Motivo da solicitação</label>
+		        <textarea rows="5" name="motivo_solicitacao" id="motivo_solicitacao" class="form-control"></textarea>
+		    </div>
+		</div>
+		</div>
+		
+    </div>
+</div>
+
+<div id="painel2" class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">Análise</h3>
+    </div>
+    <div class="panel-body">
+    	<div class="row">
+		<div class="form-group col-md-4">
+		    <label>Análise (s) a ser (em) realizada (s) conforme IT do produto</label>
+		    <div class="checkbox">
+		        <label><input type="checkbox" name="aspecto">Aspecto</label></br>
+		        <label><input type="checkbox" name="dosagem">Dosagem</label></br>
+		        <label><input type="checkbox" name="esterilidade">Esterilidade</label></br>
+		        <label><input type="checkbox" name="desempenho">Desempenho microbiológico</label></br>
+		        <label><input type="checkbox" name="outros_it">Outros: </label> <input type="text" name="descricao_outros_acao2" id="descricao_outros_acao2" style="display: inline-block; width: 200px; border: none; border-bottom: 1px solid #000; background: none; outline: none; height: 20px;" placeholder="Descreva se outros">
+		    </div>
+		</div>
+		</div>
+		<div class="row">
+		    <div class="form-group col-md-6">
+		        <label for="contaminante">Se houver crescimento identificar o(s) micro-organismo (s) contaminante (s)</label>
+		        <input type="text" name="contaminante" class="form-control" id="contaminante" placeholder="Coloque contaminante">
+		    </div>
+		    <div class="form-group col-md-3">
+		        <label for="data_hora">Data e hora</label>
+		        <input type="datetime-local" name="data_hora" class="form-control" id="data_hora" placeholder="Coloque data e hora">
+		    </div>
+		</div>
+		<div class="row">
+		    <div class="form-group col-md-6">
+		        <label for="etapas">Etapas</label>
+		        <input type="text" name="etapas" class="form-control" id="etapas" placeholder="Coloque etapas">
+		    </div>
+		    <div class="form-group col-md-6">
+		        <label for="resultados">Resultados</label>
+		        <input type="text" name="resultados" class="form-control" id="resultados" placeholder="Coloque resultados">
+		    </div>
+		</div>
+		<div class="row">
+		    <div class="form-group col-md-12">
+		        <label for="observacao">Observação</label>
+		        <textarea rows="5" name="observacao" id="observacao" class="form-control"></textarea>
+		    </div>
+		</div>
+		
+		<div class="row">
+		
+		    <div class="form-group col-md-6">
+		    <label>Ações corretivas Imediatas</label>
+		        <div class="radio">
+		            <label><input type="radio" name="acoes_imediatas" id="acoes_imediatas" value="reintegrar">Reintegrar ao estoque</label></br>
+		            <label><input type="radio" name="acoes_imediatas" id="acoes_imediatas" value="descarte">Descarte</label></br>
+		            <label><input type="radio" name="acoes_imediatas" id="acoes_imediatas" value="retrabalhar">Retrabalhar</label></br>
+		            <label><input type="radio" name="acoes_imediatas" id="acoes_imediatas" value="outros">Outros: </label> <input type="text" name="descricao_outros_acao3" id="descricao_outros_acao3" style="display: inline-block; width: 200px; border: none; border-bottom: 1px solid #000; background: none; outline: none; height: 20px;" placeholder="Descreva se outros">
+		        </div>		
+		    </div>
+		</div>
+		<div class="row">
+		    <div class="form-group col-md-6">
+		        <label for="resp">Responsável (is) pela realização das análises</label>
+		        <input type="text" name="resp" class="form-control" id="resp" placeholder="Coloque o responsável">
+		    </div>
+		    <div class="form-group col-md-2">
+		        <label for="data_conclusao">Data da conclusão</label>
+		        <input type="date" name="data_conclusao" class="form-control" id="data_conclusao" placeholder="Coloque a data">
+		    </div>
+		</div>
+		
+    </div>
+</div>
+
+
+<div id="painel3" class="panel panel-warning">
+    <div class="panel-heading">
+        <h3 class="panel-title">Informativo</h3>
+    </div>
+    <div class="panel-body">
+        <div class="row">
+		    <div class="form-group col-md-12">
+		        <label for="informativo2"></label>
+		        <textarea rows="2"  name="informativo2" id="infoText2" class="info-textarea2" style="text-align: center;" readonly>Segue a conclusão da sua solicitação. Leia atentamente as informações acima e clique em 'Enviar' para finalizar o processo.</textarea>
+		    </div>
+	    </div>
+    </div>
+</div>
+
+
+</form>
+</div>
+
+<script>
+    // Função para formatar a data no formato brasileiro (dd/MM/yyyy)
+    function formatarData(data) {
+        const dia = String(data.getDate()).padStart(2, '0');
+        const mes = String(data.getMonth() + 1).padStart(2, '0'); // Janeiro é 0
+        const ano = data.getFullYear();
+        return `${dia}/${mes}/${ano}`;
+    }
+
+    // Obter o campo da data
+    const campoData = document.getElementById('datacalendario');
+    
+    // Verificar se o campo já possui um valor
+    if (!campoData.value) {
+        // Se o campo estiver vazio, preencher com a data atual
+        const dataAtual = new Date();
+        campoData.value = formatarData(dataAtual);
+    }
+</script>
+
+</body>
+</html>

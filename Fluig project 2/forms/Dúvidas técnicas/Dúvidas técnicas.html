@@ -1,0 +1,281 @@
+<html>
+<head>
+	<link type="text/css" rel="stylesheet" href="/style-guide/css/fluig-style-guide.min.css"/>
+	<script type="text/javascript" src="/portal/resources/js/jquery/jquery.js"></script>
+	<script type="text/javascript" src="/portal/resources/js/jquery/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="/portal/resources/js/mustache/mustache-min.js"></script>
+	<script type="text/javascript" src="/style-guide/js/fluig-style-guide.min.js" charset="utf-8"></script>
+	<style>
+	
+	.textarea-fixed-size {
+            width: 100%; /* Faz o textarea ocupar toda a largura da célula */
+            height: 50px; /* Define a altura do textarea */
+            min-height: 50px;
+            box-sizing: border-box; /* Inclui padding e border no tamanho total */
+            resize: vertical; /* Permite apenas redimensionar verticalmente */
+            white-space: pre-wrap; /* Permite quebra de linha e preserva espaços */
+            word-wrap: break-word;
+        }
+        
+        .info-textarea2 {
+		width: 100%;
+		color: #000000; /* Cor do texto preta */
+		border: 1px solid #cccccc; /* Borda cinza clara */
+		border-radius: 4px;
+		background-color: #DCDCDC;
+	}
+        
+  </style>
+</head>
+<body>
+<div class="fluig-style-guide">
+<form name="form" role="form">
+
+<div id="panel1" class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">Solicitante</h3>
+    </div>
+    <div class="panel-body">
+	 <div class="row">
+	    <div class="form-group col-md-2">
+	        <label for="datacalendario">Data</label>
+	        <input type="text" name="datacalendario" id="datacalendario" class="form-control" placeholder="Data">
+	    </div>
+		<div class="form-group col-md-4">
+	        <label for="nome_contato">Nome da pessoa de contato</label>
+	        <input type="text" name="nome_contato" class="form-control" id="nome_contato" placeholder="Coloque o nome de quem fez o contato">
+	    </div>
+	    <div class="form-group col-md-4">
+	        <label for="empresa">Nome da Empresa</label>
+	        <input type="text" name="empresa" class="form-control" id="empresa" placeholder="Coloque o nome da empresa">
+	    </div>
+		<div class="form-group col-md-2">
+		    <label for="procedencia">N° Solicitação Fluig</label>
+		    <input type="text" id="numeroSolicitacao" name="numeroSolicitacao" class="form-control" readonly>
+		</div>
+	</div>
+	<div class="row">
+	    <div class="form-group col-md-6">
+	    <label>Identificação do reclamante</label>
+	        <div class="radio">
+	            <label><input type="radio" name="cliente" id="cliente" value="cliente_direto">Cliente Direto</label></br>
+	            <label><input type="radio" name="cliente" id="cliente" value="distribuidor">Distribuidor</label></br>
+	            <label><input type="radio" name="cliente" id="cliente" value="cliente_distribuidor">Cliente do Distribuidor</label>
+	        </div>		
+	    </div>
+	    <div class="form-group col-md-6">
+	    <label>Tipo</label>
+	        <div class="radio">
+	            <label><input type="radio" name="tipo_processo" id="tipo_processo" value="sugestao_melhoria">Sugestão de melhoria</label></br>
+	            <label><input type="radio" name="tipo_processo" id="tipo_processo" value="duvidas_tecnicas">Dúvidas técnicas</label>
+	        </div>		
+	    </div>
+	</div>
+	<div class="row">
+	    <div class="form-group col-md-12">
+	        <label for="descricao_duvida">Descrição da dúvida/ Sugestão de melhoria</label>
+	        <textarea rows="5" name="descricao_duvida" id="descricao_duvida" class="form-control"></textarea>
+	    </div>
+	</div>
+	<div class="row">
+	    <div class="form-group col-md-6">
+	        <label for="produto">Produto</label>
+	        <input type="text" name="produto" class="form-control" id="produto" placeholder="Coloque o produto">
+	    </div>
+	</div>
+    </div>
+</div>
+
+<div id="panelwarning" class="panel panel-warning">
+    <div class="panel-heading">
+        <h3 class="panel-title"><i class="flaticon flaticon-timer icon-xl" aria-hidden="true"></i> Prioridade</h3>
+    </div>
+    <div class="panel-body">
+       	<div class="row">
+    		<div class="form-group col-md-6">
+    			<div class="radio">
+					<label><input type="radio" name="prioridade" id="prioridade" value="prioridade">Urgente</label></br>
+					<label><input type="radio" name="prioridade" id="prioridade" value="prioridade">Alta</label></br>
+					<label><input type="radio" name="prioridade" id="prioridade" value="prioridade">Média</label></br>
+					<label><input type="radio" name="prioridade" id="prioridade" value="prioridade">Baixa</label>
+				</div>		
+		</div>
+    </div>
+</div>
+</div>
+
+
+<div id="panel2" class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">Investigação área técnica</h3>
+    </div>
+    <div class="panel-body">
+		<div class="row">
+		    <div class="form-group col-md-6">
+		    <label>A resposta para dúvida da cliente está descrito em algum documento?</label>
+		        <div class="radio">
+		            <label><input type="radio" name="resposta" id="resposta" value="sim">Sim</label></br>
+		            <label><input type="radio" name="resposta" id="resposta" value="nao">Não</label>
+		        </div>		
+		    </div>
+		</div>
+		<div class="row">
+		    <div class="form-group col-md-12">
+		        <label for="comentario">Comentário</label>
+		        <textarea rows="5" name="comentario" id="comentario" class="form-control"></textarea>
+		    </div>
+		</div>
+		<label>Foi realizada ação corretiva imediata?</label>
+		<table class="table table-striped">
+		  <thead>
+		    <tr>
+		      <th>Qual?</th>
+		      <th>Por quê?</th>
+		      <th>Quem?</th>
+		    </tr>
+		  </thead>
+		  <tbody>
+		    <tr>
+		      <td>
+		        <textarea name="qual_1" id="qual_1" class="form-control"></textarea>
+		      </td>
+		      <td>
+		        <textarea name="porque_1" id="porque_1" class="form-control"></textarea>
+		      </td>
+		      <td>
+		        <textarea name="quem_1" id="quem_1" class="form-control"></textarea>
+		      </td>
+		    </tr>
+		    <tr>
+		      <td>
+		        <textarea name="qual_2" id="qual_2" class="form-control"></textarea>
+		      </td>
+		      <td>
+		        <textarea name="porque_2" id="porque_2" class="form-control"></textarea>
+		      </td>
+		      <td>
+		        <textarea name="quem_2" id="quem_2" class="form-control"></textarea>
+		      </td>
+		    </tr>
+		    <tr>
+		      <td>
+		        <textarea name="qual_3" id="qual_3" class="form-control"></textarea>
+		      </td>
+		      <td>
+		        <textarea name="porque_3" id="porque_3" class="form-control"></textarea>
+		      </td>
+		      <td>
+		        <textarea name="quem_3" id="quem_3" class="form-control"></textarea>
+		      </td>
+		    </tr>
+		  </tbody>
+		</table>
+		
+		
+		<label> Há necessidade de AC complementar</label>
+		<div class="row">
+		  <div>
+		    <table class="table" id="tabelaRegistros3" dataset="linhaDinamicaDataset3" datadatasetkey="myDataset3" datadatasetvalue="dynamicTableData3">
+		      <thead>
+		        <tr>
+		          <th class="col-md-4">Ação</th>
+		          <th class="col-md-3">Responsável</th>
+		          <th class="col-md-3">Prazo</th>
+		          <th class="col-md-2">N° Solicitação fluig</th>
+		        </tr>
+		      </thead>
+		      <tbody>
+		        <tr>
+		          <td><textarea name="what_c1" class="form-control textarea-fixed-size"  rows="2" ></textarea></td>
+		          <td><textarea name="when_c1" class="form-control textarea-fixed-size"  rows="2"></textarea></td>
+		          <td><textarea name="who_c1" class="form-control textarea-fixed-size"  rows="2"></textarea></td>
+		          <td><input type="text" name="solicitacaoFluig_c1" class="form-control textarea-fixed-size"  style="height: 50px; rows="2"></td>
+		          
+		        </tr>
+		      </tbody>
+		    </table>
+		  </div>
+		</div>
+		<button type="button" class="btn btn-info" onclick="addNewRecord3()" id="novoRegistroBtn3">Novo Registro</button>
+		<button type="button" class="btn btn-success" onclick="saveAllTables3()">Salvar Dados</button>
+		<input type="hidden" name="linhaDinamicaDataset3" id="linhaDinamicaDataset3">
+    </div>
+</div>
+
+<div id="panel3" class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">Análise Qualidade</h3>
+    </div>
+    <div class="panel-body">
+		 <div class="row">
+		    <div class="form-group col-md-12">
+		        <label for="comentariogq">Comentário</label>
+		        <textarea rows="3" name="comentariogq" id="comentariogq" class="form-control"></textarea>
+		    </div>
+		</div>
+		
+		<div>
+    <table class="table" id="tabelaRegistros4" dataset="linhaDinamicaDataset4" datadatasetkey="myDataset4" datadatasetvalue="dynamicTableData4">
+      <thead>
+        <tr>
+          <th class="col-md-3">O Que?</th>
+          <th class="col-md-3">Quando?</th>
+          <th class="col-md-3">Quem?</th>
+          <th class="col-md-1">Solicitação Fluig</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><textarea name="what_d1" class="form-control textarea-fixed-size" rows="2"></textarea></td>
+          <td><textarea name="when_d1" class="form-control textarea-fixed-size" rows="2"></textarea></td>
+          <td><textarea name="who_d1" class="form-control textarea-fixed-size" rows="2"></textarea></td>
+          <td><input type="text" name="solicitacaoFluig_d1" class="form-control textarea-fixed-size" style="height: 50px;"></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<button type="button" class="btn btn-info" onclick="addNewRecord4()" id="novoRegistroBtn4">Novo Registro</button>
+<button type="button" class="btn btn-success" onclick="saveAllTables4()">Salvar Dados</button></br></br>
+<input type="hidden" name="linhaDinamicaDataset4" id="linhaDinamicaDataset4">
+		
+		
+</div>
+
+<div id="panel4" class="panel panel-warning">
+    <div class="panel-heading">
+        <h3 class="panel-title">Notificação aos participantes do processo:</h3>
+    </div>
+    <div class="panel-body">
+        <div class="row">
+	    <div class="form-group col-md-12">
+	        <label for="informativo2"></label>
+	        <textarea rows="2"  name="informativo2" id="infoText2" class="info-textarea2" style="text-align: center;" readonly> Informo que esse protocolo Dúvidas técnicas/Sugestões foi finalizado com sucesso, ao terminar a leitura clique em enviar.</textarea>
+	    </div>
+	    </div>
+    </div>
+</div>
+
+
+
+</form>
+</div>
+<script>
+        window.onload = function() {
+            var today = new Date();
+            var day = String(today.getDate()).padStart(2, '0');
+            var month = String(today.getMonth() + 1).padStart(2, '0'); // Janeiro é 0!
+            var year = today.getFullYear();
+
+            var currentDate = year + '-' + month + '-' + day; // Formato YYYY-MM-DD
+
+            // Define o valor do campo
+            document.getElementById("datacalendario").value = currentDate;
+        };
+        
+  
+</script>
+<script src="datacalen.js"></script>
+<script src="tabela.js"></script>
+</body>
+</html>

@@ -28,7 +28,7 @@
     <processDefinitionVersionPK>
       <companyId>1</companyId>
       <processId>Carta de transferência de função-setor</processId>
-      <version>6</version>
+      <version>7</version>
     </processDefinitionVersionPK>
     <versionDescription></versionDescription>
     <formId>0</formId>
@@ -213,7 +213,7 @@
       <joint>false</joint>
       <agreementPercentage>0</agreementPercentage>
       <engineAllocationId>Usuário</engineAllocationId>
-      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;User&gt;luci.taborda&lt;/User&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
+      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;User&gt;gestao.pessoas&lt;/User&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
       <selectColleague>1</selectColleague>
       <initialState>false</initialState>
       <notifyAuthorityDelay>true</notifyAuthorityDelay>
@@ -376,12 +376,12 @@
         <companyId>1</companyId>
         <processId>BPM - Cartadetransferênciadefunção-setor</processId>
         <expressionOrder>1</expressionOrder>
-        <version>6</version>
+        <version>7</version>
         <sequence>7</sequence>
       </conditionProcessStatePK>
       <condition></condition>
       <destinationSequenceId>11</destinationSequenceId>
-      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;User&gt;luci.taborda&lt;/User&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
+      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;User&gt;gestao.pessoas&lt;/User&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
       <engineAllocationId>Usuário</engineAllocationId>
       <conditionType>1</conditionType>
     </ConditionProcessState>
@@ -390,7 +390,7 @@
         <companyId>1</companyId>
         <processId>BPM - Cartadetransferênciadefunção-setor</processId>
         <expressionOrder>2</expressionOrder>
-        <version>6</version>
+        <version>7</version>
         <sequence>7</sequence>
       </conditionProcessStatePK>
       <condition></condition>

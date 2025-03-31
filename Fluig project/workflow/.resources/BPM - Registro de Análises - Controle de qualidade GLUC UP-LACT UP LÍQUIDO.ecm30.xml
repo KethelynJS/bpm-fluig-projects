@@ -28,7 +28,7 @@
     <processDefinitionVersionPK>
       <companyId>1</companyId>
       <processId>Registro de Análises - Bioquímica LÍQUIDO</processId>
-      <version>13</version>
+      <version>15</version>
     </processDefinitionVersionPK>
     <versionDescription></versionDescription>
     <formId>39087</formId>
@@ -111,7 +111,7 @@
       <joint>false</joint>
       <agreementPercentage>0</agreementPercentage>
       <engineAllocationId>Usuário</engineAllocationId>
-      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;User&gt;fernando.stocco&lt;/User&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
+      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;User&gt;controle.qualidade&lt;/User&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
       <selectColleague>1</selectColleague>
       <initialState>false</initialState>
       <notifyAuthorityDelay>true</notifyAuthorityDelay>
@@ -162,8 +162,8 @@
       <deadlineFieldName></deadlineFieldName>
       <joint>false</joint>
       <agreementPercentage>0</agreementPercentage>
-      <engineAllocationId>Usuário</engineAllocationId>
-      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;User&gt;fernando.stocco&lt;/User&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
+      <engineAllocationId>Executor Atividade</engineAllocationId>
+      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;BaseActivity&gt;7&lt;/BaseActivity&gt;&lt;Returns&gt;Last&lt;/Returns&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
       <selectColleague>1</selectColleague>
       <initialState>false</initialState>
       <notifyAuthorityDelay>true</notifyAuthorityDelay>
@@ -378,7 +378,7 @@
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>BPM - Registro de Análises - Controle de qualidade GLUC UP-LACT UP LÍQUIDO</processId>
-        <version>13</version>
+        <version>15</version>
         <linkSequence>10</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -389,7 +389,7 @@
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>BPM - Registro de Análises - Controle de qualidade GLUC UP-LACT UP LÍQUIDO</processId>
-        <version>13</version>
+        <version>15</version>
         <linkSequence>15</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>

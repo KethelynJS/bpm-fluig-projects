@@ -9,7 +9,7 @@
     <active>true</active>
     <publicProcess>false</publicProcess>
     <volumeId>Default</volumeId>
-    <categoryId>Teste Eclipse</categoryId>
+    <categoryId>Qualidade</categoryId>
     <managerEngineAllocationId></managerEngineAllocationId>
     <snapshotFrequency>0</snapshotFrequency>
     <baseDay>0</baseDay>
@@ -28,10 +28,10 @@
     <processDefinitionVersionPK>
       <companyId>1</companyId>
       <processId>Qualificação de componentes</processId>
-      <version>10</version>
+      <version>8</version>
     </processDefinitionVersionPK>
     <versionDescription></versionDescription>
-    <formId>0</formId>
+    <formId>43202</formId>
     <editionMode>true</editionMode>
     <updateAttachmentsVersion>false</updateAttachmentsVersion>
     <controlsAttachmentsSecurity>false</controlsAttachmentsSecurity>
@@ -160,6 +160,8 @@
       <deadlineFieldName></deadlineFieldName>
       <joint>false</joint>
       <agreementPercentage>0</agreementPercentage>
+      <engineAllocationId>Usuário</engineAllocationId>
+      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;User&gt;andrea.issa&lt;/User&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
       <selectColleague>1</selectColleague>
       <initialState>false</initialState>
       <notifyAuthorityDelay>true</notifyAuthorityDelay>
@@ -260,6 +262,8 @@
       <deadlineFieldName></deadlineFieldName>
       <joint>false</joint>
       <agreementPercentage>0</agreementPercentage>
+      <engineAllocationId>Usuário</engineAllocationId>
+      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;User&gt;andrea.issa&lt;/User&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
       <selectColleague>1</selectColleague>
       <initialState>false</initialState>
       <notifyAuthorityDelay>true</notifyAuthorityDelay>
@@ -310,6 +314,7 @@
       <deadlineFieldName></deadlineFieldName>
       <joint>false</joint>
       <agreementPercentage>0</agreementPercentage>
+      <engineAllocationId></engineAllocationId>
       <selectColleague>1</selectColleague>
       <initialState>false</initialState>
       <notifyAuthorityDelay>true</notifyAuthorityDelay>
@@ -610,6 +615,8 @@
       <deadlineFieldName></deadlineFieldName>
       <joint>false</joint>
       <agreementPercentage>0</agreementPercentage>
+      <engineAllocationId>Grupo</engineAllocationId>
+      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;Group&gt;notifycompras&lt;/Group&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
       <selectColleague>1</selectColleague>
       <initialState>false</initialState>
       <notifyAuthorityDelay>true</notifyAuthorityDelay>
@@ -861,6 +868,8 @@
       <deadlineFieldName></deadlineFieldName>
       <joint>false</joint>
       <agreementPercentage>0</agreementPercentage>
+      <engineAllocationId>Usuário</engineAllocationId>
+      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;User&gt;andrea.issa&lt;/User&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
       <selectColleague>1</selectColleague>
       <initialState>false</initialState>
       <notifyAuthorityDelay>true</notifyAuthorityDelay>
@@ -1145,7 +1154,7 @@
         <companyId>1</companyId>
         <processId>BPM-Qualificaçãodecomponentes</processId>
         <expressionOrder>1</expressionOrder>
-        <version>10</version>
+        <version>8</version>
         <sequence>17</sequence>
       </conditionProcessStatePK>
       <condition></condition>
@@ -1157,7 +1166,7 @@
         <companyId>1</companyId>
         <processId>BPM-Qualificaçãodecomponentes</processId>
         <expressionOrder>2</expressionOrder>
-        <version>10</version>
+        <version>8</version>
         <sequence>17</sequence>
       </conditionProcessStatePK>
       <condition></condition>
@@ -1169,11 +1178,13 @@
         <companyId>1</companyId>
         <processId>BPM-Qualificaçãodecomponentes</processId>
         <expressionOrder>3</expressionOrder>
-        <version>10</version>
+        <version>8</version>
         <sequence>17</sequence>
       </conditionProcessStatePK>
       <condition></condition>
       <destinationSequenceId>25</destinationSequenceId>
+      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;Group&gt;notifycompras&lt;/Group&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
+      <engineAllocationId>Grupo</engineAllocationId>
       <conditionType>1</conditionType>
     </ConditionProcessState>
     <ConditionProcessState>
@@ -1181,7 +1192,7 @@
         <companyId>1</companyId>
         <processId>BPM-Qualificaçãodecomponentes</processId>
         <expressionOrder>1</expressionOrder>
-        <version>10</version>
+        <version>8</version>
         <sequence>23</sequence>
       </conditionProcessStatePK>
       <condition></condition>
@@ -1193,7 +1204,7 @@
         <companyId>1</companyId>
         <processId>BPM-Qualificaçãodecomponentes</processId>
         <expressionOrder>2</expressionOrder>
-        <version>10</version>
+        <version>8</version>
         <sequence>23</sequence>
       </conditionProcessStatePK>
       <condition></condition>
@@ -1205,7 +1216,7 @@
         <companyId>1</companyId>
         <processId>BPM-Qualificaçãodecomponentes</processId>
         <expressionOrder>1</expressionOrder>
-        <version>10</version>
+        <version>8</version>
         <sequence>38</sequence>
       </conditionProcessStatePK>
       <condition></condition>
@@ -1217,11 +1228,13 @@
         <companyId>1</companyId>
         <processId>BPM-Qualificaçãodecomponentes</processId>
         <expressionOrder>2</expressionOrder>
-        <version>10</version>
+        <version>8</version>
         <sequence>38</sequence>
       </conditionProcessStatePK>
       <condition></condition>
       <destinationSequenceId>58</destinationSequenceId>
+      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;Group&gt;notifycompras&lt;/Group&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
+      <engineAllocationId>Grupo</engineAllocationId>
       <conditionType>1</conditionType>
     </ConditionProcessState>
     <ConditionProcessState>
@@ -1229,11 +1242,13 @@
         <companyId>1</companyId>
         <processId>BPM-Qualificaçãodecomponentes</processId>
         <expressionOrder>1</expressionOrder>
-        <version>10</version>
+        <version>8</version>
         <sequence>64</sequence>
       </conditionProcessStatePK>
       <condition></condition>
       <destinationSequenceId>4</destinationSequenceId>
+      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;BaseActivity&gt;4&lt;/BaseActivity&gt;&lt;Returns&gt;Last&lt;/Returns&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
+      <engineAllocationId>Executor Atividade</engineAllocationId>
       <conditionType>1</conditionType>
     </ConditionProcessState>
     <ConditionProcessState>
@@ -1241,11 +1256,13 @@
         <companyId>1</companyId>
         <processId>BPM-Qualificaçãodecomponentes</processId>
         <expressionOrder>2</expressionOrder>
-        <version>10</version>
+        <version>8</version>
         <sequence>64</sequence>
       </conditionProcessStatePK>
       <condition></condition>
       <destinationSequenceId>5</destinationSequenceId>
+      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;User&gt;almox.suprimentos&lt;/User&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
+      <engineAllocationId>Usuário</engineAllocationId>
       <conditionType>1</conditionType>
     </ConditionProcessState>
   </list>
@@ -1857,7 +1874,7 @@
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>BPM-Qualificaçãodecomponentes</processId>
-        <version>10</version>
+        <version>8</version>
         <linkSequence>22</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -1868,7 +1885,7 @@
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>BPM-Qualificaçãodecomponentes</processId>
-        <version>10</version>
+        <version>8</version>
         <linkSequence>29</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -1879,7 +1896,7 @@
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>BPM-Qualificaçãodecomponentes</processId>
-        <version>10</version>
+        <version>8</version>
         <linkSequence>34</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -1890,7 +1907,7 @@
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>BPM-Qualificaçãodecomponentes</processId>
-        <version>10</version>
+        <version>8</version>
         <linkSequence>37</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -1901,7 +1918,7 @@
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>BPM-Qualificaçãodecomponentes</processId>
-        <version>10</version>
+        <version>8</version>
         <linkSequence>49</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -1912,7 +1929,7 @@
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>BPM-Qualificaçãodecomponentes</processId>
-        <version>10</version>
+        <version>8</version>
         <linkSequence>56</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -1926,19 +1943,7 @@
   <list/>
   <list/>
   <list/>
-  <list>
-    <ProcessAttachmentRules>
-      <id>0</id>
-      <tenantId>0</tenantId>
-      <processId>BPM-Qualificaçãodecomponentes</processId>
-      <processVersion>10</processVersion>
-      <stateSequence>4</stateSequence>
-      <operator>1</operator>
-      <amount>1</amount>
-      <name></name>
-      <message>Anexar arquivo</message>
-    </ProcessAttachmentRules>
-  </list>
+  <list/>
   <list>
     <ConditionProcessAutomaticRules>
       <sequence>17</sequence>
